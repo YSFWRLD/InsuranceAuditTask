@@ -1,0 +1,7 @@
+# The audit engine itself has no third-party dependencies: it uses only the
+# Python standard library (csv, json, decimal, datetime, dataclasses).  That is
+# deliberate -- every monetary calculation is integer cents via decimal.Decimal
+# with ROUND_HALF_UP, and nothing about that benefits from a numeric library.
+#
+# pytest is needed only to run the test suite.
+pytest==8.3.4

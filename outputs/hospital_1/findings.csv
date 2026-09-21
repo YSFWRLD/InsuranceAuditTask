@@ -1,0 +1,115 @@
+invoice_id,line_id,category,detail
+INV-H1-000002,H1-L00002-01,service_date_after_invoice_date,service date 2024-01-13 is after the invoice date 2024-01-09
+INV-H1-000004,H1-L00004-01,volume_discount_incorrectly_applied,'Extended Geriatric Wound Care' billed at 8585; the contract rate is 10100. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000004,H1-L00004-02,unit_price_mismatch,'Ambulatory Musculoskeletal Ward Bed Occupancy' billed at 463725; the contract rate is 154575 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000004,H1-L00004-06,unit_price_mismatch,'Preoperative Oncology Consultation' billed at 73718; the contract rate is 42125 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000015,H1-L00015-11,daily_cap_exceeded,'Advanced Rheumatologic Laboratory Panel': 9 units billed for patient PT-H1-000172 on 2024-01-20; Section 8 caps this at 4
+INV-H1-000036,H1-L00036-17,malformed_service_date,service date '2025-06-31' is not a valid date
+INV-H1-000036,H1-L00036-02,unknown_service,description 'Extended Haem Anaes Admin' does not identify any contracted service (best candidate scored 0.27)
+INV-H1-000049,H1-L00049-04,daily_cap_exceeded,'Comprehensive Oncology Nursing Observation': 15 units billed for patient PT-H1-000038 on 2024-02-18; Section 8 caps this at 12
+INV-H1-000049,H1-L00049-15,premium_incorrectly_applied,'Routine Psychiatric Rehabilitation Programme' billed at 90625; the contract rate is 72500. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000068,,duplicate_invoice_id,"invoice identifier 'INV-H1-000068' is used by 2 separate invoice records (dates 2024-03-04, 2024-05-20)"
+INV-H1-000069,H1-L00069-02,malformed_service_date,service date 'not-a-date' is not a valid date
+INV-H1-000069,H1-L00069-05,line_total_arithmetic,line total 96675 != unit price 29725 x quantity 3 (= 89175)
+INV-H1-000069,,invoice_total_mismatch,invoice total 1712345 != sum of line totals 1711345
+INV-H1-000072,H1-L00072-03,service_date_after_invoice_date,service date 2024-04-08 is after the invoice date 2024-03-13
+INV-H1-000072,H1-L00072-01,unit_price_mismatch,'Routine Infectious Critical Care Occupancy' billed at 87562; the contract rate is 58375 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000102,H1-L00102-07,volume_discount_incorrectly_applied,'Preoperative Immunologic Endoscopic Procedure' billed at 121580; the contract rate is 151975. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000102,H1-L00102-11,unit_price_mismatch,'Postoperative Ophthalmic Radiotherapy Fraction' billed at 516656; the contract rate is 413325 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000132,H1-L00132-02,bundle_not_applied,'Advanced Cardiac Recovery Room Occupancy' billed at 20000; the contract rate is 16400. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000132,H1-L00132-03,bundle_not_applied,'Routine Cardiac Specimen Analysis' billed at 23350; the contract rate is 19150. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000132,H1-L00132-08,unknown_service,description 'Session  Interm Hep Dial' does not identify any contracted service (best candidate scored 0.27)
+INV-H1-000148,H1-L00148-02,service_date_out_of_window,service date 2023-06-09 falls outside the term 2024-01-01 to 2025-12-31
+INV-H1-000151,H1-L00151-01,unit_price_mismatch,'Ambulatory Pulmonary Recovery Room Occupancy' billed at 304629; the contract rate is 101543 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> volume discount -10%)
+INV-H1-000152,,duplicate_invoice_id,"invoice identifier 'INV-H1-000152' is used by 2 separate invoice records (dates 2024-05-10, 2024-06-11)"
+INV-H1-000152,,contract_number_mismatch,invoice quotes contract 'INS-H4-2024-2049'; this agreement is 'INS-H1-2024-0417'
+INV-H1-000179,H1-L00179-06,service_date_out_of_window,service date 2026-07-24 falls outside the term 2024-01-01 to 2025-12-31
+INV-H1-000179,H1-L00179-04,unknown_service,description 'Amb Gastrointestinal Discharge Plng' does not identify any contracted service (best candidate scored 0.26)
+INV-H1-000186,H1-L00186-03,line_total_arithmetic,line total 1102600 != unit price 179600 x quantity 6 (= 1077600)
+INV-H1-000186,H1-L00186-01,volume_discount_incorrectly_applied,'Intermittent Pulmonary Rehabilitation Programme' billed at 12105; the contract rate is 13450. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000201,,contract_number_mismatch,invoice quotes contract 'INS-H4-2024-2049'; this agreement is 'INS-H1-2024-0417'
+INV-H1-000201,H1-L00201-08,bundle_not_applied,'Advanced Cardiac Recovery Room Occupancy' billed at 20000; the contract rate is 16400. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000201,H1-L00201-09,bundle_not_applied,'Routine Cardiac Specimen Analysis' billed at 23350; the contract rate is 19150. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000211,H1-L00211-05,wrong_unit_basis,billed 'per_unit_dispensed'; 'Inpatient Ophthalmic Radiotherapy Fraction' is billed 'per_item'
+INV-H1-000211,H1-L00211-08,exclusion_window_violation,"'Standard Paediatric Biopsy Procedure' billed on 2024-06-14, within 10 days of 'Advanced Infectious Critical Care Occupancy' on 2024-06-24 (10 day(s) apart) -- Section 10"
+INV-H1-000219,H1-L00219-09,malformed_service_date,service date '2024-00-17' is not a valid date
+INV-H1-000219,H1-L00219-05,unknown_service,description 'Cont Pulm Spcm Analysis' does not identify any contracted service (best candidate scored 0.28)
+INV-H1-000219,H1-L00219-06,volume_discount_incorrectly_applied,'Intermittent Pulmonary Rehabilitation Programme' billed at 12105; the contract rate is 13450. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000227,,invoice_total_mismatch,invoice total 5492725 != sum of line totals 5392725
+INV-H1-000227,H1-L00227-11,daily_cap_exceeded,'Comprehensive Oncology Nursing Observation': 14 units billed for patient PT-H1-000055 on 2024-07-12; Section 8 caps this at 12
+INV-H1-000231,H1-L00231-07,cross_invoice_duplicate,'Preoperative Otolaryngologic Sterilisation Service' already billed for patient PT-H1-000031 on 2024-03-12 (line H1-L00079-05 of invoice INV-H1-000079)
+INV-H1-000236,H1-L00236-03,wrong_unit_basis,billed 'per_visit'; 'Outpatient Metabolic Radiotherapy Fraction' is billed 'per_item'
+INV-H1-000236,H1-L00236-03,unit_price_mismatch,'Outpatient Metabolic Radiotherapy Fraction' billed at 8225; the contract rate is 22775 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000236,H1-L00236-10,premium_omitted,'Emergency Renal Radiotherapy Fraction' billed at 11000; the contract rate is 13200. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000257,H1-L00257-04,line_total_arithmetic,line total 82700 != unit price 37600 x quantity 2 (= 75200)
+INV-H1-000257,H1-L00257-11,wrong_unit_basis,billed 'per_procedure'; 'Ambulatory Immunologic Ward Bed Occupancy' is billed 'per_day'
+INV-H1-000271,H1-L00271-19,bundle_not_applied,'Routine Cardiac Specimen Analysis' billed at 23350; the contract rate is 19150. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000271,H1-L00271-20,bundle_not_applied,'Advanced Cardiac Recovery Room Occupancy' billed at 20000; the contract rate is 16400. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000274,H1-L00274-01,service_date_after_invoice_date,service date 2024-09-18 is after the invoice date 2024-09-04
+INV-H1-000274,H1-L00274-08,service_date_after_invoice_date,service date 2024-09-10 is after the invoice date 2024-09-04
+INV-H1-000281,H1-L00281-10,malformed_service_date,service date '31/02/2024' is not a valid date
+INV-H1-000281,,invoice_total_mismatch,invoice total 5732823 != sum of line totals 5731823
+INV-H1-000281,H1-L00281-08,premium_incorrectly_applied,'Specialist Neurological Recovery Room Occupancy' billed at 20020; the contract rate is 15400. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000283,,contract_number_mismatch,invoice quotes contract 'INS-H3-2024-0562'; this agreement is 'INS-H1-2024-0417'
+INV-H1-000283,,invoice_total_mismatch,invoice total 1881268 != sum of line totals 1906268
+INV-H1-000304,H1-L00304-08,volume_discount_omitted,'Standard Otolaryngologic Radiotherapy Fraction' billed at 25250; the contract rate is 17675. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000304,H1-L00304-10,premium_incorrectly_applied,'Standard Pulmonary Dialysis Session' billed at 53969; the contract rate is 43175. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000304,H1-L00304-11,unknown_service,description 'Extended Ortho Ventilation Support' does not identify any contracted service (best candidate scored 0.28)
+INV-H1-000348,H1-L00348-02,unknown_service,description 'Outpatient Orthopaedic Pharm Dispensing /NG-2825' does not identify any contracted service (best candidate scored 0.27)
+INV-H1-000348,H1-L00348-03,premium_omitted,'Preoperative Geriatric Ventilation Support' billed at 6875; the contract rate is 8250. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000352,,invoice_total_mismatch,invoice total 1971430 != sum of line totals 1963930
+INV-H1-000352,H1-L00352-06,premium_incorrectly_applied,'Ambulatory Ophthalmic Dialysis Session' billed at 575790; the contract rate is 479825. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000362,H1-L00362-04,unit_price_mismatch,'Routine Infectious Critical Care Occupancy' billed at 72968; the contract rate is 58375 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000362,H1-L00362-07,premium_incorrectly_applied,'Continuous Musculoskeletal Wound Care' billed at 51520; the contract rate is 36800. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000369,H1-L00369-12,wrong_unit_basis,billed 'per_test'; 'Standard Otolaryngologic Radiotherapy Fraction' is billed 'per_item'
+INV-H1-000369,H1-L00369-15,unknown_service,description 'Supp Postoperative Ortho Nutritional' does not identify any contracted service (best candidate scored 0.27)
+INV-H1-000410,H1-L00410-04,unit_price_mismatch,'Advanced Metabolic Anaesthesia Administration' billed at 6900; the contract rate is 9200 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000410,H1-L00410-07,unknown_service,description 'Occ Advanced Orthopaedic Recovery Rm /NG-2920' does not identify any contracted service (best candidate scored 0.59)
+INV-H1-000429,,duplicate_invoice_id,"invoice identifier 'INV-H1-000429' is used by 2 separate invoice records (dates 2024-12-23, 2025-03-10)"
+INV-H1-000457,,duplicate_invoice_id,"invoice identifier 'INV-H1-000457' is used by 2 separate invoice records (dates 2025-01-17, 2025-02-03)"
+INV-H1-000457,H1-L00483-02,wrong_unit_basis,billed 'per_unit_dispensed'; 'Extended Geriatric Wound Care' is billed 'per_item'
+INV-H1-000458,H1-L00458-03,volume_discount_omitted,'Ambulatory Pulmonary Recovery Room Occupancy' billed at 112825; the contract rate is 101543. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000548,,duplicate_invoice_id,"invoice identifier 'INV-H1-000548' is used by 2 separate invoice records (dates 2025-04-05, 2025-05-10)"
+INV-H1-000548,H1-L00601-16,exclusion_window_violation,"'Standard Paediatric Biopsy Procedure' billed on 2025-04-27, within 10 days of 'Advanced Infectious Critical Care Occupancy' on 2025-05-07 (10 day(s) apart) -- Section 10"
+INV-H1-000552,H1-L00552-12,malformed_service_date,service date '2025-02-30' is not a valid date
+INV-H1-000552,H1-L00552-14,line_total_arithmetic,line total 442532 != unit price 112508 x quantity 4 (= 450032)
+INV-H1-000552,H1-L00552-15,wrong_unit_basis,billed 'per_item'; 'Postoperative Metabolic Critical Care Occupancy' is billed 'per_night'
+INV-H1-000571,H1-L00571-03,line_total_arithmetic,line total 19605 != unit price 12105 x quantity 1 (= 12105)
+INV-H1-000571,H1-L00571-04,unknown_service,description 'Metabolic - Lab Pnl' does not identify any contracted service (best candidate scored 0.40)
+INV-H1-000619,H1-L00619-07,premium_omitted,'Emergency Renal Radiotherapy Fraction' billed at 11000; the contract rate is 13200. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000629,,contract_number_mismatch,invoice quotes contract 'INS-H4-2024-2049'; this agreement is 'INS-H1-2024-0417'
+INV-H1-000635,H1-L00635-01,wrong_unit_basis,billed 'per_item'; 'Intermittent Dermatologic Transfusion Service' is billed 'per_procedure'
+INV-H1-000635,H1-L00635-02,unit_price_mismatch,'Inpatient Vascular Diagnostic Imaging' billed at 6362; the contract rate is 12725 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000646,H1-L00646-06,premium_incorrectly_applied,'Ambulatory Ophthalmic Case Conference' billed at 20310; the contract rate is 16925. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000646,H1-L00646-07,unit_price_mismatch,'Standard Endocrine Endoscopic Procedure' billed at 62225; the contract rate is 124450 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000646,H1-L00646-09,exclusion_window_violation,"'Advanced Metabolic Anaesthesia Administration' billed on 2025-06-07, within 7 days of 'Standard Endocrine Endoscopic Procedure' on 2025-06-14 (7 day(s) apart) -- Section 10"
+INV-H1-000650,H1-L00650-07,malformed_service_date,service date '2025-06-31' is not a valid date
+INV-H1-000657,H1-L00657-02,wrong_unit_basis,"billed 'per_night'; no plausible service (Ambulatory Immunologic Endoscopic Procedure, Preoperative Immunologic Endoscopic Procedure) is billed 'per_night'"
+INV-H1-000659,H1-L00659-07,service_date_out_of_window,service date 2023-02-24 falls outside the term 2024-01-01 to 2025-12-31
+INV-H1-000659,H1-L00659-09,service_date_out_of_window,service date 2022-12-30 falls outside the term 2024-01-01 to 2025-12-31
+INV-H1-000659,H1-L00659-01,bundle_not_applied,'Advanced Cardiac Recovery Room Occupancy' billed at 20000; the contract rate is 16400. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000659,H1-L00659-02,bundle_not_applied,'Routine Cardiac Specimen Analysis' billed at 23350; the contract rate is 19150. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000667,H1-L00667-07,unknown_service,description 'Adv  Renal Consultation' does not identify any contracted service (best candidate scored 0.49)
+INV-H1-000674,H1-L00674-08,service_date_after_invoice_date,service date 2025-08-07 is after the invoice date 2025-07-11
+INV-H1-000675,H1-L00675-01,unit_price_mismatch,'Specialist Neurological Recovery Room Occupancy' billed at 25025; the contract rate is 20020 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> threshold premium +30% -> no volume discount)
+INV-H1-000675,H1-L00675-07,cross_invoice_duplicate,'Ambulatory Infectious Home Visit' already billed for patient PT-H1-000221 on 2025-01-10 (line H1-L00450-04 of invoice INV-H1-000450)
+INV-H1-000677,H1-L00677-05,unit_price_mismatch,'Supervised Renal Isolation Room Occupancy' billed at 287875; the contract rate is 164500 (base rate -> facility multiplier x1 -> plan-tier multiplier x1 -> no premium -> no volume discount)
+INV-H1-000677,H1-L00677-12,wrong_unit_basis,billed 'per_night'; 'Comprehensive Infectious Nursing Observation' is billed 'per_day'
+INV-H1-000677,H1-L00677-18,cross_invoice_duplicate,'Extended Metabolic Isolation Room Occupancy' already billed for patient PT-H1-000016 on 2024-10-16 (line H1-L00346-03 of invoice INV-H1-000346)
+INV-H1-000703,H1-L00703-05,line_total_arithmetic,line total 28200 != unit price 17850 x quantity 2 (= 35700)
+INV-H1-000703,H1-L00703-01,wrong_unit_basis,billed 'per_hour'; 'Intermittent Pulmonary Rehabilitation Programme' is billed 'per_visit'
+INV-H1-000717,H1-L00717-10,wrong_unit_basis,billed 'per_hour'; 'Routine Dermatologic Transfusion Service' is billed 'per_unit_dispensed'
+INV-H1-000725,H1-L00725-10,daily_cap_exceeded,'Standard Endocrine Dialysis Session': 11 units billed for patient PT-H1-000212 on 2025-07-31; Section 8 caps this at 8
+INV-H1-000748,H1-L00748-08,service_date_out_of_window,service date 2026-05-12 falls outside the term 2024-01-01 to 2025-12-31
+INV-H1-000748,H1-L00748-12,service_date_after_invoice_date,service date 2025-09-13 is after the invoice date 2025-09-01
+INV-H1-000811,H1-L00811-02,volume_discount_omitted,'Comprehensive Infectious Nursing Observation' billed at 169825; the contract rate is 127369. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000811,H1-L00811-07,unknown_service,description 'Asst Specimen Anly' does not identify any contracted service (best candidate scored 0.42)
+INV-H1-000820,,invoice_total_mismatch,invoice total 2881532 != sum of line totals 2880532
+INV-H1-000820,H1-L00820-12,volume_discount_omitted,'Preoperative Immunologic Endoscopic Procedure' billed at 151975; the contract rate is 121580. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000847,H1-L00847-02,wrong_unit_basis,billed 'per_unit_dispensed'; 'Routine Cardiac Specimen Analysis' is billed 'per_item'
+INV-H1-000847,H1-L00847-17,exclusion_window_violation,"'Advanced Metabolic Anaesthesia Administration' billed on 2025-10-19, within 7 days of 'Standard Endocrine Endoscopic Procedure' on 2025-10-26 (7 day(s) apart) -- Section 10"
+INV-H1-000852,H1-L00852-12,service_date_out_of_window,service date 2026-07-01 falls outside the term 2024-01-01 to 2025-12-31
+INV-H1-000852,H1-L00852-18,cross_invoice_duplicate,'Intermittent Dermatologic Transfusion Service' already billed for patient PT-H1-000003 on 2024-07-26 (line H1-L00246-02 of invoice INV-H1-000246)
+INV-H1-000873,,contract_number_mismatch,invoice quotes contract 'INS-H5-2024-0731'; this agreement is 'INS-H1-2024-0417'
+INV-H1-000873,H1-L00873-10,bundle_not_applied,'Extended Palliative Laboratory Panel' billed at 17850; the contract rate is 15175. The billed figure is exactly the rate with this adjustment wrong.
+INV-H1-000873,H1-L00873-11,bundle_not_applied,'Inpatient Ophthalmic Radiotherapy Fraction' billed at 25300; the contract rate is 21500. The billed figure is exactly the rate with this adjustment wrong.

@@ -1,0 +1,52 @@
+{
+  "frozen_utc": "2026-09-21T12:14:09.349359+00:00",
+  "reason": "structural refactor of ab7bc8040ab8fe43 into src/shared + src/hospital_1; no logic change; predictions.csv byte-identical (predictions_sha256 unchanged)",
+  "sources": {
+    "src/shared/models.py": "b8cd41dee95fd93cbe3c2aa96e199d059c706b58ab1103006060f31e25ca982a",
+    "src/shared/data.py": "9cf5663f5388d98d90b81c0c127532ebf7670e75a226db36de64cefb195f337b",
+    "src/shared/money.py": "c3a2f83b297c2c70f33c1b8341537b22e92964dcd00db55b575dca55ce793a70",
+    "src/shared/submission.py": "17cdab951acc2961c3847b2db70274320cbbf49ea69f7d9512cd19efef19279a",
+    "src/hospital_1/contract.py": "42ac6b38acba8fcf717340525d598cd82c740c87b68829ccf4a9ab8a866bfe45",
+    "src/hospital_1/matcher.py": "f6305dc6e455162d86f38af959e9ee7a13321b0bca84a5b50171da8e472f7787",
+    "src/hospital_1/audit.py": "6d74452bc709900351479bc6703ddf0c34c778dbda3330b6ea801412ee46dc3c"
+  },
+  "combined_sha256": "7f075ea2733f1eff99bd25946127d249379453f61cc43e4142743b3ff4bc1527",
+  "predictions_sha256": "90b81da1a9129dac59458520a61a0b25794fd7a17d687466ed29aa91c35bba6b",
+  "matcher_thresholds": {
+    "MIN_PLAUSIBLE": 0.55,
+    "MIN_MATCH": 0.72,
+    "MIN_MARGIN": 0.05,
+    "CONTRADICTION_DECAY": 0.75
+  },
+  "abbreviation_count": 91,
+  "contract": {
+    "number": "INS-H1-2024-0417",
+    "services": 108,
+    "threshold_premiums": 9,
+    "non_business_day_uplifts": 7,
+    "volume_discount_tiers": 11,
+    "daily_caps": 7,
+    "bundles": 3,
+    "exclusion_windows": 6
+  },
+  "history": [
+    {
+      "frozen_utc": "2026-09-20T23:37:05.441736+00:00",
+      "reason": "initial freeze, before the holdout was read",
+      "combined_sha256": "ab7bc8040ab8fe431fded2cb5414792184cb59d541582a38cfdc465cf846a4a7",
+      "predictions_sha256": "90b81da1a9129dac59458520a61a0b25794fd7a17d687466ed29aa91c35bba6b",
+      "sources": {
+        "src/models.py": "9de72bae03cec54777d4c1cba03d701d751eb6f9f4cd17791b67a7fbddbb382f",
+        "src/contract_parser.py": "c60e5f871aeb19f4fd084b10ed0d09b20dcccf831fa9fbc9421359571a56230e",
+        "src/data.py": "c133301d69786bbd7a22627f73d774f60897629aec6096ceb19b25ebd65254c8",
+        "src/matcher.py": "c3ceeb356d69a924d48101366ada1c354fa39a6fa251d395d1441c3090c2ea40",
+        "src/context.py": "7ca6fdefb3f3a67549a9d6d80b5aff3796a2453f4681e3788ecff0a086ea4d7e",
+        "src/pricing.py": "a60b8422507f4c18d1ef0a9ec89ac5dc954af3ee62fd444efda4c4333bdabb92",
+        "src/validators.py": "e67b97015b3218b61afe81ddc1f3d7b6f640ad97a965337b7567ee25d67d2429",
+        "src/auditor.py": "074b5f82dfa3d7b7678955ff7487bb73c65befda3d9e316183a1fe50cd6df19a",
+        "src/confidence.py": "436b76c53bfe457c0fdee96c10e9f156d52b3d9a16862368566619891b05b588",
+        "src/pipeline.py": "cd2d049433d6f2365f39cc3ec9bf00d916be2b3ca2641a6ec282543c6ec57b1b"
+      }
+    }
+  ]
+}

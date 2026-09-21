@@ -1,117 +1,156 @@
-# Invoice Audit Exercise
+# Invoice audit — contract-driven, deterministic, per hospital
 
-Meridian Health Assurance Group reimburses five hospitals under five separately
-negotiated service contracts. Each hospital submits invoices for the patients
-it has treated. Some of those invoices are wrong — a rate that does not match
-the contract, an adjustment applied when it was not due or omitted when it was,
-a quantity beyond a contractual limit, a service billed twice.
+The exercise brief is in [`EXERCISE.md`](EXERCISE.md). This file describes the
+solution.
 
-Your job is to find the wrong ones.
+**Status:** Hospital 1 is implemented. Hospitals 2–5 are not yet implemented,
+and no production audit code exists for them. The Hospital 1 prediction path
+does not read or depend on Hospital 2–5 data.
 
-## What you have
+## Where things live
+
+The repository is organised **by hospital**. Everything that makes the
+Hospital 1 audit what it is lives in `src/hospital_1/`. `src/shared/` holds
+only what does not depend on any contract.
 
 ```
-contracts/hospital_1/ ... contracts/hospital_5/
-    The five contracts, as Markdown and as plain text. Each hospital's
-    contract is presented differently; one of them is split across several
-    documents. Read whichever format suits your tooling.
+src/
+├── main.py                  CLI. Orchestration only -- no audit logic.
+├── shared/                  hospital-independent
+│   ├── models.py            invoice schema, match outcome, audit result
+│   ├── data.py              JSONL -> physical invoice occurrences; CSV cross-check
+│   ├── money.py             integer cents, Decimal, ROUND_HALF_UP
+│   └── submission.py        audit results -> submission / predictions / findings CSV
+└── hospital_1/              the Hospital 1 solution
+    ├── contract.py          the Agreement -> ContractRules; fails loudly
+    ├── matcher.py           description -> MATCHED / AMBIGUOUS / UNKNOWN
+    ├── audit.py             context, pricing, checks, reconstruction, confidence
+    └── evaluation.py        labels, locked split, metrics, freeze, research
+                             (the ONLY module that reads labels)
 
-invoices/hospital_N_invoices.csv
-    One row per invoice: invoice_id, hospital_id, contract_number,
-    invoice_date, patient_id, facility_code, plan_tier, admission_date,
-    discharge_date, invoice_total_cents.
+tests/
+├── shared/                  test_data.py, test_money.py
+└── hospital_1/              conftest.py (a synthetic contract), test_contract.py,
+                             test_matching.py, test_audit.py, test_evaluation.py
 
-invoices/hospital_N_line_items.csv
-    One row per line item: line_id, invoice_id, line_no, service_date,
-    description, quantity, unit_basis_as_billed, unit_price_cents,
-    line_total_cents.
+outputs/                     deliverables
+├── submission.csv           template format
+└── hospital_1/
+    ├── predictions.csv      submission columns + uncertainty columns
+    ├── findings.csv         one row per finding, with its line
+    ├── evaluation.md        dev + locked-holdout scores
+    └── generalization_report.md   the honest write-up
 
-invoices/hospital_N_invoices.jsonl
-    The same data, one JSON object per invoice, with the line items nested.
-    Use whichever shape you prefer; they carry identical information.
+artifacts/hospital_1/        evidence behind the outputs
+├── split/                   dev_labels.csv, holdout_labels.csv (70/30, fixed seed)
+├── split_manifest.json      how the split was drawn, and when
+├── freeze.json              prediction-source hashes + predictions fingerprint
+├── service_matches.csv      every distinct description and how it was matched
+└── research/                temporal_evaluation.md, ablation.md (development only)
 
-labels/hospital_1_labels.csv
-    Ground truth for hospital 1 only — your development set.
-
-submission_template.csv
-    The format your predictions must take.
+prompts/hospital_1/          the prompts that produced this, versioned
+DECISION_LOG.md              readings of the contract, and why
 ```
 
-All money is an integer number of cents. There are no floating-point amounts
-anywhere in the data, and there should be none in your answer.
+### Reading `src/hospital_1/` in order
 
-The line-item `description` is the hospital's own free-text billing
-description. It is not a contract term, it is not a code, and the same
-contracted service is described many different ways across the data.
-Establishing which contracted service a description refers to is part of the
-task.
+1. **`contract.py`** — every rate, cap, threshold, uplift, discount, bundle
+   and exclusion window, parsed out of the Agreement with the clause it came
+   from. Nothing in the audit hardcodes a contract term.
+2. **`matcher.py`** — turns free text like `Procedure Immun Endosc /NG-7220`
+   into a contracted service, or says it cannot. Never looks at price.
+3. **`audit.py`** — the audit, in seven numbered sections: inputs, global
+   context, pricing (clause 3.2 in order), stateless checks, the auditor,
+   confidence, and the pipeline that wires them. Detection ("is it wrong?")
+   and reconstruction ("what should it cost?") are answered separately.
+4. **`evaluation.py`** — how the audit is measured, and the one place labels
+   are read.
 
-## The task
+The dependency runs one way: `evaluation.py` imports the prediction path;
+nothing on the prediction path imports `evaluation.py`.
+`tests/hospital_1/test_evaluation.py` checks that mechanically, including by
+hiding every label file and asserting that not one prediction changes.
 
-For hospitals hospital_2, hospital_3, hospital_4, hospital_5, decide for each invoice whether it is erroneous, and
-submit your predictions in the format of `submission_template.csv`:
+## Running it
 
-| column | meaning |
-|---|---|
-| `invoice_id` | the invoice you are making a claim about |
-| `flagged` | `1` if you believe the invoice is erroneous, `0` otherwise |
-| `error_category` | your own short label for what is wrong; free text |
-| `expected_total_cents` | what you believe the invoice *should* have totalled |
-| `billed_total_cents` | what it actually totalled |
-| `confidence` | your confidence in the row, between 0 and 1 |
+Python 3.11+. The engine uses only the standard library; pytest is for tests.
 
-Submit a row for every invoice you have an opinion about. Rows for invoices you
-believe are correct are useful and are scored.
+```bash
+pip install -r requirements.txt
+```
 
-Hospital 1 is labelled. Use it to develop and to calibrate; it is not scored.
+```bash
+python -m pytest tests -q
+```
 
-## How this is assessed
+```bash
+python -m src.main audit h1
+```
 
-**Complete coverage of all five contracts is not expected.** The exercise is
-deliberately larger than the time budget. Sequencing — deciding what to attempt
-first and what to leave — and reporting honestly on what you did not attempt
-are explicitly part of what is being evaluated. A submission covering two
-hospitals well, with a clear account of why those two and what would come next,
-is a stronger result than a thin pass over all four.
+```bash
+python -m src.main evaluate h1
+```
 
-**A confidently wrong extraction is worse than a flagged uncertainty.** If you
-tell us a rate is 42.00 and it is not, that error propagates silently into
-every invoice touching that service. If you tell us you are unsure, a human
-reviews it and the cost is a few minutes. Scoring reflects this: your stated
-`confidence` is used, and calibration is measured. Say what you do not know.
+```bash
+python -m src.main submission
+```
 
-## Time budget
+`audit` writes `outputs/hospital_1/{predictions,findings}.csv` and
+`artifacts/hospital_1/service_matches.csv`. `evaluate` writes
+`outputs/hospital_1/evaluation.md`. `submission` writes `outputs/submission.csv`
+in the template's format. Today it contains Hospital 1's rows only, because
+Hospital 1 is the only hospital implemented. Hospital 1 is the labelled
+development hospital and is not what the exercise scores.
 
-Six to eight hours, spread over one week. That is a **cap**, not a target. Do
-not exceed it. If you find yourself at the cap with work outstanding, stop and
-write down what you would have done next — that write-up is worth more to us
-than the extra hours.
+Development evidence. These commands read labels and are not needed to
+produce predictions:
 
-## AI assistance
+```bash
+python -m src.main research h1 temporal
+```
 
-Using AI assistance is permitted and expected. It must be disclosed. Include
-your prompts as versioned files in the repository (see deliverables) so we can
-see how you worked, not just what you produced.
+```bash
+python -m src.main research h1 ablation
+```
 
-## Deliverables
+```bash
+python -m src.main freeze h1 --reason "why the prediction path changed"
+```
 
-1. **A runnable repository.** We should be able to clone it, follow your README,
-   and reproduce your submission file. Pin your dependencies.
-2. **`submission.csv`** in the template format.
-3. **A short evaluation report** giving per-category performance on the
-   hospital 1 development set, and an error analysis grouped by *failure type*
-   — not a list of individual misses, but the three or four systematic ways
-   your approach goes wrong, with an example of each.
-4. **Your prompts, as versioned files** in the repository. If you iterated on a
-   prompt, we would like to see that it was iterated on.
-5. **A one-page decision log**: the assumptions you made, the ambiguities you
-   found and could not resolve, and what you decided to do about each. If you
-   read a clause two ways and had to pick one, that belongs here.
+`split h1` exists but refuses to run: the split is locked, and its manifest's
+creation time is evidence that it was drawn before development began.
 
-## Ground rules
+### The holdout gate
 
-- The data is synthetic. There are no real patients and no real hospitals.
-- Everything you need is in this package. There is nothing to look up
-  externally.
-- If something in a contract seems genuinely ambiguous, it may well be. Record
-  your reading and move on; do not spend the budget on it.
+`evaluate h1` scores the 30% holdout **only while the prediction sources are
+byte-identical to `artifacts/hospital_1/freeze.json`**. Edit any file on the
+prediction path and the report says the holdout is not evaluated, instead of
+printing a number that has stopped being an unseen measurement. Re-freezing
+requires a stated reason and keeps the earlier freeze in the record's history.
+
+## Hospital 1 in one table
+
+| | development (639) | locked holdout (274) |
+|---|---|---|
+| detection precision / recall | 1.000 / 1.000 | 1.000 / 1.000 |
+| TP / FP / TN / FN | 46 / 0 / 593 / 0 | 12 / 0 / 262 / 0 |
+| exact corrected total, where offered | 636 / 636 | 272 / 273 |
+| corrected total declined as unknowable | 3 | 1 |
+
+That holdout row contains one real failure: a matcher defect, analysed in §7
+of the generalization report and deliberately left unfixed. Fixing it after
+reading the holdout would spend the only unseen measurement. The per-category
+tables are in `outputs/hospital_1/evaluation.md`; most categories have
+single-digit support and are marked as such.
+
+## Adding a hospital
+
+When Hospital *N* is implemented, it gets `src/hospital_N/` and
+`tests/hospital_N/`, written for *its* contract. It should reuse `shared/`
+where that fits, and duplicate otherwise. Code moves into `shared/` only once
+two real implementations show it is actually shared. Hospital 1's structure
+(contract → matcher → audit → evaluation) is a starting point, not an
+interface to implement. No base classes, registries or plug-in points exist
+for hospitals that have not been built.
+
+`main.py` accepts `h1` only; a new hospital adds its own choice and calls.
