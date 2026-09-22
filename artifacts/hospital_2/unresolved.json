@@ -1,396 +1,23 @@
 {
-  "generated_utc": "2026-09-21T20:43:54+00:00",
+  "generated_utc": "2026-09-22T02:41:47+00:00",
   "counts": {
     "total_normalized_clusters": 441,
     "deterministic_matched_clusters": 358,
     "deterministic_unknown_clusters": 14,
     "semantic_required_clusters": 69,
     "semantic_required_line_occurrences": 2093,
-    "semantic_pending_clusters": 69,
-    "semantic_pending_line_occurrences": 2093,
+    "semantic_pending_clusters": 5,
+    "semantic_pending_line_occurrences": 135,
     "semantic_verified_matched_clusters": 0,
-    "semantic_verified_ambiguous_clusters": 0,
+    "semantic_verified_ambiguous_clusters": 64,
     "semantic_verified_unknown_clusters": 0,
-    "classifier_ok_clusters": 0,
-    "classifier_failed_clusters": 0,
-    "jev_answered_clusters": 0,
+    "classifier_ok_clusters": 67,
+    "classifier_failed_clusters": 2,
+    "jev_answered_clusters": 67,
     "total_unresolved_or_unknown_clusters": 83
   },
   "note": "Clusters without a single verified service. 'semantic_pending' clusters await the classifier and Jev and still take part in the audit as sets of possible services. 'deterministic_unknown' clusters were decided from the text alone (a recognised word contradicts every candidate) and are not semantic work. line_occurrences counts every invoice line carrying the description, before any per-line unit-basis tie-break.",
   "semantic_pending": [
-    {
-      "cluster_id": "c-52465acdc1",
-      "normalized_description": "adv endoscopic proc",
-      "raw_descriptions": [
-        "ADV ENDOSCOPIC PROC /SA-6974"
-      ],
-      "line_occurrences": 87,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Advanced Gastrointestinal Endoscopic Procedure"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-aa9862ba88",
-      "normalized_description": "postop anaes admin",
-      "raw_descriptions": [
-        "POSTOP ANAES ADMIN"
-      ],
-      "line_occurrences": 66,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Postoperative Ophthalmic Anaesthesia Administration"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-f3f2557267",
-      "normalized_description": "emer transp service",
-      "raw_descriptions": [
-        "EMER  TRANSP SERVICE /SA-9292"
-      ],
-      "line_occurrences": 63,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Emergency Haematology Transport Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-a64b7098c0",
-      "normalized_description": "elect transp svc",
-      "raw_descriptions": [
-        "ELECT TRANSP SVC"
-      ],
-      "line_occurrences": 62,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Elective Cardiac Transport Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-e59b7a94eb",
-      "normalized_description": "svc emer transp",
-      "raw_descriptions": [
-        "SVC EMER TRANSP"
-      ],
-      "line_occurrences": 59,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Emergency Haematology Transport Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-88581b2033",
-      "normalized_description": "disp foc pharm",
-      "raw_descriptions": [
-        "DISP FOC PHARM"
-      ],
-      "line_occurrences": 56,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Focused Pulmonary Pharmaceutical Dispensing"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-bd8b7c67ed",
-      "normalized_description": "ophth anaesthesia admin",
-      "raw_descriptions": [
-        "OPHTH - ANAESTHESIA ADMIN /SA-3643"
-      ],
-      "line_occurrences": 56,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Intermittent Ophthalmic Anaesthesia Administration",
-        "Postoperative Ophthalmic Anaesthesia Administration"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-596594fc2b",
-      "normalized_description": "emer transp svc",
-      "raw_descriptions": [
-        "EMER  TRANSP SVC /SA-1419"
-      ],
-      "line_occurrences": 55,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Emergency Haematology Transport Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-c9e5894573",
-      "normalized_description": "cardiac transp service",
-      "raw_descriptions": [
-        "CARDIAC  TRANSP SERVICE"
-      ],
-      "line_occurrences": 55,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Elective Cardiac Transport Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-6117a3d6bb",
-      "normalized_description": "interpretation neuro img",
-      "raw_descriptions": [
-        "INTERPRETATION NEURO IMG /SA-5989"
-      ],
-      "line_occurrences": 52,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Routine Neurological Imaging Interpretation",
-        "Supervised Neurological Imaging Interpretation"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-e2ccc6412b",
-      "normalized_description": "ent cs conf",
-      "raw_descriptions": [
-        "ENT CS CONF /SA-6459",
-        "ENT CS CONF /SA-5963"
-      ],
-      "line_occurrences": 46,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Comprehensive Otolaryngologic Case Conference"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-ce34e61373",
-      "normalized_description": "std telem monit",
-      "raw_descriptions": [
-        "STD  - TELEM MONIT",
-        "STD - TELEM MONIT /SA-8775"
-      ],
-      "line_occurrences": 45,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Standard Metabolic Telemetry Monitoring"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-2b06aa87d1",
-      "normalized_description": "beds pharm disp",
-      "raw_descriptions": [
-        "BEDS PHARM DISP"
-      ],
-      "line_occurrences": 39,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Bedside Pulmonary Pharmaceutical Dispensing"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-ac8bea5063",
-      "normalized_description": "ext radiother fract",
-      "raw_descriptions": [
-        "EXT RADIOTHER FRACT"
-      ],
-      "line_occurrences": 39,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Extended Orthopaedic Radiotherapy Fraction"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-fff7114c57",
-      "normalized_description": "img asst diag",
-      "raw_descriptions": [
-        "IMG ASST DIAG"
-      ],
-      "line_occurrences": 39,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Assisted Musculoskeletal Diagnostic Imaging"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-091cbabde0",
-      "normalized_description": "pulm pharm disp",
-      "raw_descriptions": [
-        "PULM PHARM DISP /SA-2727"
-      ],
-      "line_occurrences": 38,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Bedside Pulmonary Pharmaceutical Dispensing",
-        "Focused Pulmonary Pharmaceutical Dispensing"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-056282c49e",
-      "normalized_description": "spclst sterilisation svc",
-      "raw_descriptions": [
-        "SPCLST STERILISATION SVC"
-      ],
-      "line_occurrences": 36,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Specialist Psychiatric Sterilisation Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-3a5c37912b",
-      "normalized_description": "pall recov room occ",
-      "raw_descriptions": [
-        "PALL RECOV ROOM OCC"
-      ],
-      "line_occurrences": 36,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Focused Palliative Recovery Room Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-f0c76fd87e",
-      "normalized_description": "vasc transp svc",
-      "raw_descriptions": [
-        "VASC TRANSP SVC"
-      ],
-      "line_occurrences": 36,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Postoperative Vascular Transport Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-d3c7174179",
-      "normalized_description": "asst diag img",
-      "raw_descriptions": [
-        "ASST DIAG IMG /SA-7926"
-      ],
-      "line_occurrences": 35,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Assisted Musculoskeletal Diagnostic Imaging"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-3f541e0ce3",
-      "normalized_description": "pulm inf ther",
-      "raw_descriptions": [
-        "PULM INF THER /SA-9868"
-      ],
-      "line_occurrences": 33,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Postoperative Pulmonary Infusion Therapy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-183521e1e9",
-      "normalized_description": "postop thtr tm",
-      "raw_descriptions": [
-        "POSTOP THTR TM"
-      ],
-      "line_occurrences": 32,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Postoperative Paediatric Theatre Time"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-413f5a34b0",
-      "normalized_description": "occ std recov rm",
-      "raw_descriptions": [
-        "OCC STD RECOV RM"
-      ],
-      "line_occurrences": 31,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Standard Musculoskeletal Recovery Room Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
     {
       "cluster_id": "c-cae6b74c9e",
       "normalized_description": "asst diag imaging",
@@ -403,57 +30,9 @@
         "Assisted Musculoskeletal Diagnostic Imaging"
       ],
       "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-d45f47a99d",
-      "normalized_description": "fract beds radiother",
-      "raw_descriptions": [
-        "FRACT BEDS RADIOTHER /SA-5851"
-      ],
-      "line_occurrences": 30,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Bedside Ophthalmic Radiotherapy Fraction"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-f9ebf6366f",
-      "normalized_description": "postop inf ther",
-      "raw_descriptions": [
-        "POSTOP INF THER"
-      ],
-      "line_occurrences": 30,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Postoperative Pulmonary Infusion Therapy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-829a1ed9de",
-      "normalized_description": "otolaryngologic disch plng",
-      "raw_descriptions": [
-        "OTOLARYNGOLOGIC  DISCH PLNG /SA-6235"
-      ],
-      "line_occurrences": 29,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Continuous Otolaryngologic Discharge Planning"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "Jev verdict below the 0.90 threshold: ACCEPT=0.41, REJECT=0.59, UNCERTAIN=0.00"
     },
     {
       "cluster_id": "c-24ff039f5f",
@@ -468,9 +47,9 @@
         "Standard Orthopaedic Isolation Room Occupancy"
       ],
       "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
+      "classifier_status": "failed",
       "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
+      "reason": "classifier failed: attempt 2: provider error: unexpected provider envelope: {'id': 'gen-1790037907-7YGndIdvNC2RE9zGlTvw', 'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 131072 tokens, but can only afford 79721. To increase, ; attempt 3: provider error: HTTP Error 402: Payment Required"
     },
     {
       "cluster_id": "c-62ebc62ea4",
@@ -484,9 +63,9 @@
         "Preoperative Vascular Imaging Interpretation"
       ],
       "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "Jev verdict below the 0.90 threshold: ACCEPT=0.41, REJECT=0.59, UNCERTAIN=0.00"
     },
     {
       "cluster_id": "c-25306efce4",
@@ -501,170 +80,9 @@
         "Intermittent Otolaryngologic Rehabilitation Programme"
       ],
       "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
+      "classifier_status": "failed",
       "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-6634a0e30f",
-      "normalized_description": "psych transf svc",
-      "raw_descriptions": [
-        "PSYCH TRANSF SVC"
-      ],
-      "line_occurrences": 27,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Standard Psychiatric Transfusion Service"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-a8f573655c",
-      "normalized_description": "msk recovery rm occ",
-      "raw_descriptions": [
-        "MSK RECOVERY RM OCC"
-      ],
-      "line_occurrences": 27,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Standard Musculoskeletal Recovery Room Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-38a6b2d3d9",
-      "normalized_description": "inpt isol rm occ",
-      "raw_descriptions": [
-        "INPT ISOL RM OCC"
-      ],
-      "line_occurrences": 26,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Inpatient Paediatric Isolation Room Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-49bd3a10ec",
-      "normalized_description": "endo cs conf",
-      "raw_descriptions": [
-        "ENDO  CS CONF"
-      ],
-      "line_occurrences": 26,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Advanced Endocrine Case Conference"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-f0a976dcf8",
-      "normalized_description": "asst biop proc",
-      "raw_descriptions": [
-        "ASST BIOP PROC"
-      ],
-      "line_occurrences": 26,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Assisted Gastrointestinal Biopsy Procedure"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-6e0a8106be",
-      "normalized_description": "sess card dial",
-      "raw_descriptions": [
-        "SESS CARD DIAL"
-      ],
-      "line_occurrences": 24,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Focused Cardiac Dialysis Session"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-9094fb408c",
-      "normalized_description": "supervised biopsy proc",
-      "raw_descriptions": [
-        "SUPERVISED BIOPSY PROC"
-      ],
-      "line_occurrences": 24,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Supervised Haematology Biopsy Procedure"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-9ab22bdf91",
-      "normalized_description": "neuro rehab prog",
-      "raw_descriptions": [
-        "NEURO  REHAB PROG"
-      ],
-      "line_occurrences": 24,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Intensive Neurological Rehabilitation Programme",
-        "Postoperative Neurological Rehabilitation Programme"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-1c0858a35a",
-      "normalized_description": "metab lab panel",
-      "raw_descriptions": [
-        "METAB LAB PANEL"
-      ],
-      "line_occurrences": 23,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Supervised Metabolic Laboratory Panel"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-46e2e7cf5a",
-      "normalized_description": "observation card nursing",
-      "raw_descriptions": [
-        "OBSERVATION  CARD NURSING"
-      ],
-      "line_occurrences": 22,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Elective Cardiac Nursing Observation"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
+      "reason": "classifier failed: attempt 2: provider error: HTTP Error 402: Payment Required; attempt 3: provider error: HTTP Error 402: Payment Required"
     },
     {
       "cluster_id": "c-54a3891f4d",
@@ -678,468 +96,9 @@
         "Extended Vascular Home Visit"
       ],
       "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-a3f90bb108",
-      "normalized_description": "std recov rm occ",
-      "raw_descriptions": [
-        "STD RECOV RM OCC"
-      ],
-      "line_occurrences": 22,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Standard Musculoskeletal Recovery Room Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-d1bec38e27",
-      "normalized_description": "interp supervised img",
-      "raw_descriptions": [
-        "INTERP  SUPERVISED IMG /SA-6042"
-      ],
-      "line_occurrences": 22,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Supervised Neurological Imaging Interpretation"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-de5b709ff8",
-      "normalized_description": "paed theatre tm",
-      "raw_descriptions": [
-        "PAED THEATRE TM /SA-1156"
-      ],
-      "line_occurrences": 22,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Emergency Paediatric Theatre Time",
-        "Postoperative Paediatric Theatre Time"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-6c3e770460",
-      "normalized_description": "emer thtr tm",
-      "raw_descriptions": [
-        "EMER THTR TM /SA-2118"
-      ],
-      "line_occurrences": 21,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Emergency Paediatric Theatre Time"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-90ffd35fc6",
-      "normalized_description": "pnl foc lab",
-      "raw_descriptions": [
-        "PNL FOC LAB /SA-4377"
-      ],
-      "line_occurrences": 21,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Focused Ophthalmic Laboratory Panel"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-a2694f606d",
-      "normalized_description": "occ intens wd bd",
-      "raw_descriptions": [
-        "OCC INTENS WD BD"
-      ],
-      "line_occurrences": 21,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Intensive Palliative Ward Bed Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-eedb721f97",
-      "normalized_description": "paed inf ther",
-      "raw_descriptions": [
-        "PAED  INF THER"
-      ],
-      "line_occurrences": 21,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Intensive Paediatric Infusion Therapy",
-        "Standard Paediatric Infusion Therapy"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-73207fe65c",
-      "normalized_description": "neurological rehab prog",
-      "raw_descriptions": [
-        "NEUROLOGICAL REHAB PROG /SA-9661"
-      ],
-      "line_occurrences": 20,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Intensive Neurological Rehabilitation Programme",
-        "Postoperative Neurological Rehabilitation Programme"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-bfb9d5a818",
-      "normalized_description": "paediatric inf ther",
-      "raw_descriptions": [
-        "PAEDIATRIC  INF THER"
-      ],
-      "line_occurrences": 20,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Intensive Paediatric Infusion Therapy",
-        "Standard Paediatric Infusion Therapy"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-cf03267737",
-      "normalized_description": "amb nutritional supp",
-      "raw_descriptions": [
-        "AMB NUTRITIONAL SUPP /SA-7761"
-      ],
-      "line_occurrences": 20,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Ambulatory Haematology Nutritional Support"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-dcd66ed416",
-      "normalized_description": "anly derm spcm",
-      "raw_descriptions": [
-        "ANLY - DERM SPCM"
-      ],
-      "line_occurrences": 20,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Advanced Dermatologic Specimen Analysis",
-        "Extended Dermatologic Specimen Analysis"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-0729223b15",
-      "normalized_description": "preop spcm anly",
-      "raw_descriptions": [
-        "PREOP SPCM ANLY /SA-5067"
-      ],
-      "line_occurrences": 19,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Preoperative Cardiac Specimen Analysis"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-599dba09b3",
-      "normalized_description": "admin ophth anaes",
-      "raw_descriptions": [
-        "ADMIN OPHTH ANAES /SA-6486"
-      ],
-      "line_occurrences": 19,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Intermittent Ophthalmic Anaesthesia Administration",
-        "Postoperative Ophthalmic Anaesthesia Administration"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-8cef1b5ec0",
-      "normalized_description": "ophth lab pnl",
-      "raw_descriptions": [
-        "OPHTH LAB PNL"
-      ],
-      "line_occurrences": 19,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Focused Ophthalmic Laboratory Panel",
-        "Routine Ophthalmic Laboratory Panel"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-98a470f518",
-      "normalized_description": "analysis card spcm",
-      "raw_descriptions": [
-        "ANALYSIS CARD SPCM"
-      ],
-      "line_occurrences": 19,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Intermittent Cardiac Specimen Analysis",
-        "Preoperative Cardiac Specimen Analysis"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-ad5bda0f6a",
-      "normalized_description": "supv img interp",
-      "raw_descriptions": [
-        "SUPV  IMG INTERP"
-      ],
-      "line_occurrences": 19,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Supervised Neurological Imaging Interpretation"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-e26eed1d13",
-      "normalized_description": "vst vascular hm",
-      "raw_descriptions": [
-        "VST VASCULAR HM /SA-8814"
-      ],
-      "line_occurrences": 19,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Extended Vascular Home Visit"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-1e727b9ff9",
-      "normalized_description": "proc hep endosc",
-      "raw_descriptions": [
-        "PROC HEP ENDOSC"
-      ],
-      "line_occurrences": 18,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Supervised Hepatic Endoscopic Procedure"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-a3609e5e62",
-      "normalized_description": "card nurs obs",
-      "raw_descriptions": [
-        "CARD  NURS OBS"
-      ],
-      "line_occurrences": 18,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Elective Cardiac Nursing Observation"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-bca929f045",
-      "normalized_description": "rtn physio sess",
-      "raw_descriptions": [
-        "RTN PHYSIO SESS"
-      ],
-      "line_occurrences": 18,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Routine Geriatric Physiotherapy Session"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-47a7b761bf",
-      "normalized_description": "msk diag img",
-      "raw_descriptions": [
-        "MSK  DIAG IMG"
-      ],
-      "line_occurrences": 17,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Assisted Musculoskeletal Diagnostic Imaging",
-        "Supervised Musculoskeletal Diagnostic Imaging"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-58e1b5194f",
-      "normalized_description": "orthopaedic isol rm occ",
-      "raw_descriptions": [
-        "ORTHOPAEDIC ISOL RM OCC"
-      ],
-      "line_occurrences": 17,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Postoperative Orthopaedic Isolation Room Occupancy",
-        "Standard Orthopaedic Isolation Room Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-468013ea9f",
-      "normalized_description": "ther standard inf",
-      "raw_descriptions": [
-        "THER  STANDARD INF"
-      ],
-      "line_occurrences": 16,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Standard Paediatric Infusion Therapy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-504e1fcd23",
-      "normalized_description": "sess preop physio",
-      "raw_descriptions": [
-        "SESS PREOP PHYSIO"
-      ],
-      "line_occurrences": 16,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Preoperative Obstetric Physiotherapy Session"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-60347fffcc",
-      "normalized_description": "interm rehab prog",
-      "raw_descriptions": [
-        "INTERM  REHAB PROG"
-      ],
-      "line_occurrences": 16,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Intermittent Otolaryngologic Rehabilitation Programme"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-3995ceec2d",
-      "normalized_description": "occ preop isol rm",
-      "raw_descriptions": [
-        "OCC PREOP ISOL RM"
-      ],
-      "line_occurrences": 15,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Preoperative Neurological Isolation Room Occupancy"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-d816bda672",
-      "normalized_description": "haem biop proc",
-      "raw_descriptions": [
-        "HAEM BIOP PROC /SA-6522"
-      ],
-      "line_occurrences": 15,
-      "deterministic_method": "tied_candidates",
-      "candidates": [
-        "Outpatient Haematology Biopsy Procedure",
-        "Supervised Haematology Biopsy Procedure"
-      ],
-      "unit_basis_tiebreak_eligible": true,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
-    },
-    {
-      "cluster_id": "c-67704c6e5e",
-      "normalized_description": "routine lab pnl",
-      "raw_descriptions": [
-        "ROUTINE LAB PNL /SA-5904"
-      ],
-      "line_occurrences": 14,
-      "deterministic_method": "missing_discriminator",
-      "candidates": [
-        "Routine Ophthalmic Laboratory Panel"
-      ],
-      "unit_basis_tiebreak_eligible": false,
-      "classifier_status": "not_run",
-      "jev_status": "not_exported",
-      "reason": "semantic classification not yet run"
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "Jev verdict below the 0.90 threshold: ACCEPT=0.35, REJECT=0.65, UNCERTAIN=0.00"
     }
   ],
   "deterministic_unknown": [
@@ -1340,6 +299,1048 @@
       "reason": null
     }
   ],
-  "semantic_verified_ambiguous": [],
+  "semantic_verified_ambiguous": [
+    {
+      "cluster_id": "c-52465acdc1",
+      "normalized_description": "adv endoscopic proc",
+      "raw_descriptions": [
+        "ADV ENDOSCOPIC PROC /SA-6974"
+      ],
+      "line_occurrences": 87,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Advanced Gastrointestinal Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description gives the qualifier (ADV) and service type (Endoscopic Procedure) but omits the specialty word 'Gastrointestinal', which is needed to distinguish this candidate from advanced endoscopic procedures of other specialties not listed in the contract."
+    },
+    {
+      "cluster_id": "c-aa9862ba88",
+      "normalized_description": "postop anaes admin",
+      "raw_descriptions": [
+        "POSTOP ANAES ADMIN"
+      ],
+      "line_occurrences": 66,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Ophthalmic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"POSTOP ANAES ADMIN\" expands to Postoperative Anaesthesia Administration but omits the specialty word \"Ophthalmic\", which is needed to distinguish this candidate from postoperative anaesthesia administration of other specialties the contract does not list."
+    },
+    {
+      "cluster_id": "c-f3f2557267",
+      "normalized_description": "emer transp service",
+      "raw_descriptions": [
+        "EMER  TRANSP SERVICE /SA-9292"
+      ],
+      "line_occurrences": 63,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Haematology Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'emer transp service' omits the clinical specialty word 'Haematology', which is needed to distinguish this candidate from other Emergency Transport Services of different specialties that the contract does not list."
+    },
+    {
+      "cluster_id": "c-a64b7098c0",
+      "normalized_description": "elect transp svc",
+      "raw_descriptions": [
+        "ELECT TRANSP SVC"
+      ],
+      "line_occurrences": 62,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description expands to 'elective transport service' but omits the specialty word 'Cardiac', which is needed to distinguish this candidate from other elective transport services of the same kind not listed in the contract."
+    },
+    {
+      "cluster_id": "c-e59b7a94eb",
+      "normalized_description": "svc emer transp",
+      "raw_descriptions": [
+        "SVC EMER TRANSP"
+      ],
+      "line_occurrences": 59,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Haematology Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'svc emer transp' expands to 'Service Emergency Transport' but omits the clinical specialty word 'Haematology' needed to distinguish this candidate from an emergency transport service of another specialty not listed in the contract."
+    },
+    {
+      "cluster_id": "c-88581b2033",
+      "normalized_description": "disp foc pharm",
+      "raw_descriptions": [
+        "DISP FOC PHARM"
+      ],
+      "line_occurrences": 56,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Pulmonary Pharmaceutical Dispensing"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: DISP FOC PHARM expands to 'Focused Pharmaceutical Dispensing' but omits the specialty word 'Pulmonary', which is needed to distinguish the candidate from focused pharmaceutical dispensing of other specialties not listed in this contract."
+    },
+    {
+      "cluster_id": "c-bd8b7c67ed",
+      "normalized_description": "ophth anaesthesia admin",
+      "raw_descriptions": [
+        "OPHTH - ANAESTHESIA ADMIN /SA-3643"
+      ],
+      "line_occurrences": 56,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intermittent Ophthalmic Anaesthesia Administration",
+        "Postoperative Ophthalmic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'ophth anaesthesia admin' matches the specialty and service type of both candidates but omits the qualifier (Intermittent vs Postoperative) needed to distinguish them, so more than one candidate is a reasonable reading."
+    },
+    {
+      "cluster_id": "c-596594fc2b",
+      "normalized_description": "emer transp svc",
+      "raw_descriptions": [
+        "EMER  TRANSP SVC /SA-1419"
+      ],
+      "line_occurrences": 55,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Haematology Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'emer transp svc' names an emergency transport service but omits the specialty word 'Haematology', which is needed to distinguish this candidate from other emergency transport services the contract does not list."
+    },
+    {
+      "cluster_id": "c-c9e5894573",
+      "normalized_description": "cardiac transp service",
+      "raw_descriptions": [
+        "CARDIAC  TRANSP SERVICE"
+      ],
+      "line_occurrences": 55,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"Transp\" reads as transport and \"cardiac ... service\" matches the specialty and service type, but the qualifier \"Elective\" is omitted, so the description cannot be distinguished from a non-elective cardiac transport service the contract does not list."
+    },
+    {
+      "cluster_id": "c-6117a3d6bb",
+      "normalized_description": "interpretation neuro img",
+      "raw_descriptions": [
+        "INTERPRETATION NEURO IMG /SA-5989"
+      ],
+      "line_occurrences": 52,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Routine Neurological Imaging Interpretation",
+        "Supervised Neurological Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'interpretation neuro img' matches the specialty and service type of both candidates but omits the qualifier ('Routine' vs 'Supervised') needed to distinguish them, and no word in it selects one over the other."
+    },
+    {
+      "cluster_id": "c-e2ccc6412b",
+      "normalized_description": "ent cs conf",
+      "raw_descriptions": [
+        "ENT CS CONF /SA-6459",
+        "ENT CS CONF /SA-5963"
+      ],
+      "line_occurrences": 46,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Comprehensive Otolaryngologic Case Conference"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'ENT' maps to Otolaryngologic and 'CONF' to Conference, but 'CS' reads most naturally as 'Case', leaving the qualifier 'Comprehensive' unstated, so the description cannot be told apart from a differently qualified Otolaryngologic Case Conference."
+    },
+    {
+      "cluster_id": "c-ce34e61373",
+      "normalized_description": "std telem monit",
+      "raw_descriptions": [
+        "STD  - TELEM MONIT",
+        "STD - TELEM MONIT /SA-8775"
+      ],
+      "line_occurrences": 45,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Metabolic Telemetry Monitoring"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"std telem monit\" expands to Standard Telemetry Monitoring but omits the specialty word \"Metabolic\", which is needed to distinguish the candidate from other same-kind services such as Standard Cardiac Telemetry Monitoring that this contract does not list."
+    },
+    {
+      "cluster_id": "c-2b06aa87d1",
+      "normalized_description": "beds pharm disp",
+      "raw_descriptions": [
+        "BEDS PHARM DISP"
+      ],
+      "line_occurrences": 39,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Bedside Pulmonary Pharmaceutical Dispensing"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"BEDS PHARM DISP\" could be shorthand for Bedside Pulmonary Pharmaceutical Dispensing, but \"beds\" is equally a natural abbreviation for beds/bed occupancy, a different service kind not listed here, so the description does not uniquely identify the candidate."
+    },
+    {
+      "cluster_id": "c-ac8bea5063",
+      "normalized_description": "ext radiother fract",
+      "raw_descriptions": [
+        "EXT RADIOTHER FRACT"
+      ],
+      "line_occurrences": 39,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Extended Orthopaedic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'ext radiother fract' reads as Extended Radiotherapy Fraction but omits the specialty word 'Orthopaedic', so it could equally denote a radiotherapy fraction of another specialty not listed in this contract. The missing specialty word prevents a unique match."
+    },
+    {
+      "cluster_id": "c-fff7114c57",
+      "normalized_description": "img asst diag",
+      "raw_descriptions": [
+        "IMG ASST DIAG"
+      ],
+      "line_occurrences": 39,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Assisted Musculoskeletal Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: IMG ASST DIAG matches Assisted Diagnostic Imaging but omits the specialty word 'Musculoskeletal', so it could equally refer to diagnostic imaging of another specialty not listed in the contract."
+    },
+    {
+      "cluster_id": "c-091cbabde0",
+      "normalized_description": "pulm pharm disp",
+      "raw_descriptions": [
+        "PULM PHARM DISP /SA-2727"
+      ],
+      "line_occurrences": 38,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Bedside Pulmonary Pharmaceutical Dispensing",
+        "Focused Pulmonary Pharmaceutical Dispensing"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'pulm pharm disp' matches the specialty and service type of both candidates but omits the qualifier ('Bedside' vs 'Focused') needed to distinguish them, so more than one candidate is a reasonable reading."
+    },
+    {
+      "cluster_id": "c-056282c49e",
+      "normalized_description": "spclst sterilisation svc",
+      "raw_descriptions": [
+        "SPCLST STERILISATION SVC"
+      ],
+      "line_occurrences": 36,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Specialist Psychiatric Sterilisation Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description supplies the qualifier (SPCLST = Specialist) and service type (STERILISATION SVC) but omits the clinical specialty 'Psychiatric', which is needed to distinguish this candidate from a non-psychiatric sterilisation service the contract does not list."
+    },
+    {
+      "cluster_id": "c-3a5c37912b",
+      "normalized_description": "pall recov room occ",
+      "raw_descriptions": [
+        "PALL RECOV ROOM OCC"
+      ],
+      "line_occurrences": 36,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Palliative Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"PALL RECOV ROOM OCC\" matches the specialty (Palliative) and service type (Recovery Room Occupancy) but omits the qualifier \"Focused\", the word needed to distinguish this candidate from other qualifier variants of the same service that the contract does not list."
+    },
+    {
+      "cluster_id": "c-f0c76fd87e",
+      "normalized_description": "vasc transp svc",
+      "raw_descriptions": [
+        "VASC TRANSP SVC"
+      ],
+      "line_occurrences": 36,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Vascular Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: VASC TRANSP SVC matches the specialty and service type of Postoperative Vascular Transport Service, but omits the qualifier, so it could equally denote a Routine or Advanced vascular transport service not listed here."
+    },
+    {
+      "cluster_id": "c-d3c7174179",
+      "normalized_description": "asst diag img",
+      "raw_descriptions": [
+        "ASST DIAG IMG /SA-7926"
+      ],
+      "line_occurrences": 35,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Assisted Musculoskeletal Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'asst diag img' expands to 'Assisted Diagnostic Imaging' but omits the specialty word 'Musculoskeletal', which is needed to distinguish this candidate from other diagnostic imaging services of the same kind the contract does not list."
+    },
+    {
+      "cluster_id": "c-3f541e0ce3",
+      "normalized_description": "pulm inf ther",
+      "raw_descriptions": [
+        "PULM INF THER /SA-9868"
+      ],
+      "line_occurrences": 33,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Pulmonary Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"pulm inf ther\" reads as Pulmonary Infusion Therapy but omits the qualifier \"Postoperative\", which is needed to distinguish the contracted service from other qualifiers of the same specialty and service type not listed in this contract. The trailing \"/SA-9868\" is a billing number and carries no meaning."
+    },
+    {
+      "cluster_id": "c-183521e1e9",
+      "normalized_description": "postop thtr tm",
+      "raw_descriptions": [
+        "POSTOP THTR TM"
+      ],
+      "line_occurrences": 32,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'POSTOP THTR TM' expands to 'Postoperative Theatre Time', matching the qualifier and service type but omitting the specialty word 'Paediatric', so it could equally denote a non-paediatric theatre time service not listed in this contract."
+    },
+    {
+      "cluster_id": "c-413f5a34b0",
+      "normalized_description": "occ std recov rm",
+      "raw_descriptions": [
+        "OCC STD RECOV RM"
+      ],
+      "line_occurrences": 31,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'occ std recov rm' supplies the qualifier (STD) and service type (Recovery Room Occupancy) but omits the clinical specialty, so it cannot distinguish Musculoskeletal Recovery Room Occupancy from an identically named recovery room service of another specialty not listed in this contract."
+    },
+    {
+      "cluster_id": "c-d45f47a99d",
+      "normalized_description": "fract beds radiother",
+      "raw_descriptions": [
+        "FRACT BEDS RADIOTHER /SA-5851"
+      ],
+      "line_occurrences": 30,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Bedside Ophthalmic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The shorthand 'fract beds radiother' plausibly reads as 'Fraction Bedside Radiotherapy', matching the candidate's qualifier and service type, but it omits the specialty word 'Ophthalmic' needed to distinguish it from a bedside radiotherapy fraction of another specialty not listed in this contract."
+    },
+    {
+      "cluster_id": "c-f9ebf6366f",
+      "normalized_description": "postop inf ther",
+      "raw_descriptions": [
+        "POSTOP INF THER"
+      ],
+      "line_occurrences": 30,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Pulmonary Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description expands to 'Postoperative Infusion Therapy', matching the qualifier and service type, but omits the specialty word 'Pulmonary' that distinguishes this candidate from other kinds of postoperative infusion therapy not listed in the contract."
+    },
+    {
+      "cluster_id": "c-829a1ed9de",
+      "normalized_description": "otolaryngologic disch plng",
+      "raw_descriptions": [
+        "OTOLARYNGOLOGIC  DISCH PLNG /SA-6235"
+      ],
+      "line_occurrences": 29,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Continuous Otolaryngologic Discharge Planning"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'otolaryngologic disch plng' expands to Otolaryngologic Discharge Planning but omits the qualifier 'Continuous', which is needed to distinguish the listed service from other qualified discharge planning services of the same kind not listed in this contract."
+    },
+    {
+      "cluster_id": "c-6634a0e30f",
+      "normalized_description": "psych transf svc",
+      "raw_descriptions": [
+        "PSYCH TRANSF SVC"
+      ],
+      "line_occurrences": 27,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Psychiatric Transfusion Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"PSYCH TRANSF SVC\" expands to Psychiatric Transfusion Service, matching the specialty and service type, but it omits the qualifier \"Standard\", which is the word distinguishing this candidate from other qualifier variants of the same psychiatric transfusion service that the contract does not list."
+    },
+    {
+      "cluster_id": "c-a8f573655c",
+      "normalized_description": "msk recovery rm occ",
+      "raw_descriptions": [
+        "MSK RECOVERY RM OCC"
+      ],
+      "line_occurrences": 27,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"MSK RECOVERY RM OCC\" identifies Musculoskeletal Recovery Room Occupancy but omits the qualifier \"Standard\", the word needed to distinguish this candidate from other-qualifier recovery room occupancy services the contract does not list."
+    },
+    {
+      "cluster_id": "c-38a6b2d3d9",
+      "normalized_description": "inpt isol rm occ",
+      "raw_descriptions": [
+        "INPT ISOL RM OCC"
+      ],
+      "line_occurrences": 26,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Inpatient Paediatric Isolation Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"INPT ISOL RM OCC\" matches Inpatient Isolation Room Occupancy but omits the specialty word \"Paediatric\", which is needed to distinguish the candidate from an adult isolation room occupancy service of the same kind that this contract does not list."
+    },
+    {
+      "cluster_id": "c-49bd3a10ec",
+      "normalized_description": "endo cs conf",
+      "raw_descriptions": [
+        "ENDO  CS CONF"
+      ],
+      "line_occurrences": 26,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Advanced Endocrine Case Conference"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"endo\" and \"conf\" read as Endocrine Conference and \"cs\" plausibly as \"case\", but the qualifier \"Advanced\" is omitted, and that word is needed to tell Advanced Endocrine Case Conference apart from a standard endocrine case conference this contract does not list; \"cs\" is itself uncertain shorthand for \"case\"."
+    },
+    {
+      "cluster_id": "c-f0a976dcf8",
+      "normalized_description": "asst biop proc",
+      "raw_descriptions": [
+        "ASST BIOP PROC"
+      ],
+      "line_occurrences": 26,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Assisted Gastrointestinal Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"ASST BIOP PROC\" expands to Assisted Biopsy Procedure but omits the specialty word \"Gastrointestinal\", which is needed to distinguish this candidate from other assisted biopsy procedures of different specialties that the contract does not list."
+    },
+    {
+      "cluster_id": "c-6e0a8106be",
+      "normalized_description": "sess card dial",
+      "raw_descriptions": [
+        "SESS CARD DIAL"
+      ],
+      "line_occurrences": 24,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Cardiac Dialysis Session"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"sess card dial\" reads as Session/Cardiac/Dialysis, matching the specialty and service type of Focused Cardiac Dialysis Session, but it omits the qualifier \"Focused\" (no FOC/ADV-like token), so it could equally describe an unqualified or differently qualified Cardiac Dialysis Session that this contract does not list."
+    },
+    {
+      "cluster_id": "c-9094fb408c",
+      "normalized_description": "supervised biopsy proc",
+      "raw_descriptions": [
+        "SUPERVISED BIOPSY PROC"
+      ],
+      "line_occurrences": 24,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Haematology Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description matches qualifier and type ('Supervised', 'Biopsy Procedure') but omits the specialty word 'Haematology', which is needed to distinguish it from supervised biopsies of other specialties not listed in this contract."
+    },
+    {
+      "cluster_id": "c-9ab22bdf91",
+      "normalized_description": "neuro rehab prog",
+      "raw_descriptions": [
+        "NEURO  REHAB PROG"
+      ],
+      "line_occurrences": 24,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Neurological Rehabilitation Programme",
+        "Postoperative Neurological Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'neuro rehab prog' matches the specialty and service type of both candidates but omits the qualifier (Intensive vs Postoperative) needed to distinguish them, so more than one candidate is a reasonable reading."
+    },
+    {
+      "cluster_id": "c-1c0858a35a",
+      "normalized_description": "metab lab panel",
+      "raw_descriptions": [
+        "METAB LAB PANEL"
+      ],
+      "line_occurrences": 23,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Metabolic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"Metab lab panel\" matches Metabolic Laboratory Panel but omits the qualifier \"Supervised\", which distinguishes this service from an unsupervised panel of the same kind not listed in the contract. The description is therefore insufficient to identify exactly one contracted service."
+    },
+    {
+      "cluster_id": "c-46e2e7cf5a",
+      "normalized_description": "observation card nursing",
+      "raw_descriptions": [
+        "OBSERVATION  CARD NURSING"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Nursing Observation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"Card\" reads as Cardiac and \"observation nursing\" as Nursing Observation, but the description omits the qualifier \"Elective\", which is needed to distinguish this candidate from a non-elective cardiac nursing observation service of the same kind that this contract does not list."
+    },
+    {
+      "cluster_id": "c-a3f90bb108",
+      "normalized_description": "std recov rm occ",
+      "raw_descriptions": [
+        "STD RECOV RM OCC"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: STD RECOV RM OCC expands to Standard Recovery Room Occupancy, giving the qualifier and service type but omitting the clinical specialty word (Musculoskeletal) needed to distinguish this candidate from a same-kind service under another specialty not listed here."
+    },
+    {
+      "cluster_id": "c-d1bec38e27",
+      "normalized_description": "interp supervised img",
+      "raw_descriptions": [
+        "INTERP  SUPERVISED IMG /SA-6042"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Neurological Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'interp' and 'supervised' match the qualifier and service type of Supervised Neurological Imaging Interpretation, but the description omits the specialty word 'Neurological', so it could equally denote a supervised imaging interpretation of another specialty not listed in this contract."
+    },
+    {
+      "cluster_id": "c-de5b709ff8",
+      "normalized_description": "paed theatre tm",
+      "raw_descriptions": [
+        "PAED THEATRE TM /SA-1156"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Emergency Paediatric Theatre Time",
+        "Postoperative Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'paed theatre tm' matches the specialty and service type (Paediatric Theatre Time) but omits the qualifier needed to distinguish Emergency from Postoperative, both of which are listed candidates."
+    },
+    {
+      "cluster_id": "c-6c3e770460",
+      "normalized_description": "emer thtr tm",
+      "raw_descriptions": [
+        "EMER THTR TM /SA-2118"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: EMER THTR TM reads as Emergency Theatre Time, but the description omits the specialty word Paediatric, so it could equally denote a non-paediatric emergency theatre time service not listed in this contract."
+    },
+    {
+      "cluster_id": "c-90ffd35fc6",
+      "normalized_description": "pnl foc lab",
+      "raw_descriptions": [
+        "PNL FOC LAB /SA-4377"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: PNL FOC LAB matches 'Panel Focused Laboratory', but the specialty word 'Ophthalmic' is omitted, so it could equally denote a focused laboratory panel of another specialty not listed."
+    },
+    {
+      "cluster_id": "c-a2694f606d",
+      "normalized_description": "occ intens wd bd",
+      "raw_descriptions": [
+        "OCC INTENS WD BD"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Intensive Palliative Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description matches every word of 'Intensive Palliative Ward Bed Occupancy' (INTENS, WD, BD, OCC) but omits the specialty word 'Palliative', so it could equally describe an intensive ward bed occupancy of a different specialty that this contract does not list."
+    },
+    {
+      "cluster_id": "c-eedb721f97",
+      "normalized_description": "paed inf ther",
+      "raw_descriptions": [
+        "PAED  INF THER"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Paediatric Infusion Therapy",
+        "Standard Paediatric Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'paed inf ther' expands to Paediatric Infusion Therapy but omits the qualifier (Intensive vs Standard) that distinguishes the two contracted services, and no word in it selects one over the other."
+    },
+    {
+      "cluster_id": "c-73207fe65c",
+      "normalized_description": "neurological rehab prog",
+      "raw_descriptions": [
+        "NEUROLOGICAL REHAB PROG /SA-9661"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Neurological Rehabilitation Programme",
+        "Postoperative Neurological Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'neurological rehab prog' names the specialty and service type but omits the qualifier, so it fits both 'Intensive' (20.2) and 'Postoperative' (20.3) Neurological Rehabilitation Programme equally well."
+    },
+    {
+      "cluster_id": "c-bfb9d5a818",
+      "normalized_description": "paediatric inf ther",
+      "raw_descriptions": [
+        "PAEDIATRIC  INF THER"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Paediatric Infusion Therapy",
+        "Standard Paediatric Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'paediatric inf ther' identifies Paediatric Infusion Therapy but omits the qualifier (Intensive vs Standard) that distinguishes the two contracted candidates, so both are reasonable readings."
+    },
+    {
+      "cluster_id": "c-cf03267737",
+      "normalized_description": "amb nutritional supp",
+      "raw_descriptions": [
+        "AMB NUTRITIONAL SUPP /SA-7761"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Ambulatory Haematology Nutritional Support"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'AMB' and 'NUTRITIONAL SUPP' match the qualifier and service type of Ambulatory Haematology Nutritional Support, but the clinical specialty 'Haematology' is omitted, so the description cannot be distinguished from an ambulatory nutritional support service of another specialty that this contract does not list."
+    },
+    {
+      "cluster_id": "c-dcd66ed416",
+      "normalized_description": "anly derm spcm",
+      "raw_descriptions": [
+        "ANLY - DERM SPCM"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Advanced Dermatologic Specimen Analysis",
+        "Extended Dermatologic Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description expands to 'analysis dermatologic specimen', which matches the specialty and service type of both candidates, but it omits the qualifier word (ADV/EXT) needed to distinguish Advanced from Extended Dermatologic Specimen Analysis."
+    },
+    {
+      "cluster_id": "c-0729223b15",
+      "normalized_description": "preop spcm anly",
+      "raw_descriptions": [
+        "PREOP SPCM ANLY /SA-5067"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Preoperative Cardiac Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: PREOP, SPCM and ANLY map to Preoperative Specimen Analysis, but the specialty word (Cardiac) is omitted, so the description could equally denote a non-cardiac specimen analysis not listed under this contract."
+    },
+    {
+      "cluster_id": "c-599dba09b3",
+      "normalized_description": "admin ophth anaes",
+      "raw_descriptions": [
+        "ADMIN OPHTH ANAES /SA-6486"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intermittent Ophthalmic Anaesthesia Administration",
+        "Postoperative Ophthalmic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'admin ophth anaes' identifies Ophthalmic Anaesthesia Administration but omits the qualifier needed to distinguish 'Intermittent' (6.1) from 'Postoperative' (24.2), both of which are equally reasonable readings."
+    },
+    {
+      "cluster_id": "c-8cef1b5ec0",
+      "normalized_description": "ophth lab pnl",
+      "raw_descriptions": [
+        "OPHTH LAB PNL"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Focused Ophthalmic Laboratory Panel",
+        "Routine Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'OPHTH LAB PNL' matches both Focused and Routine Ophthalmic Laboratory Panel; the qualifier is omitted, so the description cannot distinguish between them."
+    },
+    {
+      "cluster_id": "c-98a470f518",
+      "normalized_description": "analysis card spcm",
+      "raw_descriptions": [
+        "ANALYSIS CARD SPCM"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intermittent Cardiac Specimen Analysis",
+        "Preoperative Cardiac Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description 'analysis card spcm' reads as 'Cardiac Specimen Analysis' but omits any qualifier (e.g. 'intermittent' or 'preoperative'), so both candidate services are equally reasonable readings."
+    },
+    {
+      "cluster_id": "c-ad5bda0f6a",
+      "normalized_description": "supv img interp",
+      "raw_descriptions": [
+        "SUPV  IMG INTERP"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Neurological Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"SUPV IMG INTERP\" expands to \"Supervised Imaging Interpretation\", which matches the qualifier and service type but omits the specialty word \"Neurological\"; imaging interpretation could equally refer to a non-neurological specialty service not listed here, so the description does not uniquely identify the candidate."
+    },
+    {
+      "cluster_id": "c-e26eed1d13",
+      "normalized_description": "vst vascular hm",
+      "raw_descriptions": [
+        "VST VASCULAR HM /SA-8814"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Extended Vascular Home Visit"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'VST' and 'HM' read as shorthand for 'Vascular Home Visit', but the description omits the qualifier 'Extended', which is needed to distinguish this candidate from other kinds of vascular home visit the contract does not list."
+    },
+    {
+      "cluster_id": "c-1e727b9ff9",
+      "normalized_description": "proc hep endosc",
+      "raw_descriptions": [
+        "PROC HEP ENDOSC"
+      ],
+      "line_occurrences": 18,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Hepatic Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: PROC HEP ENDOSC matches the specialty (Hepatic) and service type (Endoscopic Procedure), but the qualifier is omitted; 'Supervised' is a qualifier that could be dropped in shorthand, yet the description cannot confirm it against other unlisted hepatic endoscopic procedures."
+    },
+    {
+      "cluster_id": "c-a3609e5e62",
+      "normalized_description": "card nurs obs",
+      "raw_descriptions": [
+        "CARD  NURS OBS"
+      ],
+      "line_occurrences": 18,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Nursing Observation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"CARD NURS OBS\" identifies the specialty (Cardiac) and service type (Nursing Observation) but omits the qualifier, so it cannot be distinguished from a non-elective (e.g., Routine) Cardiac Nursing Observation that this contract does not list."
+    },
+    {
+      "cluster_id": "c-bca929f045",
+      "normalized_description": "rtn physio sess",
+      "raw_descriptions": [
+        "RTN PHYSIO SESS"
+      ],
+      "line_occurrences": 18,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Routine Geriatric Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'RTN PHYSIO SESS' expands to 'Routine Physiotherapy Session' but omits 'Geriatric', the word distinguishing the contracted service from other physiotherapy sessions of the same kind not listed in this contract."
+    },
+    {
+      "cluster_id": "c-47a7b761bf",
+      "normalized_description": "msk diag img",
+      "raw_descriptions": [
+        "MSK  DIAG IMG"
+      ],
+      "line_occurrences": 17,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Assisted Musculoskeletal Diagnostic Imaging",
+        "Supervised Musculoskeletal Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'MSK DIAG IMG' expands to Musculoskeletal Diagnostic Imaging but omits the qualifier that distinguishes the two candidates, 'Assisted' versus 'Supervised', so both are equally reasonable readings."
+    },
+    {
+      "cluster_id": "c-58e1b5194f",
+      "normalized_description": "orthopaedic isol rm occ",
+      "raw_descriptions": [
+        "ORTHOPAEDIC ISOL RM OCC"
+      ],
+      "line_occurrences": 17,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Postoperative Orthopaedic Isolation Room Occupancy",
+        "Standard Orthopaedic Isolation Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description gives only 'Orthopaedic Isolation Room Occupancy' and omits the qualifier that distinguishes the two candidates, Postoperative versus Standard, so both are equally reasonable readings."
+    },
+    {
+      "cluster_id": "c-468013ea9f",
+      "normalized_description": "ther standard inf",
+      "raw_descriptions": [
+        "THER  STANDARD INF"
+      ],
+      "line_occurrences": 16,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Paediatric Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: \"STANDARD\" and \"INF\" (with \"THER\" read as \"Therapy\") match Standard Infusion Therapy, but the description omits the specialty word \"Paediatric\" needed to distinguish this candidate from other standard infusion therapy services the contract does not list."
+    },
+    {
+      "cluster_id": "c-504e1fcd23",
+      "normalized_description": "sess preop physio",
+      "raw_descriptions": [
+        "SESS PREOP PHYSIO"
+      ],
+      "line_occurrences": 16,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Preoperative Obstetric Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: SESS PREOP PHYSIO reads as a preoperative physiotherapy session, but it omits the specialty word Obstetric, so it could equally describe a non-obstetric preoperative physiotherapy session not listed under this contract."
+    },
+    {
+      "cluster_id": "c-60347fffcc",
+      "normalized_description": "interm rehab prog",
+      "raw_descriptions": [
+        "INTERM  REHAB PROG"
+      ],
+      "line_occurrences": 16,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Intermittent Otolaryngologic Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'interm' could abbreviate 'Intermittent' or 'Intermediate', and the description omits the specialty word (Otolaryngologic) needed to distinguish this rehabilitation programme from same-kind programmes of other specialties not listed here."
+    },
+    {
+      "cluster_id": "c-3995ceec2d",
+      "normalized_description": "occ preop isol rm",
+      "raw_descriptions": [
+        "OCC PREOP ISOL RM"
+      ],
+      "line_occurrences": 15,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Preoperative Neurological Isolation Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description gives OCC, PREOP, ISOL and RM, matching the service type and qualifier, but omits the clinical specialty word 'Neurological', so it cannot be distinguished from a preoperative isolation room occupancy of another specialty not listed in this contract."
+    },
+    {
+      "cluster_id": "c-d816bda672",
+      "normalized_description": "haem biop proc",
+      "raw_descriptions": [
+        "HAEM BIOP PROC /SA-6522"
+      ],
+      "line_occurrences": 15,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Outpatient Haematology Biopsy Procedure",
+        "Supervised Haematology Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: 'haem biop proc' expands to 'Haematology Biopsy Procedure' but omits the qualifier that distinguishes the two candidates, 'Outpatient' versus 'Supervised', so both are equally reasonable readings."
+    },
+    {
+      "cluster_id": "c-67704c6e5e",
+      "normalized_description": "routine lab pnl",
+      "raw_descriptions": [
+        "ROUTINE LAB PNL /SA-5904"
+      ],
+      "line_occurrences": 14,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Routine Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "ok",
+      "jev_status": "answered",
+      "reason": "verified AMBIGUOUS: The description matches 'Routine', 'Lab' (Laboratory) and 'Pnl' (Panel) but omits the specialty word 'Ophthalmic', which is needed to distinguish this candidate from a routine laboratory panel of another specialty not listed in this contract."
+    }
+  ],
   "semantic_verified_unknown": []
 }

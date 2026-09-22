@@ -88,6 +88,22 @@ class InvalidClassifierOutput(SemanticError):
 # Configuration
 # ==========================================================================
 
+DEFAULT_CLASSIFIER_MAX_TOKENS = 4096
+
+
+def _positive_int(name: str, default: int) -> int:
+    raw = _env(name)
+    if raw is None:
+        return default
+    try:
+        value = int(raw)
+    except ValueError:
+        raise SemanticError(f"{name} must be a positive integer, got {raw!r}") from None
+    if value <= 0:
+        raise SemanticError(f"{name} must be a positive integer, got {raw!r}")
+    return value
+
+
 @dataclass(frozen=True)
 class SemanticConfig:
     """Everything external, from the environment.  No credential is ever stored."""
@@ -101,6 +117,11 @@ class SemanticConfig:
     jev_api_url: Optional[str]
     jev_api_key: Optional[str]
     jev_threshold: float
+    # Upper bound on the classifier's output tokens.  The 69-cluster run sent
+    # none, so each request asked for the model's maximum (131072); once the
+    # remaining credit could not cover that, OpenRouter refused with HTTP 402
+    # ("can only afford 79721") -- the two failed clusters.  Not rerun.
+    classifier_max_tokens: int = DEFAULT_CLASSIFIER_MAX_TOKENS
 
     @classmethod
     def from_env(cls) -> "SemanticConfig":
@@ -116,6 +137,8 @@ class SemanticConfig:
             # TYPESAFE_API_KEY is preferred; JEV_API_KEY is accepted as a fallback.
             jev_api_key=_env("TYPESAFE_API_KEY") or _env("JEV_API_KEY"),
             jev_threshold=float(_env("JEV_THRESHOLD") or "0.90"),
+            classifier_max_tokens=_positive_int(
+                "H2_CLASSIFIER_MAX_TOKENS", DEFAULT_CLASSIFIER_MAX_TOKENS),
         )
 
     def readiness(self) -> dict[str, str]:
@@ -263,6 +286,7 @@ def openrouter_transport(config: SemanticConfig) -> Transport:
         body = {
             "model": config.classifier_model,
             "temperature": 0,
+            "max_tokens": config.classifier_max_tokens,
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
@@ -497,23 +521,34 @@ def export_jev_batch(doc: dict, contract: H2Contract, config: SemanticConfig) ->
     return state, questions
 
 
+#: Where a response keeps its verdicts.  ``answers`` is what the TypeSafe
+#: SystemOne API returns (observed live, jev-1.13.0); ``results`` is this
+#: project's own Playground import format.
+JEV_ANSWER_CONTAINERS = ("answers", "results")
+
+
 def normalize_jev_results(raw: object, model: str) -> dict[str, dict]:
     """Validate raw verdicts into the one internal shape, or raise listing
-    every problem.  Accepts ``{"model": ..., "results": {question_id: item}}``
-    or a bare ``{question_id: item}``.  Each item needs ``choice`` and all
-    three ``probabilities``; ``confidence`` and ``model`` are optional but
-    must agree if present."""
+    every problem.
+
+    The verdicts are read from exactly one container: ``answers`` (the real
+    API response) or ``results`` (Playground import).  Everything else at the
+    top level -- ``usage`` token accounting, ``model`` -- is response metadata
+    and is never read as a question id.  A response with no container, or
+    with both, is refused rather than guessed at.
+    """
     if not isinstance(raw, dict):
-        raise SemanticError("Jev results must be a JSON object")
+        raise SemanticError("Jev response must be a JSON object")
     if raw.get("model") not in (None, model):
-        raise SemanticError(f"results are for model {raw.get('model')!r}, expected {model!r}")
-    if "results" in raw:
-        items = raw["results"]
-    else:
-        # Bare per-question results, optionally beside a top-level "model".
-        items = {k: v for k, v in raw.items() if k != "model"}
+        raise SemanticError(f"response is for model {raw.get('model')!r}, expected {model!r}")
+    present = [c for c in JEV_ANSWER_CONTAINERS if c in raw]
+    if len(present) != 1:
+        raise SemanticError(
+            f"Jev response must contain exactly one of {JEV_ANSWER_CONTAINERS}; "
+            f"top-level keys were {sorted(raw)}")
+    items = raw[present[0]]
     if not isinstance(items, dict) or not items:
-        raise SemanticError("no Jev results found")
+        raise SemanticError(f"'{present[0]}' must be a non-empty object keyed by question id")
 
     out: dict[str, dict] = {}
     errors: list[str] = []
@@ -528,8 +563,14 @@ def normalize_jev_results(raw: object, model: str) -> dict[str, dict]:
 
 
 def _normalize_one(item: object, model: str) -> dict:
+    """One answer.  ``confidence`` is Jev's own reported number and is kept as
+    reported: it is *not* the top probability (a live answer had P(ACCEPT) =
+    0.92 with confidence 0.87).  The gate never reads it -- it decides on the
+    probabilities alone."""
     if not isinstance(item, dict):
-        raise SemanticError("result is not an object")
+        raise SemanticError("answer is not an object")
+    if item.get("type") not in (None, "choice"):
+        raise SemanticError(f"answer type {item.get('type')!r} is not 'choice'")
     choice = item.get("choice")
     if choice not in JEV_OUTCOMES:
         raise SemanticError(f"choice {choice!r} not in {JEV_OUTCOMES}")
@@ -546,13 +587,19 @@ def _normalize_one(item: object, model: str) -> dict:
         raise SemanticError(f"probabilities sum to {sum(clean.values()):.3f}, not 1")
     if clean[choice] < max(clean.values()) - 1e-9:
         raise SemanticError(f"choice {choice} is not the most probable outcome")
-    if "confidence" in item:
-        c = item["confidence"]
-        if not isinstance(c, (int, float)) or isinstance(c, bool) or abs(c - clean[choice]) > 0.02:
-            raise SemanticError(f"confidence {c!r} disagrees with P({choice})={clean[choice]}")
+    confidence = item.get("confidence")
+    if confidence is not None and (
+        not isinstance(confidence, (int, float)) or isinstance(confidence, bool)
+        or confidence != confidence or not 0 <= confidence <= 1
+    ):
+        raise SemanticError(f"confidence {confidence!r} is not a number in [0, 1]")
     if item.get("model") not in (None, model):
         raise SemanticError(f"model {item.get('model')!r}, expected {model!r}")
-    return {"choice": choice, "probabilities": clean, "confidence": clean[choice], "model": model}
+    return {"choice": choice, "probabilities": clean,
+            # As reported, or None if Jev did not report one.  Never derived
+            # from the probabilities, and never used by the gate.
+            "confidence": None if confidence is None else float(confidence),
+            "model": model}
 
 
 def jev_gate(probs: dict[str, float], threshold: float) -> str:
@@ -629,11 +676,12 @@ def jev_request(config: SemanticConfig, state: dict, questions: dict) -> urllib.
 def jev_http_transport(config: SemanticConfig) -> JevTransport:
     """Direct API adapter -- the only transport-specific Jev code.
 
-    Sends ``jev_request`` and returns the decoded body unchanged.  The body's
-    per-question Choice results (``choice``, ``probabilities``,
-    ``confidence``) are validated by ``normalize_jev_results`` -- the same
-    function a Playground import goes through -- so the API and the
-    Playground share one interpretation and one gate.
+    Sends ``jev_request`` and returns the decoded body unchanged.  The live
+    response is ``{"model", "answers": {question_id: {"type": "choice",
+    "choice", "probabilities", "confidence"}}, "usage": {...}}``; the answers
+    are validated by ``normalize_jev_results`` -- the same function a
+    Playground import goes through -- so the API and the Playground share one
+    interpretation and one gate.
     """
     if not config.jev_api_key:
         raise SemanticError("TYPESAFE_API_KEY (or JEV_API_KEY) is not set; use jev-export / jev-import")
@@ -839,8 +887,9 @@ def run_classifier(
     limit: Optional[int] = None,
     retry_failed: bool = False,
 ) -> dict[str, int]:
-    """Classify each pending cluster once.  Repeated descriptions share a
-    cluster, so each distinct normalised description costs one call."""
+    """One classification operation is performed per pending description
+    cluster (repeated descriptions share a cluster).  Bounded retries may
+    result in multiple HTTP requests for that cluster."""
     template = load_prompt(CLASSIFIER_PROMPT_FILE)
     by_id = {cluster_id(k): (k, c) for k, c in clusters.items()}
     stats = {"called": 0, "ok": 0, "failed": 0, "skipped": 0}

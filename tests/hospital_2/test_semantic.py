@@ -125,6 +125,34 @@ def test_no_api_key_means_no_transport():
         S.openrouter_transport(config(openrouter_api_key=None))
 
 
+def test_classifier_request_bounds_output_tokens(monkeypatch):
+    """The 69-cluster run sent no max_tokens, so every request asked for the
+    model's maximum (131072) and two failed with HTTP 402 once credit could
+    not cover that.  The request now carries a small, configurable bound."""
+    sent = []
+
+    def fake_urlopen(request, timeout):
+        sent.append(json.loads(request.data.decode("utf-8")))
+        return _FakeResponse({"choices": [{"message": {"content": answer(AMBIGUOUS)}}]})
+
+    monkeypatch.setattr(S.urllib.request, "urlopen", fake_urlopen)
+    S.openrouter_transport(config(openrouter_api_key="k"))("sys", "user")
+    assert sent[0]["max_tokens"] == S.DEFAULT_CLASSIFIER_MAX_TOKENS == 4096
+    S.openrouter_transport(config(openrouter_api_key="k", classifier_max_tokens=512))("s", "u")
+    assert sent[1]["max_tokens"] == 512
+
+
+def test_classifier_max_tokens_comes_from_the_environment(monkeypatch):
+    monkeypatch.setenv("H2_CLASSIFIER_MAX_TOKENS", "2048")
+    assert S.SemanticConfig.from_env().classifier_max_tokens == 2048
+    monkeypatch.setenv("H2_CLASSIFIER_MAX_TOKENS", "")
+    assert S.SemanticConfig.from_env().classifier_max_tokens == 4096
+    for bad in ("0", "-5", "lots"):
+        monkeypatch.setenv("H2_CLASSIFIER_MAX_TOKENS", bad)
+        with pytest.raises(S.SemanticError, match="H2_CLASSIFIER_MAX_TOKENS"):
+            S.SemanticConfig.from_env()
+
+
 def test_repeated_descriptions_are_classified_once(doc, clusters, contract):
     calls = []
     def count(system, user):
@@ -277,7 +305,11 @@ def test_no_verdict_means_unresolved(doc, clusters, contract, matcher):
     (_verdict("ACCEPT", True, 0, 0), r"\[0, 1\]"),
     (_verdict("ACCEPT", 0.5, 0.1, 0.1), "sum"),
     (_verdict("REJECT", 0.95, 0.03, 0.02), "most probable"),
-    (_verdict("ACCEPT", 0.95, 0.03, 0.02, confidence=0.5), "confidence"),
+    (_verdict("ACCEPT", 0.95, 0.03, 0.02, confidence=1.5), "confidence"),
+    (_verdict("ACCEPT", 0.95, 0.03, 0.02, confidence="high"), "confidence"),
+    (_verdict("ACCEPT", 0.95, 0.03, 0.02, confidence=True), "confidence"),
+    (_verdict("ACCEPT", 0.95, 0.03, 0.02, confidence=float("nan")), "confidence"),
+    ({**_verdict("ACCEPT", 0.95, 0.03, 0.02), "type": "free_text"}, "type"),
     (_verdict("ACCEPT", 0.95, 0.03, 0.02, model="jev-0.1"), "model"),
 ])
 def test_malformed_results_fail_safely(doc, clusters, contract, matcher, bad, match):
@@ -332,7 +364,7 @@ def test_api_and_playground_use_the_same_gate(doc, clusters, contract, matcher):
         assert set(questions) == {f"verify_{c}" for c in state["cases"]}
         for qid in questions:
             verdicts[qid] = _verdict("ACCEPT", 0.96, 0.02, 0.02)
-        return {"model": "jev-1.13.0", "results": verdicts}
+        return {"model": "jev-1.13.0", "answers": verdicts, "usage": {"input_tokens": 1}}
 
     stats = S.run_jev(api_doc, contract, config(), fake_api)
     assert stats == {"applied": 2, "asked": 2}
@@ -348,7 +380,7 @@ def test_api_and_playground_use_the_same_gate(doc, clusters, contract, matcher):
 def test_api_results_are_validated_like_imports(doc, clusters, contract):
     _classify(doc, clusters, contract)
     with pytest.raises(S.SemanticError, match="sum"):
-        S.run_jev(doc, contract, config(), lambda s, q: {qid: _verdict("ACCEPT", 0.5, 0.1, 0.1) for qid in q})
+        S.run_jev(doc, contract, config(), lambda s, q: {"answers": {qid: _verdict("ACCEPT", 0.5, 0.1, 0.1) for qid in q}})
 
 
 def test_jev_api_needs_only_a_key():
@@ -434,10 +466,10 @@ def test_api_response_is_normalised_like_a_playground_import(doc, clusters, cont
     def fake_urlopen(request, timeout):
         body = json.loads(request.data.decode("utf-8"))
         sent.append((request, body))
-        return _FakeResponse({qid: {"choice": "ACCEPT",
+        return _FakeResponse({"model": "jev-1.13.0", "usage": {"input_tokens": 981}, "answers": {qid: {"type": "choice", "choice": "ACCEPT",
                                     "probabilities": {"ACCEPT": 0.94, "REJECT": 0.04, "UNCERTAIN": 0.02},
                                     "confidence": 0.94}
-                              for qid in body["questions"]})
+                              for qid in body["questions"]}})
 
     monkeypatch.setattr(S.urllib.request, "urlopen", fake_urlopen)
     c = config(jev_api_key="ts-key")
@@ -448,7 +480,8 @@ def test_api_response_is_normalised_like_a_playground_import(doc, clusters, cont
 
     S.export_jev_batch(playground_doc, contract, config())
     S.import_jev_results(playground_doc, {"model": "jev-1.13.0", "results": {
-        qid: {"choice": "ACCEPT", "probabilities": {"ACCEPT": 0.94, "REJECT": 0.04, "UNCERTAIN": 0.02}}
+        qid: {"choice": "ACCEPT", "probabilities": {"ACCEPT": 0.94, "REJECT": 0.04, "UNCERTAIN": 0.02},
+              "confidence": 0.94}
         for qid in body["questions"]}}, config())
     for cid, record in doc["clusters"].items():
         other = playground_doc["clusters"][cid]
@@ -537,7 +570,7 @@ def test_playground_and_api_build_identical_evidence(doc, clusters, contract, ma
 
     def capture(state, questions):
         seen.update(state=state, questions=questions)
-        return {qid: _verdict("UNCERTAIN", 0.2, 0.2, 0.6) for qid in questions}
+        return {"answers": {qid: _verdict("UNCERTAIN", 0.2, 0.2, 0.6) for qid in questions}}
 
     S.run_jev(doc, contract, config(), capture)
     assert seen["state"] == exported_state
@@ -661,3 +694,107 @@ def test_a_verified_semantic_match_is_used_by_the_audit(contract, matcher):
     rl = r.occurrences[0].lines[0]
     assert (rl.status, rl.service, rl.source) == (MATCHED, MISSING_SVC, "semantic_verified")
     assert not r.result.flagged and r.result.correction_reconstructable
+
+
+# -- the real TypeSafe response shape (sanitised from a live jev-1.13.0 call) --------------
+
+def _live_shape(answers: dict) -> dict:
+    """Envelope as observed live: answers keyed by question id, plus metadata."""
+    return {"model": "jev-1.13.0", "answers": answers,
+            "usage": {"input_tokens": 981, "output_tokens": 58}}
+
+
+LIVE_ANSWER = {"type": "choice", "choice": "ACCEPT",
+               "probabilities": {"REJECT": 0.08, "UNCERTAIN": 0.0, "ACCEPT": 0.92},
+               "confidence": 0.87}
+
+
+def test_live_response_shape_is_parsed():
+    """answers parsed; usage ignored; confidence 0.87 kept although P(ACCEPT)=0.92."""
+    out = S.normalize_jev_results(_live_shape({"verify_h2_example": LIVE_ANSWER}), "jev-1.13.0")
+    assert list(out) == ["verify_h2_example"], "usage/model are metadata, not question ids"
+    assert out["verify_h2_example"] == {
+        "choice": "ACCEPT",
+        "probabilities": {"ACCEPT": 0.92, "REJECT": 0.08, "UNCERTAIN": 0.0},
+        "confidence": 0.87,
+        "model": "jev-1.13.0",
+    }
+    assert S.jev_gate(out["verify_h2_example"]["probabilities"], 0.90) == "ACCEPT"
+
+
+def test_live_response_through_the_api_path_accepts(doc, clusters, contract, matcher):
+    _classify(doc, clusters, contract)
+    stats = S.run_jev(doc, contract, config(),
+                      lambda state, questions: _live_shape({q: LIVE_ANSWER for q in questions}))
+    assert stats == {"applied": 2, "asked": 2}
+    rec = _missing_record(doc, matcher)
+    assert rec["jev"]["result"]["confidence"] == 0.87
+    assert rec["jev"]["decision"] == "ACCEPT"
+    assert (rec["final"]["status"], rec["final"]["service"]) == (MATCHED, MISSING_SVC)
+
+
+@pytest.mark.parametrize("confidence", [0.01, 0.50, 0.87, 0.99, None])
+def test_the_gate_never_depends_on_confidence(doc, clusters, contract, matcher, confidence):
+    """Same probabilities, any confidence (or none): the same decision."""
+    _classify(doc, clusters, contract)
+    answer_ = {k: v for k, v in LIVE_ANSWER.items() if k != "confidence"}
+    if confidence is not None:
+        answer_["confidence"] = confidence
+    S.run_jev(doc, contract, config(), lambda s, q: _live_shape({qid: answer_ for qid in q}))
+    rec = _missing_record(doc, matcher)
+    assert rec["jev"]["decision"] == "ACCEPT"
+    assert rec["jev"]["result"]["confidence"] == confidence
+    assert rec["final"]["status"] == MATCHED
+
+
+@pytest.mark.parametrize("probs,decision,status", [
+    ({"ACCEPT": 0.05, "REJECT": 0.93, "UNCERTAIN": 0.02}, "REJECT", AMBIGUOUS),
+    ({"ACCEPT": 0.86, "REJECT": 0.10, "UNCERTAIN": 0.04}, "UNRESOLVED", AMBIGUOUS),   # weak ACCEPT
+    ({"ACCEPT": 0.10, "REJECT": 0.86, "UNCERTAIN": 0.04}, "UNRESOLVED", AMBIGUOUS),   # weak REJECT
+])
+def test_live_shape_answers_follow_the_same_gate(doc, clusters, contract, matcher, probs, decision, status):
+    _classify(doc, clusters, contract)
+    choice = max(probs, key=probs.get)
+    answer_ = {"type": "choice", "choice": choice, "probabilities": probs, "confidence": 0.5}
+    S.run_jev(doc, contract, config(), lambda s, q: _live_shape({qid: answer_ for qid in q}))
+    rec = _missing_record(doc, matcher)
+    assert rec["jev"]["decision"] == decision
+    assert rec["final"]["status"] == status and rec["final"]["service"] is None
+
+
+@pytest.mark.parametrize("body,match", [
+    ({"usage": {"input_tokens": 1}}, "exactly one of"),                          # no container
+    ({"verify_h2_x": LIVE_ANSWER}, "exactly one of"),                           # bare dict no longer guessed
+    ({"answers": {"q": LIVE_ANSWER}, "results": {"q": LIVE_ANSWER}}, "exactly one of"),
+    ({"answers": []}, "non-empty object"),
+    ({"answers": {}}, "non-empty object"),
+    ({"answers": {"q": "ACCEPT"}}, "not an object"),
+    ({"model": "jev-0.1", "answers": {"q": LIVE_ANSWER}}, "expected 'jev-1.13.0'"),
+    ([LIVE_ANSWER], "JSON object"),
+])
+def test_malformed_live_responses_fail_visibly(body, match):
+    with pytest.raises(S.SemanticError, match=match):
+        S.normalize_jev_results(body, "jev-1.13.0")
+
+
+def test_unknown_question_in_a_live_response_fails_safely(doc, clusters, contract):
+    _classify(doc, clusters, contract)
+    with pytest.raises(S.SemanticError, match="no exported question"):
+        S.run_jev(doc, contract, config(),
+                  lambda s, q: _live_shape({"verify_h2_c-ffffffffff": LIVE_ANSWER}))
+    # Export bookkeeping may exist, but no verdict was applied anywhere.
+    assert all(r.get("jev") is None or r["jev"]["result"] is None for r in doc["clusters"].values())
+    assert all(r["final"]["source"] != "semantic_verified" for r in doc["clusters"].values())
+
+
+def test_playground_import_reads_the_same_answer_the_same_way(doc, clusters, contract, matcher):
+    """A Playground result copied from the live answer, in the ``results``
+    container, normalises identically and takes the same decision."""
+    _classify(doc, clusters, contract)
+    _, questions = S.export_jev_batch(doc, contract, config())
+    rec = _missing_record(doc, matcher)
+    S.import_jev_results(doc, {"model": "jev-1.13.0",
+                               "results": {rec["jev"]["question_id"]: LIVE_ANSWER}}, config())
+    api = S.normalize_jev_results(_live_shape({"verify_h2_example": LIVE_ANSWER}), "jev-1.13.0")
+    assert rec["jev"]["result"] == api["verify_h2_example"]
+    assert rec["jev"]["decision"] == "ACCEPT" and rec["final"]["status"] == MATCHED

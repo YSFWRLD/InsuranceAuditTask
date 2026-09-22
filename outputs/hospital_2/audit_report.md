@@ -15,7 +15,7 @@ Contract `INS-H2-2024-1183`, fingerprint `2770429a2de63335`.
 
 ## Service identity
 
-Two units are counted here and must not be mixed up. A **cluster** is one normalised description. A **line occurrence** is one invoice line. One cluster can cover hundreds of lines. The classifier is asked once per cluster; the audit prices every line.
+Two units are counted here and must not be mixed up. A **cluster** is one normalised description. A **line occurrence** is one invoice line. One cluster can cover hundreds of lines. Classification is done per cluster (with bounded retries on provider errors or invalid output); the audit prices every line.
 
 | count | value | meaning |
 |---|---|---|
@@ -24,24 +24,24 @@ Two units are counted here and must not be mixed up. A **cluster** is one normal
 | `deterministic_unknown_clusters` | 14 | a recognised word contradicts every candidate; decided from text, not semantic work |
 | `semantic_required_clusters` | 69 | sent by the deterministic stage to the classifier + Jev |
 | `semantic_required_line_occurrences` | 2093 | invoice lines carrying those descriptions |
-| `semantic_pending_clusters` | 69 | of those, still without a verified decision |
-| `semantic_pending_line_occurrences` | 2093 | invoice lines carrying the pending descriptions |
+| `semantic_pending_clusters` | 5 | of those, still without a verified decision |
+| `semantic_pending_line_occurrences` | 135 | invoice lines carrying the pending descriptions |
 | `semantic_verified_matched_clusters` | 0 | classifier MATCHED, accepted by Jev |
-| `semantic_verified_ambiguous_clusters` | 0 | classifier AMBIGUOUS, accepted by Jev (stays AMBIGUOUS) |
+| `semantic_verified_ambiguous_clusters` | 64 | classifier AMBIGUOUS, accepted by Jev (stays AMBIGUOUS) |
 | `semantic_verified_unknown_clusters` | 0 | classifier UNKNOWN, accepted by Jev (stays UNKNOWN) |
-| `classifier_ok_clusters` | 0 | classifier returned a valid decision |
-| `classifier_failed_clusters` | 0 | classifier output invalid or provider unreachable after bounded retries |
-| `jev_answered_clusters` | 0 | Jev verdict imported or received |
+| `classifier_ok_clusters` | 67 | classifier returned a valid decision |
+| `classifier_failed_clusters` | 2 | classifier output invalid or provider unreachable after bounded retries |
+| `jev_answered_clusters` | 67 | Jev verdict imported or received |
 | `total_unresolved_or_unknown_clusters` | 83 | every cluster without a single verified service (listed in unresolved.json) |
 | `total_line_occurrences` | 14360 | all invoice lines |
 | `deterministic_matched_line_occurrences` | 12253 | lines identified from text alone |
 | `semantic_verified_matched_line_occurrences` | 0 | lines identified by a verified semantic decision |
 | `unit_basis_tiebreak_line_occurrences` | 384 | lines whose billed basis broke a textual tie (cannot carry wrong_unit_basis) |
-| `unit_basis_provisional_line_occurrences` | 384 | of those, lines in semantic-pending clusters (a verified decision would override) |
+| `unit_basis_provisional_line_occurrences` | 27 | of those, lines in semantic-pending clusters (a verified decision would override) |
 | `currently_ambiguous_line_occurrences` | 1709 | lines the audit carries as a set of possible services |
 | `currently_unknown_line_occurrences` | 14 | lines naming no contracted service |
 
-Semantic stage so far: classifier z-ai/glm-5.3-flash (0 ok, 0 failed); Jev jev-1.13.0 (0 answered). Zero means the stage has not been run.
+Semantic stage so far: classifier z-ai/glm-5.3-flash (67 ok, 2 failed); Jev jev-1.13.0 (67 answered). Zero means the stage has not been run.
 
 ## Results
 
@@ -97,7 +97,7 @@ Confidence is an evidence band for review priority, not a calibrated probability
 
 | advisory (never flags on its own) | occurrences |
 |---|---|
-| none | 0 |
+| `ambiguous_service_description` | 1601 |
 
 ## Reused invoice numbers
 

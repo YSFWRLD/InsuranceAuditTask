@@ -1103,8 +1103,9 @@ def audit_report(pipeline: H2Pipeline, results: list[H2InvoiceResult]) -> str:
         "",
         "Two units are counted here and must not be mixed up. A **cluster** is one "
         "normalised description. A **line occurrence** is one invoice line. One "
-        "cluster can cover hundreds of lines. The classifier is asked once per "
-        "cluster; the audit prices every line.",
+        "cluster can cover hundreds of lines. Classification is done per cluster "
+        "(with bounded retries on provider errors or invalid output); the audit "
+        "prices every line.",
         "",
         "| count | value | meaning |",
         "|---|---|---|",

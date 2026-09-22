@@ -1,122 +1,187 @@
 # Invoice audit — contract-driven, deterministic, per hospital
 
 The exercise brief is in [`EXERCISE.md`](EXERCISE.md). This file describes the
-solution.
+submission.
 
-**Status:** Hospitals 1 and 2 are implemented. Hospitals 3–5 are not yet
-implemented, and no production audit code exists for them. The Hospital 1
-prediction path does not read or depend on data from any other hospital.
+## What is submitted
 
-- **Hospital 1** is the labelled development hospital, evaluated on a locked
-  holdout.
-- **Hospital 2** has no labels. Its semantic stage (an LLM classifier plus the
-  Jev verifier) has **not yet been run**: no API credentials are configured.
-  Of 441 description clusters, 69 therefore await semantic review. Those 69
-  cover 2,093 of the 14,360 invoice lines, and 1,709 of those lines are
-  currently audited as unresolved (see [Hospital 2](#hospital-2)).
+| hospital | status | in `outputs/submission.csv`? |
+|---|---|---|
+| Hospital 1 | implemented; the labelled **development** hospital, evaluated, **not scored** | no — it is development data |
+| Hospital 2 | implemented; **submitted** (1,125 rows, 74 flagged) | yes — the only rows in the file |
+| Hospitals 3–5 | **not implemented** — no code, no rows, no placeholder files; not used to produce any submitted prediction | no |
 
-## Where things live
+Deliverables, as the brief lists them:
 
-The repository is organised **by hospital**. Everything that makes the
-Hospital 1 audit what it is lives in `src/hospital_1/`. `src/shared/` holds
-only what does not depend on any contract.
+1. **A runnable repository.** See [Install and test](#install-and-test) and
+   [Reproduce](#reproduce). Dependencies are pinned in `requirements.txt`.
+2. **`submission.csv`.** [`outputs/submission.csv`](outputs/submission.csv),
+   in the template format. It holds scored hospitals only. The per-hospital
+   file is [`outputs/hospital_2/submission.csv`](outputs/hospital_2/submission.csv).
+3. **Evaluation report.**
+   [`outputs/hospital_1/evaluation_report.md`](outputs/hospital_1/evaluation_report.md)
+   has per-category performance on Hospital 1 and failures grouped by type.
+4. **Prompts, versioned.** [`prompts/`](prompts/), indexed in
+   [`prompts/README.md`](prompts/README.md).
+5. **One-page decision log.** [`DECISION_LOG.md`](DECISION_LOG.md). The
+   detailed per-hospital logs are
+   [`outputs/hospital_1/decision_log.md`](outputs/hospital_1/decision_log.md) and
+   [`outputs/hospital_2/decision_log.md`](outputs/hospital_2/decision_log.md).
+
+## Why Hospital 1, then Hospital 2, then stop
+
+- **Hospital 1 came first because it is the only labelled hospital.** Every
+  design choice (conservative matching, a declined total rather than a guessed
+  one, evidence-strength confidence) was developed and checked there.
+- **Hospital 2 was the first scored hospital attempted.** Its contract is
+  unlike Hospital 1's: 76 services, each described in one prose clause, with
+  no tables. That tested whether the approach transfers.
+- **Hospitals 3–5 were not implemented** and were not used to produce any
+  submitted prediction. They were looked at only during planning.
+- **Hospital 2 was stopped at a defined point.** See the
+  [Stopping decision](outputs/hospital_2/decision_log.md#stopping-decision).
+  Following the brief's emphasis on depth and stated uncertainty, a focused
+  implementation of one scored hospital, with explicit uncertainty, was
+  preferred over shallow coverage of all four scored hospitals.
+
+## How it works
 
 ```
-src/
-├── main.py                  CLI. Orchestration only -- no audit logic.
-├── shared/                  hospital-independent
-│   ├── models.py            invoice schema, match outcome, audit result
-│   ├── data.py              JSONL -> physical invoice occurrences; CSV cross-check
-│   ├── money.py             integer cents, Decimal, ROUND_HALF_UP
-│   └── submission.py        audit results -> submission / predictions / findings CSV
-├── hospital_1/              the Hospital 1 solution
-│   ├── contract.py          the Agreement -> ContractRules; fails loudly
-│   ├── matcher.py           description -> MATCHED / AMBIGUOUS / UNKNOWN
-│   ├── audit.py             context, pricing, checks, reconstruction, confidence
-│   └── evaluation.py        labels, locked split, metrics, freeze, research
-│                            (the ONLY module that reads labels)
-└── hospital_2/              the Hospital 2 solution (no labels exist)
-    ├── contract.py          76 prose service clauses -> rules; fails loudly
-    ├── matcher.py           deterministic identity + bounded candidates
-    ├── semantic.py          classifier + Jev verifier + persisted mappings
-    │                        (identity only -- never prices anything)
-    └── audit.py             global context, pricing trace, findings, confidence
-
-tests/
-├── shared/                  test_data.py, test_money.py
-├── hospital_1/              conftest.py (a synthetic contract), test_contract.py,
-│                            test_matching.py, test_audit.py, test_evaluation.py
-└── hospital_2/              conftest.py (synthetic invoices, real contract),
-                             test_contract.py, test_matching.py,
-                             test_semantic.py, test_audit.py
-
-outputs/                     deliverables
-├── submission.csv           template format -- scored hospitals only (hospital_2)
-├── hospital_1/
-│   ├── predictions.csv      submission columns + uncertainty columns
-│   ├── findings.csv         one row per finding, with its line
-│   ├── evaluation.md        dev + locked-holdout scores
-│   └── generalization_report.md   the honest write-up
-└── hospital_2/
-    ├── predictions.csv      one row per invoice number; occurrence ids kept
-    ├── findings.csv         per occurrence and line, with evidence basis + clause
-    ├── audit_report.md      what was found -- no accuracy claimed
-    └── decision_log.md      every Hospital 2 reading and open question
-
-artifacts/hospital_1/        evidence behind the outputs
-├── split/                   dev_labels.csv, holdout_labels.csv (70/30, fixed seed)
-├── split_manifest.json      how the split was drawn, and when
-├── freeze.json              prediction-source hashes + predictions fingerprint
-├── service_matches.csv      every distinct description and how it was matched
-└── research/                temporal_evaluation.md, ablation.md (development only)
-
-artifacts/hospital_2/
-├── contract_rules.json      every parsed rule + source text + contract fingerprint
-├── description_clusters.json  506 raw descriptions -> 441 normalised clusters
-├── service_mappings.json    one identity decision per cluster, with provenance
-├── unresolved.json          clusters without a verified single identity
-├── jev_state.json, jev_questions.json   Jev Playground batch (+ jev_results.json)
-└── pricing_traces.jsonl     stage-by-stage price of every line on a flagged invoice
-
-prompts/hospital_1/          the prompts that produced Hospital 1, versioned
-prompts/hospital_2/          the H2 task prompt, and the classifier and Jev
-                             prompts the code sends (loaded from these files)
-DECISION_LOG.md              Hospital 1 readings of the contract, and why
+contract text ──► contract.py ──► rules (every rate, cap, discount, bundle, exclusion, with its clause)
+invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGUOUS / UNKNOWN (never uses price)
+                  semantic.py ──► (H2 only) LLM classifier + Jev verifier for unclear descriptions
+                  audit.py    ──► integer-cent pricing, findings, reconstructable total or blank, confidence
 ```
 
-### Reading `src/hospital_1/` in order
+- **Python decides every number.** All money is integer cents through
+  `Decimal` with `ROUND_HALF_UP` (`src/shared/money.py`). An LLM is used only
+  for Hospital 2 service *identity*. It never sees a price, a total, an
+  invoice or patient id, and it never calculates anything.
+- **Identity comes from words, never from price.** The billed price is the
+  thing under audit, so using it to identify a service would be circular.
+  Tests pin the matcher signatures to prevent it.
+- **Detection and reconstruction are separate questions.**
+  `expected_total_cents` is filled only when the corrected total can be
+  defended. Otherwise it is left blank, never the billed total, zero, or a
+  cap-adjusted guess. For example, a daily-cap breach proves an invoice is
+  wrong but does not reveal the delivered quantity, so its total is blank.
+- **Unresolved identity is carried, not guessed.** An unclear line is audited
+  as the set of services it could be. It is flagged only if it is wrong under
+  every reading.
 
-1. **`contract.py`** — every rate, cap, threshold, uplift, discount, bundle
-   and exclusion window, parsed out of the Agreement with the clause it came
-   from. Nothing in the audit hardcodes a contract term.
-2. **`matcher.py`** — turns free text like `Procedure Immun Endosc /NG-7220`
-   into a contracted service, or says it cannot. Never looks at price.
-3. **`audit.py`** — the audit, in seven numbered sections: inputs, global
-   context, pricing (clause 3.2 in order), stateless checks, the auditor,
-   confidence, and the pipeline that wires them. Detection ("is it wrong?")
-   and reconstruction ("what should it cost?") are answered separately.
-4. **`evaluation.py`** — how the audit is measured, and the one place labels
-   are read.
+### Uncertainty
 
-The dependency runs one way: `evaluation.py` imports the prediction path;
-nothing on the prediction path imports `evaluation.py`.
-`tests/hospital_1/test_evaluation.py` checks that mechanically, including by
-hiding every label file and asserting that not one prediction changes.
+- `confidence` is an **evidence-strength score, not a calibrated
+  probability**:
+  - Hospital 1 uses 0.92 / 0.70 / 0.40;
+  - Hospital 2 uses 0.85 / 0.65 / 0.40.
 
-## Running it
+  It measures how the services were identified and whether the total can be
+  reconstructed. Hospital 1 shows it is under-confident as a detection
+  probability (the low band was right 19 of 19 times); see §4 of the
+  evaluation report. Hospital 2 has no labels, so its calibration is unknown.
+- `predictions.csv` (per hospital) adds the uncertainty columns:
+  - `confidence_band`;
+  - `pricing_complete` and `correction_reconstructable`;
+  - `maximum_contractually_payable_total_cents`;
+  - occurrence ids;
+  - a plain-language `uncertainty_reasons`.
 
-Python 3.11+. The audit engine uses only the standard library. `python-dotenv`
-loads an optional `.env` at startup, and pytest is for tests.
+  Hospital 2 also has a diagnostic `provisional_expected_total_cents` that is
+  never submitted.
+
+## Results
+
+### Hospital 1 (development, not scored)
+
+Checked against labels, all 913 invoices:
+
+- **Detection:** TP 58 / FP 0 / TN 855 / FN 0.
+- **Corrected totals:**
+  - 909 offered, 908 exact; the one miss is 43,650 cents off;
+  - 4 declined as unknowable (daily-cap breaches).
+- **Categories:** exact except for one invoice, which has a matcher defect.
+
+**These are post-hoc numbers, not untouched validation.** The project owner
+reports that the full labels were visible during development. Also, the
+locked holdout (274 invoices) has been printed on every evaluation run since
+the freeze. Details, the split and temporal results, and why earlier quoted
+figures (99.56% / 333.5 cents MAE) differ are in the
+[evaluation report](outputs/hospital_1/evaluation_report.md).
+
+### Hospital 2 (submitted, no labels)
+
+No accuracy is claimed, because none can be measured.
+
+| | |
+|---|---|
+| invoice rows / flagged | 1,125 / 74 |
+| `pricing_complete` / reconstructable | 238 / 237 |
+| blank `expected_total_cents` | 888 |
+| description clusters | 441: 358 matched from text, 14 UNKNOWN, 69 sent to the semantic stage |
+| semantic stage | classification attempted for 69 clusters (75 OpenRouter HTTP attempts, with bounded retries): 67 valid (64 AMBIGUOUS, 3 MATCHED), 2 failed (HTTP 402). Jev accepted the 64 AMBIGUOUS, and none of the 3 MATCHED passed the gate |
+| verified matches added by the semantic stage | **0** |
+| lines audited as ambiguous / unknown | 1,709 / 14 (of 14,360) |
+
+**The semantic stage did not increase verified service-mapping coverage.** The
+submitted rows are byte-identical before and after it ran. Most totals are
+blank because the invoice contains at least one line whose service the text
+does not identify, and the audit declines to guess. That covers 866 of the
+888 blank totals. See
+[`outputs/hospital_2/audit_report.md`](outputs/hospital_2/audit_report.md) and
+the [decision log](outputs/hospital_2/decision_log.md).
+
+## Install and test
+
+Python 3.11+ (developed on 3.13.2). The engine uses only the standard library.
+`python-dotenv` loads an optional `.env`, and `pytest` runs the tests. Both
+are pinned.
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ```bash
-python -m pytest tests -q
+python -m pytest -q
 ```
 
-The suite has 325 tests: 190 for Hospital 1 and shared code, 135 for Hospital 2.
+There are 414 tests:
+
+| area | tests |
+|---|---|
+| Hospital 1 | 154 |
+| Hospital 2 | 209 |
+| shared | 36 |
+| setup and secrets | 8 |
+| submission files | 7 |
+
+After dependencies are installed, the tests and normal reproduction workflow
+require no API keys or network access.
+
+## Reproduce
+
+Every command in this section is **offline**: no API key is needed and no
+network call is made.
+
+Reproduce the submission from the artifacts in the repository:
+
+```bash
+python -m src.main audit h2
+```
+
+```bash
+python -m src.main submission
+```
+
+- `audit h2` reads the persisted identity decisions in
+  `artifacts/hospital_2/service_mappings.json` and makes no API call.
+- It writes `outputs/hospital_2/{predictions,findings,submission}.csv`,
+  `audit_report.md` and `artifacts/hospital_2/pricing_traces.jsonl`.
+- `submission` rewrites `outputs/hospital_2/submission.csv` and builds
+  `outputs/submission.csv` by copying that file's rows unchanged. The two
+  cannot disagree, and a test checks this.
+
+Reproduce the Hospital 1 predictions and evaluation:
 
 ```bash
 python -m src.main audit h1
@@ -126,121 +191,42 @@ python -m src.main audit h1
 python -m src.main evaluate h1
 ```
 
-```bash
-python -m src.main audit h2
-```
+- `audit h1` writes `outputs/hospital_1/{predictions,findings}.csv`.
+- `evaluate h1` reads labels (after prediction) and writes
+  `outputs/hospital_1/evaluation.md`. It scores the holdout only while the
+  prediction sources match `artifacts/hospital_1/freeze.json`.
+- There is no Hospital 1 submission-format file, because Hospital 1 is not
+  scored.
+
+Inspect the Hospital 2 semantic state without calling anything:
 
 ```bash
-python -m src.main submission
+python -m src.main semantic h2 status
 ```
 
-`audit h1` writes `outputs/hospital_1/{predictions,findings}.csv` and
-`artifacts/hospital_1/service_matches.csv`. `evaluate` writes
-`outputs/hospital_1/evaluation.md`. `audit h2` writes `outputs/hospital_2/` (see
-[Hospital 2](#hospital-2)). `submission` writes `outputs/submission.csv` in the
-template's format. It contains **only scored hospitals**, so today that is
-Hospital 2's 1,125 rows. Hospital 1 is the labelled development hospital, is
-not scored, and is left out.
+Further offline commands:
 
-Development evidence. These commands read labels and are not needed to
-produce predictions:
+- `semantic h2 prepare`, `rebuild`, `jev-export` and `jev-import`;
+- `research h1 temporal|ablation` (reads labels; development evidence).
 
-```bash
-python -m src.main research h1 temporal
-```
+### Commands that call paid external APIs
 
-```bash
-python -m src.main research h1 ablation
-```
+These are **not** needed to reproduce the submission, and they were not rerun
+for it:
 
-```bash
-python -m src.main freeze h1 --reason "why the prediction path changed"
-```
-
-`split h1` exists but refuses to run: the split is locked, and its manifest's
-creation time is evidence that it was drawn before development began.
-
-### The holdout gate
-
-`evaluate h1` scores the 30% holdout **only while the prediction sources are
-byte-identical to `artifacts/hospital_1/freeze.json`**. Edit any file on the
-prediction path and the report says the holdout is not evaluated, instead of
-printing a number that has stopped being an unseen measurement. Re-freezing
-requires a stated reason and keeps the earlier freeze in the record's history.
-
-## Hospital 1 in one table
-
-| | development (639) | locked holdout (274) |
+| command | calls | key |
 |---|---|---|
-| detection precision / recall | 1.000 / 1.000 | 1.000 / 1.000 |
-| TP / FP / TN / FN | 46 / 0 / 593 / 0 | 12 / 0 / 262 / 0 |
-| exact corrected total, where offered | 636 / 636 | 272 / 273 |
-| corrected total declined as unknowable | 3 | 1 |
+| `python -m src.main semantic h2 classify [--retry-failed]` | OpenRouter, `z-ai/glm-5.3-flash` | `OPENROUTER_API_KEY` |
+| `python -m src.main semantic h2 jev` | TypeSafe SystemOne (Jev `jev-1.13.0`) | `TYPESAFE_API_KEY` (or `JEV_API_KEY`) |
 
-That holdout row contains one real failure: a matcher defect, analysed in §7
-of the generalization report and deliberately left unfixed. Fixing it after
-reading the holdout would spend the only unseen measurement. The per-category
-tables are in `outputs/hospital_1/evaluation.md`; most categories have
-single-digit support and are marked as such.
+- Rerunning them may change `service_mappings.json`, and so the Hospital 2
+  outputs.
+- A decision is kept only while its contract fingerprint, matcher version,
+  prompt version (a hash of the prompt file) and candidate set are unchanged.
+- The Jev Playground route (`jev-export`, then a manual Playground run, then
+  `jev-import`) needs no key.
 
-## Hospital 2
-
-Hospital 2 has no labels, so nothing about it is reported as an accuracy. Its
-contract has no tables: 76 services are each described in one prose clause,
-scattered across 13 Articles between pages of boilerplate.
-
-### Who decides what
-
-| stage | decided by | where |
-|---|---|---|
-| contract rules: rates, bases, uplifts, discounts, caps, bundles, exclusions | Python, parsed from the contract text | `contract.py` |
-| service identity, when the text is clear | Python, deterministic | `matcher.py` |
-| service identity, when it is not | LLM classifier, then Jev verifier, then a Python gate | `semantic.py` |
-| every price, total, threshold, finding and confidence | Python | `audit.py` |
-
-The LLM decides **identity only**. It never sees a billed price, a total, an
-invoice id or a patient id, and it never calculates anything. The classifier
-and Jev prompts live in `prompts/hospital_2/`, and the code loads and sends
-them from there, so the documented prompt is the executed prompt. Their
-content hash is recorded as the prompt version on every decision.
-
-### Configuration
-
-**No API key is needed to use this project.** Without any key, all of these
-work:
-
-- the tests;
-- the Hospital 1 audit and evaluation;
-- the Hospital 2 deterministic audit and the submission;
-- `semantic h2 prepare` and `status`;
-- the Jev Playground export and import.
-
-Two keys matter only for the two semantic steps that call an external API:
-
-| variable | required only for |
-|---|---|
-| `OPENROUTER_API_KEY` | `python -m src.main semantic h2 classify` |
-| `TYPESAFE_API_KEY` | `python -m src.main semantic h2 jev` (direct Jev verification via TypeSafe SystemOne) |
-
-Optional:
-
-| variable | default | purpose |
-|---|---|---|
-| `JEV_API_KEY` | none | fallback Jev key, used only if `TYPESAFE_API_KEY` is not set |
-| `JEV_API_URL` | `https://api.typesafe.ai/v1/systemone` | override the Jev endpoint. **Normally leave unset** |
-| `JEV_MODEL` | `jev-1.13.0` | Jev model, recorded with every verdict (`JEV_VERSION` also accepted) |
-| `JEV_THRESHOLD` | `0.90` | the acceptance gate |
-| `H2_CLASSIFIER_MODEL` | `z-ai/glm-5.3-flash` | OpenRouter model |
-| `OPENROUTER_BASE_URL` | `https://openrouter.ai/api/v1` | |
-| `H2_CLASSIFIER_MAX_ATTEMPTS` | `3` | bounded retries on invalid output |
-
-An empty value means "use the default".
-
-#### Setting the keys with `.env`
-
-On startup, `src/main.py` loads a project-root `.env` file once. The file is
-optional, and variables already set in the OS environment take precedence over
-it.
+### Keys and `.env`
 
 1. Copy the template:
 
@@ -248,252 +234,80 @@ it.
    cp .env.example .env
    ```
 
-2. In `.env`, fill in `OPENROUTER_API_KEY` and `TYPESAFE_API_KEY`.
+2. Fill in the keys you need in `.env`.
 
-3. Run the semantic steps, then the audit and submission:
+How the file is handled:
 
-   ```bash
-   python -m src.main semantic h2 classify
-   ```
+- `src/main.py` loads the project-root `.env` once at startup, with
+  python-dotenv, `override=False`. Real environment variables win.
+- `.env` is git-ignored.
+- `.env.example` holds only empty placeholders.
+- A test fails if any committable file contains something shaped like a
+  credential.
 
-   ```bash
-   python -m src.main semantic h2 jev
-   ```
+Optional settings (an empty value means the default):
 
-   ```bash
-   python -m src.main audit h2
-   ```
-
-   ```bash
-   python -m src.main submission
-   ```
-
-- `.env` is local and ignored by Git. Never commit it.
-- `.env.example` contains no secrets and is committed.
-- API keys are not required for the deterministic audits or the tests.
-
-Plain `export OPENROUTER_API_KEY=...` / `export TYPESAFE_API_KEY=...` works too.
-
-```bash
-python -m src.main semantic h2 status
-```
-
-`status` shows what is configured (never the credentials) and every count.
-
-### Generating service mappings (deliberate, never on every audit)
-
-```bash
-python -m src.main semantic h2 prepare
-```
-
-`prepare` writes `contract_rules.json`, `description_clusters.json`,
-`service_mappings.json` and `unresolved.json`. Earlier semantic decisions are
-kept only if the contract fingerprint, the matcher version, the prompt version
-and the cluster's candidate set are all unchanged; otherwise they are
-discarded, and the reason is recorded.
-
-```bash
-python -m src.main semantic h2 classify
-```
-
-`classify` sends each semantic-pending **cluster** once. The classifier sees a
-cluster's descriptions, never an individual line. Today that is 69 calls, and
-those 69 clusters cover 2,093 line occurrences. Output must match a strict
-JSON schema. Invalid output is retried a bounded number of times and then
-recorded as a failure, never scraped or guessed.
-
-### Clusters and line occurrences are different units
-
-A **cluster** is one normalised description; a **line occurrence** is one
-invoice line. Reports name each count explicitly. Current values:
-
-| count | value | meaning |
-|---|---|---|
-| `total_normalized_clusters` | 441 | distinct descriptions after `/SA-####` is stripped |
-| `deterministic_matched_clusters` | 358 | identified from text alone |
-| `deterministic_unknown_clusters` | 14 | a recognised word contradicts every candidate. Decided from text; **not** semantic work |
-| `semantic_pending_clusters` | 69 | sent to the classifier + Jev, not yet verified |
-| `semantic_pending_line_occurrences` | 2,093 | invoice lines carrying those 69 descriptions |
-| `unit_basis_provisional_line_occurrences` | 384 | of those lines, ones the billed basis resolved for now (a verified semantic decision would override it) |
-| `currently_ambiguous_line_occurrences` | 1,709 | lines the audit carries as a set of possible services (2,093 − 384) |
-| `total_unresolved_or_unknown_clusters` | 83 | everything in `unresolved.json`: 69 pending + 14 deterministic UNKNOWN, in separate groups |
-
-### Jev verification
-
-Jev judges each classifier decision and returns P(ACCEPT), P(REJECT) and
-P(UNCERTAIN). Both modes below produce the same internal verdict,
-`{"choice", "probabilities", "confidence", "model"}`, and both pass through
-one validator and one gate:
-
-| Jev verdict | effect |
+| variable | default |
 |---|---|
-| P(ACCEPT) ≥ 0.90 | the decision stands **with its own status** |
-| P(REJECT) ≥ 0.90 | rejected; the cluster stays semantic-pending |
-| anything else | semantic-pending |
+| `H2_CLASSIFIER_MODEL` | `z-ai/glm-5.3-flash` |
+| `H2_CLASSIFIER_MAX_ATTEMPTS` | `3` |
+| `H2_CLASSIFIER_MAX_TOKENS` | `4096` |
+| `OPENROUTER_BASE_URL` | `https://openrouter.ai/api/v1` |
+| `JEV_API_URL` | `https://api.typesafe.ai/v1/systemone` |
+| `JEV_MODEL` | `jev-1.13.0` |
+| `JEV_THRESHOLD` | `0.90` |
 
-An accepted AMBIGUOUS stays AMBIGUOUS, and an accepted UNKNOWN stays UNKNOWN.
+## AI use (disclosure)
 
-**Direct API mode**, once `TYPESAFE_API_KEY` is set (no URL needed):
+- **Code and documents.** They were written with Claude Code (Claude Opus 5),
+  driven by the prompts in [`prompts/`](prompts/). The human author set the
+  scope, the constraints and the stopping points; the assistant wrote the code,
+  the tests and the first drafts of the reports.
+  - Development prompts are saved verbatim. Several were saved only
+    afterwards, recovered from the session transcript, and each file says so.
+  - The prompts index lists them in order.
+- **Runtime models.** Two are used, both for Hospital 2 service identity only:
+  - the OpenRouter classifier (`prompts/hospital_2/001_service_classifier.md`);
+  - the Jev verifier (`prompts/hospital_2/003_jev_verifier.md`).
 
-```bash
-python -m src.main semantic h2 jev
+  The code loads those prompt files directly, so the documented prompt is the
+  executed prompt.
+- **No LLM prices, totals or flags anything.**
+
+## Where things live
+
+```
+src/main.py                 CLI (orchestration only)
+src/submission.py           per-hospital submission files -> combined outputs/submission.csv
+src/shared/                 data loading, money, result types, CSV writers (frozen with H1)
+src/hospital_1/             contract, matcher, audit, evaluation (the only label reader)
+src/hospital_2/             contract, matcher, semantic (identity only), audit
+tests/                      shared/, hospital_1/, hospital_2/, test_setup.py, test_submission.py
+outputs/submission.csv      the combined, scored submission (hospital_2 only)
+outputs/hospital_1/         predictions, findings, evaluation.md, evaluation_report.md,
+                            generalization_report.md, decision_log.md
+outputs/hospital_2/         submission, predictions, findings, audit_report.md, decision_log.md
+artifacts/hospital_1/       locked split + manifest, freeze record, match audit, research/
+artifacts/hospital_2/       contract rules, clusters, service_mappings.json (every identity
+                            decision with provenance), unresolved.json, Jev batch, pricing traces
+prompts/                    versioned prompts; see prompts/README.md
+DECISION_LOG.md             one-page decision log for the submission
+EXERCISE.md                 the challenge brief (unchanged)
 ```
 
-This sends `POST https://api.typesafe.ai/v1/systemone` with
-`Authorization: Bearer $TYPESAFE_API_KEY` and a body of
-`{"state", "model": "jev-1.13.0", "questions"}`, the same state and questions
-the Playground export writes. It then applies the per-question Choice results
-(`choice`, `probabilities`, `confidence`). The transport is one isolated
-function, `semantic.jev_http_transport`. Its reply goes through the same
-validator and gate as a Playground import.
-
-**What Jev sees.** Both modes build each case with one function, so the
-Playground and the API always show Jev identical evidence:
-
-- the descriptions;
-- the candidate services, with clause ids, contractual unit bases and redacted
-  contract text;
-- the classifier's status, selected service, confidence and reason.
-
-Jev never receives a price, a line, invoice or expected total, an invoice or
-patient id, or any rate-derived hint.
-
-The billed unit basis is withheld (`"identity_evidence": {"used_unit_basis_for_identity": false}`)
-**unless** the decision being verified actually consumed it as a tie-break. In
-that case, and only then, the case states
-`{"used_unit_basis_for_identity": true, "billed_unit_basis": "..."}`, so Jev
-sees all the evidence behind the decision.
-
-The current classifier never receives the billed basis, so every case today
-carries `false`. The deterministic per-line tie-break in the audit is not a
-semantic decision and is not sent to Jev. A basis consumed for identity can
-never also support `wrong_unit_basis`.
-
-**Playground mode**, always available:
-
-```bash
-python -m src.main semantic h2 jev-export
-```
-
-This writes two files:
-
-- `artifacts/hospital_2/jev_state.json`: `{"cases": {"h2_<cluster_id>": {...}}}`.
-  Each case holds the description, its candidates (clause, contractual unit
-  basis, redacted contract text) and the classifier's decision.
-- `artifacts/hospital_2/jev_questions.json`: one question per case, keyed
-  `verify_h2_<cluster_id>`, in the Playground's
-  `{"type": "choice", "instructions": ..., "criteria": {"ACCEPT", "REJECT", "UNCERTAIN"}}`
-  format. The question text is loaded from `prompts/hospital_2/003_jev_verifier.md`.
-
-Run the batch in the Playground. Then copy each question's choice and three
-probabilities into `artifacts/hospital_2/jev_results.json`:
-`{"model": "jev-1.13.0", "results": {"verify_h2_<cluster_id>": {"choice": "ACCEPT", "probabilities": {"ACCEPT": 0.95, "REJECT": 0.03, "UNCERTAIN": 0.02}}}}`.
-This is the project's own input format; the Playground's native export format
-is not documented here.
-
-```bash
-python -m src.main semantic h2 jev-import
-```
-
-Import is all-or-nothing. It refuses, listing every problem:
-
-- unknown or non-exported question ids;
-- a choice other than ACCEPT, REJECT or UNCERTAIN;
-- a probability that is missing, non-numeric or outside [0, 1];
-- probabilities that do not sum to 1;
-- a choice that is not the most probable outcome;
-- a different model;
-- any verdict issued for a classifier answer that has since changed.
-
-### The complete flow, once both keys exist
-
-With `OPENROUTER_API_KEY` and `TYPESAFE_API_KEY` exported (`JEV_API_URL`
-normally unset):
-
-```bash
-python -m src.main semantic h2 classify
-```
-
-```bash
-python -m src.main semantic h2 jev
-```
-
-```bash
-python -m src.main audit h2
-```
-
-```bash
-python -m src.main submission
-```
-
-### Running fully offline
-
-Once `service_mappings.json` exists, `audit h2` and `submission` read it and
-call nothing (a test disables all network access and runs the audit).
-Unresolved clusters are not skipped: each such line is carried as the set of
-services it could be, through cumulative utilisation, Service Day aggregates,
-bundles and exclusion history. It is flagged only if its price is wrong under
-every reading.
-
-### Expected totals are submitted only when defensible
-
-A number in `expected_total_cents` claims to know what the invoice should have
-totalled. So it is filled **only** when `correction_reconstructable` is true,
-and left as an empty field otherwise: never the billed total, zero, or a
-partial or cap-adjusted guess. The three states are:
-
-| state | meaning |
-|---|---|
-| `pricing_complete` | every line of the invoice was priced exactly, from resolved identities and determinate inputs |
-| `correction_reconstructable` | that exact total is also defensible: no cap breach, malformed date or unknown service blocks it |
-| `expected_total_cents` | filled if and only if reconstructable |
-
-`outputs/hospital_2/predictions.csv` also carries
-`provisional_expected_total_cents`. This is a diagnostic (for example, an
-unresolved line priced at the reading its billed rate matches), kept in its own
-column so it cannot be mistaken for a corrected total. It never reaches the
-submission.
-
-Reconstructability updates automatically. Once the semantic stage verifies a
-mapping, the next `audit h2` prices those lines exactly, and every invoice with
-no other blocker gets its expected total. No manual step is needed.
-
-### Reused invoice numbers
-
-Seven invoice numbers are each used by two physical invoices. Internally every
-occurrence is audited separately. The submission has one row per number, and
-that row represents the **later** occurrence (the one that reused the number):
-its billed and expected totals, its pricing state and its own findings,
-including `duplicate_invoice_id`. The earlier occurrence's findings are not
-copied onto that row; they remain in `findings.csv` and in the audit report,
-attributed to the earlier occurrence.
-
-### Current state
-
-In the current run no classifier or Jev call has been made, so no semantic
-result appears anywhere.
-
-- **Clusters:** 441 in total. 358 were matched deterministically, 14 are
-  deterministic UNKNOWN, and 69 are semantic-pending (covering 2,093 line
-  occurrences).
-- **Lines:** 384 are unit-basis provisional, and 1,709 are currently ambiguous.
-- **Invoices:** of 1,125 rows, 74 are flagged, 238 are `pricing_complete` and
-  237 are reconstructable. 888 therefore have a blank `expected_total_cents`.
-
-See `outputs/hospital_2/audit_report.md` and
-`outputs/hospital_2/decision_log.md`.
+Hospital 1's prediction path (`src/shared/*`, `src/hospital_1/{contract,matcher,audit}.py`)
+is hashed in `artifacts/hospital_1/freeze.json`. Editing any of those files
+switches off the holdout score. Hospital 2 reuses `src/shared/` without
+modifying it.
 
 ## Adding a hospital
 
-When Hospital *N* is implemented, it gets `src/hospital_N/` and
-`tests/hospital_N/`, written for *its* contract. It should reuse `shared/`
-where that fits, and duplicate otherwise. Code moves into `shared/` only once
-two real implementations show it is actually shared. Hospital 1's structure
-(contract → matcher → audit → evaluation) is a starting point, not an
-interface to implement. No base classes, registries or plug-in points exist
-for hospitals that have not been built.
-
-Hospital 2 was added this way. It has its own four modules and reuses
-`shared/` (data loading, money, the result types and the submission writer),
-but none of Hospital 1's code. `main.py` accepts `h1` and `h2`; a new hospital
-adds its own choice and calls.
+- Each new hospital gets its own `src/hospital_N/` and `tests/hospital_N/`,
+  written for *its* contract.
+- To submit it:
+  1. write `outputs/hospital_N/submission.csv` with
+     `write_hospital_submission`;
+  2. add `"hospital_N"` to `SCORED_HOSPITALS` in `src/submission.py`;
+  3. pass its file to `combine_submissions` in `cmd_submission`.
+- `combine_submissions` refuses unscored hospitals, missing files and
+  duplicate invoice ids.

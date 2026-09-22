@@ -2,7 +2,7 @@
 
 Three questions, reported separately and never combined: is the invoice wrong (detection), what is wrong with it (category attribution), and what should it have cost (monetary reconstruction).
 
-The development split is `artifacts/hospital_1/split/dev_labels.csv`. The 30% holdout was not read while the system was being built.
+The development split is `artifacts/hospital_1/split/dev_labels.csv`. The split was created before the final engine implementation, but because the full H1 labels had been visible during development, the holdout is reported only as a post-hoc check, not as an untouched validation set.
 
 
 ## Development split (70%)

@@ -72,13 +72,24 @@ three probabilities Jev reports for each question into it, unchanged.
 }
 ```
 
-`confidence` and a per-item `model` are optional; if given, they must agree
-with the probabilities and the configured model. Import is all-or-nothing, and
-refuses any result that:
+Include Jev's `confidence` too if the Playground shows it. `confidence` and a
+per-item `model` are optional:
+
+- `confidence` must be a number in [0, 1], but it is Jev's own figure and need
+  **not** equal any probability. A live answer had P(ACCEPT) = 0.92 with
+  confidence 0.87.
+- `model`, if given, must match the configured model.
+
+The direct API returns the same answer objects under an `answers` key (with
+`usage` metadata beside them). Both are read by the same validator. The gate
+uses the ACCEPT and REJECT probabilities only, never `confidence`.
+
+Import is all-or-nothing, and refuses any result that:
 
 - names an unknown or non-exported question id;
 - has a choice other than ACCEPT, REJECT or UNCERTAIN;
 - has a probability that is missing, non-numeric or outside [0, 1];
 - has probabilities that do not sum to 1;
 - has a choice that is not the most probable outcome;
+- has a confidence that is not a number in [0, 1];
 - was issued for a classifier answer that has since changed.

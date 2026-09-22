@@ -1,5 +1,13 @@
 # Hospital 1 — generalization report
 
+> **Validation status (added 2026-09-22).** This report was written at the
+> freeze and is kept as history. The project owner reports that the full
+> Hospital 1 labels were visible during development of this project, and the
+> holdout has been printed by every `evaluate h1` run since. So where this
+> report calls the holdout "unseen", read it as a **post-hoc check, not an
+> independent test-set measurement**. The same applies to the temporal study.
+> See [`evaluation_report.md`](evaluation_report.md).
+
 Implementation frozen at `ab7bc8040ab8fe43` before the holdout was read.
 183 tests passed at that freeze. 913 invoices audited, 58 flagged.
 

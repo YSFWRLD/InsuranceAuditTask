@@ -4,9 +4,9 @@
   "classifier_model": "z-ai/glm-5.3-flash",
   "classifier_prompt_version": "001_service_classifier@2b8f543469fb",
   "jev_model": "jev-1.13.0",
-  "jev_prompt_version": "003_jev_verifier@ec6778c60f4b",
+  "jev_prompt_version": "003_jev_verifier@7a2a82a900a9",
   "jev_threshold": 0.9,
-  "updated_utc": "2026-09-21T20:43:54+00:00",
+  "updated_utc": "2026-09-22T02:41:47+00:00",
   "invalidated": [],
   "clusters": {
     "c-599dba09b3": {
@@ -60,14 +60,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "6.1",
+            "24.2"
+          ],
+          "reason": "The description 'admin ophth anaes' identifies Ophthalmic Anaesthesia Administration but omits the qualifier needed to distinguish 'Intermittent' (6.1) from 'Postoperative' (24.2), both of which are equally reasonable readings."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:03:01+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-599dba09b3",
+        "question_id": "verify_h2_c-599dba09b3",
+        "classifier_digest": "c5fb3b02f6907d6a",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'admin ophth anaes' identifies Ophthalmic Anaesthesia Administration but omits the qualifier needed to distinguish 'Intermittent' (6.1) from 'Postoperative' (24.2), both of which are equally reasonable readings."
       }
     },
     "c-041fb4f3a4": {
@@ -386,14 +424,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "14.4"
+          ],
+          "reason": "The description gives the qualifier (ADV) and service type (Endoscopic Procedure) but omits the specialty word 'Gastrointestinal', which is needed to distinguish this candidate from advanced endoscopic procedures of other specialties not listed in the contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:01:54+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-52465acdc1",
+        "question_id": "verify_h2_c-52465acdc1",
+        "classifier_digest": "2b8c31081b41e753",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description gives the qualifier (ADV) and service type (Endoscopic Procedure) but omits the specialty word 'Gastrointestinal', which is needed to distinguish this candidate from advanced endoscopic procedures of other specialties not listed in the contract."
       }
     },
     "c-454bd2845b": {
@@ -1010,14 +1085,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.78,
+          "evidence_clause_ids": [
+            "26.1"
+          ],
+          "reason": "'AMB' and 'NUTRITIONAL SUPP' match the qualifier and service type of Ambulatory Haematology Nutritional Support, but the clinical specialty 'Haematology' is omitted, so the description cannot be distinguished from an ambulatory nutritional support service of another specialty that this contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:15:55+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-cf03267737",
+        "question_id": "verify_h2_c-cf03267737",
+        "classifier_digest": "7098576cef0b3aad",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.95,
+            "REJECT": 0.05,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.93,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'AMB' and 'NUTRITIONAL SUPP' match the qualifier and service type of Ambulatory Haematology Nutritional Support, but the clinical specialty 'Haematology' is omitted, so the description cannot be distinguished from an ambulatory nutritional support service of another specialty that this contract does not list."
       }
     },
     "c-9ad0406939": {
@@ -1276,14 +1388,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.9,
+          "evidence_clause_ids": [
+            "26.6",
+            "28.2"
+          ],
+          "reason": "The description 'analysis card spcm' reads as 'Cardiac Specimen Analysis' but omits any qualifier (e.g. 'intermittent' or 'preoperative'), so both candidate services are equally reasonable readings."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:09:30+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-98a470f518",
+        "question_id": "verify_h2_c-98a470f518",
+        "classifier_digest": "143568ad632d6684",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'analysis card spcm' reads as 'Cardiac Specimen Analysis' but omits any qualifier (e.g. 'intermittent' or 'preoperative'), so both candidate services are equally reasonable readings."
       }
     },
     "c-0b1047ce2f": {
@@ -1490,14 +1640,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "6.6",
+            "18.6"
+          ],
+          "reason": "The description expands to 'analysis dermatologic specimen', which matches the specialty and service type of both candidates, but it omits the qualifier word (ADV/EXT) needed to distinguish Advanced from Extended Dermatologic Specimen Analysis."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:17:10+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-dcd66ed416",
+        "question_id": "verify_h2_c-dcd66ed416",
+        "classifier_digest": "d79e168ee695ee85",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description expands to 'analysis dermatologic specimen', which matches the specialty and service type of both candidates, but it omits the qualifier word (ADV/EXT) needed to distinguish Advanced from Extended Dermatologic Specimen Analysis."
       }
     },
     "c-dc0a438323": {
@@ -1677,14 +1865,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "10.6"
+          ],
+          "reason": "\"ASST BIOP PROC\" expands to Assisted Biopsy Procedure but omits the specialty word \"Gastrointestinal\", which is needed to distinguish this candidate from other assisted biopsy procedures of different specialties that the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:19:53+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-f0a976dcf8",
+        "question_id": "verify_h2_c-f0a976dcf8",
+        "classifier_digest": "c8efd45b7397b93c",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"ASST BIOP PROC\" expands to Assisted Biopsy Procedure but omits the specialty word \"Gastrointestinal\", which is needed to distinguish this candidate from other assisted biopsy procedures of different specialties that the contract does not list."
       }
     },
     "c-cae6b74c9e": {
@@ -1725,14 +1950,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": "Assisted Musculoskeletal Diagnostic Imaging",
+          "status": "MATCHED",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "8.1"
+          ],
+          "reason": "ASST DIAG IMAGING is shorthand for Assisted Diagnostic Imaging, matching the only candidate; the specialty word Musculoskeletal is omitted but no other imaging service is listed, so no ambiguity arises."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:14:55+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-cae6b74c9e",
+        "question_id": "verify_h2_c-cae6b74c9e",
+        "classifier_digest": "2e6744b822d55e95",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "REJECT",
+          "probabilities": {
+            "ACCEPT": 0.41,
+            "REJECT": 0.59,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.38,
+          "model": "jev-1.13.0"
+        },
+        "decision": "UNRESOLVED",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
         "source": "unresolved",
         "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "unresolved_reason": "Jev verdict below the 0.90 threshold: ACCEPT=0.41, REJECT=0.59, UNCERTAIN=0.00"
       }
     },
     "c-d3c7174179": {
@@ -1773,14 +2035,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "8.1"
+          ],
+          "reason": "'asst diag img' expands to 'Assisted Diagnostic Imaging' but omits the specialty word 'Musculoskeletal', which is needed to distinguish this candidate from other diagnostic imaging services of the same kind the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:16:19+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-d3c7174179",
+        "question_id": "verify_h2_c-d3c7174179",
+        "classifier_digest": "18ac8a271c981ca8",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.93,
+            "REJECT": 0.07,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.89,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'asst diag img' expands to 'Assisted Diagnostic Imaging' but omits the specialty word 'Musculoskeletal', which is needed to distinguish this candidate from other diagnostic imaging services of the same kind the contract does not list."
       }
     },
     "c-7b4b57216e": {
@@ -2208,14 +2507,53 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 2,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.6,
+          "evidence_clause_ids": [
+            "22.3"
+          ],
+          "reason": "\"BEDS PHARM DISP\" could be shorthand for Bedside Pulmonary Pharmaceutical Dispensing, but \"beds\" is equally a natural abbreviation for beds/bed occupancy, a different service kind not listed here, so the description does not uniquely identify the candidate."
+        },
+        "errors": [
+          "attempt 1: provider error: HTTP Error 402: Payment Required"
+        ],
+        "completed_utc": "2026-09-22T00:45:45+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-2b06aa87d1",
+        "question_id": "verify_h2_c-2b06aa87d1",
+        "classifier_digest": "1b7f12309623a121",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.93,
+            "REJECT": 0.07,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.89,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"BEDS PHARM DISP\" could be shorthand for Bedside Pulmonary Pharmaceutical Dispensing, but \"beds\" is equally a natural abbreviation for beds/bed occupancy, a different service kind not listed here, so the description does not uniquely identify the candidate."
       }
     },
     "c-58a0ec1f45": {
@@ -2444,14 +2782,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "14.6"
+          ],
+          "reason": "\"CARD NURS OBS\" identifies the specialty (Cardiac) and service type (Nursing Observation) but omits the qualifier, so it cannot be distinguished from a non-elective (e.g., Routine) Cardiac Nursing Observation that this contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:11:22+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-a3609e5e62",
+        "question_id": "verify_h2_c-a3609e5e62",
+        "classifier_digest": "1f39ddde64f2ac48",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"CARD NURS OBS\" identifies the specialty (Cardiac) and service type (Nursing Observation) but omits the qualifier, so it cannot be distinguished from a non-elective (e.g., Routine) Cardiac Nursing Observation that this contract does not list."
       }
     },
     "c-ea900137b9": {
@@ -2584,14 +2959,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.78,
+          "evidence_clause_ids": [
+            "18.5"
+          ],
+          "reason": "\"Transp\" reads as transport and \"cardiac ... service\" matches the specialty and service type, but the qualifier \"Elective\" is omitted, so the description cannot be distinguished from a non-elective cardiac transport service the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:14:53+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-c9e5894573",
+        "question_id": "verify_h2_c-c9e5894573",
+        "classifier_digest": "6b6f8fa94a24f5bc",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.97,
+            "REJECT": 0.03,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.95,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"Transp\" reads as transport and \"cardiac ... service\" matches the specialty and service type, but the qualifier \"Elective\" is omitted, so the description cannot be distinguished from a non-elective cardiac transport service the contract does not list."
       }
     },
     "c-311105b484": {
@@ -3658,14 +4070,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "26.4"
+          ],
+          "reason": "DISP FOC PHARM expands to 'Focused Pharmaceutical Dispensing' but omits the specialty word 'Pulmonary', which is needed to distinguish the candidate from focused pharmaceutical dispensing of other specialties not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:08:21+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-88581b2033",
+        "question_id": "verify_h2_c-88581b2033",
+        "classifier_digest": "4691265e92cb8e7e",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.96,
+            "REJECT": 0.04,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.95,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: DISP FOC PHARM expands to 'Focused Pharmaceutical Dispensing' but omits the specialty word 'Pulmonary', which is needed to distinguish the candidate from focused pharmaceutical dispensing of other specialties not listed in this contract."
       }
     },
     "c-7b52f08295": {
@@ -3986,14 +4435,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "18.5"
+          ],
+          "reason": "The description expands to 'elective transport service' but omits the specialty word 'Cardiac', which is needed to distinguish this candidate from other elective transport services of the same kind not listed in the contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:12:13+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-a64b7098c0",
+        "question_id": "verify_h2_c-a64b7098c0",
+        "classifier_digest": "718f9b25601dec5a",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description expands to 'elective transport service' but omits the specialty word 'Cardiac', which is needed to distinguish this candidate from other elective transport services of the same kind not listed in the contract."
       }
     },
     "c-282306c2aa": {
@@ -4537,14 +5023,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.7,
+          "evidence_clause_ids": [
+            "26.3"
+          ],
+          "reason": "EMER THTR TM reads as Emergency Theatre Time, but the description omits the specialty word Paediatric, so it could equally denote a non-paediatric emergency theatre time service not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:06:05+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-6c3e770460",
+        "question_id": "verify_h2_c-6c3e770460",
+        "classifier_digest": "f237fecad383ec83",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: EMER THTR TM reads as Emergency Theatre Time, but the description omits the specialty word Paediatric, so it could equally denote a non-paediatric emergency theatre time service not listed in this contract."
       }
     },
     "c-f3f2557267": {
@@ -4585,14 +5108,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "8.3"
+          ],
+          "reason": "The description 'emer transp service' omits the clinical specialty word 'Haematology', which is needed to distinguish this candidate from other Emergency Transport Services of different specialties that the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:20:12+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-f3f2557267",
+        "question_id": "verify_h2_c-f3f2557267",
+        "classifier_digest": "e1851c44c9c8868b",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.96,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'emer transp service' omits the clinical specialty word 'Haematology', which is needed to distinguish this candidate from other Emergency Transport Services of different specialties that the contract does not list."
       }
     },
     "c-596594fc2b": {
@@ -4633,14 +5193,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "8.3"
+          ],
+          "reason": "The description 'emer transp svc' names an emergency transport service but omits the specialty word 'Haematology', which is needed to distinguish this candidate from other emergency transport services the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:02:52+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-596594fc2b",
+        "question_id": "verify_h2_c-596594fc2b",
+        "classifier_digest": "18cc2df4e17938d9",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'emer transp svc' names an emergency transport service but omits the specialty word 'Haematology', which is needed to distinguish this candidate from other emergency transport services the contract does not list."
       }
     },
     "c-f579c95bd7": {
@@ -4727,14 +5324,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.7,
+          "evidence_clause_ids": [
+            "18.3"
+          ],
+          "reason": "\"endo\" and \"conf\" read as Endocrine Conference and \"cs\" plausibly as \"case\", but the qualifier \"Advanced\" is omitted, and that word is needed to tell Advanced Endocrine Case Conference apart from a standard endocrine case conference this contract does not list; \"cs\" is itself uncertain shorthand for \"case\"."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:01:13+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-49bd3a10ec",
+        "question_id": "verify_h2_c-49bd3a10ec",
+        "classifier_digest": "c3337e37f0d29878",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"endo\" and \"conf\" read as Endocrine Conference and \"cs\" plausibly as \"case\", but the qualifier \"Advanced\" is omitted, and that word is needed to tell Advanced Endocrine Case Conference apart from a standard endocrine case conference this contract does not list; \"cs\" is itself uncertain shorthand for \"case\"."
       }
     },
     "c-e2ccc6412b": {
@@ -4776,14 +5410,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.72,
+          "evidence_clause_ids": [
+            "4.3"
+          ],
+          "reason": "'ENT' maps to Otolaryngologic and 'CONF' to Conference, but 'CS' reads most naturally as 'Case', leaving the qualifier 'Comprehensive' unstated, so the description cannot be told apart from a differently qualified Otolaryngologic Case Conference."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:18:41+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-e2ccc6412b",
+        "question_id": "verify_h2_c-e2ccc6412b",
+        "classifier_digest": "ff27bec5bf8ea309",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'ENT' maps to Otolaryngologic and 'CONF' to Conference, but 'CS' reads most naturally as 'Case', leaving the qualifier 'Comprehensive' unstated, so the description cannot be told apart from a differently qualified Otolaryngologic Case Conference."
       }
     },
     "c-25306efce4": {
@@ -4837,14 +5508,26 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "failed",
+        "attempts": 3,
+        "result": null,
+        "errors": [
+          "attempt 1: provider error: HTTP Error 402: Payment Required",
+          "attempt 2: provider error: HTTP Error 402: Payment Required",
+          "attempt 3: provider error: HTTP Error 402: Payment Required"
+        ],
+        "completed_utc": "2026-09-22T00:45:26+00:00"
+      },
       "jev": null,
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
         "source": "unresolved",
         "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "unresolved_reason": "classifier failed: attempt 2: provider error: HTTP Error 402: Payment Required; attempt 3: provider error: HTTP Error 402: Payment Required"
       }
     },
     "c-1c1d80b3b5": {
@@ -5256,14 +5939,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "12.2"
+          ],
+          "reason": "'ext radiother fract' reads as Extended Radiotherapy Fraction but omits the specialty word 'Orthopaedic', so it could equally denote a radiotherapy fraction of another specialty not listed in this contract. The missing specialty word prevents a unique match."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:13:39+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-ac8bea5063",
+        "question_id": "verify_h2_c-ac8bea5063",
+        "classifier_digest": "8755486205f4dae7",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'ext radiother fract' reads as Extended Radiotherapy Fraction but omits the specialty word 'Orthopaedic', so it could equally denote a radiotherapy fraction of another specialty not listed in this contract. The missing specialty word prevents a unique match."
       }
     },
     "c-7634c3f93a": {
@@ -5588,14 +6308,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": "Extended Vascular Home Visit",
+          "status": "MATCHED",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "22.5"
+          ],
+          "reason": "'EXTENDED' matches the qualifier and 'HM VST' is shorthand for Home Visit; no word contradicts the sole candidate Extended Vascular Home Visit."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:02:02+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-54a3891f4d",
+        "question_id": "verify_h2_c-54a3891f4d",
+        "classifier_digest": "9f424b9e9f04a66f",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "REJECT",
+          "probabilities": {
+            "ACCEPT": 0.35,
+            "REJECT": 0.65,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.47,
+          "model": "jev-1.13.0"
+        },
+        "decision": "UNRESOLVED",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
         "source": "unresolved",
         "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "unresolved_reason": "Jev verdict below the 0.90 threshold: ACCEPT=0.35, REJECT=0.65, UNCERTAIN=0.00"
       }
     },
     "c-3406638dd1": {
@@ -6320,14 +7077,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "18.4"
+          ],
+          "reason": "The shorthand 'fract beds radiother' plausibly reads as 'Fraction Bedside Radiotherapy', matching the candidate's qualifier and service type, but it omits the specialty word 'Ophthalmic' needed to distinguish it from a bedside radiotherapy fraction of another specialty not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:16:40+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-d45f47a99d",
+        "question_id": "verify_h2_c-d45f47a99d",
+        "classifier_digest": "5b87acce1b86ee9a",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.95,
+            "REJECT": 0.05,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.93,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The shorthand 'fract beds radiother' plausibly reads as 'Fraction Bedside Radiotherapy', matching the candidate's qualifier and service type, but it omits the specialty word 'Ophthalmic' needed to distinguish it from a bedside radiotherapy fraction of another specialty not listed in this contract."
       }
     },
     "c-146874ee92": {
@@ -6519,14 +7313,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.9,
+          "evidence_clause_ids": [
+            "16.4",
+            "6.5"
+          ],
+          "reason": "'haem biop proc' expands to 'Haematology Biopsy Procedure' but omits the qualifier that distinguishes the two candidates, 'Outpatient' versus 'Supervised', so both are equally reasonable readings."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:16:51+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-d816bda672",
+        "question_id": "verify_h2_c-d816bda672",
+        "classifier_digest": "e0b2c2456541816f",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'haem biop proc' expands to 'Haematology Biopsy Procedure' but omits the qualifier that distinguishes the two candidates, 'Outpatient' versus 'Supervised', so both are equally reasonable readings."
       }
     },
     "c-195c389fd5": {
@@ -6797,14 +7629,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "8.1"
+          ],
+          "reason": "IMG ASST DIAG matches Assisted Diagnostic Imaging but omits the specialty word 'Musculoskeletal', so it could equally refer to diagnostic imaging of another specialty not listed in the contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:20:44+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-fff7114c57",
+        "question_id": "verify_h2_c-fff7114c57",
+        "classifier_digest": "d0e4cca462ed1ca5",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.94,
+            "REJECT": 0.06,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.91,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: IMG ASST DIAG matches Assisted Diagnostic Imaging but omits the specialty word 'Musculoskeletal', so it could equally refer to diagnostic imaging of another specialty not listed in the contract."
       }
     },
     "c-bbb20cb044": {
@@ -7229,14 +8098,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.72,
+          "evidence_clause_ids": [
+            "26.5"
+          ],
+          "reason": "\"INPT ISOL RM OCC\" matches Inpatient Isolation Room Occupancy but omits the specialty word \"Paediatric\", which is needed to distinguish the candidate from an adult isolation room occupancy service of the same kind that this contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:46:31+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-38a6b2d3d9",
+        "question_id": "verify_h2_c-38a6b2d3d9",
+        "classifier_digest": "407816aa7d7680b2",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"INPT ISOL RM OCC\" matches Inpatient Isolation Room Occupancy but omits the specialty word \"Paediatric\", which is needed to distinguish the candidate from an adult isolation room occupancy service of the same kind that this contract does not list."
       }
     },
     "c-eb55757d75": {
@@ -9065,14 +9971,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "12.5"
+          ],
+          "reason": "'interm' could abbreviate 'Intermittent' or 'Intermediate', and the description omits the specialty word (Otolaryngologic) needed to distinguish this rehabilitation programme from same-kind programmes of other specialties not listed here."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:03:43+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-60347fffcc",
+        "question_id": "verify_h2_c-60347fffcc",
+        "classifier_digest": "89497c6216835db1",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.97,
+            "REJECT": 0.03,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.95,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'interm' could abbreviate 'Intermittent' or 'Intermediate', and the description omits the specialty word (Otolaryngologic) needed to distinguish this rehabilitation programme from same-kind programmes of other specialties not listed here."
       }
     },
     "c-67427c53b1": {
@@ -9346,14 +10289,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "24.6"
+          ],
+          "reason": "'interp' and 'supervised' match the qualifier and service type of Supervised Neurological Imaging Interpretation, but the description omits the specialty word 'Neurological', so it could equally denote a supervised imaging interpretation of another specialty not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:16:08+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-d1bec38e27",
+        "question_id": "verify_h2_c-d1bec38e27",
+        "classifier_digest": "755657c2a8ad6fc7",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.95,
+            "REJECT": 0.05,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.92,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'interp' and 'supervised' match the qualifier and service type of Supervised Neurological Imaging Interpretation, but the description omits the specialty word 'Neurological', so it could equally denote a supervised imaging interpretation of another specialty not listed in this contract."
       }
     },
     "c-5cc03b8042": {
@@ -9453,14 +10433,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.92,
+          "evidence_clause_ids": [
+            "28.3",
+            "24.6"
+          ],
+          "reason": "The description 'interpretation neuro img' matches the specialty and service type of both candidates but omits the qualifier ('Routine' vs 'Supervised') needed to distinguish them, and no word in it selects one over the other."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:04:10+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-6117a3d6bb",
+        "question_id": "verify_h2_c-6117a3d6bb",
+        "classifier_digest": "ba8f8a4c7c8fa007",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'interpretation neuro img' matches the specialty and service type of both candidates but omits the qualifier ('Routine' vs 'Supervised') needed to distinguish them, and no word in it selects one over the other."
       }
     },
     "c-1620d3165b": {
@@ -9643,14 +10661,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.6,
+          "evidence_clause_ids": [
+            "10.4"
+          ],
+          "reason": "\"Metab lab panel\" matches Metabolic Laboratory Panel but omits the qualifier \"Supervised\", which distinguishes this service from an unsupervised panel of the same kind not listed in the contract. The description is therefore insufficient to identify exactly one contracted service."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:44:59+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-1c0858a35a",
+        "question_id": "verify_h2_c-1c0858a35a",
+        "classifier_digest": "fcb03348677ed4ad",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"Metab lab panel\" matches Metabolic Laboratory Panel but omits the qualifier \"Supervised\", which distinguishes this service from an unsupervised panel of the same kind not listed in the contract. The description is therefore insufficient to identify exactly one contracted service."
       }
     },
     "c-3e6098dc2f": {
@@ -9797,14 +10852,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "8.1",
+            "22.1"
+          ],
+          "reason": "'MSK DIAG IMG' expands to Musculoskeletal Diagnostic Imaging but omits the qualifier that distinguishes the two candidates, 'Assisted' versus 'Supervised', so both are equally reasonable readings."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:53:40+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-47a7b761bf",
+        "question_id": "verify_h2_c-47a7b761bf",
+        "classifier_digest": "1df37ef183017afb",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'MSK DIAG IMG' expands to Musculoskeletal Diagnostic Imaging but omits the qualifier that distinguishes the two candidates, 'Assisted' versus 'Supervised', so both are equally reasonable readings."
       }
     },
     "c-f04c364fc8": {
@@ -9937,14 +11030,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "24.5"
+          ],
+          "reason": "\"MSK RECOVERY RM OCC\" identifies Musculoskeletal Recovery Room Occupancy but omits the qualifier \"Standard\", the word needed to distinguish this candidate from other-qualifier recovery room occupancy services the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:12:47+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-a8f573655c",
+        "question_id": "verify_h2_c-a8f573655c",
+        "classifier_digest": "1660027c12a84b38",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.95,
+            "REJECT": 0.05,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.92,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"MSK RECOVERY RM OCC\" identifies Musculoskeletal Recovery Room Occupancy but omits the qualifier \"Standard\", the word needed to distinguish this candidate from other-qualifier recovery room occupancy services the contract does not list."
       }
     },
     "c-1b3155cb8a": {
@@ -10224,14 +11354,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "20.2",
+            "20.3"
+          ],
+          "reason": "The description 'neuro rehab prog' matches the specialty and service type of both candidates but omits the qualifier (Intensive vs Postoperative) needed to distinguish them, so more than one candidate is a reasonable reading."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:10:12+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-9ab22bdf91",
+        "question_id": "verify_h2_c-9ab22bdf91",
+        "classifier_digest": "7a50660053851b2f",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'neuro rehab prog' matches the specialty and service type of both candidates but omits the qualifier (Intensive vs Postoperative) needed to distinguish them, so more than one candidate is a reasonable reading."
       }
     },
     "c-745a283fe5": {
@@ -10377,14 +11545,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "20.2",
+            "20.3"
+          ],
+          "reason": "The description 'neurological rehab prog' names the specialty and service type but omits the qualifier, so it fits both 'Intensive' (20.2) and 'Postoperative' (20.3) Neurological Rehabilitation Programme equally well."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:07:50+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-73207fe65c",
+        "question_id": "verify_h2_c-73207fe65c",
+        "classifier_digest": "2b509acb7e45ae53",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'neurological rehab prog' names the specialty and service type but omits the qualifier, so it fits both 'Intensive' (20.2) and 'Postoperative' (20.3) Neurological Rehabilitation Programme equally well."
       }
     },
     "c-46e2e7cf5a": {
@@ -10425,14 +11631,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.78,
+          "evidence_clause_ids": [
+            "14.6"
+          ],
+          "reason": "\"Card\" reads as Cardiac and \"observation nursing\" as Nursing Observation, but the description omits the qualifier \"Elective\", which is needed to distinguish this candidate from a non-elective cardiac nursing observation service of the same kind that this contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:53:27+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-46e2e7cf5a",
+        "question_id": "verify_h2_c-46e2e7cf5a",
+        "classifier_digest": "562001877e5729f0",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"Card\" reads as Cardiac and \"observation nursing\" as Nursing Observation, but the description omits the qualifier \"Elective\", which is needed to distinguish this candidate from a non-elective cardiac nursing observation service of the same kind that this contract does not list."
       }
     },
     "c-970dd8dc8f": {
@@ -11104,14 +12347,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "8.5"
+          ],
+          "reason": "The description matches every word of 'Intensive Palliative Ward Bed Occupancy' (INTENS, WD, BD, OCC) but omits the specialty word 'Palliative', so it could equally describe an intensive ward bed occupancy of a different specialty that this contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:10:46+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-a2694f606d",
+        "question_id": "verify_h2_c-a2694f606d",
+        "classifier_digest": "6dbd9cd5f97e31d6",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description matches every word of 'Intensive Palliative Ward Bed Occupancy' (INTENS, WD, BD, OCC) but omits the specialty word 'Palliative', so it could equally describe an intensive ward bed occupancy of a different specialty that this contract does not list."
       }
     },
     "c-5a90b16a0a": {
@@ -11332,14 +12612,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "20.4"
+          ],
+          "reason": "The description gives OCC, PREOP, ISOL and RM, matching the service type and qualifier, but omits the clinical specialty word 'Neurological', so it cannot be distinguished from a preoperative isolation room occupancy of another specialty not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:47:50+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-3995ceec2d",
+        "question_id": "verify_h2_c-3995ceec2d",
+        "classifier_digest": "e7ada9796d386038",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description gives OCC, PREOP, ISOL and RM, matching the service type and qualifier, but omits the clinical specialty word 'Neurological', so it cannot be distinguished from a preoperative isolation room occupancy of another specialty not listed in this contract."
       }
     },
     "c-8ae6cbcb4a": {
@@ -11864,14 +13181,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "24.5"
+          ],
+          "reason": "The description 'occ std recov rm' supplies the qualifier (STD) and service type (Recovery Room Occupancy) but omits the clinical specialty, so it cannot distinguish Musculoskeletal Recovery Room Occupancy from an identically named recovery room service of another specialty not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:50:47+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-413f5a34b0",
+        "question_id": "verify_h2_c-413f5a34b0",
+        "classifier_digest": "ba7814e11da0d210",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'occ std recov rm' supplies the qualifier (STD) and service type (Recovery Room Occupancy) but omits the clinical specialty, so it cannot distinguish Musculoskeletal Recovery Room Occupancy from an identically named recovery room service of another specialty not listed in this contract."
       }
     },
     "c-fb54b48d00": {
@@ -12142,14 +13496,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "6.1",
+            "24.2"
+          ],
+          "reason": "The description 'ophth anaesthesia admin' matches the specialty and service type of both candidates but omits the qualifier (Intermittent vs Postoperative) needed to distinguish them, so more than one candidate is a reasonable reading."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:14:22+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-bd8b7c67ed",
+        "question_id": "verify_h2_c-bd8b7c67ed",
+        "classifier_digest": "44ae65f486cdf1b1",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'ophth anaesthesia admin' matches the specialty and service type of both candidates but omits the qualifier (Intermittent vs Postoperative) needed to distinguish them, so more than one candidate is a reasonable reading."
       }
     },
     "c-8cef1b5ec0": {
@@ -12203,14 +13595,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.9,
+          "evidence_clause_ids": [
+            "16.2",
+            "20.5"
+          ],
+          "reason": "'OPHTH LAB PNL' matches both Focused and Routine Ophthalmic Laboratory Panel; the qualifier is omitted, so the description cannot distinguish between them."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:08:32+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-8cef1b5ec0",
+        "question_id": "verify_h2_c-8cef1b5ec0",
+        "classifier_digest": "d1a2f29d2b03ffd2",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'OPHTH LAB PNL' matches both Focused and Routine Ophthalmic Laboratory Panel; the qualifier is omitted, so the description cannot distinguish between them."
       }
     },
     "c-905a347323": {
@@ -12624,14 +14054,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "6.2",
+            "14.2"
+          ],
+          "reason": "The description gives only 'Orthopaedic Isolation Room Occupancy' and omits the qualifier that distinguishes the two candidates, Postoperative versus Standard, so both are equally reasonable readings."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:02:12+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-58e1b5194f",
+        "question_id": "verify_h2_c-58e1b5194f",
+        "classifier_digest": "a1c9daec3c5f4519",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description gives only 'Orthopaedic Isolation Room Occupancy' and omits the qualifier that distinguishes the two candidates, Postoperative versus Standard, so both are equally reasonable readings."
       }
     },
     "c-829a1ed9de": {
@@ -12672,14 +14140,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "12.1"
+          ],
+          "reason": "The description 'otolaryngologic disch plng' expands to Otolaryngologic Discharge Planning but omits the qualifier 'Continuous', which is needed to distinguish the listed service from other qualified discharge planning services of the same kind not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:08:08+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-829a1ed9de",
+        "question_id": "verify_h2_c-829a1ed9de",
+        "classifier_digest": "7f1a38a65998c11a",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'otolaryngologic disch plng' expands to Otolaryngologic Discharge Planning but omits the qualifier 'Continuous', which is needed to distinguish the listed service from other qualified discharge planning services of the same kind not listed in this contract."
       }
     },
     "c-91bef966e8": {
@@ -12871,14 +14376,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "12.4",
+            "20.6"
+          ],
+          "reason": "The description 'paed inf ther' expands to Paediatric Infusion Therapy but omits the qualifier (Intensive vs Standard) that distinguishes the two contracted services, and no word in it selects one over the other."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:19:44+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-eedb721f97",
+        "question_id": "verify_h2_c-eedb721f97",
+        "classifier_digest": "9dfa05e40014f698",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'paed inf ther' expands to Paediatric Infusion Therapy but omits the qualifier (Intensive vs Standard) that distinguishes the two contracted services, and no word in it selects one over the other."
       }
     },
     "c-675218ed1c": {
@@ -13024,14 +14567,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "26.3",
+            "28.1"
+          ],
+          "reason": "The description 'paed theatre tm' matches the specialty and service type (Paediatric Theatre Time) but omits the qualifier needed to distinguish Emergency from Postoperative, both of which are listed candidates."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:17:19+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-de5b709ff8",
+        "question_id": "verify_h2_c-de5b709ff8",
+        "classifier_digest": "b8ae5dbe809aa80b",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'paed theatre tm' matches the specialty and service type (Paediatric Theatre Time) but omits the qualifier needed to distinguish Emergency from Postoperative, both of which are listed candidates."
       }
     },
     "c-39a233e80b": {
@@ -13177,14 +14758,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "12.4",
+            "20.6"
+          ],
+          "reason": "The description 'paediatric inf ther' identifies Paediatric Infusion Therapy but omits the qualifier (Intensive vs Standard) that distinguishes the two contracted candidates, so both are reasonable readings."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:14:29+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-bfb9d5a818",
+        "question_id": "verify_h2_c-bfb9d5a818",
+        "classifier_digest": "42005cdcfa18d3d8",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 1.0,
+            "REJECT": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'paediatric inf ther' identifies Paediatric Infusion Therapy but omits the qualifier (Intensive vs Standard) that distinguishes the two contracted candidates, so both are reasonable readings."
       }
     },
     "c-3a5c37912b": {
@@ -13225,14 +14844,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "4.5"
+          ],
+          "reason": "\"PALL RECOV ROOM OCC\" matches the specialty (Palliative) and service type (Recovery Room Occupancy) but omits the qualifier \"Focused\", the word needed to distinguish this candidate from other qualifier variants of the same service that the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:49:58+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-3a5c37912b",
+        "question_id": "verify_h2_c-3a5c37912b",
+        "classifier_digest": "6c62850ab7996b41",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.95,
+            "REJECT": 0.05,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.92,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"PALL RECOV ROOM OCC\" matches the specialty (Palliative) and service type (Recovery Room Occupancy) but omits the qualifier \"Focused\", the word needed to distinguish this candidate from other qualifier variants of the same service that the contract does not list."
       }
     },
     "c-d3bb824064": {
@@ -13448,14 +15104,53 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 2,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "16.2"
+          ],
+          "reason": "PNL FOC LAB matches 'Panel Focused Laboratory', but the specialty word 'Ophthalmic' is omitted, so it could equally denote a focused laboratory panel of another specialty not listed."
+        },
+        "errors": [
+          "attempt 1: provider error: HTTP Error 402: Payment Required"
+        ],
+        "completed_utc": "2026-09-22T01:09:14+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-90ffd35fc6",
+        "question_id": "verify_h2_c-90ffd35fc6",
+        "classifier_digest": "c4ffdfbfbf1e485b",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: PNL FOC LAB matches 'Panel Focused Laboratory', but the specialty word 'Ophthalmic' is omitted, so it could equally denote a focused laboratory panel of another specialty not listed."
       }
     },
     "c-99434e63ec": {
@@ -13681,14 +15376,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "24.2"
+          ],
+          "reason": "\"POSTOP ANAES ADMIN\" expands to Postoperative Anaesthesia Administration but omits the specialty word \"Ophthalmic\", which is needed to distinguish this candidate from postoperative anaesthesia administration of other specialties the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:13:07+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-aa9862ba88",
+        "question_id": "verify_h2_c-aa9862ba88",
+        "classifier_digest": "f536ae77c6ab6d4c",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"POSTOP ANAES ADMIN\" expands to Postoperative Anaesthesia Administration but omits the specialty word \"Ophthalmic\", which is needed to distinguish this candidate from postoperative anaesthesia administration of other specialties the contract does not list."
       }
     },
     "c-3868fbd69d": {
@@ -13872,14 +15604,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "10.1"
+          ],
+          "reason": "The description expands to 'Postoperative Infusion Therapy', matching the qualifier and service type, but omits the specialty word 'Pulmonary' that distinguishes this candidate from other kinds of postoperative infusion therapy not listed in the contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:20:29+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-f9ebf6366f",
+        "question_id": "verify_h2_c-f9ebf6366f",
+        "classifier_digest": "79c8e06b2bb8d313",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description expands to 'Postoperative Infusion Therapy', matching the qualifier and service type, but omits the specialty word 'Pulmonary' that distinguishes this candidate from other kinds of postoperative infusion therapy not listed in the contract."
       }
     },
     "c-fd03c630e2": {
@@ -14510,14 +16279,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "28.1"
+          ],
+          "reason": "'POSTOP THTR TM' expands to 'Postoperative Theatre Time', matching the qualifier and service type but omitting the specialty word 'Paediatric', so it could equally denote a non-paediatric theatre time service not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:44:53+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-183521e1e9",
+        "question_id": "verify_h2_c-183521e1e9",
+        "classifier_digest": "c7afde8bc99850ff",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'POSTOP THTR TM' expands to 'Postoperative Theatre Time', matching the qualifier and service type but omitting the specialty word 'Paediatric', so it could equally denote a non-paediatric theatre time service not listed in this contract."
       }
     },
     "c-aca099a877": {
@@ -15470,14 +17276,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "28.2"
+          ],
+          "reason": "PREOP, SPCM and ANLY map to Preoperative Specimen Analysis, but the specialty word (Cardiac) is omitted, so the description could equally denote a non-cardiac specimen analysis not listed under this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:43:49+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-0729223b15",
+        "question_id": "verify_h2_c-0729223b15",
+        "classifier_digest": "aa2074ef91b11a01",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.97,
+            "REJECT": 0.03,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.96,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: PREOP, SPCM and ANLY map to Preoperative Specimen Analysis, but the specialty word (Cardiac) is omitted, so the description could equally denote a non-cardiac specimen analysis not listed under this contract."
       }
     },
     "c-2c43cd86e8": {
@@ -15893,14 +17736,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.6,
+          "evidence_clause_ids": [
+            "18.2"
+          ],
+          "reason": "PROC HEP ENDOSC matches the specialty (Hepatic) and service type (Endoscopic Procedure), but the qualifier is omitted; 'Supervised' is a qualifier that could be dropped in shorthand, yet the description cannot confirm it against other unlisted hepatic endoscopic procedures."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:45:05+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-1e727b9ff9",
+        "question_id": "verify_h2_c-1e727b9ff9",
+        "classifier_digest": "0761e77a814aed87",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.97,
+            "REJECT": 0.03,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.95,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: PROC HEP ENDOSC matches the specialty (Hepatic) and service type (Endoscopic Procedure), but the qualifier is omitted; 'Supervised' is a qualifier that could be dropped in shorthand, yet the description cannot confirm it against other unlisted hepatic endoscopic procedures."
       }
     },
     "c-724fc66685": {
@@ -16449,14 +18329,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.72,
+          "evidence_clause_ids": [
+            "28.4"
+          ],
+          "reason": "\"PSYCH TRANSF SVC\" expands to Psychiatric Transfusion Service, matching the specialty and service type, but it omits the qualifier \"Standard\", which is the word distinguishing this candidate from other qualifier variants of the same psychiatric transfusion service that the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:05:40+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-6634a0e30f",
+        "question_id": "verify_h2_c-6634a0e30f",
+        "classifier_digest": "2965dee6bfd6bb4b",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.97,
+            "REJECT": 0.03,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.95,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"PSYCH TRANSF SVC\" expands to Psychiatric Transfusion Service, matching the specialty and service type, but it omits the qualifier \"Standard\", which is the word distinguishing this candidate from other qualifier variants of the same psychiatric transfusion service that the contract does not list."
       }
     },
     "c-3f541e0ce3": {
@@ -16497,14 +18414,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "10.1"
+          ],
+          "reason": "\"pulm inf ther\" reads as Pulmonary Infusion Therapy but omits the qualifier \"Postoperative\", which is needed to distinguish the contracted service from other qualifiers of the same specialty and service type not listed in this contract. The trailing \"/SA-9868\" is a billing number and carries no meaning."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:50:20+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-3f541e0ce3",
+        "question_id": "verify_h2_c-3f541e0ce3",
+        "classifier_digest": "dc3d4f10f59a3c56",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"pulm inf ther\" reads as Pulmonary Infusion Therapy but omits the qualifier \"Postoperative\", which is needed to distinguish the contracted service from other qualifiers of the same specialty and service type not listed in this contract. The trailing \"/SA-9868\" is a billing number and carries no meaning."
       }
     },
     "c-091cbabde0": {
@@ -16558,14 +18512,52 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.95,
+          "evidence_clause_ids": [
+            "22.3",
+            "26.4"
+          ],
+          "reason": "The description 'pulm pharm disp' matches the specialty and service type of both candidates but omits the qualifier ('Bedside' vs 'Focused') needed to distinguish them, so more than one candidate is a reasonable reading."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:44:02+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-091cbabde0",
+        "question_id": "verify_h2_c-091cbabde0",
+        "classifier_digest": "95232157545a0d4d",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'pulm pharm disp' matches the specialty and service type of both candidates but omits the qualifier ('Bedside' vs 'Focused') needed to distinguish them, so more than one candidate is a reasonable reading."
       }
     },
     "c-8cd430823c": {
@@ -16875,14 +18867,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "20.5"
+          ],
+          "reason": "The description matches 'Routine', 'Lab' (Laboratory) and 'Pnl' (Panel) but omits the specialty word 'Ophthalmic', which is needed to distinguish this candidate from a routine laboratory panel of another specialty not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:05:52+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-67704c6e5e",
+        "question_id": "verify_h2_c-67704c6e5e",
+        "classifier_digest": "4a68c460ba6f3d7c",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description matches 'Routine', 'Lab' (Laboratory) and 'Pnl' (Panel) but omits the specialty word 'Ophthalmic', which is needed to distinguish this candidate from a routine laboratory panel of another specialty not listed in this contract."
       }
     },
     "c-97b7b286dc": {
@@ -17359,14 +19388,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "16.6"
+          ],
+          "reason": "'RTN PHYSIO SESS' expands to 'Routine Physiotherapy Session' but omits 'Geriatric', the word distinguishing the contracted service from other physiotherapy sessions of the same kind not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:14:10+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-bca929f045",
+        "question_id": "verify_h2_c-bca929f045",
+        "classifier_digest": "64ff848c942cbc1e",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'RTN PHYSIO SESS' expands to 'Routine Physiotherapy Session' but omits 'Geriatric', the word distinguishing the contracted service from other physiotherapy sessions of the same kind not listed in this contract."
       }
     },
     "c-6300d6cbee": {
@@ -17499,14 +19565,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.82,
+          "evidence_clause_ids": [
+            "8.4"
+          ],
+          "reason": "\"sess card dial\" reads as Session/Cardiac/Dialysis, matching the specialty and service type of Focused Cardiac Dialysis Session, but it omits the qualifier \"Focused\" (no FOC/ADV-like token), so it could equally describe an unqualified or differently qualified Cardiac Dialysis Session that this contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:07:44+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-6e0a8106be",
+        "question_id": "verify_h2_c-6e0a8106be",
+        "classifier_digest": "a3e73ac94aae62c2",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"sess card dial\" reads as Session/Cardiac/Dialysis, matching the specialty and service type of Focused Cardiac Dialysis Session, but it omits the qualifier \"Focused\" (no FOC/ADV-like token), so it could equally describe an unqualified or differently qualified Cardiac Dialysis Session that this contract does not list."
       }
     },
     "c-42a69b0afb": {
@@ -17687,14 +19790,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "14.1"
+          ],
+          "reason": "SESS PREOP PHYSIO reads as a preoperative physiotherapy session, but it omits the specialty word Obstetric, so it could equally describe a non-obstetric preoperative physiotherapy session not listed under this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:01:39+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-504e1fcd23",
+        "question_id": "verify_h2_c-504e1fcd23",
+        "classifier_digest": "502a674fad77dc6f",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.99,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: SESS PREOP PHYSIO reads as a preoperative physiotherapy session, but it omits the specialty word Obstetric, so it could equally describe a non-obstetric preoperative physiotherapy session not listed under this contract."
       }
     },
     "c-90a13ae11b": {
@@ -18045,14 +20185,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "6.4"
+          ],
+          "reason": "The description supplies the qualifier (SPCLST = Specialist) and service type (STERILISATION SVC) but omits the clinical specialty 'Psychiatric', which is needed to distinguish this candidate from a non-psychiatric sterilisation service the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:43:29+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-056282c49e",
+        "question_id": "verify_h2_c-056282c49e",
+        "classifier_digest": "6c7ef47653152302",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.97,
+            "REJECT": 0.03,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.95,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description supplies the qualifier (SPCLST = Specialist) and service type (STERILISATION SVC) but omits the clinical specialty 'Psychiatric', which is needed to distinguish this candidate from a non-psychiatric sterilisation service the contract does not list."
       }
     },
     "c-c2037398b8": {
@@ -18388,14 +20565,26 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "failed",
+        "attempts": 3,
+        "result": null,
+        "errors": [
+          "attempt 1: provider error: HTTP Error 402: Payment Required",
+          "attempt 2: provider error: unexpected provider envelope: {'id': 'gen-1790037907-7YGndIdvNC2RE9zGlTvw', 'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 131072 tokens, but can only afford 79721. To increase, ",
+          "attempt 3: provider error: HTTP Error 402: Payment Required"
+        ],
+        "completed_utc": "2026-09-22T00:45:21+00:00"
+      },
       "jev": null,
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
         "source": "unresolved",
         "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "unresolved_reason": "classifier failed: attempt 2: provider error: unexpected provider envelope: {'id': 'gen-1790037907-7YGndIdvNC2RE9zGlTvw', 'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 131072 tokens, but can only afford 79721. To increase, ; attempt 3: provider error: HTTP Error 402: Payment Required"
       }
     },
     "c-feda0d77d0": {
@@ -18967,14 +21156,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "24.5"
+          ],
+          "reason": "STD RECOV RM OCC expands to Standard Recovery Room Occupancy, giving the qualifier and service type but omitting the clinical specialty word (Musculoskeletal) needed to distinguish this candidate from a same-kind service under another specialty not listed here."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:12:02+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-a3f90bb108",
+        "question_id": "verify_h2_c-a3f90bb108",
+        "classifier_digest": "cd55d1871922e19c",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.96,
+            "REJECT": 0.04,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.94,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: STD RECOV RM OCC expands to Standard Recovery Room Occupancy, giving the qualifier and service type but omitting the clinical specialty word (Musculoskeletal) needed to distinguish this candidate from a same-kind service under another specialty not listed here."
       }
     },
     "c-ce34e61373": {
@@ -19016,14 +21242,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.8,
+          "evidence_clause_ids": [
+            "18.1"
+          ],
+          "reason": "\"std telem monit\" expands to Standard Telemetry Monitoring but omits the specialty word \"Metabolic\", which is needed to distinguish the candidate from other same-kind services such as Standard Cardiac Telemetry Monitoring that this contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:15:25+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-ce34e61373",
+        "question_id": "verify_h2_c-ce34e61373",
+        "classifier_digest": "572553254b830e3e",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.97,
+            "REJECT": 0.03,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.95,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"std telem monit\" expands to Standard Telemetry Monitoring but omits the specialty word \"Metabolic\", which is needed to distinguish the candidate from other same-kind services such as Standard Cardiac Telemetry Monitoring that this contract does not list."
       }
     },
     "c-9094fb408c": {
@@ -19064,14 +21327,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "6.5"
+          ],
+          "reason": "The description matches qualifier and type ('Supervised', 'Biopsy Procedure') but omits the specialty word 'Haematology', which is needed to distinguish it from supervised biopsies of other specialties not listed in this contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:08:58+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-9094fb408c",
+        "question_id": "verify_h2_c-9094fb408c",
+        "classifier_digest": "247f598244ef8efc",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description matches qualifier and type ('Supervised', 'Biopsy Procedure') but omits the specialty word 'Haematology', which is needed to distinguish it from supervised biopsies of other specialties not listed in this contract."
       }
     },
     "c-419b1d484b": {
@@ -19948,14 +22248,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.82,
+          "evidence_clause_ids": [
+            "24.6"
+          ],
+          "reason": "\"SUPV IMG INTERP\" expands to \"Supervised Imaging Interpretation\", which matches the qualifier and service type but omits the specialty word \"Neurological\"; imaging interpretation could equally refer to a non-neurological specialty service not listed here, so the description does not uniquely identify the candidate."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:14:00+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-ad5bda0f6a",
+        "question_id": "verify_h2_c-ad5bda0f6a",
+        "classifier_digest": "bdcd30f8bfc5aee9",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.98,
+            "REJECT": 0.02,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.97,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"SUPV IMG INTERP\" expands to \"Supervised Imaging Interpretation\", which matches the qualifier and service type but omits the specialty word \"Neurological\"; imaging interpretation could equally refer to a non-neurological specialty service not listed here, so the description does not uniquely identify the candidate."
       }
     },
     "c-07e4d94c34": {
@@ -20540,14 +22877,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.85,
+          "evidence_clause_ids": [
+            "8.3"
+          ],
+          "reason": "The description 'svc emer transp' expands to 'Service Emergency Transport' but omits the clinical specialty word 'Haematology' needed to distinguish this candidate from an emergency transport service of another specialty not listed in the contract."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:19:39+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-e59b7a94eb",
+        "question_id": "verify_h2_c-e59b7a94eb",
+        "classifier_digest": "46af105b310e1b95",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: The description 'svc emer transp' expands to 'Service Emergency Transport' but omits the clinical specialty word 'Haematology' needed to distinguish this candidate from an emergency transport service of another specialty not listed in the contract."
       }
     },
     "c-5065318c89": {
@@ -21009,14 +23383,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.82,
+          "evidence_clause_ids": [
+            "20.6"
+          ],
+          "reason": "\"STANDARD\" and \"INF\" (with \"THER\" read as \"Therapy\") match Standard Infusion Therapy, but the description omits the specialty word \"Paediatric\" needed to distinguish this candidate from other standard infusion therapy services the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T00:52:20+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-468013ea9f",
+        "question_id": "verify_h2_c-468013ea9f",
+        "classifier_digest": "5d95c91cfc66d3ee",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.99,
+            "REJECT": 0.01,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.98,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: \"STANDARD\" and \"INF\" (with \"THER\" read as \"Therapy\") match Standard Infusion Therapy, but the description omits the specialty word \"Paediatric\" needed to distinguish this candidate from other standard infusion therapy services the contract does not list."
       }
     },
     "c-fd9575f5d6": {
@@ -21337,14 +23748,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": "Preoperative Vascular Imaging Interpretation",
+          "status": "MATCHED",
+          "confidence": 0.75,
+          "evidence_clause_ids": [
+            "6.3"
+          ],
+          "reason": "VASC IMAGING INTERP is shorthand for Vascular Imaging Interpretation, matching the only candidate; no qualifier is stated but no other candidate exists to contradict, and no word conflicts."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:04:25+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-62ebc62ea4",
+        "question_id": "verify_h2_c-62ebc62ea4",
+        "classifier_digest": "b858e8b593b80aaf",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "REJECT",
+          "probabilities": {
+            "ACCEPT": 0.41,
+            "REJECT": 0.59,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.38,
+          "model": "jev-1.13.0"
+        },
+        "decision": "UNRESOLVED",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
         "source": "unresolved",
         "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "unresolved_reason": "Jev verdict below the 0.90 threshold: ACCEPT=0.41, REJECT=0.59, UNCERTAIN=0.00"
       }
     },
     "c-f0c76fd87e": {
@@ -21385,14 +23833,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.6,
+          "evidence_clause_ids": [
+            "16.5"
+          ],
+          "reason": "VASC TRANSP SVC matches the specialty and service type of Postoperative Vascular Transport Service, but omits the qualifier, so it could equally denote a Routine or Advanced vascular transport service not listed here."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:20:07+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-f0c76fd87e",
+        "question_id": "verify_h2_c-f0c76fd87e",
+        "classifier_digest": "5e8eebb5f6ae782f",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.92,
+            "REJECT": 0.08,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.88,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: VASC TRANSP SVC matches the specialty and service type of Postoperative Vascular Transport Service, but omits the qualifier, so it could equally denote a Routine or Advanced vascular transport service not listed here."
       }
     },
     "c-6665e1bd21": {
@@ -21479,14 +23964,51 @@
         }
       },
       "used_unit_basis_for_identity": false,
-      "classifier": null,
-      "jev": null,
+      "classifier": {
+        "model": "z-ai/glm-5.3-flash",
+        "prompt_version": "001_service_classifier@2b8f543469fb",
+        "status": "ok",
+        "attempts": 1,
+        "result": {
+          "selected_service": null,
+          "status": "AMBIGUOUS",
+          "confidence": 0.72,
+          "evidence_clause_ids": [
+            "22.5"
+          ],
+          "reason": "'VST' and 'HM' read as shorthand for 'Vascular Home Visit', but the description omits the qualifier 'Extended', which is needed to distinguish this candidate from other kinds of vascular home visit the contract does not list."
+        },
+        "errors": [],
+        "completed_utc": "2026-09-22T01:17:42+00:00"
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "prompt_version": "003_jev_verifier@7a2a82a900a9",
+        "case_id": "h2_c-e26eed1d13",
+        "question_id": "verify_h2_c-e26eed1d13",
+        "classifier_digest": "ef9f0d972f7d59d8",
+        "status": "answered",
+        "source": "api",
+        "result": {
+          "choice": "ACCEPT",
+          "probabilities": {
+            "ACCEPT": 0.93,
+            "REJECT": 0.07,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 0.89,
+          "model": "jev-1.13.0"
+        },
+        "decision": "ACCEPT",
+        "exported_utc": "2026-09-22T02:19:47+00:00",
+        "answered_utc": "2026-09-22T02:19:49+00:00"
+      },
       "final": {
         "status": "AMBIGUOUS",
         "service": null,
-        "source": "unresolved",
-        "verified": false,
-        "unresolved_reason": "semantic classification not yet run"
+        "source": "semantic_verified",
+        "verified": true,
+        "unresolved_reason": "verified AMBIGUOUS: 'VST' and 'HM' read as shorthand for 'Vascular Home Visit', but the description omits the qualifier 'Extended', which is needed to distinguish this candidate from other kinds of vascular home visit the contract does not list."
       }
     }
   }

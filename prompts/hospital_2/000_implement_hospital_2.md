@@ -2,8 +2,10 @@
 
 - **Used with:** Claude Code (Claude Opus 5)
 - **Produced:** `src/hospital_2/`, `tests/hospital_2/`, `artifacts/hospital_2/`,
-  `outputs/hospital_2/`, and the two executed prompts in this directory
-  ([001](001_service_classifier.md), [002](002_jev_verifier.md))
+  `outputs/hospital_2/`, and the two runtime prompts first written in this
+  directory: [001](001_service_classifier.md) and [002](002_jev_verifier.md).
+  002 was later superseded by [003](003_jev_verifier.md) and never sent to Jev;
+  see [the index](../README.md)
 - **Preceded by:** [`prompts/hospital_1/`](../hospital_1/)
 
 Transcribed verbatim below.

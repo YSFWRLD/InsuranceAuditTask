@@ -86,9 +86,17 @@ def test_dotenv_is_ignored_and_the_example_is_not():
 _SECRET = re.compile(
     r"sk-or-v1-[0-9a-f]{20,}"
     r"|Bearer\s+[A-Za-z0-9_\-.]{24,}"
-    r"|^\s*(?:export\s+)?\w*_API_KEY\s*=\s*['\"]?[A-Za-z0-9_\-.]{12,}",
+    r"|apikey_[0-9a-f]{20,}"
+    # [ \t]* rather than \s*: an empty `KEY=` must not run on into the next line.
+    r"|^[ \t]*(?:export[ \t]+)?\w*_API_KEY[ \t]*=[ \t]*['\"]?[A-Za-z0-9_\-.]{12,}",
     re.M,
 )
+
+
+def test_secret_pattern_flags_values_but_not_empty_placeholders():
+    assert _SECRET.search("OPENROUTER_API_KEY=abcdefghijklmnop1234")
+    assert _SECRET.search("sk-or-v1-" + "0" * 40)
+    assert not _SECRET.search("OPENROUTER_API_KEY=\nTYPESAFE_API_KEY=\n")
 
 
 def test_no_secrets_in_committable_files():

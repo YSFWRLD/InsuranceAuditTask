@@ -4,15 +4,16 @@
     python -m src.main audit h2          (offline: reads persisted service mappings)
     python -m src.main evaluate h1       score against the development split
                                          (and the locked holdout, while frozen)
-    python -m src.main submission        submission.csv in the template format
-                                         (scored hospitals only: hospital_2)
+    python -m src.main submission        outputs/hospital_2/submission.csv and the
+                                         combined outputs/submission.csv (scored
+                                         hospitals only: hospital_2; offline)
 
 Hospital 2 semantic service identity (run deliberately, never by an audit):
 
     python -m src.main semantic h2 prepare      contract rules, clusters, mappings
     python -m src.main semantic h2 status       configuration readiness + counts
-    python -m src.main semantic h2 classify     OpenRouter classifier, once per
-                                                pending cluster (OPENROUTER_API_KEY)
+    python -m src.main semantic h2 classify     OpenRouter classifier, per pending
+                                                cluster, bounded retries (OPENROUTER_API_KEY)
     python -m src.main semantic h2 jev          Jev by API (JEV_API_KEY, JEV_API_URL)
     python -m src.main semantic h2 jev-export   Playground state + questions JSON
     python -m src.main semantic h2 jev-import   apply jev_results.json (Playground)
@@ -45,7 +46,8 @@ from .hospital_2 import contract as h2_contract
 from .hospital_2 import semantic as h2_semantic
 from .hospital_2.matcher import H2Matcher, cluster_descriptions
 from .shared.data import cross_check_against_csv, load_occurrences
-from .shared.submission import write_findings, write_predictions, write_submission
+from .shared.submission import write_findings, write_predictions
+from .submission import combine_submissions, write_hospital_submission
 
 REPO_ROOT = h1_audit.REPO_ROOT
 OUTPUTS = REPO_ROOT / "outputs"
@@ -142,10 +144,13 @@ def cmd_submission(_args) -> None:
     # labelled development hospital and is not scored, so it is left out.
     # Hospital 2 is the only scored hospital implemented; 3-5 are not.
     _, results = _run_h2()
+    h2_file = H2_OUTPUTS / "submission.csv"
+    write_hospital_submission([r.result for r in results], h2_file, template=TEMPLATE)
     path = OUTPUTS / "submission.csv"
-    n = write_submission([r.result for r in results], path, template=TEMPLATE)
-    print(f"{n} rows (hospital_2; hospitals 3-5 are not implemented)")
-    print(f"written to {path}")
+    counts = combine_submissions({"hospital_2": h2_file}, path)
+    print(f"{h2_file}: {counts['hospital_2']} rows")
+    print(f"{path}: {sum(counts.values())} rows {counts} (hospital_1 is not scored; "
+          "hospitals 3-5 are not implemented)")
 
 
 # --------------------------------------------------------------------------
@@ -176,6 +181,7 @@ def _audit_h2() -> None:
     res = [r.result for r in results]
     h2_audit.write_predictions(results, H2_OUTPUTS / "predictions.csv")
     h2_audit.write_findings(results, H2_OUTPUTS / "findings.csv")
+    write_hospital_submission(res, H2_OUTPUTS / "submission.csv", template=TEMPLATE)
     n_traces = h2_audit.write_traces(results, h2_audit.ARTIFACTS / "pricing_traces.jsonl")
     (H2_OUTPUTS / "audit_report.md").write_text(
         h2_audit.audit_report(pipeline, results), encoding="utf-8")

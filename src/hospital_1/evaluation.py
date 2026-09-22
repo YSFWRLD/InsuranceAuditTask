@@ -8,15 +8,17 @@ predictor never reads labels" a property of the code rather than a promise;
 
 Contents
     1. Locations          labels, the locked split, the freeze record
-    2. The locked split   created once, before development; never re-drawn
+    2. The locked split   created once and retained as a fixed development/holdout
+                          partition; never re-drawn
     3. Metrics            detection, category attribution, money -- separately
     4. Freeze             source hashes; the holdout is scored only on frozen code
     5. Reports            the development + holdout evaluation
     6. Research           temporal (prospective) evaluation and ablations
 
 Sections 2 and 6 are development evidence rather than runtime machinery.  They
-are kept because they are how the no-overfitting claims in
-``outputs/hospital_1/generalization_report.md`` can be re-checked.
+are kept so that the figures in ``outputs/hospital_1/generalization_report.md``
+can be re-checked.  The complete H1 labels were visible during development, so
+the holdout is a post-hoc measurement, not independent validation.
 """
 
 from __future__ import annotations
@@ -54,8 +56,8 @@ RESEARCH_DIR = ARTIFACTS / "research"
 
 #: The prediction path.  ``freeze`` hashes exactly these files, and the holdout
 #: is only scored while they are unchanged.  This module and ``main.py`` are
-#: deliberately absent: report wording can be fixed without invalidating an
-#: unseen measurement, but prediction logic cannot.
+#: deliberately absent: report wording can be fixed without invalidating the
+#: frozen holdout result, but prediction logic cannot.
 FROZEN_SOURCES = (
     "src/shared/models.py",
     "src/shared/data.py",
@@ -97,8 +99,8 @@ def create_split(
     contents -- only counts -- so running it cannot leak the holdout.
 
     Refuses to overwrite an existing split unless ``force``: the manifest's
-    creation time is evidence that the split preceded development, and
-    silently re-stamping it would destroy that evidence.
+    creation time records when the partition was fixed, and silently
+    re-stamping it would destroy that record.
     """
     if manifest_path.exists() and not force:
         raise FileExistsError(
@@ -441,7 +443,7 @@ def freeze(*, reason: Optional[str] = None) -> dict:
 
     If a freeze already exists it is kept in ``history`` rather than
     overwritten, and a ``reason`` is required: re-freezing after the holdout
-    has been read is only honest when the reason is on the record and the
+    has been read is only defensible when the reason is on the record and the
     behaviour demonstrably did not change.
     """
     previous = json.loads(FREEZE_FILE.read_text(encoding="utf-8")) if FREEZE_FILE.exists() else None
@@ -513,8 +515,9 @@ def evaluation_report(results: list[AuditResult]) -> str:
 
     The holdout section is produced only when the prediction sources are
     byte-identical to the freeze record.  Change any of them and this report
-    says so instead of printing a number that is no longer an unseen
-    measurement.
+    says so instead of printing a number that no longer corresponds to the
+    frozen holdout result.  (The holdout is a post-hoc measurement: the full
+    H1 labels were visible during development.)
     """
     dev = _score(results, DEV_LABELS, "Development split (70%)")
     parts = [
@@ -522,8 +525,10 @@ def evaluation_report(results: list[AuditResult]) -> str:
         "Three questions, reported separately and never combined: is the invoice "
         "wrong (detection), what is wrong with it (category attribution), and "
         "what should it have cost (monetary reconstruction).\n\n"
-        f"The development split is `{_rel(DEV_LABELS)}`. The 30% holdout was not "
-        "read while the system was being built.\n\n",
+        f"The development split is `{_rel(DEV_LABELS)}`. The split was created "
+        "before the final engine implementation, but because the full H1 labels "
+        "had been visible during development, the holdout is reported only as a "
+        "post-hoc check, not as an untouched validation set.\n\n",
         format_report(dev),
     ]
 
@@ -534,7 +539,7 @@ def evaluation_report(results: list[AuditResult]) -> str:
         parts.append(
             "\n## Locked holdout split (30%)\n\nNot evaluated: prediction sources "
             f"changed since the freeze ({', '.join(drift)}). A holdout number from "
-            "unfrozen code would no longer be an unseen measurement.\n"
+            "unfrozen code would no longer be the frozen post-hoc holdout measurement.\n"
         )
     else:
         holdout = _score(results, HOLDOUT_LABELS, "Locked holdout split (30%)")
@@ -673,7 +678,7 @@ def _build_pipeline(normalisation: bool, options: PricingOptions, **kwargs) -> P
     """Build a pipeline, optionally crippling description normalisation.
 
     Disabling normalisation is done by replacing it with an identity function,
-    which is the honest form of the ablation: the matcher still runs, it just
+    so the ablation isolates normalisation: the matcher still runs, but it
     no longer strips reference suffixes, punctuation or casing.  The pipeline
     matches every line while it is being built, so restoring the function
     afterwards does not undo the ablation.

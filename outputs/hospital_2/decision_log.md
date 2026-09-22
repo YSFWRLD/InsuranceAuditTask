@@ -163,28 +163,63 @@ lines**, all recorded with `used_unit_basis_for_identity = true`. None of them
 can carry `wrong_unit_basis`: the basis cannot both identify the service and
 accuse it.
 
-**19. Semantic-pending clusters are pending, not guessed.** The semantic
-classifier (OpenRouter, `z-ai/glm-5.3-flash`) and the Jev verifier have **not
-been run**: no `OPENROUTER_API_KEY` or Jev access is configured. No mapping and
-no verdict was invented. Clusters and line occurrences are different units:
+**19. The semantic stage ran once, and nothing it did not verify is used.**
+The classifier (OpenRouter, `z-ai/glm-5.3-flash`, prompt
+`001_service_classifier@2b8f543469fb`) was run on 2026-09-22 from 00:43Z to
+01:20Z. Classification was attempted for all 69 semantic clusters. With bounded
+retries, that took 75 OpenRouter HTTP attempts in total: 65 clusters finished
+in 1 attempt, 2 in 2, and 2 in 3.
+
+- 67 returned a valid decision: 64 AMBIGUOUS and 3 MATCHED.
+- 2 failed after 3 attempts each, with HTTP 402 (credit exhausted; see
+  *Stopping decision*): `ent rehab prog` (27 lines) and `std isol rm occ`
+  (28 lines).
+
+Jev (`jev-1.13.0`, prompt `003_jev_verifier@7a2a82a900a9`, direct API) judged
+all 67 decisions at 02:19Z:
+
+- It accepted all 64 AMBIGUOUS decisions. Those clusters stay AMBIGUOUS
+  (item 21).
+- It did not accept any of the 3 MATCHED proposals. None reached the 0.90
+  gate in either direction, so all three stay unresolved:
+
+| cluster | proposed service | P(ACCEPT) | P(REJECT) |
+|---|---|---|---|
+| `asst diag imaging` (30 lines) | Assisted Musculoskeletal Diagnostic Imaging | 0.41 | 0.59 |
+| `extended hm vst` (22 lines) | Extended Vascular Home Visit | 0.35 | 0.65 |
+| `vasc imaging interp` (28 lines) | Preoperative Vascular Imaging Interpretation | 0.41 | 0.59 |
+
+Counts after the run (clusters and line occurrences are different units):
 
 | count | value |
 |---|---|
 | `total_normalized_clusters` | 441 |
 | `deterministic_matched_clusters` | 358 |
 | `deterministic_unknown_clusters` | 14 (decided from text; not semantic work) |
-| `semantic_pending_clusters` | 69 (one classifier call each) |
-| `semantic_pending_line_occurrences` | 2,093 (lines carrying those 69 descriptions) |
-| `unit_basis_provisional_line_occurrences` | 384 (of those 2,093, resolved for now by the billed basis) |
-| `currently_ambiguous_line_occurrences` | 1,709 (= 2,093 − 384) |
-| `total_unresolved_or_unknown_clusters` | 83 (= 69 + 14; `unresolved.json` lists them in separate groups) |
+| `semantic_required_clusters` | 69 (2,093 line occurrences) |
+| `semantic_verified_matched_clusters` | **0** |
+| `semantic_verified_ambiguous_clusters` | 64 |
+| `semantic_pending_clusters` | 5 (135 line occurrences: 2 classifier failures + 3 unaccepted matches) |
+| `unit_basis_tiebreak_line_occurrences` | 384 (27 of them in pending clusters, so still provisional) |
+| `currently_ambiguous_line_occurrences` | 1,709 |
+| `currently_unknown_line_occurrences` | 14 |
+| `total_unresolved_or_unknown_clusters` | 83 (`unresolved.json` lists them by group) |
 
-The 384 provisional lines are resolved for now: a verified semantic decision
-for their cluster would override the tie-break.
+**The semantic stage did NOT increase verified service-mapping coverage.**
+Before and after the run:
 
-To resolve the pending clusters, run `semantic h2 classify`, then either
-`semantic h2 jev` (direct API) or `jev-export` → Playground → `jev-import`
-(item 23).
+- the same 74 rows are flagged;
+- every submitted value in `submission.csv` is byte-identical;
+- the numeric columns of `predictions.csv` (`pricing_complete`,
+  `correction_reconstructable`, confidence, totals) are identical.
+
+What changed is evidence only. 1,601 `ambiguous_service_description`
+advisories (which never flag on their own) now appear in `findings.csv`, and
+the uncertainty text of 841 prediction rows now says "semantic_verified"
+instead of "unresolved". The semantic run was still informative: Jev, used as
+a separate verifier, accepted the classifier's 64 AMBIGUOUS decisions and did
+not accept any of the 3 MATCHED proposals. There are no H2 labels, so this is
+not a measure of accuracy.
 
 **20. Unresolved lines still exist.** Each is carried as the set of services it
 might be:
@@ -209,7 +244,7 @@ gets no expected amount, so the invoice's `expected_total_cents` is empty.
 Hospital 1 carried such a line's billed amount through; this brief asked that
 unreconstructable amounts not be invented, and Hospital 2 follows that.
 
-**23. Jev: two modes, one interpretation.**
+**23. Jev: two modes, one interpretation.** (The run in item 19 used the direct API.)
 - *Direct API* (`semantic h2 jev`) calls TypeSafe SystemOne,
   `POST https://api.typesafe.ai/v1/systemone`.
   - It uses a bearer key: `TYPESAFE_API_KEY`, falling back to `JEV_API_KEY`.
@@ -228,6 +263,18 @@ id is derived from the cluster id. A verdict is bound to the exact classifier
 answer, and the identity evidence, that it judged. Both modes pass through the
 same 0.90 gate. `jev_results.json` is this project's own input format, because
 the Playground's native export format is not documented here.
+
+*Corrected after a live call.* The TypeSafe API returns its verdicts under
+`answers`, with `usage` metadata beside them. The first parser expected
+`results` and read every top-level key as a question id, so it refused real
+responses.
+
+It also assumed Jev's `confidence` equals the top probability. It does not: a
+live answer had P(ACCEPT) = 0.92 with confidence 0.87. Confidence is now
+validated only as a number in [0, 1] and stored as reported.
+
+The gate was always, and still is, decided by the ACCEPT and REJECT
+probabilities alone.
 
 *Unit-basis evidence.* One canonical builder (`jev_case`) makes every case for
 both modes. The billed unit basis is withheld unless the decision under
@@ -297,3 +344,48 @@ Every finding in `findings.csv` names what it rests on:
 - A `wrong_unit_basis` line "shall be returned": the corrected amount is taken
   as the contract rate times the billed quantity, which assumes the quantity is
   right and only the basis label is wrong.
+
+## Stopping decision
+
+Algorithmic work on Hospital 2 stopped on 2026-09-22, at the state described
+in item 19.
+
+**Why the two clusters failed.** OpenRouter answered both with HTTP 402
+Payment Required: *"This request requires more credits, or fewer max_tokens.
+You requested up to 131072 tokens, but can only afford 79721."* The failure
+was about quota and credit, not about the model's output. The request set no
+`max_tokens`, so each call asked for the model's maximum. The code now sends a
+bounded, configurable `max_tokens` (`H2_CLASSIFIER_MAX_TOKENS`, default 4096,
+unit-tested). **The classifier was not rerun after that change.**
+
+**Why no more credit was bought.**
+
+- The semantic stage had just shown what it contributes: 0 verified matches
+  from 67 answered clusters.
+- The 2 missing clusters cover 55 of 14,360 lines.
+- Even at the best outcome — both classified MATCHED *and* accepted by Jev —
+  those lines would only become priceable. Their invoices would still need
+  every other line resolved before a total could be submitted.
+- The expected gain did not justify further spend inside the time budget.
+
+**Why no replacement model was used.**
+
+- A different model for 2 of 69 clusters would mix two classifiers in one
+  mapping set, which Jev and the provenance record were not designed to
+  compare.
+- It would also be tuning towards coverage after seeing results.
+- The pending clusters remain AMBIGUOUS instead. Their lines are carried
+  as sets of possible services, and their invoices get no submitted corrected
+  total.
+
+**What would come next**, in order:
+
+1. With credit restored, run `semantic h2 classify --retry-failed` (only the
+   2 failed clusters) and then `semantic h2 jev`. No code change is needed.
+2. Put the 3 unaccepted MATCHED proposals to a human reviewer rather than a
+   model. Jev's REJECT probabilities (0.59–0.65) are not decisive either way.
+3. If more coverage is wanted, work on the 52 clusters that lack a qualifier
+   or specialty. The fix is contract-side (a qualifier/specialty evidence
+   table reviewed by a person), not another model pass.
+4. Only after that, Hospitals 3–5. Hospital 1's contract parser and matcher
+   patterns are the starting point.
