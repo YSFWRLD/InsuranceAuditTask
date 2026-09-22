@@ -1,0 +1,1345 @@
+{
+  "generated_utc": "2026-09-21T20:43:54+00:00",
+  "counts": {
+    "total_normalized_clusters": 441,
+    "deterministic_matched_clusters": 358,
+    "deterministic_unknown_clusters": 14,
+    "semantic_required_clusters": 69,
+    "semantic_required_line_occurrences": 2093,
+    "semantic_pending_clusters": 69,
+    "semantic_pending_line_occurrences": 2093,
+    "semantic_verified_matched_clusters": 0,
+    "semantic_verified_ambiguous_clusters": 0,
+    "semantic_verified_unknown_clusters": 0,
+    "classifier_ok_clusters": 0,
+    "classifier_failed_clusters": 0,
+    "jev_answered_clusters": 0,
+    "total_unresolved_or_unknown_clusters": 83
+  },
+  "note": "Clusters without a single verified service. 'semantic_pending' clusters await the classifier and Jev and still take part in the audit as sets of possible services. 'deterministic_unknown' clusters were decided from the text alone (a recognised word contradicts every candidate) and are not semantic work. line_occurrences counts every invoice line carrying the description, before any per-line unit-basis tie-break.",
+  "semantic_pending": [
+    {
+      "cluster_id": "c-52465acdc1",
+      "normalized_description": "adv endoscopic proc",
+      "raw_descriptions": [
+        "ADV ENDOSCOPIC PROC /SA-6974"
+      ],
+      "line_occurrences": 87,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Advanced Gastrointestinal Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-aa9862ba88",
+      "normalized_description": "postop anaes admin",
+      "raw_descriptions": [
+        "POSTOP ANAES ADMIN"
+      ],
+      "line_occurrences": 66,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Ophthalmic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-f3f2557267",
+      "normalized_description": "emer transp service",
+      "raw_descriptions": [
+        "EMER  TRANSP SERVICE /SA-9292"
+      ],
+      "line_occurrences": 63,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Haematology Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-a64b7098c0",
+      "normalized_description": "elect transp svc",
+      "raw_descriptions": [
+        "ELECT TRANSP SVC"
+      ],
+      "line_occurrences": 62,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-e59b7a94eb",
+      "normalized_description": "svc emer transp",
+      "raw_descriptions": [
+        "SVC EMER TRANSP"
+      ],
+      "line_occurrences": 59,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Haematology Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-88581b2033",
+      "normalized_description": "disp foc pharm",
+      "raw_descriptions": [
+        "DISP FOC PHARM"
+      ],
+      "line_occurrences": 56,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Pulmonary Pharmaceutical Dispensing"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-bd8b7c67ed",
+      "normalized_description": "ophth anaesthesia admin",
+      "raw_descriptions": [
+        "OPHTH - ANAESTHESIA ADMIN /SA-3643"
+      ],
+      "line_occurrences": 56,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intermittent Ophthalmic Anaesthesia Administration",
+        "Postoperative Ophthalmic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-596594fc2b",
+      "normalized_description": "emer transp svc",
+      "raw_descriptions": [
+        "EMER  TRANSP SVC /SA-1419"
+      ],
+      "line_occurrences": 55,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Haematology Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-c9e5894573",
+      "normalized_description": "cardiac transp service",
+      "raw_descriptions": [
+        "CARDIAC  TRANSP SERVICE"
+      ],
+      "line_occurrences": 55,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-6117a3d6bb",
+      "normalized_description": "interpretation neuro img",
+      "raw_descriptions": [
+        "INTERPRETATION NEURO IMG /SA-5989"
+      ],
+      "line_occurrences": 52,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Routine Neurological Imaging Interpretation",
+        "Supervised Neurological Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-e2ccc6412b",
+      "normalized_description": "ent cs conf",
+      "raw_descriptions": [
+        "ENT CS CONF /SA-6459",
+        "ENT CS CONF /SA-5963"
+      ],
+      "line_occurrences": 46,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Comprehensive Otolaryngologic Case Conference"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-ce34e61373",
+      "normalized_description": "std telem monit",
+      "raw_descriptions": [
+        "STD  - TELEM MONIT",
+        "STD - TELEM MONIT /SA-8775"
+      ],
+      "line_occurrences": 45,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Metabolic Telemetry Monitoring"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-2b06aa87d1",
+      "normalized_description": "beds pharm disp",
+      "raw_descriptions": [
+        "BEDS PHARM DISP"
+      ],
+      "line_occurrences": 39,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Bedside Pulmonary Pharmaceutical Dispensing"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-ac8bea5063",
+      "normalized_description": "ext radiother fract",
+      "raw_descriptions": [
+        "EXT RADIOTHER FRACT"
+      ],
+      "line_occurrences": 39,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Extended Orthopaedic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-fff7114c57",
+      "normalized_description": "img asst diag",
+      "raw_descriptions": [
+        "IMG ASST DIAG"
+      ],
+      "line_occurrences": 39,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Assisted Musculoskeletal Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-091cbabde0",
+      "normalized_description": "pulm pharm disp",
+      "raw_descriptions": [
+        "PULM PHARM DISP /SA-2727"
+      ],
+      "line_occurrences": 38,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Bedside Pulmonary Pharmaceutical Dispensing",
+        "Focused Pulmonary Pharmaceutical Dispensing"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-056282c49e",
+      "normalized_description": "spclst sterilisation svc",
+      "raw_descriptions": [
+        "SPCLST STERILISATION SVC"
+      ],
+      "line_occurrences": 36,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Specialist Psychiatric Sterilisation Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-3a5c37912b",
+      "normalized_description": "pall recov room occ",
+      "raw_descriptions": [
+        "PALL RECOV ROOM OCC"
+      ],
+      "line_occurrences": 36,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Palliative Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-f0c76fd87e",
+      "normalized_description": "vasc transp svc",
+      "raw_descriptions": [
+        "VASC TRANSP SVC"
+      ],
+      "line_occurrences": 36,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Vascular Transport Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-d3c7174179",
+      "normalized_description": "asst diag img",
+      "raw_descriptions": [
+        "ASST DIAG IMG /SA-7926"
+      ],
+      "line_occurrences": 35,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Assisted Musculoskeletal Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-3f541e0ce3",
+      "normalized_description": "pulm inf ther",
+      "raw_descriptions": [
+        "PULM INF THER /SA-9868"
+      ],
+      "line_occurrences": 33,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Pulmonary Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-183521e1e9",
+      "normalized_description": "postop thtr tm",
+      "raw_descriptions": [
+        "POSTOP THTR TM"
+      ],
+      "line_occurrences": 32,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-413f5a34b0",
+      "normalized_description": "occ std recov rm",
+      "raw_descriptions": [
+        "OCC STD RECOV RM"
+      ],
+      "line_occurrences": 31,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-cae6b74c9e",
+      "normalized_description": "asst diag imaging",
+      "raw_descriptions": [
+        "ASST DIAG IMAGING"
+      ],
+      "line_occurrences": 30,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Assisted Musculoskeletal Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-d45f47a99d",
+      "normalized_description": "fract beds radiother",
+      "raw_descriptions": [
+        "FRACT BEDS RADIOTHER /SA-5851"
+      ],
+      "line_occurrences": 30,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Bedside Ophthalmic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-f9ebf6366f",
+      "normalized_description": "postop inf ther",
+      "raw_descriptions": [
+        "POSTOP INF THER"
+      ],
+      "line_occurrences": 30,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Pulmonary Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-829a1ed9de",
+      "normalized_description": "otolaryngologic disch plng",
+      "raw_descriptions": [
+        "OTOLARYNGOLOGIC  DISCH PLNG /SA-6235"
+      ],
+      "line_occurrences": 29,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Continuous Otolaryngologic Discharge Planning"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-24ff039f5f",
+      "normalized_description": "std isol rm occ",
+      "raw_descriptions": [
+        "STD ISOL RM OCC"
+      ],
+      "line_occurrences": 28,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Standard Neurological Isolation Room Occupancy",
+        "Standard Orthopaedic Isolation Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-62ebc62ea4",
+      "normalized_description": "vasc imaging interp",
+      "raw_descriptions": [
+        "VASC IMAGING INTERP"
+      ],
+      "line_occurrences": 28,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Preoperative Vascular Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-25306efce4",
+      "normalized_description": "ent rehab prog",
+      "raw_descriptions": [
+        "ENT REHAB PROG"
+      ],
+      "line_occurrences": 27,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Otolaryngologic Rehabilitation Programme",
+        "Intermittent Otolaryngologic Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-6634a0e30f",
+      "normalized_description": "psych transf svc",
+      "raw_descriptions": [
+        "PSYCH TRANSF SVC"
+      ],
+      "line_occurrences": 27,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Psychiatric Transfusion Service"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-a8f573655c",
+      "normalized_description": "msk recovery rm occ",
+      "raw_descriptions": [
+        "MSK RECOVERY RM OCC"
+      ],
+      "line_occurrences": 27,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-38a6b2d3d9",
+      "normalized_description": "inpt isol rm occ",
+      "raw_descriptions": [
+        "INPT ISOL RM OCC"
+      ],
+      "line_occurrences": 26,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Inpatient Paediatric Isolation Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-49bd3a10ec",
+      "normalized_description": "endo cs conf",
+      "raw_descriptions": [
+        "ENDO  CS CONF"
+      ],
+      "line_occurrences": 26,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Advanced Endocrine Case Conference"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-f0a976dcf8",
+      "normalized_description": "asst biop proc",
+      "raw_descriptions": [
+        "ASST BIOP PROC"
+      ],
+      "line_occurrences": 26,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Assisted Gastrointestinal Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-6e0a8106be",
+      "normalized_description": "sess card dial",
+      "raw_descriptions": [
+        "SESS CARD DIAL"
+      ],
+      "line_occurrences": 24,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Cardiac Dialysis Session"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-9094fb408c",
+      "normalized_description": "supervised biopsy proc",
+      "raw_descriptions": [
+        "SUPERVISED BIOPSY PROC"
+      ],
+      "line_occurrences": 24,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Haematology Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-9ab22bdf91",
+      "normalized_description": "neuro rehab prog",
+      "raw_descriptions": [
+        "NEURO  REHAB PROG"
+      ],
+      "line_occurrences": 24,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Neurological Rehabilitation Programme",
+        "Postoperative Neurological Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-1c0858a35a",
+      "normalized_description": "metab lab panel",
+      "raw_descriptions": [
+        "METAB LAB PANEL"
+      ],
+      "line_occurrences": 23,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Metabolic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-46e2e7cf5a",
+      "normalized_description": "observation card nursing",
+      "raw_descriptions": [
+        "OBSERVATION  CARD NURSING"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Nursing Observation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-54a3891f4d",
+      "normalized_description": "extended hm vst",
+      "raw_descriptions": [
+        "EXTENDED - HM VST"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Extended Vascular Home Visit"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-a3f90bb108",
+      "normalized_description": "std recov rm occ",
+      "raw_descriptions": [
+        "STD RECOV RM OCC"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-d1bec38e27",
+      "normalized_description": "interp supervised img",
+      "raw_descriptions": [
+        "INTERP  SUPERVISED IMG /SA-6042"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Neurological Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-de5b709ff8",
+      "normalized_description": "paed theatre tm",
+      "raw_descriptions": [
+        "PAED THEATRE TM /SA-1156"
+      ],
+      "line_occurrences": 22,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Emergency Paediatric Theatre Time",
+        "Postoperative Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-6c3e770460",
+      "normalized_description": "emer thtr tm",
+      "raw_descriptions": [
+        "EMER THTR TM /SA-2118"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Emergency Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-90ffd35fc6",
+      "normalized_description": "pnl foc lab",
+      "raw_descriptions": [
+        "PNL FOC LAB /SA-4377"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Focused Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-a2694f606d",
+      "normalized_description": "occ intens wd bd",
+      "raw_descriptions": [
+        "OCC INTENS WD BD"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Intensive Palliative Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-eedb721f97",
+      "normalized_description": "paed inf ther",
+      "raw_descriptions": [
+        "PAED  INF THER"
+      ],
+      "line_occurrences": 21,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Paediatric Infusion Therapy",
+        "Standard Paediatric Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-73207fe65c",
+      "normalized_description": "neurological rehab prog",
+      "raw_descriptions": [
+        "NEUROLOGICAL REHAB PROG /SA-9661"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Neurological Rehabilitation Programme",
+        "Postoperative Neurological Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-bfb9d5a818",
+      "normalized_description": "paediatric inf ther",
+      "raw_descriptions": [
+        "PAEDIATRIC  INF THER"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intensive Paediatric Infusion Therapy",
+        "Standard Paediatric Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-cf03267737",
+      "normalized_description": "amb nutritional supp",
+      "raw_descriptions": [
+        "AMB NUTRITIONAL SUPP /SA-7761"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Ambulatory Haematology Nutritional Support"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-dcd66ed416",
+      "normalized_description": "anly derm spcm",
+      "raw_descriptions": [
+        "ANLY - DERM SPCM"
+      ],
+      "line_occurrences": 20,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Advanced Dermatologic Specimen Analysis",
+        "Extended Dermatologic Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-0729223b15",
+      "normalized_description": "preop spcm anly",
+      "raw_descriptions": [
+        "PREOP SPCM ANLY /SA-5067"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Preoperative Cardiac Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-599dba09b3",
+      "normalized_description": "admin ophth anaes",
+      "raw_descriptions": [
+        "ADMIN OPHTH ANAES /SA-6486"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intermittent Ophthalmic Anaesthesia Administration",
+        "Postoperative Ophthalmic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-8cef1b5ec0",
+      "normalized_description": "ophth lab pnl",
+      "raw_descriptions": [
+        "OPHTH LAB PNL"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Focused Ophthalmic Laboratory Panel",
+        "Routine Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-98a470f518",
+      "normalized_description": "analysis card spcm",
+      "raw_descriptions": [
+        "ANALYSIS CARD SPCM"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Intermittent Cardiac Specimen Analysis",
+        "Preoperative Cardiac Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-ad5bda0f6a",
+      "normalized_description": "supv img interp",
+      "raw_descriptions": [
+        "SUPV  IMG INTERP"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Neurological Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-e26eed1d13",
+      "normalized_description": "vst vascular hm",
+      "raw_descriptions": [
+        "VST VASCULAR HM /SA-8814"
+      ],
+      "line_occurrences": 19,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Extended Vascular Home Visit"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-1e727b9ff9",
+      "normalized_description": "proc hep endosc",
+      "raw_descriptions": [
+        "PROC HEP ENDOSC"
+      ],
+      "line_occurrences": 18,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Supervised Hepatic Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-a3609e5e62",
+      "normalized_description": "card nurs obs",
+      "raw_descriptions": [
+        "CARD  NURS OBS"
+      ],
+      "line_occurrences": 18,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Elective Cardiac Nursing Observation"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-bca929f045",
+      "normalized_description": "rtn physio sess",
+      "raw_descriptions": [
+        "RTN PHYSIO SESS"
+      ],
+      "line_occurrences": 18,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Routine Geriatric Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-47a7b761bf",
+      "normalized_description": "msk diag img",
+      "raw_descriptions": [
+        "MSK  DIAG IMG"
+      ],
+      "line_occurrences": 17,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Assisted Musculoskeletal Diagnostic Imaging",
+        "Supervised Musculoskeletal Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-58e1b5194f",
+      "normalized_description": "orthopaedic isol rm occ",
+      "raw_descriptions": [
+        "ORTHOPAEDIC ISOL RM OCC"
+      ],
+      "line_occurrences": 17,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Postoperative Orthopaedic Isolation Room Occupancy",
+        "Standard Orthopaedic Isolation Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-468013ea9f",
+      "normalized_description": "ther standard inf",
+      "raw_descriptions": [
+        "THER  STANDARD INF"
+      ],
+      "line_occurrences": 16,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Standard Paediatric Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-504e1fcd23",
+      "normalized_description": "sess preop physio",
+      "raw_descriptions": [
+        "SESS PREOP PHYSIO"
+      ],
+      "line_occurrences": 16,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Preoperative Obstetric Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-60347fffcc",
+      "normalized_description": "interm rehab prog",
+      "raw_descriptions": [
+        "INTERM  REHAB PROG"
+      ],
+      "line_occurrences": 16,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Intermittent Otolaryngologic Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-3995ceec2d",
+      "normalized_description": "occ preop isol rm",
+      "raw_descriptions": [
+        "OCC PREOP ISOL RM"
+      ],
+      "line_occurrences": 15,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Preoperative Neurological Isolation Room Occupancy"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-d816bda672",
+      "normalized_description": "haem biop proc",
+      "raw_descriptions": [
+        "HAEM BIOP PROC /SA-6522"
+      ],
+      "line_occurrences": 15,
+      "deterministic_method": "tied_candidates",
+      "candidates": [
+        "Outpatient Haematology Biopsy Procedure",
+        "Supervised Haematology Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_eligible": true,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    },
+    {
+      "cluster_id": "c-67704c6e5e",
+      "normalized_description": "routine lab pnl",
+      "raw_descriptions": [
+        "ROUTINE LAB PNL /SA-5904"
+      ],
+      "line_occurrences": 14,
+      "deterministic_method": "missing_discriminator",
+      "candidates": [
+        "Routine Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": "semantic classification not yet run"
+    }
+  ],
+  "deterministic_unknown": [
+    {
+      "cluster_id": "c-218fc47aba",
+      "normalized_description": "std gi telem monit",
+      "raw_descriptions": [
+        "STD  GI TELEM MONIT"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-2d226c458e",
+      "normalized_description": "routine hep cs conf",
+      "raw_descriptions": [
+        "ROUTINE HEP CS CONF"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-44b850ab57",
+      "normalized_description": "plng beds geriatric disch",
+      "raw_descriptions": [
+        "PLNG  BEDS GERIATRIC DISCH"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-6e0434814c",
+      "normalized_description": "foc vasc pharm disp",
+      "raw_descriptions": [
+        "FOC  VASC PHARM DISP /SA-5164"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-859740291c",
+      "normalized_description": "ambulatory ophth ventilation supp",
+      "raw_descriptions": [
+        "AMBULATORY - OPHTH VENTILATION SUPP"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-8c22600f8a",
+      "normalized_description": "intens metab recov rm occ",
+      "raw_descriptions": [
+        "INTENS  - METAB RECOV RM OCC"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-92be12ef51",
+      "normalized_description": "interm msk dial session",
+      "raw_descriptions": [
+        "INTERM - MSK DIAL SESSION /SA-9704"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-9ad0406939",
+      "normalized_description": "amb pall diagnostic img",
+      "raw_descriptions": [
+        "AMB - PALL DIAGNOSTIC IMG /SA-7135"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-a05e2262ba",
+      "normalized_description": "std ent anaes admin",
+      "raw_descriptions": [
+        "STD ENT ANAES ADMIN /SA-3414"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-b4e1c19826",
+      "normalized_description": "supv ophth img",
+      "raw_descriptions": [
+        "SUPV OPHTH IMG"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-b93c7047ee",
+      "normalized_description": "emer msk prog",
+      "raw_descriptions": [
+        "EMER MSK PROG /SA-4534"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-bbb20cb044",
+      "normalized_description": "img cont card diag",
+      "raw_descriptions": [
+        "IMG CONT CARD DIAG /SA-4810"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-c8f13e8f30",
+      "normalized_description": "onc wd bd occ",
+      "raw_descriptions": [
+        "ONC WD BD OCC /SA-5889"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    },
+    {
+      "cluster_id": "c-e263c550b3",
+      "normalized_description": "spclst hep nutr supp",
+      "raw_descriptions": [
+        "SPCLST HEP NUTR SUPP"
+      ],
+      "line_occurrences": 1,
+      "deterministic_method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_eligible": false,
+      "classifier_status": "not_run",
+      "jev_status": "not_exported",
+      "reason": null
+    }
+  ],
+  "semantic_verified_ambiguous": [],
+  "semantic_verified_unknown": []
+}

@@ -3,5 +3,7 @@
 # deliberate -- every monetary calculation is integer cents via decimal.Decimal
 # with ROUND_HALF_UP, and nothing about that benefits from a numeric library.
 #
+# python-dotenv loads optional API keys from a local .env file at startup.
 # pytest is needed only to run the test suite.
+python-dotenv==1.2.3
 pytest==8.3.4

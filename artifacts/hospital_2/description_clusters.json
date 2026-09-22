@@ -1,0 +1,4484 @@
+{
+  "contract_fingerprint": "2770429a2de63335d3bd68681e840b9171955a26ef844b93b685ce9184d64c4f",
+  "matcher_version": "h2-matcher-1",
+  "reference_suffix_rule": "trailing /XX-#### billing references are stripped before clustering and never read as service codes",
+  "raw_description_count": 506,
+  "total_normalized_clusters": 441,
+  "clusters": [
+    {
+      "cluster_id": "c-454bd2845b",
+      "normalized_description": "adv gi endosc proc",
+      "line_occurrences": 177,
+      "raw_descriptions": [
+        "ADV  GI ENDOSC PROC /SA-3924",
+        "ADV  GI ENDOSC PROC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1fa052ad37",
+      "normalized_description": "foc pulm pharm disp",
+      "line_occurrences": 170,
+      "raw_descriptions": [
+        "FOC  PULM PHARM DISP",
+        "FOC  PULM PHARM DISP /SA-2738",
+        "FOC  PULM PHARM DISP /SA-8680"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bf660634e9",
+      "normalized_description": "occ inpatient ortho recov rm",
+      "line_occurrences": 141,
+      "raw_descriptions": [
+        "OCC INPATIENT ORTHO RECOV RM /SA-7665",
+        "OCC  INPATIENT ORTHO RECOV RM /SA-2313"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-092bf17585",
+      "normalized_description": "interp rtn neuro img",
+      "line_occurrences": 123,
+      "raw_descriptions": [
+        "INTERP RTN NEURO IMG /SA-3711",
+        "INTERP  RTN NEURO IMG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-395d1db8c6",
+      "normalized_description": "adv gi proc",
+      "line_occurrences": 102,
+      "raw_descriptions": [
+        "ADV  GI PROC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9f5eb6c07b",
+      "normalized_description": "emer ren inf ther",
+      "line_occurrences": 91,
+      "raw_descriptions": [
+        "EMER REN INF THER /SA-8878",
+        "EMER  REN INF THER /SA-7213",
+        "EMER REN INF THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ee8cda61e8",
+      "normalized_description": "svc std psych transf",
+      "line_occurrences": 90,
+      "raw_descriptions": [
+        "SVC STD PSYCH TRANSF",
+        "SVC STD PSYCH TRANSF /SA-3868",
+        "SVC STD PSYCH TRANSF /SA-9672"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5d8bb642f0",
+      "normalized_description": "preop obstetric hm vst",
+      "line_occurrences": 90,
+      "raw_descriptions": [
+        "PREOP OBSTETRIC HM VST"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-52465acdc1",
+      "normalized_description": "adv endoscopic proc",
+      "line_occurrences": 87,
+      "raw_descriptions": [
+        "ADV ENDOSCOPIC PROC /SA-6974"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-8b87b46ee6",
+      "normalized_description": "proc adv gi endoscopic",
+      "line_occurrences": 82,
+      "raw_descriptions": [
+        "PROC ADV GI ENDOSCOPIC /SA-3753"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b379049fc3",
+      "normalized_description": "inpatient ortho recov rm occ",
+      "line_occurrences": 80,
+      "raw_descriptions": [
+        "INPATIENT ORTHO RECOV RM OCC /SA-8038"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-282306c2aa",
+      "normalized_description": "emer haem svc",
+      "line_occurrences": 78,
+      "raw_descriptions": [
+        "EMER HAEM SVC /SA-3156"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b73cf234b3",
+      "normalized_description": "ext ent nutr supp",
+      "line_occurrences": 77,
+      "raw_descriptions": [
+        "EXT ENT NUTR SUPP",
+        "EXT ENT NUTR SUPP /SA-9610"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0bf1b21349",
+      "normalized_description": "inpt ortho recov rm occ",
+      "line_occurrences": 77,
+      "raw_descriptions": [
+        "INPT  ORTHO RECOV RM OCC /SA-8297"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0565fcf542",
+      "normalized_description": "supv haem biop proc",
+      "line_occurrences": 77,
+      "raw_descriptions": [
+        "SUPV HAEM BIOP PROC /SA-9038",
+        "SUPV HAEM BIOP PROC /SA-6547",
+        "SUPV HAEM BIOP PROC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-28725bd995",
+      "normalized_description": "ortho recov rm occ inpt",
+      "line_occurrences": 77,
+      "raw_descriptions": [
+        "ORTHO RECOV RM OCC INPT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6665e1bd21",
+      "normalized_description": "vst preop obst hm",
+      "line_occurrences": 75,
+      "raw_descriptions": [
+        "VST PREOP OBST HM /SA-4486"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d371a92742",
+      "normalized_description": "preop obstetric hm visit",
+      "line_occurrences": 72,
+      "raw_descriptions": [
+        "PREOP OBSTETRIC HM VISIT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4844b4d42b",
+      "normalized_description": "preoperative obst hm vst",
+      "line_occurrences": 72,
+      "raw_descriptions": [
+        "PREOPERATIVE OBST HM VST"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9b88954003",
+      "normalized_description": "inpt ortho recov occ",
+      "line_occurrences": 71,
+      "raw_descriptions": [
+        "INPT ORTHO RECOV OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-041fb4f3a4",
+      "normalized_description": "admin postop ophth anaes",
+      "line_occurrences": 71,
+      "raw_descriptions": [
+        "ADMIN POSTOP OPHTH ANAES"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-384de85426",
+      "normalized_description": "rtn neuro img interp",
+      "line_occurrences": 69,
+      "raw_descriptions": [
+        "RTN NEURO IMG INTERP /SA-2009"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-82d04cfcfd",
+      "normalized_description": "preop obst hm vst",
+      "line_occurrences": 69,
+      "raw_descriptions": [
+        "PREOP OBST HM VST /SA-3879"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-730ed5ebef",
+      "normalized_description": "elect card transp svc",
+      "line_occurrences": 68,
+      "raw_descriptions": [
+        "ELECT CARD TRANSP SVC /SA-5251"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1b3155cb8a",
+      "normalized_description": "neuro img interp rtn",
+      "line_occurrences": 68,
+      "raw_descriptions": [
+        "NEURO IMG INTERP RTN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5f529549d6",
+      "normalized_description": "std ortho isol rm occ",
+      "line_occurrences": 67,
+      "raw_descriptions": [
+        "STD ORTHO ISOL RM OCC /SA-8236",
+        "STD - ORTHO ISOL RM OCC /SA-1562"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-79a07aee55",
+      "normalized_description": "asst infect telem monit",
+      "line_occurrences": 67,
+      "raw_descriptions": [
+        "ASST - INFECT TELEM MONIT",
+        "ASST INFECT TELEM MONIT /SA-9090"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-aa9862ba88",
+      "normalized_description": "postop anaes admin",
+      "line_occurrences": 66,
+      "raw_descriptions": [
+        "POSTOP ANAES ADMIN"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-1620d3165b",
+      "normalized_description": "interpretation routine neuro",
+      "line_occurrences": 66,
+      "raw_descriptions": [
+        "INTERPRETATION  ROUTINE NEURO"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e924c3061f",
+      "normalized_description": "postop ophth anaes administration",
+      "line_occurrences": 66,
+      "raw_descriptions": [
+        "POSTOP  OPHTH ANAES ADMINISTRATION /SA-5379"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-24b9e405c4",
+      "normalized_description": "haem transp svc emer",
+      "line_occurrences": 65,
+      "raw_descriptions": [
+        "HAEM TRANSP SVC EMER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-01f9c1c6b6",
+      "normalized_description": "cont otolaryngologic disch plng",
+      "line_occurrences": 65,
+      "raw_descriptions": [
+        "CONT - OTOLARYNGOLOGIC DISCH PLNG",
+        "CONT OTOLARYNGOLOGIC DISCH PLNG /SA-3899"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-81d93250fc",
+      "normalized_description": "occ inpt paed isol rm",
+      "line_occurrences": 64,
+      "raw_descriptions": [
+        "OCC  INPT PAED ISOL RM",
+        "OCC  INPT PAED ISOL RM /SA-6138",
+        "OCC INPT PAED ISOL RM /SA-7229"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-8245b17de6",
+      "normalized_description": "rtn neurological img interp",
+      "line_occurrences": 64,
+      "raw_descriptions": [
+        "RTN  NEUROLOGICAL IMG INTERP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f3f2557267",
+      "normalized_description": "emer transp service",
+      "line_occurrences": 63,
+      "raw_descriptions": [
+        "EMER  TRANSP SERVICE /SA-9292"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-7d9816a051",
+      "normalized_description": "foc ophth lab pnl",
+      "line_occurrences": 63,
+      "raw_descriptions": [
+        "FOC  OPHTH LAB PNL /SA-9997",
+        "FOC OPHTH LAB PNL /SA-4929",
+        "FOC OPHTH LAB PNL /SA-5900"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-85eb079e44",
+      "normalized_description": "pharm foc pulm",
+      "line_occurrences": 63,
+      "raw_descriptions": [
+        "PHARM FOC PULM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-75b3d4fde4",
+      "normalized_description": "ophth anaes admin postop",
+      "line_occurrences": 63,
+      "raw_descriptions": [
+        "OPHTH ANAES ADMIN POSTOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-03f6d1f5c0",
+      "normalized_description": "postop card physio sess",
+      "line_occurrences": 62,
+      "raw_descriptions": [
+        "POSTOP CARD PHYSIO SESS /SA-2508",
+        "POSTOP  CARD PHYSIO SESS /SA-4818"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a64b7098c0",
+      "normalized_description": "elect transp svc",
+      "line_occurrences": 62,
+      "raw_descriptions": [
+        "ELECT TRANSP SVC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-77fa3b4098",
+      "normalized_description": "preop obst home vst",
+      "line_occurrences": 61,
+      "raw_descriptions": [
+        "PREOP  OBST HOME VST /SA-4776"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-af4b31af43",
+      "normalized_description": "postoperative ophth anaes admin",
+      "line_occurrences": 60,
+      "raw_descriptions": [
+        "POSTOPERATIVE OPHTH ANAES ADMIN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e59b7a94eb",
+      "normalized_description": "svc emer transp",
+      "line_occurrences": 59,
+      "raw_descriptions": [
+        "SVC EMER TRANSP"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-ff7d68332e",
+      "normalized_description": "supv rheum crit cr occ",
+      "line_occurrences": 59,
+      "raw_descriptions": [
+        "SUPV RHEUM CRIT CR OCC",
+        "SUPV RHEUM CRIT CR OCC /SA-8848"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e8c1a088c6",
+      "normalized_description": "focused pulmonary pharm disp",
+      "line_occurrences": 58,
+      "raw_descriptions": [
+        "FOCUSED PULMONARY PHARM DISP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-feda0d77d0",
+      "normalized_description": "std metab telem monit",
+      "line_occurrences": 58,
+      "raw_descriptions": [
+        "STD METAB TELEM MONIT /SA-4721",
+        "STD METAB TELEM MONIT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e164e059e1",
+      "normalized_description": "pulm pharm disp foc",
+      "line_occurrences": 58,
+      "raw_descriptions": [
+        "PULM PHARM DISP FOC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-8833c15a98",
+      "normalized_description": "elect card svc",
+      "line_occurrences": 58,
+      "raw_descriptions": [
+        "ELECT CARD SVC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e78aba3ad6",
+      "normalized_description": "adv infect isol rm occ",
+      "line_occurrences": 58,
+      "raw_descriptions": [
+        "ADV INFECT ISOL RM OCC",
+        "ADV - INFECT ISOL RM OCC /SA-7043"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5c2123f3fd",
+      "normalized_description": "elect card nurs obs",
+      "line_occurrences": 57,
+      "raw_descriptions": [
+        "ELECT CARD NURS OBS",
+        "ELECT CARD NURS OBS /SA-1894",
+        "ELECT CARD NURS OBS /SA-5886"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-73f55624c1",
+      "normalized_description": "preop vasc interp",
+      "line_occurrences": 57,
+      "raw_descriptions": [
+        "PREOP VASC INTERP /SA-3692",
+        "PREOP  VASC INTERP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c8fb7c5d41",
+      "normalized_description": "supp ext ent nutr",
+      "line_occurrences": 56,
+      "raw_descriptions": [
+        "SUPP  - EXT ENT NUTR",
+        "SUPP EXT ENT NUTR /SA-9016"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f546f75cb7",
+      "normalized_description": "svc elect card transp",
+      "line_occurrences": 56,
+      "raw_descriptions": [
+        "SVC ELECT CARD TRANSP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bd8b7c67ed",
+      "normalized_description": "ophth anaesthesia admin",
+      "line_occurrences": 56,
+      "raw_descriptions": [
+        "OPHTH - ANAESTHESIA ADMIN /SA-3643"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-88581b2033",
+      "normalized_description": "disp foc pharm",
+      "line_occurrences": 56,
+      "raw_descriptions": [
+        "DISP FOC PHARM"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-42a69b0afb",
+      "normalized_description": "sess foc card dial",
+      "line_occurrences": 55,
+      "raw_descriptions": [
+        "SESS FOC CARD DIAL",
+        "SESS FOC CARD DIAL /SA-1863"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e43fbea5cb",
+      "normalized_description": "cont ent disch plng",
+      "line_occurrences": 55,
+      "raw_descriptions": [
+        "CONT ENT DISCH PLNG",
+        "CONT ENT DISCH PLNG /SA-8811"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-596594fc2b",
+      "normalized_description": "emer transp svc",
+      "line_occurrences": 55,
+      "raw_descriptions": [
+        "EMER  TRANSP SVC /SA-1419"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-c9e5894573",
+      "normalized_description": "cardiac transp service",
+      "line_occurrences": 55,
+      "raw_descriptions": [
+        "CARDIAC  TRANSP SERVICE"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-8a4573a29b",
+      "normalized_description": "preop ortho vent supp",
+      "line_occurrences": 55,
+      "raw_descriptions": [
+        "PREOP - ORTHO VENT SUPP /SA-6661",
+        "PREOP - ORTHO VENT SUPP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bba0772986",
+      "normalized_description": "preop obst physio sess",
+      "line_occurrences": 54,
+      "raw_descriptions": [
+        "PREOP  OBST PHYSIO SESS",
+        "PREOP OBST PHYSIO SESS /SA-6179",
+        "PREOP  OBST PHYSIO SESS /SA-5105"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e8b322ecab",
+      "normalized_description": "postop ophth anaesthesia",
+      "line_occurrences": 54,
+      "raw_descriptions": [
+        "POSTOP OPHTH ANAESTHESIA /SA-4633"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c756779ef4",
+      "normalized_description": "transp emergency haem",
+      "line_occurrences": 54,
+      "raw_descriptions": [
+        "TRANSP EMERGENCY HAEM /SA-4837"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3e6098dc2f",
+      "normalized_description": "monit std metab telem",
+      "line_occurrences": 53,
+      "raw_descriptions": [
+        "MONIT  STD METAB TELEM /SA-3090",
+        "MONIT STD METAB TELEM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9b675a41bf",
+      "normalized_description": "sess rtn ger physio",
+      "line_occurrences": 52,
+      "raw_descriptions": [
+        "SESS RTN GER PHYSIO /SA-7008",
+        "SESS RTN GER PHYSIO /SA-5953"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6117a3d6bb",
+      "normalized_description": "interpretation neuro img",
+      "line_occurrences": 52,
+      "raw_descriptions": [
+        "INTERPRETATION NEURO IMG /SA-5989"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-e8c478a570",
+      "normalized_description": "amb vasc inf ther",
+      "line_occurrences": 52,
+      "raw_descriptions": [
+        "AMB VASC INF THER /SA-1352",
+        "AMB VASC INF THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-244bbd2296",
+      "normalized_description": "postop vasc transp svc",
+      "line_occurrences": 51,
+      "raw_descriptions": [
+        "POSTOP  VASC TRANSP SVC",
+        "POSTOP VASC TRANSP SVC /SA-5049"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d92b156730",
+      "normalized_description": "emer haem transp svc",
+      "line_occurrences": 51,
+      "raw_descriptions": [
+        "EMER HAEM TRANSP SVC /SA-2115"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c5b56daaa9",
+      "normalized_description": "svc elect cardiac transp",
+      "line_occurrences": 50,
+      "raw_descriptions": [
+        "SVC - ELECT CARDIAC TRANSP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-df971b3806",
+      "normalized_description": "interm ophth anaes admin",
+      "line_occurrences": 50,
+      "raw_descriptions": [
+        "INTERM OPHTH ANAES ADMIN",
+        "INTERM - OPHTH ANAES ADMIN /SA-3116"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6300d6cbee",
+      "normalized_description": "service elect card transp",
+      "line_occurrences": 49,
+      "raw_descriptions": [
+        "SERVICE - ELECT CARD TRANSP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f270b2b650",
+      "normalized_description": "sess intens infect physio",
+      "line_occurrences": 49,
+      "raw_descriptions": [
+        "SESS  INTENS INFECT PHYSIO",
+        "SESS INTENS INFECT PHYSIO /SA-4043"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4f8ac6da5e",
+      "normalized_description": "postop ortho isol rm occ",
+      "line_occurrences": 48,
+      "raw_descriptions": [
+        "POSTOP ORTHO ISOL RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1a5cc82c14",
+      "normalized_description": "foc card dial sess",
+      "line_occurrences": 48,
+      "raw_descriptions": [
+        "FOC  CARD DIAL SESS /SA-1981",
+        "FOC - CARD DIAL SESS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e97bf08995",
+      "normalized_description": "postop neuro rehab prog",
+      "line_occurrences": 47,
+      "raw_descriptions": [
+        "POSTOP NEURO REHAB PROG /SA-6939",
+        "POSTOP - NEURO REHAB PROG",
+        "POSTOP NEURO REHAB PROG /SA-1572"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-dc0a438323",
+      "normalized_description": "anly interm card spcm",
+      "line_occurrences": 47,
+      "raw_descriptions": [
+        "ANLY INTERM CARD SPCM",
+        "ANLY INTERM CARD SPCM /SA-2727"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ef747da184",
+      "normalized_description": "intens paed inf ther",
+      "line_occurrences": 47,
+      "raw_descriptions": [
+        "INTENS  PAED INF THER",
+        "INTENS PAED INF THER /SA-4770"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e143905282",
+      "normalized_description": "haem transp svc compr",
+      "line_occurrences": 47,
+      "raw_descriptions": [
+        "HAEM TRANSP SVC COMPR"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7f295145f8",
+      "normalized_description": "ortho isol rm occ postop",
+      "line_occurrences": 46,
+      "raw_descriptions": [
+        "ORTHO ISOL RM OCC POSTOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0c23888f41",
+      "normalized_description": "cont ren vent supp",
+      "line_occurrences": 46,
+      "raw_descriptions": [
+        "CONT - REN VENT SUPP",
+        "CONT REN VENT SUPP /SA-2853"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-853ee7ff96",
+      "normalized_description": "spclst psych sterilisation svc",
+      "line_occurrences": 46,
+      "raw_descriptions": [
+        "SPCLST PSYCH STERILISATION SVC /SA-1201"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7b52f08295",
+      "normalized_description": "disp foc pulm pharm",
+      "line_occurrences": 46,
+      "raw_descriptions": [
+        "DISP FOC PULM PHARM /SA-1272"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e2ccc6412b",
+      "normalized_description": "ent cs conf",
+      "line_occurrences": 46,
+      "raw_descriptions": [
+        "ENT CS CONF /SA-6459",
+        "ENT CS CONF /SA-5963"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-7b5eb49bdf",
+      "normalized_description": "intens ent rehab prog",
+      "line_occurrences": 46,
+      "raw_descriptions": [
+        "INTENS - ENT REHAB PROG /SA-6734",
+        "INTENS  ENT REHAB PROG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-553cb36cfc",
+      "normalized_description": "intensive infect physio sess",
+      "line_occurrences": 45,
+      "raw_descriptions": [
+        "INTENSIVE INFECT PHYSIO SESS /SA-6814",
+        "INTENSIVE  INFECT PHYSIO SESS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fc75a0443f",
+      "normalized_description": "compr haem transport svc",
+      "line_occurrences": 45,
+      "raw_descriptions": [
+        "COMPR HAEM TRANSPORT SVC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ce34e61373",
+      "normalized_description": "std telem monit",
+      "line_occurrences": 45,
+      "raw_descriptions": [
+        "STD  - TELEM MONIT",
+        "STD - TELEM MONIT /SA-8775"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-a10e14db4e",
+      "normalized_description": "postop pulm inf ther",
+      "line_occurrences": 44,
+      "raw_descriptions": [
+        "POSTOP PULM INF THER /SA-6470",
+        "POSTOP PULM INF THER /SA-9058"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-8ae6cbcb4a",
+      "normalized_description": "occ preop neurological isol rm",
+      "line_occurrences": 43,
+      "raw_descriptions": [
+        "OCC PREOP NEUROLOGICAL ISOL RM",
+        "OCC  PREOP NEUROLOGICAL ISOL RM /SA-3078"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e6834090c1",
+      "normalized_description": "standard ortho isol rm occ",
+      "line_occurrences": 43,
+      "raw_descriptions": [
+        "STANDARD  - ORTHO ISOL RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-994a2534dd",
+      "normalized_description": "outpt haem biopsy proc",
+      "line_occurrences": 43,
+      "raw_descriptions": [
+        "OUTPT HAEM BIOPSY PROC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ddb590dc4d",
+      "normalized_description": "postop ortho isolation rm occ",
+      "line_occurrences": 43,
+      "raw_descriptions": [
+        "POSTOP ORTHO ISOLATION RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a5287d8e93",
+      "normalized_description": "occ preoperative neuro isol rm",
+      "line_occurrences": 43,
+      "raw_descriptions": [
+        "OCC PREOPERATIVE NEURO ISOL RM",
+        "OCC - PREOPERATIVE NEURO ISOL RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6bda3a7380",
+      "normalized_description": "compr ent cs conf",
+      "line_occurrences": 43,
+      "raw_descriptions": [
+        "COMPR ENT CS CONF",
+        "COMPR ENT CS CONF /SA-8008"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-970dd8dc8f",
+      "normalized_description": "obst physio sess beds",
+      "line_occurrences": 42,
+      "raw_descriptions": [
+        "OBST PHYSIO SESS BEDS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-91bef966e8",
+      "normalized_description": "outpt haem biop proc",
+      "line_occurrences": 42,
+      "raw_descriptions": [
+        "OUTPT HAEM BIOP PROC /SA-1755"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3889e2f99a",
+      "normalized_description": "interm ortho recov rm occ",
+      "line_occurrences": 41,
+      "raw_descriptions": [
+        "INTERM  ORTHO RECOV RM OCC /SA-8516",
+        "INTERM ORTHO RECOV RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9c3e924bff",
+      "normalized_description": "biopsy asst gi",
+      "line_occurrences": 41,
+      "raw_descriptions": [
+        "BIOPSY ASST GI /SA-6156"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bf7c02dd34",
+      "normalized_description": "beds obst physiotherapy session",
+      "line_occurrences": 41,
+      "raw_descriptions": [
+        "BEDS OBST PHYSIOTHERAPY SESSION"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-40a3161452",
+      "normalized_description": "ext ortho radiother fract",
+      "line_occurrences": 41,
+      "raw_descriptions": [
+        "EXT  ORTHO RADIOTHER FRACT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7b4d50fa01",
+      "normalized_description": "rtn infect isol rm occ",
+      "line_occurrences": 41,
+      "raw_descriptions": [
+        "RTN INFECT ISOL RM OCC /SA-6375",
+        "RTN  INFECT ISOL RM OCC /SA-1394"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ae86c776fa",
+      "normalized_description": "occ postop ortho isolation rm",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "OCC POSTOP ORTHO ISOLATION RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3ac27ef253",
+      "normalized_description": "occ postop ortho isol room",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "OCC POSTOP ORTHO ISOL ROOM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fd03c630e2",
+      "normalized_description": "postop neuro prog",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "POSTOP NEURO PROG /SA-1044",
+        "POSTOP - NEURO PROG /SA-8363"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fff7114c57",
+      "normalized_description": "img asst diag",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "IMG ASST DIAG"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-7b4b57216e",
+      "normalized_description": "asst infect monit",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "ASST INFECT MONIT /SA-6965"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2b06aa87d1",
+      "normalized_description": "beds pharm disp",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "BEDS PHARM DISP"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-fd5d2b6955",
+      "normalized_description": "beds obstetric physio sess",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "BEDS OBSTETRIC PHYSIO SESS /SA-6964"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ac8bea5063",
+      "normalized_description": "ext radiother fract",
+      "line_occurrences": 39,
+      "raw_descriptions": [
+        "EXT RADIOTHER FRACT"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-1e670bf05a",
+      "normalized_description": "session beds obst physio",
+      "line_occurrences": 38,
+      "raw_descriptions": [
+        "SESSION  BEDS OBST PHYSIO /SA-5920"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2f43f46770",
+      "normalized_description": "emer pulm vent supp",
+      "line_occurrences": 38,
+      "raw_descriptions": [
+        "EMER  PULM VENT SUPP /SA-9029",
+        "EMER PULM VENT SUPP /SA-6819"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0d8963e3bd",
+      "normalized_description": "emer paed thtr tm",
+      "line_occurrences": 38,
+      "raw_descriptions": [
+        "EMER - PAED THTR TM /SA-9306",
+        "EMER PAED THTR TM /SA-9377"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2d868e0f7e",
+      "normalized_description": "intens palliative wd bd occ",
+      "line_occurrences": 38,
+      "raw_descriptions": [
+        "INTENS  - PALLIATIVE WD BD OCC /SA-6765",
+        "INTENS PALLIATIVE WD BD OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5301ba547d",
+      "normalized_description": "ext orthopaedic radiother fract",
+      "line_occurrences": 38,
+      "raw_descriptions": [
+        "EXT ORTHOPAEDIC RADIOTHER FRACT /SA-4235"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-091cbabde0",
+      "normalized_description": "pulm pharm disp",
+      "line_occurrences": 38,
+      "raw_descriptions": [
+        "PULM PHARM DISP /SA-2727"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-f055600fd6",
+      "normalized_description": "proc outpt haem biopsy",
+      "line_occurrences": 37,
+      "raw_descriptions": [
+        "PROC OUTPT HAEM BIOPSY /SA-9926"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-615796c182",
+      "normalized_description": "specialist psych steril service",
+      "line_occurrences": 37,
+      "raw_descriptions": [
+        "SPECIALIST PSYCH STERIL SERVICE"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-59e12d5b4b",
+      "normalized_description": "conf compr ent cs",
+      "line_occurrences": 37,
+      "raw_descriptions": [
+        "CONF  COMPR ENT CS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d0d2243280",
+      "normalized_description": "svc foc vasc transf",
+      "line_occurrences": 37,
+      "raw_descriptions": [
+        "SVC FOC VASC TRANSF /SA-2946",
+        "SVC FOC VASC TRANSF /SA-8656"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-25f1cfe9d7",
+      "normalized_description": "disp beds pulm pharm",
+      "line_occurrences": 37,
+      "raw_descriptions": [
+        "DISP - BEDS PULM PHARM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-365dc138fd",
+      "normalized_description": "pnl interm psych lab",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "PNL INTERM PSYCH LAB /SA-5413",
+        "PNL INTERM PSYCH LAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-02027bbe7e",
+      "normalized_description": "std paed inf ther",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "STD PAED INF THER",
+        "STD - PAED INF THER /SA-9927"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-624e4c8b72",
+      "normalized_description": "img supv msk diag",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "IMG SUPV MSK DIAG",
+        "IMG - SUPV MSK DIAG /SA-2439"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3a5c37912b",
+      "normalized_description": "pall recov room occ",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "PALL RECOV ROOM OCC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-f0c76fd87e",
+      "normalized_description": "vasc transp svc",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "VASC TRANSP SVC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-8b20d5946c",
+      "normalized_description": "foc pall recov rm occ",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "FOC  PALL RECOV RM OCC /SA-5934"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1613341ae5",
+      "normalized_description": "adv rheum rm occ",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "ADV RHEUM RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-056282c49e",
+      "normalized_description": "spclst sterilisation svc",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "SPCLST STERILISATION SVC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-e1c074492b",
+      "normalized_description": "supp amb haem nutr",
+      "line_occurrences": 36,
+      "raw_descriptions": [
+        "SUPP AMB HAEM NUTR",
+        "SUPP  AMB HAEM NUTR /SA-4369"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-709d46e0b2",
+      "normalized_description": "postop card sess",
+      "line_occurrences": 35,
+      "raw_descriptions": [
+        "POSTOP CARD SESS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-91406ef91f",
+      "normalized_description": "postop ortho isol occ",
+      "line_occurrences": 35,
+      "raw_descriptions": [
+        "POSTOP  ORTHO ISOL OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d3c7174179",
+      "normalized_description": "asst diag img",
+      "line_occurrences": 35,
+      "raw_descriptions": [
+        "ASST DIAG IMG /SA-7926"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-724fc66685",
+      "normalized_description": "proc outpt haem biop",
+      "line_occurrences": 35,
+      "raw_descriptions": [
+        "PROC OUTPT HAEM BIOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e97dd2bfed",
+      "normalized_description": "compr haem transp service",
+      "line_occurrences": 35,
+      "raw_descriptions": [
+        "COMPR HAEM TRANSP SERVICE /SA-1740"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-aca099a877",
+      "normalized_description": "postop vasc transp service",
+      "line_occurrences": 35,
+      "raw_descriptions": [
+        "POSTOP VASC TRANSP SERVICE"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d51930a4b6",
+      "normalized_description": "compr haem svc",
+      "line_occurrences": 35,
+      "raw_descriptions": [
+        "COMPR  HAEM SVC /SA-2722"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-569dfddaaf",
+      "normalized_description": "foc pall recovery rm occ",
+      "line_occurrences": 34,
+      "raw_descriptions": [
+        "FOC PALL RECOVERY RM OCC /SA-8419"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ad0ea0caf7",
+      "normalized_description": "interm ortho recovery rm occ",
+      "line_occurrences": 34,
+      "raw_descriptions": [
+        "INTERM  ORTHO RECOVERY RM OCC /SA-8653"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7fc8093628",
+      "normalized_description": "anly adv derm spcm",
+      "line_occurrences": 34,
+      "raw_descriptions": [
+        "ANLY ADV DERM SPCM /SA-3043",
+        "ANLY ADV DERM SPCM /SA-1886"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bd1f63d683",
+      "normalized_description": "ext ortho radiotherapy fract",
+      "line_occurrences": 34,
+      "raw_descriptions": [
+        "EXT ORTHO RADIOTHERAPY FRACT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-26893f91c1",
+      "normalized_description": "rtn infect rm occ",
+      "line_occurrences": 34,
+      "raw_descriptions": [
+        "RTN  INFECT RM OCC /SA-3020",
+        "RTN INFECT RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fb8c70f70b",
+      "normalized_description": "beds obst physio sess",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "BEDS  OBST PHYSIO SESS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-42abf1881f",
+      "normalized_description": "emer ren ther",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "EMER  REN THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-8cd430823c",
+      "normalized_description": "pulm pharm disp beds",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "PULM PHARM DISP BEDS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c2e40cbd58",
+      "normalized_description": "asst msk diag img",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "ASST MSK DIAG IMG /SA-4432"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0e33821a2c",
+      "normalized_description": "disp beds pulmonary pharm",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "DISP BEDS PULMONARY PHARM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3bc1161f3e",
+      "normalized_description": "fraction beds ophth radiother",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "FRACTION BEDS OPHTH RADIOTHER /SA-7880"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-195c389fd5",
+      "normalized_description": "haem biop proc outpt",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "HAEM BIOP PROC OUTPT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-58a0ec1f45",
+      "normalized_description": "beds pulm disp",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "BEDS PULM DISP /SA-7949"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1195a8c8a8",
+      "normalized_description": "ent rehab prog interm",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "ENT REHAB PROG INTERM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3f541e0ce3",
+      "normalized_description": "pulm inf ther",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "PULM INF THER /SA-9868"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-d972eb8ab1",
+      "normalized_description": "comprehensive haem transp svc",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "COMPREHENSIVE  HAEM TRANSP SVC /SA-3116"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-285e39d87a",
+      "normalized_description": "compr haem transp svc",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "COMPR  HAEM TRANSP SVC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fb54b48d00",
+      "normalized_description": "occ supv rheum crit cr",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "OCC SUPV RHEUM CRIT CR"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2dec4b47b0",
+      "normalized_description": "procedure supv hep endosc",
+      "line_occurrences": 33,
+      "raw_descriptions": [
+        "PROCEDURE SUPV HEP ENDOSC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a0ae9ed8e9",
+      "normalized_description": "svc spclst psych steril",
+      "line_occurrences": 32,
+      "raw_descriptions": [
+        "SVC  SPCLST PSYCH STERIL"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-204ee29777",
+      "normalized_description": "procedure asst gi biopsy",
+      "line_occurrences": 32,
+      "raw_descriptions": [
+        "PROCEDURE ASST GI BIOPSY /SA-5378"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c407991554",
+      "normalized_description": "std psychiatric transf svc",
+      "line_occurrences": 32,
+      "raw_descriptions": [
+        "STD PSYCHIATRIC TRANSF SVC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-183521e1e9",
+      "normalized_description": "postop thtr tm",
+      "line_occurrences": 32,
+      "raw_descriptions": [
+        "POSTOP THTR TM"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-7c9cfd1175",
+      "normalized_description": "proc asst gastrointestinal",
+      "line_occurrences": 32,
+      "raw_descriptions": [
+        "PROC ASST GASTROINTESTINAL"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0047ea503a",
+      "normalized_description": "emer ren infusion ther",
+      "line_occurrences": 31,
+      "raw_descriptions": [
+        "EMER REN INFUSION THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fac9757e09",
+      "normalized_description": "foc pall recov room occupancy",
+      "line_occurrences": 31,
+      "raw_descriptions": [
+        "FOC  PALL RECOV ROOM OCCUPANCY /SA-9540"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-defacb8745",
+      "normalized_description": "svc compr haem transp",
+      "line_occurrences": 31,
+      "raw_descriptions": [
+        "SVC COMPR HAEM TRANSP /SA-1408"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ebefefd265",
+      "normalized_description": "advanced infect rm occ",
+      "line_occurrences": 31,
+      "raw_descriptions": [
+        "ADVANCED INFECT RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-413f5a34b0",
+      "normalized_description": "occ std recov rm",
+      "line_occurrences": 31,
+      "raw_descriptions": [
+        "OCC STD RECOV RM"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-be26fdbc02",
+      "normalized_description": "asst infect telem",
+      "line_occurrences": 31,
+      "raw_descriptions": [
+        "ASST - INFECT TELEM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2c43cd86e8",
+      "normalized_description": "preop vasc img interp",
+      "line_occurrences": 31,
+      "raw_descriptions": [
+        "PREOP VASC IMG INTERP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-438a24f521",
+      "normalized_description": "occupancy supv rheum crit cr",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "OCCUPANCY SUPV RHEUM CRIT CR /SA-3411"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9fe517f45a",
+      "normalized_description": "spclst psych steril service",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "SPCLST PSYCH STERIL SERVICE"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-cae6b74c9e",
+      "normalized_description": "asst diag imaging",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "ASST DIAG IMAGING"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-d45f47a99d",
+      "normalized_description": "fract beds radiother",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "FRACT BEDS RADIOTHER /SA-5851"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-f9ebf6366f",
+      "normalized_description": "postop inf ther",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "POSTOP INF THER"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-f50fa49113",
+      "normalized_description": "beds pulmonary pharm disp",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "BEDS PULMONARY PHARM DISP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-69f9eb9302",
+      "normalized_description": "infect isol rm occ rtn",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "INFECT ISOL RM OCC RTN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-eb55757d75",
+      "normalized_description": "inpt ophth recov occupancy",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "INPT OPHTH RECOV OCCUPANCY /SA-8706"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d0c1c2c952",
+      "normalized_description": "outpt haematology biop proc",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "OUTPT HAEMATOLOGY BIOP PROC /SA-7396"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-384a5cc3ee",
+      "normalized_description": "intens ent rehabilitation prog",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "INTENS  ENT REHABILITATION PROG /SA-2959"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-07e4d94c34",
+      "normalized_description": "supv metab lab pnl",
+      "line_occurrences": 30,
+      "raw_descriptions": [
+        "SUPV METAB LAB PNL /SA-3376"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d52373cd00",
+      "normalized_description": "occ std neuro isol rm",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "OCC STD NEURO ISOL RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b5cd600b72",
+      "normalized_description": "supv metab laboratory panel",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "SUPV METAB LABORATORY PANEL /SA-8571"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a8137326de",
+      "normalized_description": "emer pulm vent",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "EMER PULM VENT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-844f94c8c5",
+      "normalized_description": "interm psychiatric lab pnl",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "INTERM PSYCHIATRIC LAB PNL /SA-4231"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d9aef9ed20",
+      "normalized_description": "neuro isol rm occ preop",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "NEURO ISOL RM OCC PREOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a3a32aa0d3",
+      "normalized_description": "ther intens paed inf",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "THER  INTENS PAED INF"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f04c364fc8",
+      "normalized_description": "msk diag img asst",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "MSK DIAG IMG ASST"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f8191de197",
+      "normalized_description": "supp emer pulm ventilation",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "SUPP EMER PULM VENTILATION /SA-8204"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4008e0003e",
+      "normalized_description": "inpatient ophth recov rm",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "INPATIENT OPHTH RECOV RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7c60fe373f",
+      "normalized_description": "physiotherapy beds obst",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "PHYSIOTHERAPY  BEDS OBST"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5357579c10",
+      "normalized_description": "bedside ophth radiother fract",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "BEDSIDE OPHTH RADIOTHER FRACT /SA-4563"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-829a1ed9de",
+      "normalized_description": "otolaryngologic disch plng",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "OTOLARYNGOLOGIC  DISCH PLNG /SA-6235"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-d1165b929e",
+      "normalized_description": "paed thtr tm postop",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "PAED THTR TM POSTOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ec26fa4f8d",
+      "normalized_description": "infect isol rm occ adv",
+      "line_occurrences": 29,
+      "raw_descriptions": [
+        "INFECT ISOL RM OCC ADV"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-24ff039f5f",
+      "normalized_description": "std isol rm occ",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "STD ISOL RM OCC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-253efdb34e",
+      "normalized_description": "std neuro isol rm occupancy",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "STD NEURO ISOL RM OCCUPANCY /SA-5454"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-62ebc62ea4",
+      "normalized_description": "vasc imaging interp",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "VASC IMAGING INTERP"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-7fb03243fd",
+      "normalized_description": "tm postop paediatric",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "TM POSTOP PAEDIATRIC /SA-5370"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b46164796b",
+      "normalized_description": "inpt ophth recov room occ",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "INPT OPHTH RECOV ROOM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c0f99992bc",
+      "normalized_description": "occ adv infect isol",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "OCC ADV INFECT ISOL /SA-7328"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4205ace2cf",
+      "normalized_description": "supv rheumatologic crit cr occ",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "SUPV RHEUMATOLOGIC CRIT CR OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1706eb7428",
+      "normalized_description": "std ortho isol room occupancy",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "STD ORTHO ISOL ROOM OCCUPANCY /SA-3231"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-905a347323",
+      "normalized_description": "ophth lab pnl foc",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "OPHTH LAB PNL FOC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2c6eed6e2a",
+      "normalized_description": "supp preop ortho vent",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "SUPP PREOP ORTHO VENT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-311105b484",
+      "normalized_description": "compr ent case conf",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "COMPR ENT CASE CONF"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bf81d37894",
+      "normalized_description": "extended ent nutr",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "EXTENDED ENT NUTR"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-722e1455e5",
+      "normalized_description": "amb vasc infusion ther",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "AMB VASC INFUSION THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1aca413a6b",
+      "normalized_description": "occ std neurological isol room",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "OCC STD NEUROLOGICAL ISOL ROOM /SA-6421"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d18ffcb4b8",
+      "normalized_description": "ext vasc vst",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "EXT VASC VST"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-29da54f93d",
+      "normalized_description": "fract ext ortho radiother",
+      "line_occurrences": 28,
+      "raw_descriptions": [
+        "FRACT EXT ORTHO RADIOTHER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-75a90cb803",
+      "normalized_description": "ther ambulatory vasc inf",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "THER AMBULATORY VASC INF"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-06edd8b8e3",
+      "normalized_description": "std neuro isol rm occ",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "STD  NEURO ISOL RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a85c5c83a2",
+      "normalized_description": "occ inpt ophth recov rm",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "OCC INPT OPHTH RECOV RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6634a0e30f",
+      "normalized_description": "psych transf svc",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "PSYCH TRANSF SVC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-3868fbd69d",
+      "normalized_description": "postop card physio",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "POSTOP  CARD PHYSIO"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-67db14b659",
+      "normalized_description": "beds ophth radiother fract",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "BEDS OPHTH RADIOTHER FRACT /SA-1831"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1c1d80b3b5",
+      "normalized_description": "ent rehab prog intens",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "ENT REHAB PROG INTENS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-25306efce4",
+      "normalized_description": "ent rehab prog",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "ENT REHAB PROG"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-07197bc715",
+      "normalized_description": "interm ortho recov occ",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "INTERM ORTHO RECOV OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5a8b402941",
+      "normalized_description": "proc supv hep",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "PROC  - SUPV HEP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-146874ee92",
+      "normalized_description": "fract bedside ophth radiother",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "FRACT  BEDSIDE OPHTH RADIOTHER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-90a13ae11b",
+      "normalized_description": "sess routine geriatric physio",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "SESS ROUTINE GERIATRIC PHYSIO /SA-3246"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a8f573655c",
+      "normalized_description": "msk recovery rm occ",
+      "line_occurrences": 27,
+      "raw_descriptions": [
+        "MSK RECOVERY RM OCC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-e7410b89ee",
+      "normalized_description": "interm ophth admin",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "INTERM OPHTH ADMIN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ca5816fa3b",
+      "normalized_description": "advanced rheum isol rm",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "ADVANCED RHEUM ISOL RM /SA-1731"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f0a976dcf8",
+      "normalized_description": "asst biop proc",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "ASST BIOP PROC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-caa795ddf5",
+      "normalized_description": "preoperative obst sess",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "PREOPERATIVE  OBST SESS /SA-3810"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-312a350d8c",
+      "normalized_description": "service foc vasc transfusion",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "SERVICE FOC VASC TRANSFUSION /SA-8463"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-063fd6bae9",
+      "normalized_description": "svc postop vasc transp",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "SVC POSTOP VASC TRANSP /SA-7367"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-49bd3a10ec",
+      "normalized_description": "endo cs conf",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "ENDO  CS CONF"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-713f3ef927",
+      "normalized_description": "occ intens pall wd bd",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "OCC INTENS PALL WD BD"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1f87743ad8",
+      "normalized_description": "cont ren supp",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "CONT  REN SUPP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-38a6b2d3d9",
+      "normalized_description": "inpt isol rm occ",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "INPT ISOL RM OCC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-24a21ea996",
+      "normalized_description": "session postop card physio",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "SESSION POSTOP CARD PHYSIO"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-feeb407f89",
+      "normalized_description": "supp amb haematology",
+      "line_occurrences": 26,
+      "raw_descriptions": [
+        "SUPP  AMB HAEMATOLOGY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b16a685bf8",
+      "normalized_description": "preoperative orthopaedic ventilation supp",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "PREOPERATIVE ORTHOPAEDIC VENTILATION SUPP /SA-9857"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-396bdb06fe",
+      "normalized_description": "preop cardiac spcm anly",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "PREOP CARDIAC SPCM ANLY /SA-9127"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fba317541c",
+      "normalized_description": "supv hep endoscopic proc",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "SUPV HEP ENDOSCOPIC PROC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-74a62fb861",
+      "normalized_description": "conf adv endo cs",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "CONF ADV ENDO CS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-27c4acfdeb",
+      "normalized_description": "derm spcm anly ext",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "DERM SPCM ANLY EXT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4e136855ea",
+      "normalized_description": "tm postop paed thtr",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "TM  POSTOP PAED THTR"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e9ade81055",
+      "normalized_description": "intens infect physio sess",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "INTENS INFECT PHYSIO SESS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-41b2e35f28",
+      "normalized_description": "supv metab laboratory pnl",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "SUPV METAB LABORATORY PNL /SA-3629"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-dc028eee07",
+      "normalized_description": "intens infectious physio sess",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "INTENS INFECTIOUS PHYSIO SESS /SA-3027"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d83fdcff8e",
+      "normalized_description": "occ std msk recov rm",
+      "line_occurrences": 25,
+      "raw_descriptions": [
+        "OCC STD MSK RECOV RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-81e779666e",
+      "normalized_description": "intens pall wd bd occ",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "INTENS PALL WD BD OCC /SA-8184"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6e0a8106be",
+      "normalized_description": "sess card dial",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "SESS CARD DIAL"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-5065318c89",
+      "normalized_description": "svc foc vasc",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "SVC FOC VASC /SA-2989"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9ab22bdf91",
+      "normalized_description": "neuro rehab prog",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "NEURO  REHAB PROG"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-78c0deacf1",
+      "normalized_description": "support amb haem nutr",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "SUPPORT  AMB HAEM NUTR"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-cc2202245a",
+      "normalized_description": "interm ent rehab",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "INTERM ENT REHAB /SA-8030"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-dcf55c898e",
+      "normalized_description": "ortho recov rm occ interm",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "ORTHO RECOV RM OCC INTERM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-69edcc9fad",
+      "normalized_description": "interm ent rehab prog",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "INTERM ENT REHAB PROG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2378c416d0",
+      "normalized_description": "interm card anly",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "INTERM CARD ANLY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-40d2d482e2",
+      "normalized_description": "routine infect rm occ",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "ROUTINE INFECT RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9094fb408c",
+      "normalized_description": "supervised biopsy proc",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "SUPERVISED BIOPSY PROC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-fd8c14003b",
+      "normalized_description": "imaging asst msk diag",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "IMAGING ASST MSK DIAG /SA-2758"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-39a233e80b",
+      "normalized_description": "paed thtr tm emer",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "PAED THTR TM EMER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a2accd6e5f",
+      "normalized_description": "cont ren vent support",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "CONT REN VENT SUPPORT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4b1b793e33",
+      "normalized_description": "prog interm otolaryngologic rehab",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "PROG INTERM OTOLARYNGOLOGIC REHAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7ac57e439f",
+      "normalized_description": "intermittent ophth anaesthesia admin",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "INTERMITTENT OPHTH ANAESTHESIA ADMIN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6a37ecb61f",
+      "normalized_description": "procedure asst gi biop",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "PROCEDURE ASST GI BIOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d2145430ce",
+      "normalized_description": "ambulatory vasc inf therapy",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "AMBULATORY VASC INF THERAPY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c469ace9ec",
+      "normalized_description": "foc cardiac dial sess",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "FOC CARDIAC DIAL SESS /SA-9422"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-63d1e9d49b",
+      "normalized_description": "derm spcm anly adv",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "DERM SPCM ANLY ADV"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-8caa9d1625",
+      "normalized_description": "diagnostic supv msk",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "DIAGNOSTIC SUPV MSK /SA-5988"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f579c95bd7",
+      "normalized_description": "emergency paed thtr tm",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "EMERGENCY PAED THTR TM /SA-2205"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-03e466fc12",
+      "normalized_description": "occ adv infect isol room",
+      "line_occurrences": 24,
+      "raw_descriptions": [
+        "OCC ADV INFECT ISOL ROOM /SA-3253"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-cbc36c649b",
+      "normalized_description": "adv rheum isol rm occ",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "ADV  RHEUM ISOL RM OCC /SA-5213"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-69202eb2f7",
+      "normalized_description": "extended derm spcm anly",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "EXTENDED  DERM SPCM ANLY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1afdd8778d",
+      "normalized_description": "preop ortho supp",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "PREOP  ORTHO SUPP /SA-5284"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-142780f896",
+      "normalized_description": "emer paed thtr time",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "EMER PAED THTR TIME /SA-3798"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c7d22642db",
+      "normalized_description": "preoperative obst physio session",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "PREOPERATIVE  OBST PHYSIO SESSION"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-29d7df941c",
+      "normalized_description": "postoperative paed thtr tm",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "POSTOPERATIVE PAED THTR TM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c78bff4656",
+      "normalized_description": "rtn ger sess",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "RTN GER SESS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-99434e63ec",
+      "normalized_description": "pnl focused ophth lab",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "PNL FOCUSED OPHTH LAB /SA-2998"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-06fbf4b070",
+      "normalized_description": "std msk recov rm",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "STD MSK RECOV RM /SA-7054"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-99c997429d",
+      "normalized_description": "occ std neuro isol",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "OCC STD NEURO ISOL"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-baf8ed568d",
+      "normalized_description": "card spcm anly preop",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "CARD SPCM ANLY PREOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c80818a9a0",
+      "normalized_description": "ortho isol rm occ std",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "ORTHO ISOL RM OCC STD"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9588f37a86",
+      "normalized_description": "std msk recov rm occ",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "STD  MSK RECOV RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ef462ea56e",
+      "normalized_description": "postop pulmonary inf ther",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "POSTOP  PULMONARY INF THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0825b5454f",
+      "normalized_description": "anly preoperative card specimen",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "ANLY PREOPERATIVE CARD SPECIMEN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a55a9a10a6",
+      "normalized_description": "lab supv metab",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "LAB SUPV METAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b58a7f3f55",
+      "normalized_description": "preop card spcm anly",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "PREOP CARD SPCM ANLY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5a90b16a0a",
+      "normalized_description": "occ interm orthopaedic recov rm",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "OCC INTERM ORTHOPAEDIC RECOV RM /SA-4391"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0e5bdf4e1c",
+      "normalized_description": "ther amb vasc",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "THER AMB VASC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6bf947dbab",
+      "normalized_description": "rtn ophthalmic lab pnl",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "RTN OPHTHALMIC LAB PNL"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3f828d9a4b",
+      "normalized_description": "img preop vasc",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "IMG PREOP VASC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1c0858a35a",
+      "normalized_description": "metab lab panel",
+      "line_occurrences": 23,
+      "raw_descriptions": [
+        "METAB LAB PANEL"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-9b462e7bbf",
+      "normalized_description": "ext derm anly",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "EXT DERM ANLY /SA-1680"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-46e2e7cf5a",
+      "normalized_description": "observation card nursing",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "OBSERVATION  CARD NURSING"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-d1bec38e27",
+      "normalized_description": "interp supervised img",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "INTERP  SUPERVISED IMG /SA-6042"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-4686f87d19",
+      "normalized_description": "interm psych lab panel",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "INTERM  PSYCH LAB PANEL /SA-3427"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9cdd4a8405",
+      "normalized_description": "haem biop proc supv",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "HAEM BIOP PROC SUPV"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a3f90bb108",
+      "normalized_description": "std recov rm occ",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "STD RECOV RM OCC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-2e35d86bb6",
+      "normalized_description": "preop ortho ventilation supp",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "PREOP ORTHO VENTILATION SUPP /SA-6583"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7fe95a8fff",
+      "normalized_description": "intermittent psych lab pnl",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "INTERMITTENT PSYCH LAB PNL /SA-4633"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bea138571c",
+      "normalized_description": "support continuous ren vent",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "SUPPORT CONTINUOUS REN VENT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4987f26018",
+      "normalized_description": "foc vasc transf svc",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "FOC  VASC TRANSF SVC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-54a3891f4d",
+      "normalized_description": "extended hm vst",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "EXTENDED - HM VST"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-9962644ccb",
+      "normalized_description": "supv msk diag img",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "SUPV MSK DIAG IMG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-588120d399",
+      "normalized_description": "postop vascular transport svc",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "POSTOP VASCULAR TRANSPORT SVC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3e73e75c56",
+      "normalized_description": "supv hep endosc proc",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "SUPV  HEP ENDOSC PROC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e000fca678",
+      "normalized_description": "supervised metab lab panel",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "SUPERVISED  METAB LAB PANEL /SA-4441"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4532f37e92",
+      "normalized_description": "interm card spcm anly",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "INTERM - CARD SPCM ANLY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-11b75b29da",
+      "normalized_description": "monitoring asst infect telemetry",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "MONITORING ASST INFECT TELEMETRY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7634c3f93a",
+      "normalized_description": "ext vasc hm",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "EXT VASC HM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-de5b709ff8",
+      "normalized_description": "paed theatre tm",
+      "line_occurrences": 22,
+      "raw_descriptions": [
+        "PAED THEATRE TM /SA-1156"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-90ffd35fc6",
+      "normalized_description": "pnl foc lab",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "PNL FOC LAB /SA-4377"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-7e750fa651",
+      "normalized_description": "intens pall bd occupancy",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "INTENS PALL BD OCCUPANCY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a2694f606d",
+      "normalized_description": "occ intens wd bd",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "OCC INTENS WD BD"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-7dc22bb082",
+      "normalized_description": "msk diag img supv",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "MSK DIAG IMG SUPV"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-597f948aad",
+      "normalized_description": "emer pulmonary vent supp",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "EMER PULMONARY VENT SUPP /SA-3137"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-39d914d229",
+      "normalized_description": "occ std ortho isol rm",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "OCC STD ORTHO ISOL RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6c3e770460",
+      "normalized_description": "emer thtr tm",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "EMER THTR TM /SA-2118"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-2984501e09",
+      "normalized_description": "occ adv rheum isol",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "OCC  ADV RHEUM ISOL"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f8214c64c8",
+      "normalized_description": "postop pulm infusion ther",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "POSTOP PULM INFUSION THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3406638dd1",
+      "normalized_description": "extended vasc vst",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "EXTENDED VASC VST /SA-2084"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-287521c0f5",
+      "normalized_description": "supp cont ren vent",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "SUPP - CONT REN VENT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-74f676583e",
+      "normalized_description": "intens neuro rehabilitation prog",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "INTENS - NEURO REHABILITATION PROG /SA-8220"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ab06c9bfa6",
+      "normalized_description": "cs adv endo",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "CS  ADV ENDO /SA-1786"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fd9575f5d6",
+      "normalized_description": "ther std paed inf",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "THER  STD PAED INF"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-675218ed1c",
+      "normalized_description": "paed inf ther intens",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "PAED INF THER INTENS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7ee14d303c",
+      "normalized_description": "anly adv dermatologic specimen",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "ANLY ADV DERMATOLOGIC SPECIMEN /SA-3586"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ba14a96f20",
+      "normalized_description": "prog intens ent rehab",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "PROG  INTENS ENT REHAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-eedb721f97",
+      "normalized_description": "paed inf ther",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "PAED  INF THER"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-970f37f195",
+      "normalized_description": "preop neuro isol rm",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "PREOP NEURO ISOL RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-af89082f93",
+      "normalized_description": "adv derm anly",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "ADV DERM ANLY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1c778ad978",
+      "normalized_description": "proc supv haem biop",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "PROC  SUPV HAEM BIOP /SA-6944"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9d641c9871",
+      "normalized_description": "adv rheum rm occupancy",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "ADV RHEUM RM OCCUPANCY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-67b34005db",
+      "normalized_description": "postop neuro rehabilitation prog",
+      "line_occurrences": 21,
+      "raw_descriptions": [
+        "POSTOP NEURO REHABILITATION PROG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-67427c53b1",
+      "normalized_description": "intermittent ophth anaes admin",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "INTERMITTENT OPHTH ANAES ADMIN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c2037398b8",
+      "normalized_description": "spcm adv derm",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "SPCM ADV DERM /SA-5608"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6fd802021b",
+      "normalized_description": "occ inpatient ophth recov",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "OCC INPATIENT OPHTH RECOV /SA-5374"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-93c36d4c69",
+      "normalized_description": "occ std msk recov room",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "OCC STD MSK RECOV ROOM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-73cea64161",
+      "normalized_description": "inpt ophth recov rm occ",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "INPT OPHTH RECOV RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-afd9e8e860",
+      "normalized_description": "adv endo cs conf",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "ADV ENDO CS CONF /SA-1948"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4ea8f474e4",
+      "normalized_description": "ext derm spcm anly",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "EXT  DERM SPCM ANLY /SA-4005"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c3f8b5b4c5",
+      "normalized_description": "ophth anaes admin interm",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "OPHTH ANAES ADMIN INTERM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-73207fe65c",
+      "normalized_description": "neurological rehab prog",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "NEUROLOGICAL REHAB PROG /SA-9661"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-cf03267737",
+      "normalized_description": "amb nutritional supp",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "AMB NUTRITIONAL SUPP /SA-7761"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-8c4472022f",
+      "normalized_description": "supv neuro img",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "SUPV - NEURO IMG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5ac5e42381",
+      "normalized_description": "postop paed thtr tm",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "POSTOP PAED THTR TM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-94609fc1fc",
+      "normalized_description": "ther std paed infusion",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "THER STD PAED INFUSION"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ea900137b9",
+      "normalized_description": "card spcm anly interm",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "CARD SPCM ANLY INTERM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bfb9d5a818",
+      "normalized_description": "paediatric inf ther",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "PAEDIATRIC  INF THER"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-69b9a128cc",
+      "normalized_description": "occ foc pall recov room",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "OCC  - FOC PALL RECOV ROOM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5cc03b8042",
+      "normalized_description": "interp supv neuro img",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "INTERP  SUPV NEURO IMG /SA-3334"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-3844472e16",
+      "normalized_description": "adv rheum isolation occ",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "ADV RHEUM ISOLATION OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-eb3ce7a9d7",
+      "normalized_description": "supp emer pulm vent",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "SUPP EMER PULM VENT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-dcd66ed416",
+      "normalized_description": "anly derm spcm",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "ANLY - DERM SPCM"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-7c05ecc92d",
+      "normalized_description": "inpt paed isol rm occ",
+      "line_occurrences": 20,
+      "raw_descriptions": [
+        "INPT PAED ISOL RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-64f239126d",
+      "normalized_description": "rehabilitation postop neuro",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "REHABILITATION POSTOP NEURO /SA-3507"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-cb2c6ed3ce",
+      "normalized_description": "support ambulatory haem nutr",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "SUPPORT AMBULATORY HAEM NUTR"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b200d87450",
+      "normalized_description": "pnl rtn ophth laboratory",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "PNL  RTN OPHTH LABORATORY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f3da7b0895",
+      "normalized_description": "neuro img interp supv",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "NEURO IMG INTERP SUPV"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-ad5bda0f6a",
+      "normalized_description": "supv img interp",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "SUPV  IMG INTERP"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-86b151e287",
+      "normalized_description": "adv derm spcm analysis",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "ADV DERM SPCM ANALYSIS /SA-4468"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-8cef1b5ec0",
+      "normalized_description": "ophth lab pnl",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "OPHTH LAB PNL"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-98a470f518",
+      "normalized_description": "analysis card spcm",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "ANALYSIS CARD SPCM"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-599dba09b3",
+      "normalized_description": "admin ophth anaes",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "ADMIN OPHTH ANAES /SA-6486"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-360c088cd6",
+      "normalized_description": "neuro rehab prog postop",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "NEURO REHAB PROG POSTOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e26eed1d13",
+      "normalized_description": "vst vascular hm",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "VST VASCULAR HM /SA-8814"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-e42acbe43c",
+      "normalized_description": "elect card nursing obs",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "ELECT - CARD NURSING OBS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-9583aae109",
+      "normalized_description": "intensive paed inf ther",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "INTENSIVE  PAED INF THER"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-db86a449b2",
+      "normalized_description": "supervised neurological img interp",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "SUPERVISED NEUROLOGICAL IMG INTERP /SA-6293"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0729223b15",
+      "normalized_description": "preop spcm anly",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "PREOP SPCM ANLY /SA-5067"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-e910e70985",
+      "normalized_description": "inpt paed isol room occ",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "INPT PAED ISOL ROOM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0b1047ce2f",
+      "normalized_description": "analysis ext derm spcm",
+      "line_occurrences": 19,
+      "raw_descriptions": [
+        "ANALYSIS EXT DERM SPCM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bca929f045",
+      "normalized_description": "rtn physio sess",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "RTN PHYSIO SESS"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-82b619cf6f",
+      "normalized_description": "rtn ophth lab pnl",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "RTN OPHTH LAB PNL /SA-1969"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-97b7b286dc",
+      "normalized_description": "rtn ger physio sess",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "RTN GER PHYSIO SESS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d3bb824064",
+      "normalized_description": "panel rtn ophth lab",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "PANEL  RTN OPHTH LAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-f43f97f0ca",
+      "normalized_description": "neuro isol rm occ std",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "NEURO ISOL RM OCC STD"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-597c77337e",
+      "normalized_description": "sess preop obst physio",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "SESS PREOP OBST PHYSIO"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-27cb8e931d",
+      "normalized_description": "rtn infect isol rm",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "RTN  INFECT ISOL RM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-5b3d820cce",
+      "normalized_description": "svc focused vasc transfusion",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "SVC FOCUSED VASC TRANSFUSION /SA-5676"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-69ec1cb714",
+      "normalized_description": "conf adv endo case",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "CONF ADV ENDO CASE"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-88d4541fe5",
+      "normalized_description": "adv derm spcm anly",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "ADV DERM SPCM ANLY /SA-9302"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-6203f6f834",
+      "normalized_description": "fract beds ophth radiother",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "FRACT  BEDS OPHTH RADIOTHER /SA-8930"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0891668e65",
+      "normalized_description": "intens pall wd bd",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "INTENS  PALL WD BD /SA-1182"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-deeabe7e86",
+      "normalized_description": "interpretation supervised neuro img",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "INTERPRETATION SUPERVISED NEURO IMG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a551a4329e",
+      "normalized_description": "preop neuro isol rm occ",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "PREOP NEURO ISOL RM OCC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1e727b9ff9",
+      "normalized_description": "proc hep endosc",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "PROC HEP ENDOSC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-6d54d5d0e1",
+      "normalized_description": "preop card specimen anly",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "PREOP CARD SPECIMEN ANLY /SA-9557"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-36ade96e35",
+      "normalized_description": "intermittent psych lab",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "INTERMITTENT PSYCH LAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a3609e5e62",
+      "normalized_description": "card nurs obs",
+      "line_occurrences": 18,
+      "raw_descriptions": [
+        "CARD  NURS OBS"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-e871051198",
+      "normalized_description": "preop card analysis",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "PREOP CARD ANALYSIS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7d655a1255",
+      "normalized_description": "adv endo case conference",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "ADV  ENDO CASE CONFERENCE"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-68cb768407",
+      "normalized_description": "supv msk diag",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "SUPV MSK DIAG /SA-7067"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-58e1b5194f",
+      "normalized_description": "orthopaedic isol rm occ",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "ORTHOPAEDIC ISOL RM OCC"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-eaffbf9a3c",
+      "normalized_description": "anly preop card spcm",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "ANLY PREOP CARD SPCM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-47a7b761bf",
+      "normalized_description": "msk diag img",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "MSK  DIAG IMG"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-26e88ae9d7",
+      "normalized_description": "diag supervised msk",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "DIAG SUPERVISED MSK"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-e32259196a",
+      "normalized_description": "intens neuro rehab prog",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "INTENS NEURO REHAB PROG"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-82fad304fd",
+      "normalized_description": "adv rheum isol rm occupancy",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "ADV RHEUM ISOL RM OCCUPANCY"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-55bf9a47bb",
+      "normalized_description": "focused ophth lab pnl",
+      "line_occurrences": 17,
+      "raw_descriptions": [
+        "FOCUSED OPHTH LAB PNL /SA-1953"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-74c4472318",
+      "normalized_description": "interm card spcm",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "INTERM CARD SPCM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-c494fd6760",
+      "normalized_description": "programme intens neuro rehab",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "PROGRAMME INTENS NEURO REHAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-a0e820b5ec",
+      "normalized_description": "foc vasc transfusion svc",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "FOC VASC TRANSFUSION SVC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-504e1fcd23",
+      "normalized_description": "sess preop physio",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "SESS PREOP PHYSIO"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-60347fffcc",
+      "normalized_description": "interm rehab prog",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "INTERM  REHAB PROG"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-e4d2bb8f4b",
+      "normalized_description": "prog intens neuro rehab",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "PROG INTENS NEURO REHAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-125f26df9d",
+      "normalized_description": "foc ophth laboratory pnl",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "FOC  OPHTH LABORATORY PNL /SA-6975"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-468013ea9f",
+      "normalized_description": "ther standard inf",
+      "line_occurrences": 16,
+      "raw_descriptions": [
+        "THER  STANDARD INF"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-39caa4e4fa",
+      "normalized_description": "interm ophthalmic admin",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "INTERM  OPHTHALMIC ADMIN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2bc3fb7022",
+      "normalized_description": "intens neuro prog",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "INTENS NEURO PROG /SA-3375"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b46cec5538",
+      "normalized_description": "ext vasc hm vst",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "EXT  VASC HM VST"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-0f8ec53518",
+      "normalized_description": "pnl rtn ophth lab",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "PNL RTN OPHTH LAB"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1557749d8b",
+      "normalized_description": "occ inpt paed isolation room",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "OCC  INPT PAED ISOLATION ROOM"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-1585fd2a92",
+      "normalized_description": "amb haem nutr supp",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "AMB HAEM NUTR SUPP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-419b1d484b",
+      "normalized_description": "supervised haem biop procedure",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "SUPERVISED HAEM BIOP PROCEDURE"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-d816bda672",
+      "normalized_description": "haem biop proc",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "HAEM BIOP PROC /SA-6522"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "tied_candidates"
+    },
+    {
+      "cluster_id": "c-3995ceec2d",
+      "normalized_description": "occ preop isol rm",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "OCC PREOP ISOL RM"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-01a57beb60",
+      "normalized_description": "paed inf ther std",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "PAED INF THER STD"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-bd33ee3880",
+      "normalized_description": "elect card nurs observation",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "ELECT  CARD NURS OBSERVATION /SA-6459"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-17bb5547cf",
+      "normalized_description": "ther std paediatric inf",
+      "line_occurrences": 15,
+      "raw_descriptions": [
+        "THER  - STD PAEDIATRIC INF /SA-9454"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-67704c6e5e",
+      "normalized_description": "routine lab pnl",
+      "line_occurrences": 14,
+      "raw_descriptions": [
+        "ROUTINE LAB PNL /SA-5904"
+      ],
+      "deterministic_status": "AMBIGUOUS",
+      "deterministic_method": "missing_discriminator"
+    },
+    {
+      "cluster_id": "c-fb14a5ec72",
+      "normalized_description": "ext vasc home",
+      "line_occurrences": 14,
+      "raw_descriptions": [
+        "EXT  VASC HOME"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-4eecf8d841",
+      "normalized_description": "supv hep endosc",
+      "line_occurrences": 14,
+      "raw_descriptions": [
+        "SUPV HEP ENDOSC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-745a283fe5",
+      "normalized_description": "neuro rehab prog intens",
+      "line_occurrences": 13,
+      "raw_descriptions": [
+        "NEURO REHAB PROG INTENS"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-2d5bbe42db",
+      "normalized_description": "supv hepatic endosc proc",
+      "line_occurrences": 13,
+      "raw_descriptions": [
+        "SUPV HEPATIC ENDOSC PROC"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-fabe0dfaa6",
+      "normalized_description": "ophth lab pnl rtn",
+      "line_occurrences": 13,
+      "raw_descriptions": [
+        "OPHTH LAB PNL RTN"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-567bbb9a1c",
+      "normalized_description": "spcm interm card",
+      "line_occurrences": 13,
+      "raw_descriptions": [
+        "SPCM  - INTERM CARD /SA-3094"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-7789ce2296",
+      "normalized_description": "rehabilitation interm ent",
+      "line_occurrences": 11,
+      "raw_descriptions": [
+        "REHABILITATION INTERM ENT"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-b2b45f8f67",
+      "normalized_description": "obst physio sess preop",
+      "line_occurrences": 10,
+      "raw_descriptions": [
+        "OBST PHYSIO SESS PREOP"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-df5bb21263",
+      "normalized_description": "interm psych lab pnl",
+      "line_occurrences": 8,
+      "raw_descriptions": [
+        "INTERM PSYCH LAB PNL"
+      ],
+      "deterministic_status": "MATCHED",
+      "deterministic_method": "text_margin"
+    },
+    {
+      "cluster_id": "c-92be12ef51",
+      "normalized_description": "interm msk dial session",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "INTERM - MSK DIAL SESSION /SA-9704"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-e263c550b3",
+      "normalized_description": "spclst hep nutr supp",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "SPCLST HEP NUTR SUPP"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-c8f13e8f30",
+      "normalized_description": "onc wd bd occ",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "ONC WD BD OCC /SA-5889"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-859740291c",
+      "normalized_description": "ambulatory ophth ventilation supp",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "AMBULATORY - OPHTH VENTILATION SUPP"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-6e0434814c",
+      "normalized_description": "foc vasc pharm disp",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "FOC  VASC PHARM DISP /SA-5164"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-b93c7047ee",
+      "normalized_description": "emer msk prog",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "EMER MSK PROG /SA-4534"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-2d226c458e",
+      "normalized_description": "routine hep cs conf",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "ROUTINE HEP CS CONF"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-a05e2262ba",
+      "normalized_description": "std ent anaes admin",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "STD ENT ANAES ADMIN /SA-3414"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-218fc47aba",
+      "normalized_description": "std gi telem monit",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "STD  GI TELEM MONIT"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-b4e1c19826",
+      "normalized_description": "supv ophth img",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "SUPV OPHTH IMG"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-bbb20cb044",
+      "normalized_description": "img cont card diag",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "IMG CONT CARD DIAG /SA-4810"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-44b850ab57",
+      "normalized_description": "plng beds geriatric disch",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "PLNG  BEDS GERIATRIC DISCH"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-9ad0406939",
+      "normalized_description": "amb pall diagnostic img",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "AMB - PALL DIAGNOSTIC IMG /SA-7135"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    },
+    {
+      "cluster_id": "c-8c22600f8a",
+      "normalized_description": "intens metab recov rm occ",
+      "line_occurrences": 1,
+      "raw_descriptions": [
+        "INTENS  - METAB RECOV RM OCC"
+      ],
+      "deterministic_status": "UNKNOWN",
+      "deterministic_method": "contradiction"
+    }
+  ]
+}

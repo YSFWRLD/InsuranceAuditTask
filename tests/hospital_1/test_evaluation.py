@@ -25,13 +25,19 @@ PREDICTION_MODULES = [
 
 
 def test_the_prediction_module_list_is_complete():
-    """A new module on the prediction path must be added above, or it goes unguarded."""
+    """A new module on the prediction path must be added above, or it goes unguarded.
+
+    Hospital 1's prediction path is ``shared/`` plus ``hospital_1/``.  Other
+    hospitals' packages are not on it, and a separate test below forbids any
+    Hospital 1 prediction module from referring to them.
+    """
     on_disk = {
         str(p.relative_to(ROOT / "src")).replace("\\", "/")
-        for p in (ROOT / "src").rglob("*.py")
+        for package in ("shared", "hospital_1")
+        for p in (ROOT / "src" / package).rglob("*.py")
         if p.name != "__init__.py"
     }
-    not_prediction = {"main.py", "hospital_1/evaluation.py"}
+    not_prediction = {"hospital_1/evaluation.py"}
     assert on_disk - not_prediction == set(PREDICTION_MODULES)
 
 

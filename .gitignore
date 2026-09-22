@@ -1,2 +1,11 @@
 __pycache__/
 .pytest_cache/
+
+# Local secrets and environments -- never tracked.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
