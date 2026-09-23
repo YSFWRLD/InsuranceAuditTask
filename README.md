@@ -73,8 +73,9 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
   cap-adjusted guess. For example, in Hospitals 1 and 2 a daily-cap breach
   proves an invoice is wrong but does not reveal the delivered quantity, so
   its total is blank. Hospital 4's contract instead says the excess "is not
-  payable", so there the limit is priced. That reading is recorded as an open
-  ambiguity (see its decision log).
+  payable", so there the limit is priced. That is the chosen H4 policy; the
+  alternative remains documented as an acknowledged ambiguity (see its
+  decision log).
 - **Unresolved identity is carried, not guessed.** An unclear line is audited
   as the set of services it could be. It is flagged only if it is wrong under
   every reading.

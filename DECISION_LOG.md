@@ -20,7 +20,7 @@ A one-page summary. The full reasoning is in the per-hospital logs:
 
 | question | reading taken |
 |---|---|
-| daily cap exceeded | H1, H2: detect, leave the total blank, report the cap as a ceiling. H4 (clause 6.1: the excess "is not payable"): price the limit. The H4 reading is flagged as open, because H1's labels used pre-breach quantities. |
+| daily cap exceeded | H1, H2: detect, leave the total blank, report the cap as a ceiling. H4 (clause 6.1: the excess "is not payable"): price the limit. This is the chosen H4 policy; the alternative is documented because H1's labelled cases used pre-breach quantities. |
 | "within N days" | Inclusive. Chosen on H1 dev data; H4's data is consistent with it. |
 | exclusion scope | Same patient only. |
 | unknown service | H1: the billed amount is carried and marked non-reconstructable. H2, H4: no amount, so the total is blank. |
@@ -74,5 +74,5 @@ A one-page summary. The full reasoning is in the per-hospital logs:
   person review the 3 unaccepted matches.
 - **H2 and H4:** a reviewed evidence table for descriptions missing a name
   slot would raise coverage most.
-- **H4:** decide the cap reading (one policy switch).
+- **H4:** cap reading chosen; the alternative remains documented as a policy switch.
 - **Then** Hospitals 3 and 5.
