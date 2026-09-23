@@ -1,0 +1,1904 @@
+{
+  "contract_fingerprint": "4837b9647574476e4a025eb60538068665aa2e5cfffc19867f855cae78026534",
+  "matcher_version": "h4-matcher-1",
+  "note": "Deterministic decisions only. Hospital 4 has no semantic (LLM) stage. A cluster's status is the text decision; a line of a tied cluster may still be resolved by the unit-basis tie-break.",
+  "mappings": {
+    "administration anaesthesia assisted gastrointestinal": {
+      "status": "MATCHED",
+      "service": "Assisted Gastrointestinal Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Assisted Gastrointestinal Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia gastrointestinal": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Assisted Gastrointestinal Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia inpatient orthopaedic": {
+      "status": "MATCHED",
+      "service": "Inpatient Orthopaedic Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Inpatient Orthopaedic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia intermittent renal": {
+      "status": "MATCHED",
+      "service": "Intermittent Renal Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Intermittent Renal Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia neurological specialist": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia orthopaedic": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Inpatient Orthopaedic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia outpatient rheumatologic": {
+      "status": "MATCHED",
+      "service": "Outpatient Rheumatologic Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Outpatient Rheumatologic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia pulmonary supervised": {
+      "status": "MATCHED",
+      "service": "Supervised Pulmonary Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Supervised Pulmonary Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration anaesthesia renal": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Intermittent Renal Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration outpatient rheumatologic": {
+      "status": "MATCHED",
+      "service": "Outpatient Rheumatologic Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Outpatient Rheumatologic Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "administration pulmonary supervised": {
+      "status": "MATCHED",
+      "service": "Supervised Pulmonary Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Supervised Pulmonary Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced bed occupancy oncology": {
+      "status": "MATCHED",
+      "service": "Advanced Oncology Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Advanced Oncology Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced bed occupancy oncology ward": {
+      "status": "MATCHED",
+      "service": "Advanced Oncology Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Advanced Oncology Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced bed occupancy orthopaedic ward": {
+      "status": "MATCHED",
+      "service": "Advanced Orthopaedic Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Advanced Orthopaedic Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced endoscopic procedure vascular": {
+      "status": "MATCHED",
+      "service": "Advanced Vascular Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Advanced Vascular Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced home palliative": {
+      "status": "MATCHED",
+      "service": "Advanced Palliative Home Visit",
+      "method": "text",
+      "candidates": [
+        "Advanced Palliative Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced home palliative visit": {
+      "status": "MATCHED",
+      "service": "Advanced Palliative Home Visit",
+      "method": "text",
+      "candidates": [
+        "Advanced Palliative Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced occupancy orthopaedic ward": {
+      "status": "MATCHED",
+      "service": "Advanced Orthopaedic Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Advanced Orthopaedic Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced paediatric theatre": {
+      "status": "MATCHED",
+      "service": "Advanced Paediatric Theatre Time",
+      "method": "text",
+      "candidates": [
+        "Advanced Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced paediatric theatre time": {
+      "status": "MATCHED",
+      "service": "Advanced Paediatric Theatre Time",
+      "method": "text",
+      "candidates": [
+        "Advanced Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "advanced procedure vascular": {
+      "status": "MATCHED",
+      "service": "Advanced Vascular Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Advanced Vascular Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory analysis musculoskeletal specimen": {
+      "status": "MATCHED",
+      "service": "Ambulatory Musculoskeletal Specimen Analysis",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Musculoskeletal Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory bed cardiac occupancy ward": {
+      "status": "MATCHED",
+      "service": "Ambulatory Cardiac Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Cardiac Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory bed immunologic occupancy ward": {
+      "status": "MATCHED",
+      "service": "Ambulatory Immunologic Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Immunologic Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory bed occupancy ward": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Ambulatory Cardiac Ward Bed Occupancy",
+        "Ambulatory Immunologic Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory cardiac occupancy ward": {
+      "status": "MATCHED",
+      "service": "Ambulatory Cardiac Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Cardiac Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory care critical occupancy paediatric": {
+      "status": "MATCHED",
+      "service": "Ambulatory Paediatric Critical Care Occupancy",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Paediatric Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory case conference obstetric": {
+      "status": "MATCHED",
+      "service": "Ambulatory Obstetric Case Conference",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Obstetric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory conference obstetric": {
+      "status": "MATCHED",
+      "service": "Ambulatory Obstetric Case Conference",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Obstetric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory endoscopic haematology procedure": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory gastrointestinal nutritional support": {
+      "status": "MATCHED",
+      "service": "Ambulatory Gastrointestinal Nutritional Support",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Gastrointestinal Nutritional Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory haematology service transfusion": {
+      "status": "MATCHED",
+      "service": "Ambulatory Haematology Transfusion Service",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Haematology Transfusion Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory musculoskeletal specimen": {
+      "status": "MATCHED",
+      "service": "Ambulatory Musculoskeletal Specimen Analysis",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Musculoskeletal Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory musculoskeletal support ventilation": {
+      "status": "MATCHED",
+      "service": "Ambulatory Musculoskeletal Ventilation Support",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Musculoskeletal Ventilation Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "ambulatory programme rehabilitation rheumatologic": {
+      "status": "MATCHED",
+      "service": "Ambulatory Rheumatologic Rehabilitation Programme",
+      "method": "text",
+      "candidates": [
+        "Ambulatory Rheumatologic Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "anaesthesia intermittent renal": {
+      "status": "MATCHED",
+      "service": "Intermittent Renal Anaesthesia Administration",
+      "method": "text",
+      "candidates": [
+        "Intermittent Renal Anaesthesia Administration"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "analysis assisted obstetric specimen": {
+      "status": "MATCHED",
+      "service": "Assisted Obstetric Specimen Analysis",
+      "method": "text",
+      "candidates": [
+        "Assisted Obstetric Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "analysis assisted specimen": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Assisted Obstetric Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "analysis intensive specimen": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Intensive Urologic Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "analysis intensive specimen urologic": {
+      "status": "MATCHED",
+      "service": "Intensive Urologic Specimen Analysis",
+      "method": "text",
+      "candidates": [
+        "Intensive Urologic Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "analysis musculoskeletal specimen": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Ambulatory Musculoskeletal Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted cardiac support ventilation": {
+      "status": "MATCHED",
+      "service": "Assisted Cardiac Ventilation Support",
+      "method": "text",
+      "candidates": [
+        "Assisted Cardiac Ventilation Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted nursing observation urologic": {
+      "status": "MATCHED",
+      "service": "Assisted Urologic Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Assisted Urologic Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted nutritional renal": {
+      "status": "MATCHED",
+      "service": "Assisted Renal Nutritional Support",
+      "method": "text",
+      "candidates": [
+        "Assisted Renal Nutritional Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted nutritional renal support": {
+      "status": "MATCHED",
+      "service": "Assisted Renal Nutritional Support",
+      "method": "text",
+      "candidates": [
+        "Assisted Renal Nutritional Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted nutritional support": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Assisted Renal Nutritional Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted observation urologic": {
+      "status": "MATCHED",
+      "service": "Assisted Urologic Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Assisted Urologic Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted obstetric service transport": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted obstetric specimen": {
+      "status": "MATCHED",
+      "service": "Assisted Obstetric Specimen Analysis",
+      "method": "text",
+      "candidates": [
+        "Assisted Obstetric Specimen Analysis"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted paediatric physiotherapy session": {
+      "status": "MATCHED",
+      "service": "Assisted Paediatric Physiotherapy Session",
+      "method": "text",
+      "candidates": [
+        "Assisted Paediatric Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted paediatric theatre time": {
+      "status": "MATCHED",
+      "service": "Assisted Paediatric Theatre Time",
+      "method": "text",
+      "candidates": [
+        "Assisted Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted paediatric time": {
+      "status": "MATCHED",
+      "service": "Assisted Paediatric Theatre Time",
+      "method": "text",
+      "candidates": [
+        "Assisted Paediatric Theatre Time"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "assisted support ventilation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Assisted Cardiac Ventilation Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bed elective neurological occupancy ward": {
+      "status": "MATCHED",
+      "service": "Elective Neurological Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Elective Neurological Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bed extended occupancy renal": {
+      "status": "MATCHED",
+      "service": "Extended Renal Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Extended Renal Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bed extended occupancy renal ward": {
+      "status": "MATCHED",
+      "service": "Extended Renal Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Extended Renal Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bed immunologic occupancy supervised ward": {
+      "status": "MATCHED",
+      "service": "Supervised Immunologic Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Supervised Immunologic Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bed occupancy oncology standard": {
+      "status": "MATCHED",
+      "service": "Standard Oncology Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Standard Oncology Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bed occupancy oncology standard ward": {
+      "status": "MATCHED",
+      "service": "Standard Oncology Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Standard Oncology Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bed occupancy oncology ward": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Advanced Oncology Ward Bed Occupancy",
+        "Standard Oncology Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {
+        "Standard Oncology Ward Bed Occupancy": 18
+      }
+    },
+    "bed occupancy renal ward": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Extended Renal Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bedside biopsy gastrointestinal procedure": {
+      "status": "MATCHED",
+      "service": "Bedside Gastrointestinal Biopsy Procedure",
+      "method": "text",
+      "candidates": [
+        "Bedside Gastrointestinal Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bedside cardiac home": {
+      "status": "MATCHED",
+      "service": "Bedside Cardiac Home Visit",
+      "method": "text",
+      "candidates": [
+        "Bedside Cardiac Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bedside cardiac home visit": {
+      "status": "MATCHED",
+      "service": "Bedside Cardiac Home Visit",
+      "method": "text",
+      "candidates": [
+        "Bedside Cardiac Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bedside imaging interpretation obstetric": {
+      "status": "MATCHED",
+      "service": "Bedside Obstetric Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Bedside Obstetric Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bedside imaging obstetric": {
+      "status": "MATCHED",
+      "service": "Bedside Obstetric Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Bedside Obstetric Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "bedside oncology transfusion": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "biopsy focused metabolic procedure": {
+      "status": "MATCHED",
+      "service": "Focused Metabolic Biopsy Procedure",
+      "method": "text",
+      "candidates": [
+        "Focused Metabolic Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "biopsy focused procedure": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Focused Metabolic Biopsy Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac care postoperative": {
+      "status": "MATCHED",
+      "service": "Postoperative Cardiac Wound Care",
+      "method": "text",
+      "candidates": [
+        "Postoperative Cardiac Wound Care"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac care postoperative wound": {
+      "status": "MATCHED",
+      "service": "Postoperative Cardiac Wound Care",
+      "method": "text",
+      "candidates": [
+        "Postoperative Cardiac Wound Care"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac emergency physiotherapy session": {
+      "status": "MATCHED",
+      "service": "Emergency Cardiac Physiotherapy Session",
+      "method": "text",
+      "candidates": [
+        "Emergency Cardiac Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac home routine visit": {
+      "status": "MATCHED",
+      "service": "Routine Cardiac Home Visit",
+      "method": "text",
+      "candidates": [
+        "Routine Cardiac Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac home visit": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Bedside Cardiac Home Visit",
+        "Routine Cardiac Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac outpatient physiotherapy": {
+      "status": "MATCHED",
+      "service": "Outpatient Cardiac Physiotherapy Session",
+      "method": "text",
+      "candidates": [
+        "Outpatient Cardiac Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac outpatient physiotherapy session": {
+      "status": "MATCHED",
+      "service": "Outpatient Cardiac Physiotherapy Session",
+      "method": "text",
+      "candidates": [
+        "Outpatient Cardiac Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac outpatient session": {
+      "status": "MATCHED",
+      "service": "Outpatient Cardiac Physiotherapy Session",
+      "method": "text",
+      "candidates": [
+        "Outpatient Cardiac Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac physiotherapy session": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Emergency Cardiac Physiotherapy Session",
+        "Outpatient Cardiac Physiotherapy Session"
+      ],
+      "unit_basis_tiebreak_services": {
+        "Emergency Cardiac Physiotherapy Session": 24
+      }
+    },
+    "cardiac specialist support ventilation": {
+      "status": "MATCHED",
+      "service": "Specialist Cardiac Ventilation Support",
+      "method": "text",
+      "candidates": [
+        "Specialist Cardiac Ventilation Support"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "cardiac support ventilation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Assisted Cardiac Ventilation Support",
+        "Specialist Cardiac Ventilation Support"
+      ],
+      "unit_basis_tiebreak_services": {
+        "Specialist Cardiac Ventilation Support": 17
+      }
+    },
+    "care continuous critical infectious occupancy": {
+      "status": "MATCHED",
+      "service": "Continuous Infectious Critical Care Occupancy",
+      "method": "text",
+      "candidates": [
+        "Continuous Infectious Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "care critical infectious occupancy": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Continuous Infectious Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "care critical occupancy orthopaedic standard": {
+      "status": "MATCHED",
+      "service": "Standard Orthopaedic Critical Care Occupancy",
+      "method": "text",
+      "candidates": [
+        "Standard Orthopaedic Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "care critical occupancy standard": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Standard Orthopaedic Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "care critical orthopaedic standard": {
+      "status": "MATCHED",
+      "service": "Standard Orthopaedic Critical Care Occupancy",
+      "method": "text",
+      "candidates": [
+        "Standard Orthopaedic Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "care occupancy orthopaedic standard": {
+      "status": "MATCHED",
+      "service": "Standard Orthopaedic Critical Care Occupancy",
+      "method": "text",
+      "candidates": [
+        "Standard Orthopaedic Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "care specialist wound": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "case conference extended obstetric": {
+      "status": "MATCHED",
+      "service": "Extended Obstetric Case Conference",
+      "method": "text",
+      "candidates": [
+        "Extended Obstetric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "case conference focused urologic": {
+      "status": "MATCHED",
+      "service": "Focused Urologic Case Conference",
+      "method": "text",
+      "candidates": [
+        "Focused Urologic Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "case conference geriatric": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Intensive Geriatric Case Conference",
+        "Postoperative Geriatric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {
+        "Intensive Geriatric Case Conference": 15,
+        "Postoperative Geriatric Case Conference": 20
+      }
+    },
+    "case conference geriatric intensive": {
+      "status": "MATCHED",
+      "service": "Intensive Geriatric Case Conference",
+      "method": "text",
+      "candidates": [
+        "Intensive Geriatric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "case conference geriatric postoperative": {
+      "status": "MATCHED",
+      "service": "Postoperative Geriatric Case Conference",
+      "method": "text",
+      "candidates": [
+        "Postoperative Geriatric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "case conference postoperative": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Geriatric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "case conference urologic": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Focused Urologic Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "comprehensive endoscopic neurological procedure": {
+      "status": "MATCHED",
+      "service": "Comprehensive Neurological Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Comprehensive Neurological Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "comprehensive imaging interpretation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Comprehensive Urologic Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "comprehensive imaging interpretation urologic": {
+      "status": "MATCHED",
+      "service": "Comprehensive Urologic Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Comprehensive Urologic Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "comprehensive imaging urologic": {
+      "status": "MATCHED",
+      "service": "Comprehensive Urologic Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Comprehensive Urologic Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "comprehensive laboratory ophthalmic panel": {
+      "status": "MATCHED",
+      "service": "Comprehensive Ophthalmic Laboratory Panel",
+      "method": "text",
+      "candidates": [
+        "Comprehensive Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "conference extended obstetric": {
+      "status": "MATCHED",
+      "service": "Extended Obstetric Case Conference",
+      "method": "text",
+      "candidates": [
+        "Extended Obstetric Case Conference"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "consultation immunologic specialist": {
+      "status": "MATCHED",
+      "service": "Specialist Immunologic Consultation",
+      "method": "text",
+      "candidates": [
+        "Specialist Immunologic Consultation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "consultation intensive paediatric": {
+      "status": "MATCHED",
+      "service": "Intensive Paediatric Consultation",
+      "method": "text",
+      "candidates": [
+        "Intensive Paediatric Consultation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "consultation neurological routine": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "consultation specialist": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Specialist Immunologic Consultation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "continuous critical infectious occupancy": {
+      "status": "MATCHED",
+      "service": "Continuous Infectious Critical Care Occupancy",
+      "method": "text",
+      "candidates": [
+        "Continuous Infectious Critical Care Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "continuous discharge otolaryngologic planning": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "continuous gastrointestinal service transfusion": {
+      "status": "MATCHED",
+      "service": "Continuous Gastrointestinal Transfusion Service",
+      "method": "text",
+      "candidates": [
+        "Continuous Gastrointestinal Transfusion Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "continuous gastrointestinal transfusion": {
+      "status": "MATCHED",
+      "service": "Continuous Gastrointestinal Transfusion Service",
+      "method": "text",
+      "candidates": [
+        "Continuous Gastrointestinal Transfusion Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "continuous programme psychiatric rehabilitation": {
+      "status": "MATCHED",
+      "service": "Continuous Psychiatric Rehabilitation Programme",
+      "method": "text",
+      "candidates": [
+        "Continuous Psychiatric Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "continuous programme rehabilitation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Continuous Psychiatric Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dermatologic emergency laboratory": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic geriatric imaging outpatient": {
+      "status": "MATCHED",
+      "service": "Outpatient Geriatric Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Outpatient Geriatric Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic geriatric imaging preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Geriatric Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Preoperative Geriatric Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic geriatric outpatient": {
+      "status": "MATCHED",
+      "service": "Outpatient Geriatric Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Outpatient Geriatric Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic geriatric preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Geriatric Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Preoperative Geriatric Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic imaging intensive neurological": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic imaging oncology postoperative": {
+      "status": "MATCHED",
+      "service": "Postoperative Oncology Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Postoperative Oncology Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic imaging oncology preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Oncology Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Preoperative Oncology Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "diagnostic oncology preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Oncology Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Preoperative Oncology Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dialysis intermittent rheumatologic session": {
+      "status": "MATCHED",
+      "service": "Intermittent Rheumatologic Dialysis Session",
+      "method": "text",
+      "candidates": [
+        "Intermittent Rheumatologic Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dialysis obstetric outpatient": {
+      "status": "MATCHED",
+      "service": "Outpatient Obstetric Dialysis Session",
+      "method": "text",
+      "candidates": [
+        "Outpatient Obstetric Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dialysis obstetric outpatient session": {
+      "status": "MATCHED",
+      "service": "Outpatient Obstetric Dialysis Session",
+      "method": "text",
+      "candidates": [
+        "Outpatient Obstetric Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dialysis paediatric session standard": {
+      "status": "MATCHED",
+      "service": "Standard Paediatric Dialysis Session",
+      "method": "text",
+      "candidates": [
+        "Standard Paediatric Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dialysis rheumatologic session supervised": {
+      "status": "MATCHED",
+      "service": "Supervised Rheumatologic Dialysis Session",
+      "method": "text",
+      "candidates": [
+        "Supervised Rheumatologic Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dialysis session standard": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Standard Paediatric Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dialysis session supervised": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Supervised Rheumatologic Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "discharge extended hepatic planning": {
+      "status": "MATCHED",
+      "service": "Extended Hepatic Discharge Planning",
+      "method": "text",
+      "candidates": [
+        "Extended Hepatic Discharge Planning"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "discharge extended planning": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Extended Hepatic Discharge Planning"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "discharge hepatic planning": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Extended Hepatic Discharge Planning",
+        "Specialist Hepatic Discharge Planning"
+      ],
+      "unit_basis_tiebreak_services": {
+        "Extended Hepatic Discharge Planning": 10
+      }
+    },
+    "discharge hepatic planning specialist": {
+      "status": "MATCHED",
+      "service": "Specialist Hepatic Discharge Planning",
+      "method": "text",
+      "candidates": [
+        "Specialist Hepatic Discharge Planning"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "dispensing metabolic outpatient pharmacy": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "elective fraction ophthalmic radiotherapy": {
+      "status": "MATCHED",
+      "service": "Elective Ophthalmic Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Elective Ophthalmic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "elective gastrointestinal nursing": {
+      "status": "MATCHED",
+      "service": "Elective Gastrointestinal Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Elective Gastrointestinal Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "elective gastrointestinal nursing observation": {
+      "status": "MATCHED",
+      "service": "Elective Gastrointestinal Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Elective Gastrointestinal Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "elective nursing observation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Elective Gastrointestinal Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "elective obstetric service transfusion": {
+      "status": "MATCHED",
+      "service": "Elective Obstetric Transfusion Service",
+      "method": "text",
+      "candidates": [
+        "Elective Obstetric Transfusion Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "elective ophthalmic radiotherapy": {
+      "status": "MATCHED",
+      "service": "Elective Ophthalmic Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Elective Ophthalmic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "emergency fraction metabolic radiotherapy": {
+      "status": "MATCHED",
+      "service": "Emergency Metabolic Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Emergency Metabolic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "emergency metabolic radiotherapy": {
+      "status": "MATCHED",
+      "service": "Emergency Metabolic Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Emergency Metabolic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "emergency programme rehabilitation rheumatologic": {
+      "status": "MATCHED",
+      "service": "Emergency Rheumatologic Rehabilitation Programme",
+      "method": "text",
+      "candidates": [
+        "Emergency Rheumatologic Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "emergency programme rheumatologic": {
+      "status": "MATCHED",
+      "service": "Emergency Rheumatologic Rehabilitation Programme",
+      "method": "text",
+      "candidates": [
+        "Emergency Rheumatologic Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "endoscopic extended procedure psychiatric": {
+      "status": "MATCHED",
+      "service": "Extended Psychiatric Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Extended Psychiatric Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "endoscopic extended psychiatric": {
+      "status": "MATCHED",
+      "service": "Extended Psychiatric Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Extended Psychiatric Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "endoscopic outpatient procedure urologic": {
+      "status": "MATCHED",
+      "service": "Outpatient Urologic Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Outpatient Urologic Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "endoscopic outpatient urologic": {
+      "status": "MATCHED",
+      "service": "Outpatient Urologic Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Outpatient Urologic Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "extended hepatic service transfusion": {
+      "status": "MATCHED",
+      "service": "Extended Hepatic Transfusion Service",
+      "method": "text",
+      "candidates": [
+        "Extended Hepatic Transfusion Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "extended monitoring telemetry urologic": {
+      "status": "MATCHED",
+      "service": "Extended Urologic Telemetry Monitoring",
+      "method": "text",
+      "candidates": [
+        "Extended Urologic Telemetry Monitoring"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "extended nursing observation rheumatologic": {
+      "status": "MATCHED",
+      "service": "Extended Rheumatologic Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Extended Rheumatologic Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "extended observation rheumatologic": {
+      "status": "MATCHED",
+      "service": "Extended Rheumatologic Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Extended Rheumatologic Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "extended occupancy renal ward": {
+      "status": "MATCHED",
+      "service": "Extended Renal Ward Bed Occupancy",
+      "method": "text",
+      "candidates": [
+        "Extended Renal Ward Bed Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "extended procedure psychiatric": {
+      "status": "MATCHED",
+      "service": "Extended Psychiatric Endoscopic Procedure",
+      "method": "text",
+      "candidates": [
+        "Extended Psychiatric Endoscopic Procedure"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "extended telemetry urologic": {
+      "status": "MATCHED",
+      "service": "Extended Urologic Telemetry Monitoring",
+      "method": "text",
+      "candidates": [
+        "Extended Urologic Telemetry Monitoring"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "focused infusion therapy vascular": {
+      "status": "MATCHED",
+      "service": "Focused Vascular Infusion Therapy",
+      "method": "text",
+      "candidates": [
+        "Focused Vascular Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "focused neurological visit": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "focused service transport vascular": {
+      "status": "MATCHED",
+      "service": "Focused Vascular Transport Service",
+      "method": "text",
+      "candidates": [
+        "Focused Vascular Transport Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "fraction intensive radiotherapy rheumatologic": {
+      "status": "MATCHED",
+      "service": "Intensive Rheumatologic Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Intensive Rheumatologic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "fraction radiotherapy rheumatologic": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Intensive Rheumatologic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "fraction radiotherapy supervised vascular": {
+      "status": "MATCHED",
+      "service": "Supervised Vascular Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Supervised Vascular Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "gastrointestinal imaging interpretation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Specialist Gastrointestinal Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "gastrointestinal imaging interpretation specialist": {
+      "status": "MATCHED",
+      "service": "Specialist Gastrointestinal Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Specialist Gastrointestinal Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "gastrointestinal nursing observation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Elective Gastrointestinal Nursing Observation",
+        "Supervised Gastrointestinal Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {
+        "Elective Gastrointestinal Nursing Observation": 19
+      }
+    },
+    "gastrointestinal nursing observation supervised": {
+      "status": "MATCHED",
+      "service": "Supervised Gastrointestinal Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Supervised Gastrointestinal Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "gastrointestinal service transfusion": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Continuous Gastrointestinal Transfusion Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "geriatric imaging interpretation postoperative": {
+      "status": "MATCHED",
+      "service": "Postoperative Geriatric Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Postoperative Geriatric Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "geriatric imaging outpatient": {
+      "status": "MATCHED",
+      "service": "Outpatient Geriatric Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Outpatient Geriatric Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "geriatric imaging preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Geriatric Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Preoperative Geriatric Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "geriatric interpretation postoperative": {
+      "status": "MATCHED",
+      "service": "Postoperative Geriatric Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Postoperative Geriatric Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "haematology imaging interpretation preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Haematology Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Preoperative Haematology Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "haematology imaging preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Haematology Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Preoperative Haematology Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "haematology interpretation preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Haematology Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Preoperative Haematology Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "haematology service transfusion": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Ambulatory Haematology Transfusion Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "hepatic infusion standard therapy": {
+      "status": "MATCHED",
+      "service": "Standard Hepatic Infusion Therapy",
+      "method": "text",
+      "candidates": [
+        "Standard Hepatic Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "hepatic infusion therapy": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Standard Hepatic Infusion Therapy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "home inpatient psychiatric visit": {
+      "status": "MATCHED",
+      "service": "Inpatient Psychiatric Home Visit",
+      "method": "text",
+      "candidates": [
+        "Inpatient Psychiatric Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "home intermittent oncology visit": {
+      "status": "MATCHED",
+      "service": "Intermittent Oncology Home Visit",
+      "method": "text",
+      "candidates": [
+        "Intermittent Oncology Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "home pulmonary supervised visit": {
+      "status": "MATCHED",
+      "service": "Supervised Pulmonary Home Visit",
+      "method": "text",
+      "candidates": [
+        "Supervised Pulmonary Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "home standard vascular visit": {
+      "status": "MATCHED",
+      "service": "Standard Vascular Home Visit",
+      "method": "text",
+      "candidates": [
+        "Standard Vascular Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "imaging interpretation paediatric postoperative": {
+      "status": "MATCHED",
+      "service": "Postoperative Paediatric Imaging Interpretation",
+      "method": "text",
+      "candidates": [
+        "Postoperative Paediatric Imaging Interpretation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "imaging oncology postoperative": {
+      "status": "MATCHED",
+      "service": "Postoperative Oncology Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Postoperative Oncology Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "imaging oncology preoperative": {
+      "status": "MATCHED",
+      "service": "Preoperative Oncology Diagnostic Imaging",
+      "method": "text",
+      "candidates": [
+        "Preoperative Oncology Diagnostic Imaging"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "immunologic specialist": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Specialist Immunologic Consultation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intensive radiotherapy rheumatologic": {
+      "status": "MATCHED",
+      "service": "Intensive Rheumatologic Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Intensive Rheumatologic Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intensive service sterilisation": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Intensive Vascular Sterilisation Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intensive service sterilisation vascular": {
+      "status": "MATCHED",
+      "service": "Intensive Vascular Sterilisation Service",
+      "method": "text",
+      "candidates": [
+        "Intensive Vascular Sterilisation Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intermittent laboratory neurological panel": {
+      "status": "MATCHED",
+      "service": "Intermittent Neurological Laboratory Panel",
+      "method": "text",
+      "candidates": [
+        "Intermittent Neurological Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intermittent monitoring telemetry urologic": {
+      "status": "MATCHED",
+      "service": "Intermittent Urologic Telemetry Monitoring",
+      "method": "text",
+      "candidates": [
+        "Intermittent Urologic Telemetry Monitoring"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intermittent programme psychiatric": {
+      "status": "MATCHED",
+      "service": "Intermittent Psychiatric Rehabilitation Programme",
+      "method": "text",
+      "candidates": [
+        "Intermittent Psychiatric Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intermittent programme psychiatric rehabilitation": {
+      "status": "MATCHED",
+      "service": "Intermittent Psychiatric Rehabilitation Programme",
+      "method": "text",
+      "candidates": [
+        "Intermittent Psychiatric Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intermittent rheumatologic session": {
+      "status": "MATCHED",
+      "service": "Intermittent Rheumatologic Dialysis Session",
+      "method": "text",
+      "candidates": [
+        "Intermittent Rheumatologic Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "intermittent telemetry urologic": {
+      "status": "MATCHED",
+      "service": "Intermittent Urologic Telemetry Monitoring",
+      "method": "text",
+      "candidates": [
+        "Intermittent Urologic Telemetry Monitoring"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "laboratory ophthalmic panel standard": {
+      "status": "MATCHED",
+      "service": "Standard Ophthalmic Laboratory Panel",
+      "method": "text",
+      "candidates": [
+        "Standard Ophthalmic Laboratory Panel"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "monitoring otolaryngologic postoperative telemetry": {
+      "status": "MATCHED",
+      "service": "Postoperative Otolaryngologic Telemetry Monitoring",
+      "method": "text",
+      "candidates": [
+        "Postoperative Otolaryngologic Telemetry Monitoring"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "musculoskeletal occupancy preoperative recovery room": {
+      "status": "MATCHED",
+      "service": "Preoperative Musculoskeletal Recovery Room Occupancy",
+      "method": "text",
+      "candidates": [
+        "Preoperative Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "musculoskeletal occupancy preoperative room": {
+      "status": "MATCHED",
+      "service": "Preoperative Musculoskeletal Recovery Room Occupancy",
+      "method": "text",
+      "candidates": [
+        "Preoperative Musculoskeletal Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "nursing observation postoperative rheumatologic": {
+      "status": "MATCHED",
+      "service": "Postoperative Rheumatologic Nursing Observation",
+      "method": "text",
+      "candidates": [
+        "Postoperative Rheumatologic Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "nursing observation supervised": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Supervised Gastrointestinal Nursing Observation"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "occupancy orthopaedic outpatient recovery room": {
+      "status": "MATCHED",
+      "service": "Outpatient Orthopaedic Recovery Room Occupancy",
+      "method": "text",
+      "candidates": [
+        "Outpatient Orthopaedic Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "occupancy orthopaedic recovery room": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Outpatient Orthopaedic Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "occupancy outpatient recovery room": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Outpatient Orthopaedic Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "occupancy palliative postoperative recovery room": {
+      "status": "MATCHED",
+      "service": "Postoperative Palliative Recovery Room Occupancy",
+      "method": "text",
+      "candidates": [
+        "Postoperative Palliative Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "occupancy palliative recovery room": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "missing_discriminator",
+      "candidates": [
+        "Postoperative Palliative Recovery Room Occupancy"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "orthopaedic routine service transfusion": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "orthopaedic service sterilisation": {
+      "status": "UNKNOWN",
+      "service": null,
+      "method": "contradiction",
+      "candidates": [],
+      "unit_basis_tiebreak_services": {}
+    },
+    "outpatient theatre time urologic": {
+      "status": "MATCHED",
+      "service": "Outpatient Urologic Theatre Time",
+      "method": "text",
+      "candidates": [
+        "Outpatient Urologic Theatre Time"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "outpatient time urologic": {
+      "status": "MATCHED",
+      "service": "Outpatient Urologic Theatre Time",
+      "method": "text",
+      "candidates": [
+        "Outpatient Urologic Theatre Time"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "paediatric postoperative service sterilisation": {
+      "status": "MATCHED",
+      "service": "Postoperative Paediatric Sterilisation Service",
+      "method": "text",
+      "candidates": [
+        "Postoperative Paediatric Sterilisation Service"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "programme rehabilitation rheumatologic": {
+      "status": "AMBIGUOUS",
+      "service": null,
+      "method": "tied_candidates",
+      "candidates": [
+        "Ambulatory Rheumatologic Rehabilitation Programme",
+        "Emergency Rheumatologic Rehabilitation Programme"
+      ],
+      "unit_basis_tiebreak_services": {
+        "Ambulatory Rheumatologic Rehabilitation Programme": 24
+      }
+    },
+    "pulmonary supervised visit": {
+      "status": "MATCHED",
+      "service": "Supervised Pulmonary Home Visit",
+      "method": "text",
+      "candidates": [
+        "Supervised Pulmonary Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "radiotherapy supervised vascular": {
+      "status": "MATCHED",
+      "service": "Supervised Vascular Radiotherapy Fraction",
+      "method": "text",
+      "candidates": [
+        "Supervised Vascular Radiotherapy Fraction"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "rheumatologic session supervised": {
+      "status": "MATCHED",
+      "service": "Supervised Rheumatologic Dialysis Session",
+      "method": "text",
+      "candidates": [
+        "Supervised Rheumatologic Dialysis Session"
+      ],
+      "unit_basis_tiebreak_services": {}
+    },
+    "standard vascular visit": {
+      "status": "MATCHED",
+      "service": "Standard Vascular Home Visit",
+      "method": "text",
+      "candidates": [
+        "Standard Vascular Home Visit"
+      ],
+      "unit_basis_tiebreak_services": {}
+    }
+  }
+}

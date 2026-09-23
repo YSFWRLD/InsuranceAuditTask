@@ -1,0 +1,938 @@
+{
+  "contract_fingerprint": "4837b9647574476e4a025eb60538068665aa2e5cfffc19867f855cae78026534",
+  "matcher_version": "h4-matcher-1",
+  "ranking": "line occurrences still unresolved after the unit-basis tie-break, then affected invoices, then how many rule families the candidates touch",
+  "count": 54,
+  "unresolved": [
+    {
+      "canonical_key": "administration anaesthesia orthopaedic",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "ortho - ANAES administration",
+        "ortho  - ANAES admin /CW-7356",
+        "ortho - ANAES admin /CW-8548"
+      ],
+      "line_occurrences": 68,
+      "line_occurrences_still_unresolved_after_tiebreak": 68,
+      "invoice_count": 65,
+      "candidates": [
+        "Inpatient Orthopaedic Anaesthesia Administration"
+      ],
+      "candidate_rule_families": [
+        "daily_cap"
+      ]
+    },
+    {
+      "canonical_key": "immunologic specialist",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "SPCLST immunologic /CW-6493",
+        "IMMUN - spclst /CW-9956"
+      ],
+      "line_occurrences": 57,
+      "line_occurrences_still_unresolved_after_tiebreak": 57,
+      "invoice_count": 56,
+      "candidates": [
+        "Specialist Immunologic Consultation"
+      ],
+      "candidate_rule_families": [
+        "bundle"
+      ]
+    },
+    {
+      "canonical_key": "administration anaesthesia renal",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "renal ANAES admin",
+        "admin REN anaesthesia"
+      ],
+      "line_occurrences": 50,
+      "line_occurrences_still_unresolved_after_tiebreak": 50,
+      "invoice_count": 50,
+      "candidates": [
+        "Intermittent Renal Anaesthesia Administration"
+      ],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "gastrointestinal imaging interpretation",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "gi - IMG interp"
+      ],
+      "line_occurrences": 33,
+      "line_occurrences_still_unresolved_after_tiebreak": 33,
+      "invoice_count": 33,
+      "candidates": [
+        "Specialist Gastrointestinal Imaging Interpretation"
+      ],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "comprehensive imaging interpretation",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "interp COMPR img /CW-6998",
+        "interpretation - COMPR img /CW-2951"
+      ],
+      "line_occurrences": 32,
+      "line_occurrences_still_unresolved_after_tiebreak": 32,
+      "invoice_count": 31,
+      "candidates": [
+        "Comprehensive Urologic Imaging Interpretation"
+      ],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "dialysis session supervised",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "supv  - DIAL sess /CW-1782"
+      ],
+      "line_occurrences": 30,
+      "line_occurrences_still_unresolved_after_tiebreak": 30,
+      "invoice_count": 30,
+      "candidates": [
+        "Supervised Rheumatologic Dialysis Session"
+      ],
+      "candidate_rule_families": [
+        "bundle"
+      ]
+    },
+    {
+      "canonical_key": "dialysis session standard",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "std - DIAL sess /CW-2606"
+      ],
+      "line_occurrences": 28,
+      "line_occurrences_still_unresolved_after_tiebreak": 28,
+      "invoice_count": 28,
+      "candidates": [
+        "Standard Paediatric Dialysis Session"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "assisted nutritional support",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "assisted - NUTR supp"
+      ],
+      "line_occurrences": 27,
+      "line_occurrences_still_unresolved_after_tiebreak": 27,
+      "invoice_count": 26,
+      "candidates": [
+        "Assisted Renal Nutritional Support"
+      ],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "continuous programme rehabilitation",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "prog CONT rehab /CW-3359"
+      ],
+      "line_occurrences": 25,
+      "line_occurrences_still_unresolved_after_tiebreak": 25,
+      "invoice_count": 25,
+      "candidates": [
+        "Continuous Psychiatric Rehabilitation Programme"
+      ],
+      "candidate_rule_families": [
+        "bundle"
+      ]
+    },
+    {
+      "canonical_key": "case conference urologic",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "conf - UROL cs /CW-3094"
+      ],
+      "line_occurrences": 25,
+      "line_occurrences_still_unresolved_after_tiebreak": 25,
+      "invoice_count": 24,
+      "candidates": [
+        "Focused Urologic Case Conference"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "elective nursing observation",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "ELECT - nurs OBS"
+      ],
+      "line_occurrences": 24,
+      "line_occurrences_still_unresolved_after_tiebreak": 24,
+      "invoice_count": 24,
+      "candidates": [
+        "Elective Gastrointestinal Nursing Observation"
+      ],
+      "candidate_rule_families": [
+        "daily_cap"
+      ]
+    },
+    {
+      "canonical_key": "haematology service transfusion",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "haematology - TRANSF svc"
+      ],
+      "line_occurrences": 24,
+      "line_occurrences_still_unresolved_after_tiebreak": 24,
+      "invoice_count": 24,
+      "candidates": [
+        "Ambulatory Haematology Transfusion Service"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "occupancy orthopaedic recovery room",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "ORTHOPAEDIC recov RM occupancy /CW-4525"
+      ],
+      "line_occurrences": 24,
+      "line_occurrences_still_unresolved_after_tiebreak": 24,
+      "invoice_count": 24,
+      "candidates": [
+        "Outpatient Orthopaedic Recovery Room Occupancy"
+      ],
+      "candidate_rule_families": [
+        "bundle"
+      ]
+    },
+    {
+      "canonical_key": "occupancy palliative recovery room",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "occ PALLIATIVE recov RM"
+      ],
+      "line_occurrences": 23,
+      "line_occurrences_still_unresolved_after_tiebreak": 23,
+      "invoice_count": 23,
+      "candidates": [
+        "Postoperative Palliative Recovery Room Occupancy"
+      ],
+      "candidate_rule_families": [
+        "bundle"
+      ]
+    },
+    {
+      "canonical_key": "analysis musculoskeletal specimen",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "msk - SPCM analysis"
+      ],
+      "line_occurrences": 22,
+      "line_occurrences_still_unresolved_after_tiebreak": 22,
+      "invoice_count": 22,
+      "candidates": [
+        "Ambulatory Musculoskeletal Specimen Analysis"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "consultation specialist",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "SPCLST - consult"
+      ],
+      "line_occurrences": 22,
+      "line_occurrences_still_unresolved_after_tiebreak": 22,
+      "invoice_count": 22,
+      "candidates": [
+        "Specialist Immunologic Consultation"
+      ],
+      "candidate_rule_families": [
+        "bundle"
+      ]
+    },
+    {
+      "canonical_key": "assisted support ventilation",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "SUPP asst VENTILATION /CW-3888"
+      ],
+      "line_occurrences": 21,
+      "line_occurrences_still_unresolved_after_tiebreak": 21,
+      "invoice_count": 21,
+      "candidates": [
+        "Assisted Cardiac Ventilation Support"
+      ],
+      "candidate_rule_families": [
+        "threshold_premium"
+      ]
+    },
+    {
+      "canonical_key": "care critical infectious occupancy",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "INFECT - critical CARE occ"
+      ],
+      "line_occurrences": 21,
+      "line_occurrences_still_unresolved_after_tiebreak": 21,
+      "invoice_count": 21,
+      "candidates": [
+        "Continuous Infectious Critical Care Occupancy"
+      ],
+      "candidate_rule_families": [
+        "threshold_premium"
+      ]
+    },
+    {
+      "canonical_key": "bed occupancy renal ward",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "REN - wd BD occ /CW-4382"
+      ],
+      "line_occurrences": 20,
+      "line_occurrences_still_unresolved_after_tiebreak": 20,
+      "invoice_count": 20,
+      "candidates": [
+        "Extended Renal Ward Bed Occupancy"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "fraction radiotherapy rheumatologic",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "rheum - RADIOTHERAPY fract /CW-5238"
+      ],
+      "line_occurrences": 20,
+      "line_occurrences_still_unresolved_after_tiebreak": 20,
+      "invoice_count": 20,
+      "candidates": [
+        "Intensive Rheumatologic Radiotherapy Fraction"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "occupancy outpatient recovery room",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "OUTPT recov RM occ"
+      ],
+      "line_occurrences": 20,
+      "line_occurrences_still_unresolved_after_tiebreak": 20,
+      "invoice_count": 20,
+      "candidates": [
+        "Outpatient Orthopaedic Recovery Room Occupancy"
+      ],
+      "candidate_rule_families": [
+        "bundle"
+      ]
+    },
+    {
+      "canonical_key": "intensive service sterilisation",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "service - INTENS steril /CW-8257"
+      ],
+      "line_occurrences": 20,
+      "line_occurrences_still_unresolved_after_tiebreak": 20,
+      "invoice_count": 20,
+      "candidates": [
+        "Intensive Vascular Sterilisation Service"
+      ],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "analysis intensive specimen",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "anly INTENS spcm"
+      ],
+      "line_occurrences": 19,
+      "line_occurrences_still_unresolved_after_tiebreak": 19,
+      "invoice_count": 19,
+      "candidates": [
+        "Intensive Urologic Specimen Analysis"
+      ],
+      "candidate_rule_families": [
+        "daily_cap"
+      ]
+    },
+    {
+      "canonical_key": "analysis assisted specimen",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "ASSISTED spcm ANALYSIS /CW-2232"
+      ],
+      "line_occurrences": 19,
+      "line_occurrences_still_unresolved_after_tiebreak": 19,
+      "invoice_count": 19,
+      "candidates": [
+        "Assisted Obstetric Specimen Analysis"
+      ],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "ambulatory bed occupancy ward",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "amb WD bed OCC /CW-2964"
+      ],
+      "line_occurrences": 17,
+      "line_occurrences_still_unresolved_after_tiebreak": 17,
+      "invoice_count": 17,
+      "candidates": [
+        "Ambulatory Cardiac Ward Bed Occupancy",
+        "Ambulatory Immunologic Ward Bed Occupancy"
+      ],
+      "candidate_rule_families": [
+        "daily_cap"
+      ]
+    },
+    {
+      "canonical_key": "cardiac home visit",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "card  - HOME vst"
+      ],
+      "line_occurrences": 16,
+      "line_occurrences_still_unresolved_after_tiebreak": 16,
+      "invoice_count": 16,
+      "candidates": [
+        "Bedside Cardiac Home Visit",
+        "Routine Cardiac Home Visit"
+      ],
+      "candidate_rule_families": [
+        "exclusion",
+        "threshold_premium"
+      ]
+    },
+    {
+      "canonical_key": "biopsy focused procedure",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "FOCUSED biop PROC"
+      ],
+      "line_occurrences": 16,
+      "line_occurrences_still_unresolved_after_tiebreak": 16,
+      "invoice_count": 16,
+      "candidates": [
+        "Focused Metabolic Biopsy Procedure"
+      ],
+      "candidate_rule_families": [
+        "daily_cap"
+      ]
+    },
+    {
+      "canonical_key": "care critical occupancy standard",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "OCC - std CRIT cr /CW-1779"
+      ],
+      "line_occurrences": 16,
+      "line_occurrences_still_unresolved_after_tiebreak": 16,
+      "invoice_count": 16,
+      "candidates": [
+        "Standard Orthopaedic Critical Care Occupancy"
+      ],
+      "candidate_rule_families": [
+        "cumulative_discount"
+      ]
+    },
+    {
+      "canonical_key": "case conference postoperative",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "postoperative CS conference /CW-1435"
+      ],
+      "line_occurrences": 16,
+      "line_occurrences_still_unresolved_after_tiebreak": 16,
+      "invoice_count": 16,
+      "candidates": [
+        "Postoperative Geriatric Case Conference"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "hepatic infusion therapy",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "HEP - inf THERAPY"
+      ],
+      "line_occurrences": 16,
+      "line_occurrences_still_unresolved_after_tiebreak": 16,
+      "invoice_count": 16,
+      "candidates": [
+        "Standard Hepatic Infusion Therapy"
+      ],
+      "candidate_rule_families": [
+        "threshold_premium"
+      ]
+    },
+    {
+      "canonical_key": "nursing observation supervised",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "supv  NURSING obs"
+      ],
+      "line_occurrences": 15,
+      "line_occurrences_still_unresolved_after_tiebreak": 15,
+      "invoice_count": 14,
+      "candidates": [
+        "Supervised Gastrointestinal Nursing Observation"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "discharge extended planning",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "plng EXT disch /CW-9928"
+      ],
+      "line_occurrences": 13,
+      "line_occurrences_still_unresolved_after_tiebreak": 13,
+      "invoice_count": 13,
+      "candidates": [
+        "Extended Hepatic Discharge Planning"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "gastrointestinal service transfusion",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "GI - transfusion SVC /CW-9161"
+      ],
+      "line_occurrences": 13,
+      "line_occurrences_still_unresolved_after_tiebreak": 13,
+      "invoice_count": 13,
+      "candidates": [
+        "Continuous Gastrointestinal Transfusion Service"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "administration anaesthesia gastrointestinal",
+      "status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape cannot be ruled out",
+      "raw_examples": [
+        "ADMIN  - gi ANAES /CW-1500"
+      ],
+      "line_occurrences": 9,
+      "line_occurrences_still_unresolved_after_tiebreak": 9,
+      "invoice_count": 9,
+      "candidates": [
+        "Assisted Gastrointestinal Anaesthesia Administration"
+      ],
+      "candidate_rule_families": [
+        "daily_cap"
+      ]
+    },
+    {
+      "canonical_key": "discharge hepatic planning",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "hep - DISCHARGE plng /CW-2290"
+      ],
+      "line_occurrences": 11,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 11,
+      "candidates": [
+        "Extended Hepatic Discharge Planning",
+        "Specialist Hepatic Discharge Planning"
+      ],
+      "candidate_rule_families": [
+        "exclusion",
+        "threshold_premium"
+      ]
+    },
+    {
+      "canonical_key": "administration anaesthesia neurological specialist",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "ADMIN spclst NEURO anaes /CW-6871"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "ambulatory endoscopic haematology procedure",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "AMB haem ENDOSC proc /CW-9607"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "assisted obstetric service transport",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "ASST - obstetric TRANSP svc /CW-7850"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "bedside oncology transfusion",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "BEDS - oncology TRANSF /CW-9855"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "care specialist wound",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "SPCLST wnd CR /CW-6542"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "consultation neurological routine",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "CONSULT rtn NEURO /CW-8916"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "continuous discharge otolaryngologic planning",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "PLNG cont OTOLARYNGOLOGIC disch"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "dermatologic emergency laboratory",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "LAB  - emer DERM /CW-2124"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "diagnostic imaging intensive neurological",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "INTENS  neurological DIAG img /CW-9312"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "dispensing metabolic outpatient pharmacy",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "OUTPT metabolic PHARM disp"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "focused neurological visit",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "VST  foc NEURO /CW-8682"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "orthopaedic routine service transfusion",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "RTN - ortho TRANSF service /CW-3818"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "orthopaedic service sterilisation",
+      "status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a recognised word contradicts every contracted service",
+      "raw_examples": [
+        "SVC - ortho STERILISATION"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved_after_tiebreak": 1,
+      "invoice_count": 1,
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "canonical_key": "case conference geriatric",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "ger - CASE conf",
+        "CONF ger CS"
+      ],
+      "line_occurrences": 35,
+      "line_occurrences_still_unresolved_after_tiebreak": 0,
+      "invoice_count": 34,
+      "candidates": [
+        "Intensive Geriatric Case Conference",
+        "Postoperative Geriatric Case Conference"
+      ],
+      "candidate_rule_families": [
+        "daily_cap",
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "cardiac physiotherapy session",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "CARDIAC physio SESS /CW-4455"
+      ],
+      "line_occurrences": 24,
+      "line_occurrences_still_unresolved_after_tiebreak": 0,
+      "invoice_count": 24,
+      "candidates": [
+        "Emergency Cardiac Physiotherapy Session",
+        "Outpatient Cardiac Physiotherapy Session"
+      ],
+      "candidate_rule_families": [
+        "bundle",
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "programme rehabilitation rheumatologic",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "RHEUM rehabilitation PROGRAMME /CW-4700"
+      ],
+      "line_occurrences": 24,
+      "line_occurrences_still_unresolved_after_tiebreak": 0,
+      "invoice_count": 24,
+      "candidates": [
+        "Ambulatory Rheumatologic Rehabilitation Programme",
+        "Emergency Rheumatologic Rehabilitation Programme"
+      ],
+      "candidate_rule_families": [
+        "bundle",
+        "threshold_premium"
+      ]
+    },
+    {
+      "canonical_key": "gastrointestinal nursing observation",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "OBS - gi NURS /CW-2992"
+      ],
+      "line_occurrences": 19,
+      "line_occurrences_still_unresolved_after_tiebreak": 0,
+      "invoice_count": 19,
+      "candidates": [
+        "Elective Gastrointestinal Nursing Observation",
+        "Supervised Gastrointestinal Nursing Observation"
+      ],
+      "candidate_rule_families": [
+        "daily_cap",
+        "exclusion"
+      ]
+    },
+    {
+      "canonical_key": "bed occupancy oncology ward",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "occupancy ONC wd BD"
+      ],
+      "line_occurrences": 18,
+      "line_occurrences_still_unresolved_after_tiebreak": 0,
+      "invoice_count": 18,
+      "candidates": [
+        "Advanced Oncology Ward Bed Occupancy",
+        "Standard Oncology Ward Bed Occupancy"
+      ],
+      "candidate_rule_families": [
+        "cumulative_discount"
+      ]
+    },
+    {
+      "canonical_key": "cardiac support ventilation",
+      "status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "card VENT support"
+      ],
+      "line_occurrences": 17,
+      "line_occurrences_still_unresolved_after_tiebreak": 0,
+      "invoice_count": 17,
+      "candidates": [
+        "Assisted Cardiac Ventilation Support",
+        "Specialist Cardiac Ventilation Support"
+      ],
+      "candidate_rule_families": [
+        "exclusion",
+        "threshold_premium"
+      ]
+    }
+  ]
+}

@@ -2,11 +2,13 @@
 
     python -m src.main audit h1          audit every invoice; write predictions
     python -m src.main audit h2          (offline: reads persisted service mappings)
+    python -m src.main audit h4          (offline, deterministic; writes artifacts too)
     python -m src.main evaluate h1       score against the development split
                                          (and the locked holdout, while frozen)
-    python -m src.main submission        outputs/hospital_2/submission.csv and the
-                                         combined outputs/submission.csv (scored
-                                         hospitals only: hospital_2; offline)
+    python -m src.main submission        outputs/hospital_{2,4}/submission.csv and
+                                         the combined outputs/submission.csv (scored
+                                         hospitals only: hospital_2, hospital_4;
+                                         offline)
 
 Hospital 2 semantic service identity (run deliberately, never by an audit):
 
@@ -26,7 +28,8 @@ Development evidence (reads labels; not needed to produce predictions):
     python -m src.main freeze h1 [--reason TEXT]
     python -m src.main research h1 temporal|ablation
 
-Hospitals 1 and 2 are implemented; ``h1`` and ``h2`` are the accepted hospitals.
+Hospitals 1, 2 and 4 are implemented; ``h1``, ``h2`` and ``h4`` are the accepted
+hospitals.  Hospital 4 has no semantic stage and no labels.
 """
 
 from __future__ import annotations
@@ -42,6 +45,7 @@ from .hospital_1 import audit as h1_audit
 from .hospital_1 import evaluation as h1_evaluation
 from .hospital_1.matcher import write_match_audit
 from .hospital_2 import audit as h2_audit
+from .hospital_4 import audit as h4_audit
 from .hospital_2 import contract as h2_contract
 from .hospital_2 import semantic as h2_semantic
 from .hospital_2.matcher import H2Matcher, cluster_descriptions
@@ -53,6 +57,7 @@ REPO_ROOT = h1_audit.REPO_ROOT
 OUTPUTS = REPO_ROOT / "outputs"
 H1_OUTPUTS = OUTPUTS / "hospital_1"
 H2_OUTPUTS = OUTPUTS / "hospital_2"
+H4_OUTPUTS = OUTPUTS / "hospital_4"
 TEMPLATE = REPO_ROOT / "submission_template.csv"
 
 
@@ -78,6 +83,9 @@ def _run_h1() -> tuple[h1_audit.Pipeline, list]:
 def cmd_audit(args) -> None:
     if args.hospital == "h2":
         _audit_h2()
+        return
+    if args.hospital == "h4":
+        _audit_h4()
         return
     pipeline, results = _run_h1()
     write_predictions(results, H1_OUTPUTS / "predictions.csv")
@@ -142,15 +150,19 @@ def cmd_research(args) -> None:
 def cmd_submission(_args) -> None:
     # Only scored hospitals go into the submission.  Hospital 1 is the
     # labelled development hospital and is not scored, so it is left out.
-    # Hospital 2 is the only scored hospital implemented; 3-5 are not.
+    # Hospitals 2 and 4 are the scored hospitals implemented; 3 and 5 are not.
     _, results = _run_h2()
     h2_file = H2_OUTPUTS / "submission.csv"
     write_hospital_submission([r.result for r in results], h2_file, template=TEMPLATE)
+    h4_pipeline = h4_audit.H4Pipeline()
+    h4_file = H4_OUTPUTS / "submission.csv"
+    write_hospital_submission([r.result for r in h4_pipeline.run()], h4_file, template=TEMPLATE)
     path = OUTPUTS / "submission.csv"
-    counts = combine_submissions({"hospital_2": h2_file}, path)
-    print(f"{h2_file}: {counts['hospital_2']} rows")
+    counts = combine_submissions({"hospital_2": h2_file, "hospital_4": h4_file}, path)
+    for name, file in (("hospital_2", h2_file), ("hospital_4", h4_file)):
+        print(f"{file}: {counts[name]} rows")
     print(f"{path}: {sum(counts.values())} rows {counts} (hospital_1 is not scored; "
-          "hospitals 3-5 are not implemented)")
+          "hospitals 3 and 5 are not implemented)")
 
 
 # --------------------------------------------------------------------------
@@ -194,6 +206,22 @@ def _audit_h2() -> None:
     _print_counts(h2_audit.identity_counts(pipeline))
     print(f"pricing traces for flagged invoices: {n_traces}")
     print(f"written to {H2_OUTPUTS}")
+
+
+def _audit_h4() -> None:
+    pipeline = h4_audit.H4Pipeline()
+    results = pipeline.run()
+    info = h4_audit.write_outputs(pipeline, results, template=TEMPLATE)
+    res = [r.result for r in results]
+    print(f"invoice occurrences: {len(pipeline.occurrences)}  invoice numbers (rows): {info['rows']}  "
+          f"flagged rows: {sum(r.flagged for r in res)}")
+    print(f"pricing_complete: {sum(r.pricing_complete for r in res)}  "
+          f"correction_reconstructable: {sum(r.correction_reconstructable for r in res)}  "
+          f"expected_total_cents blank: {sum(r.expected_total_cents is None for r in res)}")
+    print("identity:")
+    _print_counts(info["counts"])
+    print(f"pricing traces (every line): {info['traces']}")
+    print(f"written to {H4_OUTPUTS} and {h4_audit.ARTIFACTS}")
 
 
 def _h2_clusters(contract):
@@ -319,7 +347,7 @@ def main() -> None:
         p.set_defaults(func=func)
         return p
 
-    hospital_command("audit", cmd_audit, ("h1", "h2"))
+    hospital_command("audit", cmd_audit, ("h1", "h2", "h4"))
     hospital_command("evaluate", cmd_evaluate)
     sub.add_parser("submission").set_defaults(func=cmd_submission)
     hospital_command("split", cmd_split).add_argument("--force", action="store_true")

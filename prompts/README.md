@@ -3,12 +3,14 @@
 This folder holds every prompt behind this repository, in two kinds:
 
 - **Development** prompts are what the human author sent to the coding
-  assistant (Claude Code, Claude Opus 5).
+  assistant (Claude Code: Claude Opus 5, and Claude Opus 5.5 for Hospital 4).
 - **Runtime** prompts are what the code itself sends to a model when it runs.
 
 All AI use is disclosed in the root [README](../README.md#ai-use-disclosure).
 
 ## Runtime prompts (loaded and sent by `src/hospital_2/semantic.py`)
+
+Hospital 4 has no runtime prompt: its pipeline calls no model.
 
 The code reads these files directly. Each decision records the prompt version
 as `<file>@<first 12 hex of the file's SHA-256>`. So editing a runtime prompt
@@ -42,15 +44,19 @@ OpenRouter HTTP attempts.
 | 10 | [project/004_h1_h2_submission_readiness.md](project/004_h1_h2_submission_readiness.md) | both | this submission's files, reports, index and README | recovered |
 | 11 | [project/005_documentation_cleanup.md](project/005_documentation_cleanup.md) | both | wording fixes for the H3–H5 scope, the H1 holdout and the H2 classifier attempts; a shorter root decision log | at the time |
 | 12 | [project/006_professional_cleanup.md](project/006_professional_cleanup.md) | both | neutral wording in non-frozen code and reviewer-facing documents; amended HEAD commit message | at the time |
+| 13 | [hospital_4/000_implement_hospital_4.md](hospital_4/000_implement_hospital_4.md) | H4 | the deterministic Hospital 4 implementation and its addition to the combined submission (Claude Opus 5.5) | at the time |
 
 **"Recovered"** means the prompt was not written to the repository when it was
 sent. On 2026-09-22 it was copied verbatim from the Claude Code session
 transcript, and each such file says so in its header. Nothing was paraphrased
-or reconstructed from memory. Message 8 groups four one-line requests that
+or reconstructed from memory. Message 8 groups five one-line requests that
 were sent separately.
 
-These twelve files hold every message the author sent in this project's Claude
-Code session, which begins with message 1. Any work done outside that session
+These thirteen files hold the author's task prompts from this project's Claude
+Code session, which begins with message 1. A few short operational chat
+messages sent after P005 (pushing to the author's own repository, and deleting
+a local backup branch) were not saved as prompt files, and have not been added
+retroactively. Any work done outside that session
 is not recorded here and cannot be recovered. That includes the earlier
 iteration behind the historical Hospital 1 figures mentioned in the
 [evaluation report](../outputs/hospital_1/evaluation_report.md). The

@@ -6,10 +6,10 @@ The combined ``outputs/submission.csv`` is built from those files by copying
 their data rows unchanged.  So a hospital file and its rows in the combined
 file cannot disagree.
 
-Only *scored, implemented* hospitals appear here.  Hospital 1 is the labelled
-development hospital; the challenge does not score it, so it never enters the
-combined file.  Hospitals 3-5 are not implemented, and no file is invented for
-them.
+Only *scored, implemented* hospitals appear here: Hospitals 2 and 4.
+Hospital 1 is the labelled development hospital; the challenge does not score
+it, so it never enters the combined file.  Hospitals 3 and 5 are not
+implemented, and no file is invented for them.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ from typing import Iterable
 from .shared.submission import SUBMISSION_COLUMNS, write_submission
 
 # Implemented hospitals whose rows belong in the scored submission, in output order.
-SCORED_HOSPITALS: tuple[str, ...] = ("hospital_2",)
+SCORED_HOSPITALS: tuple[str, ...] = ("hospital_2", "hospital_4")
 UNSCORED_HOSPITALS: tuple[str, ...] = ("hospital_1",)
 
 

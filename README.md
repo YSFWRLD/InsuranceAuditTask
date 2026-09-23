@@ -8,16 +8,19 @@ submission.
 | hospital | status | in `outputs/submission.csv`? |
 |---|---|---|
 | Hospital 1 | implemented; the labelled **development** hospital, evaluated, **not scored** | no — it is development data |
-| Hospital 2 | implemented; **submitted** (1,125 rows, 74 flagged) | yes — the only rows in the file |
-| Hospitals 3–5 | **not implemented** — no code, no rows, no placeholder files; not used to produce any submitted prediction | no |
+| Hospital 2 | implemented; **submitted** (1,125 rows, 74 flagged) | yes |
+| Hospital 4 | implemented; **submitted** (835 rows, 63 flagged); fully deterministic, no LLM | yes |
+| Hospitals 3 and 5 | **not implemented** — no code, no rows, no placeholder files; not used to produce any submitted prediction | no |
 
 Deliverables, as the brief lists them:
 
 1. **A runnable repository.** See [Install and test](#install-and-test) and
    [Reproduce](#reproduce). Dependencies are pinned in `requirements.txt`.
 2. **`submission.csv`.** [`outputs/submission.csv`](outputs/submission.csv),
-   in the template format. It holds scored hospitals only. The per-hospital
-   file is [`outputs/hospital_2/submission.csv`](outputs/hospital_2/submission.csv).
+   in the template format. It holds scored hospitals only: 1,960 rows. The
+   per-hospital files are
+   [`outputs/hospital_2/submission.csv`](outputs/hospital_2/submission.csv) and
+   [`outputs/hospital_4/submission.csv`](outputs/hospital_4/submission.csv).
 3. **Evaluation report.**
    [`outputs/hospital_1/evaluation_report.md`](outputs/hospital_1/evaluation_report.md)
    has per-category performance on Hospital 1 and failures grouped by type.
@@ -25,10 +28,11 @@ Deliverables, as the brief lists them:
    [`prompts/README.md`](prompts/README.md).
 5. **One-page decision log.** [`DECISION_LOG.md`](DECISION_LOG.md). The
    detailed per-hospital logs are
-   [`outputs/hospital_1/decision_log.md`](outputs/hospital_1/decision_log.md) and
-   [`outputs/hospital_2/decision_log.md`](outputs/hospital_2/decision_log.md).
+   [`outputs/hospital_1/decision_log.md`](outputs/hospital_1/decision_log.md),
+   [`outputs/hospital_2/decision_log.md`](outputs/hospital_2/decision_log.md) and
+   [`outputs/hospital_4/decision_log.md`](outputs/hospital_4/decision_log.md).
 
-## Why Hospital 1, then Hospital 2, then stop
+## Sequencing: Hospital 1, then 2, then 4
 
 - **Hospital 1 came first because it is the only labelled hospital.** Every
   design choice (conservative matching, a declined total rather than a guessed
@@ -36,13 +40,16 @@ Deliverables, as the brief lists them:
 - **Hospital 2 was the first scored hospital attempted.** Its contract is
   unlike Hospital 1's: 76 services, each described in one prose clause, with
   no tables. That tested whether the approach transfers.
-- **Hospitals 3–5 were not implemented** and were not used to produce any
+- **Hospital 4 was added next.** Its contract is table-driven, like Hospital
+  1's, with the same rule families. It is built as a deterministic engine that
+  combines Hospital 1's pricing with Hospital 2's conservative identity rules.
+- **Hospitals 3 and 5 were not implemented** and were not used to produce any
   submitted prediction. They were looked at only during planning.
 - **Hospital 2 was stopped at a defined point.** See the
   [Stopping decision](outputs/hospital_2/decision_log.md#stopping-decision).
-  Following the brief's emphasis on depth and stated uncertainty, a focused
-  implementation of one scored hospital, with explicit uncertainty, was
-  preferred over shallow coverage of all four scored hospitals.
+  Following the brief's emphasis on depth and stated uncertainty, focused
+  implementations of two scored hospitals, with explicit uncertainty, were
+  preferred over shallow coverage of all four.
 
 ## How it works
 
@@ -63,8 +70,11 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
 - **Detection and reconstruction are separate questions.**
   `expected_total_cents` is filled only when the corrected total can be
   defended. Otherwise it is left blank, never the billed total, zero, or a
-  cap-adjusted guess. For example, a daily-cap breach proves an invoice is
-  wrong but does not reveal the delivered quantity, so its total is blank.
+  cap-adjusted guess. For example, in Hospitals 1 and 2 a daily-cap breach
+  proves an invoice is wrong but does not reveal the delivered quantity, so
+  its total is blank. Hospital 4's contract instead says the excess "is not
+  payable", so there the limit is priced. That reading is recorded as an open
+  ambiguity (see its decision log).
 - **Unresolved identity is carried, not guessed.** An unclear line is audited
   as the set of services it could be. It is flagged only if it is wrong under
   every reading.
@@ -74,12 +84,13 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
 - `confidence` is an **evidence-strength score, not a calibrated
   probability**:
   - Hospital 1 uses 0.92 / 0.70 / 0.40;
-  - Hospital 2 uses 0.85 / 0.65 / 0.40.
+  - Hospitals 2 and 4 use 0.85 / 0.65 / 0.40.
 
   It measures how the services were identified and whether the total can be
   reconstructed. Hospital 1 shows it is under-confident as a detection
   probability (the low band was right 19 of 19 times); see §4 of the
-  evaluation report. Hospital 2 has no labels, so its calibration is unknown.
+  evaluation report. Hospitals 2 and 4 have no labels, so their calibration is
+  unknown.
 - `predictions.csv` (per hospital) adds the uncertainty columns:
   - `confidence_band`;
   - `pricing_complete` and `correction_reconstructable`;
@@ -87,8 +98,8 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
   - occurrence ids;
   - a plain-language `uncertainty_reasons`.
 
-  Hospital 2 also has a diagnostic `provisional_expected_total_cents` that is
-  never submitted.
+  Hospitals 2 and 4 also have a diagnostic `provisional_expected_total_cents`
+  that is never submitted.
 
 ## Results
 
@@ -131,6 +142,31 @@ does not identify, and the audit declines to guess. That covers 866 of the
 [`outputs/hospital_2/audit_report.md`](outputs/hospital_2/audit_report.md) and
 the [decision log](outputs/hospital_2/decision_log.md).
 
+### Hospital 4 (submitted, no labels)
+
+No accuracy is claimed. No model or external API is used.
+
+| | |
+|---|---|
+| invoice rows / flagged | 835 / 63 (840 physical records, 5 reused numbers) |
+| `pricing_complete` / reconstructable | 308 / 307 |
+| blank `expected_total_cents` | 528 |
+| contract rules parsed | 98 services, 18 premiums, 18 daily limits, 7 bundles, 3 discount services (4 tiers), 15 exclusions, no weekend uplift |
+| description clusters | 211: 157 MATCHED, 41 AMBIGUOUS, 13 UNKNOWN |
+| lines | 10,560: 9,725 identified (147 of them via the unit-basis tie-break), 822 ambiguous, 13 unknown |
+
+- **Why most totals are blank.** A description that omits its qualifier,
+  specialty or concept stays AMBIGUOUS even when only one contracted service
+  fits, because the text cannot rule out an uncontracted look-alike. 523
+  invoices carry such a line.
+- **Where to look.**
+  [`unresolved.json`](artifacts/hospital_4/unresolved.json) ranks those
+  clusters by impact.
+  [`audit_report.md`](outputs/hospital_4/audit_report.md) explains every
+  flagged invoice line by line.
+  [`decision_log.md`](outputs/hospital_4/decision_log.md) separates contract
+  rules, implementation policies and unresolved ambiguities.
+
 ## Install and test
 
 Python 3.11+ (developed on 3.13.2). The engine uses only the standard library.
@@ -145,15 +181,16 @@ pip install -r requirements.txt
 python -m pytest -q
 ```
 
-There are 414 tests:
+There are 521 tests:
 
 | area | tests |
 |---|---|
 | Hospital 1 | 154 |
 | Hospital 2 | 209 |
+| Hospital 4 | 106 |
 | shared | 36 |
 | setup and secrets | 8 |
-| submission files | 7 |
+| submission files | 8 |
 
 After dependencies are installed, the tests and normal reproduction workflow
 require no API keys or network access.
@@ -170,6 +207,10 @@ python -m src.main audit h2
 ```
 
 ```bash
+python -m src.main audit h4
+```
+
+```bash
 python -m src.main submission
 ```
 
@@ -177,9 +218,16 @@ python -m src.main submission
   `artifacts/hospital_2/service_mappings.json` and makes no API call.
 - It writes `outputs/hospital_2/{predictions,findings,submission}.csv`,
   `audit_report.md` and `artifacts/hospital_2/pricing_traces.jsonl`.
-- `submission` rewrites `outputs/hospital_2/submission.csv` and builds
-  `outputs/submission.csv` by copying that file's rows unchanged. The two
-  cannot disagree, and a test checks this.
+- `audit h4` parses the contract and matches every description
+  deterministically. It writes everything under `artifacts/hospital_4/`
+  (contract rules, description clusters, service mappings, unresolved
+  clusters, one pricing trace per line) and
+  `outputs/hospital_4/{predictions,findings,submission}.csv` plus
+  `audit_report.md`.
+- `submission` rewrites both hospital files and builds `outputs/submission.csv`
+  by copying their rows unchanged: Hospital 2 first, then Hospital 4. A
+  hospital file and its rows in the combined file cannot disagree, and a test
+  checks this.
 
 Reproduce the Hospital 1 predictions and evaluation:
 
@@ -259,14 +307,16 @@ Optional settings (an empty value means the default):
 
 ## AI use (disclosure)
 
-- **Code and documents.** They were written with Claude Code (Claude Opus 5),
+- **Code and documents.** They were written with Claude Code (Claude Opus 5;
+  Hospital 4 with Claude Opus 5.5),
   driven by the prompts in [`prompts/`](prompts/). The human author set the
   scope, the constraints and the stopping points; the assistant wrote the code,
   the tests and the first drafts of the reports.
   - Development prompts are saved verbatim. Several were saved only
     afterwards, recovered from the session transcript, and each file says so.
   - The prompts index lists them in order.
-- **Runtime models.** Two are used, both for Hospital 2 service identity only:
+- **Runtime models.** Two are used, both for Hospital 2 service identity
+  only. Hospital 4 uses none:
   - the OpenRouter classifier (`prompts/hospital_2/001_service_classifier.md`);
   - the Jev verifier (`prompts/hospital_2/003_jev_verifier.md`).
 
@@ -282,14 +332,19 @@ src/submission.py           per-hospital submission files -> combined outputs/su
 src/shared/                 data loading, money, result types, CSV writers (frozen with H1)
 src/hospital_1/             contract, matcher, audit, evaluation (the only label reader)
 src/hospital_2/             contract, matcher, semantic (identity only), audit
-tests/                      shared/, hospital_1/, hospital_2/, test_setup.py, test_submission.py
-outputs/submission.csv      the combined, scored submission (hospital_2 only)
+src/hospital_4/             contract, matcher, audit (deterministic; no semantic stage)
+tests/                      shared/, hospital_1/, hospital_2/, hospital_4/, test_setup.py,
+                            test_submission.py
+outputs/submission.csv      the combined, scored submission (hospital_2 then hospital_4)
 outputs/hospital_1/         predictions, findings, evaluation.md, evaluation_report.md,
                             generalization_report.md, decision_log.md
 outputs/hospital_2/         submission, predictions, findings, audit_report.md, decision_log.md
+outputs/hospital_4/         submission, predictions, findings, audit_report.md, decision_log.md
 artifacts/hospital_1/       locked split + manifest, freeze record, match audit, research/
 artifacts/hospital_2/       contract rules, clusters, service_mappings.json (every identity
                             decision with provenance), unresolved.json, Jev batch, pricing traces
+artifacts/hospital_4/       contract rules, description clusters, service mappings,
+                            unresolved.json (ranked by impact), pricing traces (every line)
 prompts/                    versioned prompts; see prompts/README.md
 DECISION_LOG.md             one-page decision log for the submission
 EXERCISE.md                 the challenge brief (unchanged)
@@ -297,7 +352,7 @@ EXERCISE.md                 the challenge brief (unchanged)
 
 Hospital 1's prediction path (`src/shared/*`, `src/hospital_1/{contract,matcher,audit}.py`)
 is hashed in `artifacts/hospital_1/freeze.json`. Editing any of those files
-switches off the holdout score. Hospital 2 reuses `src/shared/` without
+switches off the holdout score. Hospitals 2 and 4 reuse `src/shared/` without
 modifying it.
 
 ## Adding a hospital
