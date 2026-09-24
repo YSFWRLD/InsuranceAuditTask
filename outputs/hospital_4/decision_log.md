@@ -302,4 +302,6 @@ error.
 - **No semantic or LLM stage.**
 - **No differential review against other participants' outputs.** None were
   available in this environment, and none were used.
-- **Hospitals 3 and 5 are not implemented.**
+- **Hospitals 3 and 5 are not implemented.** (This was the state at the time of
+  this H4 stage. Hospital 5 was implemented afterwards; Hospital 3 remains
+  intentionally unimplemented.)

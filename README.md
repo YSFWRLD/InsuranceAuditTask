@@ -3,6 +3,9 @@
 The exercise brief is in [`EXERCISE.md`](EXERCISE.md). This file describes the
 submission.
 
+Submission write-up: [SUBMISSION_WRITEUP.md](SUBMISSION_WRITEUP.md) (also as a
+two-page PDF: [Yousef_Filmban_Insurance_Audit_Writeup.pdf](Yousef_Filmban_Insurance_Audit_Writeup.pdf)).
+
 ## What is submitted
 
 | hospital | status | in `outputs/submission.csv`? |
@@ -56,7 +59,7 @@ Deliverables, as the brief lists them:
 - **Hospital 2 was stopped at a defined point.** See the
   [Stopping decision](outputs/hospital_2/decision_log.md#stopping-decision).
   Following the brief's emphasis on depth and stated uncertainty, focused
-  implementations of two scored hospitals, with explicit uncertainty, were
+  implementations of three scored hospitals, with explicit uncertainty, were
   preferred over shallow coverage of all four.
 
 ## How it works

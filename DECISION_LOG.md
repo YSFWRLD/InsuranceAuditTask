@@ -1,115 +1,84 @@
 # Decision log
 
-A one-page summary. The full reasoning is in the per-hospital logs:
+A one-page summary of the assumptions, the ambiguities and what was decided.
+The full reasoning, with every alternative, is in the per-hospital logs:
 [Hospital 1](outputs/hospital_1/decision_log.md),
 [Hospital 2](outputs/hospital_2/decision_log.md),
 [Hospital 4](outputs/hospital_4/decision_log.md) and
 [Hospital 5](outputs/hospital_5/decision_log.md).
 
-## Scope
+## Scope and principles
 
 - **H1 is for development and evaluation only.** It is labelled and not
   scored, so it is not in `submission.csv`.
-- **H2, H4 and H5 are the scored hospitals submitted.**
-- **H3 was not implemented** and was not used to produce submitted
-  predictions.
-- **Python decides every number, in integer cents.** An LLM decides only H2
-  service identity, never a price, total or flag. H4 uses no model. H5 uses
-  Jev only as a bounded reviewer of vocabulary and missing-word identity.
-  Its audit reads the stored reviews and calls nothing.
+- **H2, H4 and H5 are submitted. H3 was deliberately not implemented.**
+- **Python decides every number, in integer cents.** Models are used only for
+  service identity: an LLM plus Jev in H2, and Jev alone in H5. No model sets
+  a price, total or flag. H4 uses no model.
+- **The billed price never identifies a service.** The unit basis may break a
+  genuine tie between contracted services. A basis used that way is never
+  then called wrong.
+- **A blank total beats a guessed one.** `expected_total_cents` is filled
+  only when the contract and the service identity determine it.
 - **Confidence is evidence strength, not a calibrated probability.**
 
 ## Clause readings
 
 | question | reading taken |
 |---|---|
-| daily cap exceeded | H1, H2, H5 (a bare "Daily cap" column with no stated consequence): detect, leave the total blank, report the cap as a ceiling. H4 (clause 6.1: the excess "is not payable"): price the limit. This is the chosen H4 policy; the alternative is documented because H1's labelled cases used pre-breach quantities. |
-| "within N days" | Inclusive. Chosen on H1 dev data; H4's data is consistent with it. For H5, from the text alone: "not billable within N days of" states a distance, so both sides of the trigger count and day N is inside. All 6 H5 exclusion findings depend on that reading. |
-| exclusion scope | Same patient only; only the left-hand service loses payment. |
-| unknown service | H1: the billed amount is carried and marked non-reconstructable. H2, H4, H5: no amount, so the total is blank. |
-| H5 discount crossing a threshold | Genuinely ambiguous. Adopted: a line takes the tier already exceeded before it, the only reading that contradicts no sentence (3.1: one unit rate per line). The per-unit reading ("subsequent units") is implemented as a switch. |
-| H5 facility column | Clause 1.2 names the line item, but the data only records the invoice's facility, so the invoice's facility is used. |
-| date out of term and after the invoice | One defect: out of term. |
-| repeat of a service on the same day | The first billing stands (by invoice date, id, line); later ones pay nothing. |
+| daily cap exceeded | H1, H2, H5 (a bare "Daily cap" with no stated consequence): flag it, leave the total blank, report the cap as a ceiling. H4 says the excess "is not payable", so there the limit is priced. |
+| "within N days of" (exclusions) | Day N is inside, and only the left-hand service loses payment. For H5 the wording states a distance, so both sides of the trigger count. **This is the least certain reading;** all 6 H5 exclusion findings depend on it. |
+| discount crossing a threshold (H5) | A line takes the tier already exceeded before it (3.1: one unit rate per line). The per-unit reading is implemented as a switch. |
+| facility (H5) | Clause 1.2 names the line item, but lines carry no facility field, so the invoice's facility is used. |
+| unknown service | H1 carries the billed amount (non-reconstructable). H2, H4, H5: no contract price, so the total is blank. |
+| reused invoice number | Occurrences are kept separate; the row represents the later one. |
+| same service twice on one day | The first billing stands (invoice date, id, line); later ones pay nothing. |
+| date out of term and after the invoice | One defect, reported as out of term. |
 
 ## Hospital 1
 
-- **Labels were visible during development.** The holdout is reported only as
-  a **post-hoc check**, not as untouched validation.
-- **The prediction path never reads labels.** Tests enforce this.
-- **Results, all 913 invoices:** detection TP 58 / FP 0 / TN 855 / FN 0.
-  908 of 909 offered totals are exact. 4 cap-breach totals were declined.
+- **Labels were visible during development,** so every H1 figure is post-hoc,
+  not untouched validation. The prediction path never reads labels; tests
+  enforce this.
+- **All 913 invoices:** TP 58 / FP 0 / TN 855 / FN 0. 908 of 909 offered
+  totals are exact, and 4 cap-breach totals were declined.
 
 ## Hospital 2
 
-- **Occurrences are kept separate.** The JSONL is canonical, and the row for
-  a reused number represents the later occurrence.
-- **`/SA-####` suffixes are stripped.** The billed price never identifies a
-  service. The unit basis may break a genuine textual tie, and a basis used
-  that way cannot also accuse the line.
-- **Semantic stage.** GLM proposes, Jev verifies, and a 0.90 gate decides;
-  an accepted AMBIGUOUS stays AMBIGUOUS.
-  - 69 clusters needed classification: 75 OpenRouter HTTP attempts with
-    retries, 67 valid results, 2 failures from provider credit (HTTP 402).
-  - Jev accepted the 64 AMBIGUOUS decisions and none of the 3 MATCHED.
-  - **The stage added 0 verified mappings.**
-- **Stopped on purpose.** No credits were added and no unvalidated
-  replacement model was used. 888 of 1,125 totals are blank, where the
-  correction cannot be reconstructed.
+- **Semantic stage:** GLM proposes, Jev verifies, and a 0.90 gate decides. Of
+  69 clusters, 67 gave valid results and 2 failed on provider credit. **The
+  stage added 0 verified mappings.**
+- **Stopped on purpose,** with no unvalidated replacement model. 888 of 1,125
+  totals are blank.
 
 ## Hospital 4
 
-- **Deterministic, with no LLM.** Every rule is parsed from the contract: 98
-  services, 18 premiums, 18 limits, 7 bundles, 4 discount tiers and 15
-  exclusions.
-- **Matching is structural.** The same data conventions apply as in H2:
-  occurrences kept separate, `/CW-####` stripped, price never used.
-  - MATCHED needs the qualifier, the specialty and a concept word, and exactly
-    one consistent service.
-  - A description missing a slot stays AMBIGUOUS: 822 of 10,560 lines.
-- **Unresolved lines are carried as intervals.** They widen Service Day
-  aggregates and cumulative utilisation. A threshold is decided only when the
-  whole interval is on one side of it.
-- **Results.** 835 rows, 63 flagged. 307 totals are reconstructable and 528
-  are blank.
+- **Deterministic, with no model.** A description missing a name slot stays
+  ambiguous (822 of 10,560 lines). Unresolved lines widen shared aggregates
+  as intervals.
+- **Results:** 835 rows, 63 flagged, 307 totals proven.
 
 ## Hospital 5
 
-- **Contract parsed strictly:** 84 services, 3 facilities × 3 tiers of
-  multipliers, 9 caps, 10 premiums, 9 weekend uplifts, 3 bundles, 15 discount
-  tiers and 7 exclusions. It is cross-checked against the .txt rendering.
-- **Normalisation is proposed broadly and reviewed by Jev.** Of 266
-  proposals, gates admit 62 as global and 45 as context-dependent, and reject
-  159. Two of these decisions are recorded human-review overrides. Invariants stop a normalisation from adding a qualifier or specialty.
-  Context-dependent tokens are settled by the surrounding words.
-- **Missing words.** 33 clusters (1,042 lines) are asked one bounded choice
-  each: 28 resolved to a service, 1 closed to its two candidates, 4 left
-  unresolved (the 3 missing-word clusters below, plus one naming only a
-  concept). Jev refused to invent a specialty in the constructed stress
-  test.
-- **Pre-commit review.** A single-candidate closure gate, added after the
-  first run, was removed, and it was not restored later. In 4 clusters Jev chose the only candidate at
-  0.80-0.89 and put the rest on "ambiguous"; the gate had counted that hedge
-  as confirmation. It had lifted proven totals from 706 to 1,032.
-  - A review may now supply at most one missing name slot.
-  - A known reviewer error (`bd → bedside`) is overridden with provenance,
-    and 2-letter tokens are never global.
-- **ENT.** Of those four clusters, only `SUPV ENT SPCM ANLY` carries its
-  discriminator. ENT (otolaryngology) sits in the specialty slot. A
-  human-reviewed, context-only reading with provenance resolves it, and
-  recovers 233 totals. The other three stay unresolved.
-- **Financial equivalence** prices every still-possible reading. It added 3
-  totals: surviving candidates never priced identically.
-- **Results.** 1,050 rows, 76 flagged, 939 totals proven. The 111 blanks are
-  mostly invoices with a line whose service is not settled.
+- **Normalisation:** 266 proposed abbreviation readings, one Jev question
+  each, then fixed gates: 62 global, 45 context-only, 159 rejected.
+  Normalisation may never add a qualifier or specialty.
+- **Missing words:** 33 clusters get one bounded Jev choice each. A review
+  may supply at most one missing name slot.
+- **Removed in review:** a single-candidate closure rule added after the
+  first run. It read Jev's hedging as confirmation.
+- **Human-reviewed overrides, recorded with reasons:**
+  - ENT is read as Otolaryngologic only where a contracted service fits.
+    233 totals depend on it.
+  - `bd → bedside` is rejected.
+- **Left unresolved** because the text omits a discriminator:
+  `SUPERVISED SPCM ANLY`, `UROL HM VST`, `RTN PHYSIOTHERAPY SESS`.
+- **Results:** 1,050 rows, 76 flagged, 939 totals proven, 111 blank.
 
-## Stopping decisions and next steps
+## Next steps
 
-- **H2:** retry the 2 failed clusters once credit is restored, and have a
-  person review the 3 unaccepted matches.
-- **H2 and H4:** a reviewed evidence table for descriptions missing a name
-  slot would raise coverage most.
-- **H4:** cap reading chosen; the alternative remains documented as a policy switch.
-- **H5:** the 3 remaining single-candidate clusters genuinely omit a word, so
-  only a recorded human sign-off could resolve them. No rule does.
-- **Then** Hospital 3.
+- **H3** is the first priority.
+- **Human sign-off** on the remaining ambiguous clusters (H2, H4, H5), recorded with provenance.
+- **Sensitivity runs** for the exclusion, discount and cap readings.
+- **Confidence calibration** against a properly held-out set.
+- **H2:** retry the 2 failed clusters.
