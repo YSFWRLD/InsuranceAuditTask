@@ -21,6 +21,7 @@ COMBINED = REPO / "outputs" / "submission.csv"
 H2_FILE = REPO / "outputs" / "hospital_2" / "submission.csv"
 H2_PREDICTIONS = REPO / "outputs" / "hospital_2" / "predictions.csv"
 H4_FILE = REPO / "outputs" / "hospital_4" / "submission.csv"
+H5_FILE = REPO / "outputs" / "hospital_5" / "submission.csv"
 
 
 def result(invoice_id, flagged=False, expected=None, billed=1000, confidence=0.9):
@@ -41,70 +42,75 @@ def rows(path):
 
 # ----------------------------------------------------------------- mechanics
 
-def _pair(tmp_path):
-    h2, h4 = tmp_path / "h2.csv", tmp_path / "h4.csv"
+def _files(tmp_path):
+    h2, h4, h5 = tmp_path / "h2.csv", tmp_path / "h4.csv", tmp_path / "h5.csv"
     write_hospital_submission([result("INV-H2-2", True, 900), result("INV-H2-1")], h2, template=TEMPLATE)
     write_hospital_submission([result("INV-H4-1", True, 700)], h4, template=TEMPLATE)
-    return h2, h4
+    write_hospital_submission([result("INV-H5-1"), result("INV-H5-2", True, None)], h5, template=TEMPLATE)
+    return {"hospital_2": h2, "hospital_4": h4, "hospital_5": h5}
 
 
-def test_scored_hospitals_are_2_and_4():
-    assert SCORED_HOSPITALS == ("hospital_2", "hospital_4")
+def test_scored_hospitals_are_2_4_and_5():
+    assert SCORED_HOSPITALS == ("hospital_2", "hospital_4", "hospital_5")
 
 
 def test_combined_rows_are_the_hospital_file_rows_unchanged(tmp_path):
-    h2, h4 = _pair(tmp_path)
+    files = _files(tmp_path)
     combined = tmp_path / "submission.csv"
-    counts = combine_submissions({"hospital_2": h2, "hospital_4": h4}, combined)
-    assert counts == {"hospital_2": 2, "hospital_4": 1}
+    counts = combine_submissions(files, combined)
+    assert counts == {"hospital_2": 2, "hospital_4": 1, "hospital_5": 2}
     body = rows(combined)[1:]
-    assert body[:2] == rows(h2)[1:] and body[2:] == rows(h4)[1:]
-    assert [r[0] for r in body] == ["INV-H2-1", "INV-H2-2", "INV-H4-1"]
+    assert body[:2] == rows(files["hospital_2"])[1:]
+    assert body[2:3] == rows(files["hospital_4"])[1:]
+    assert body[3:] == rows(files["hospital_5"])[1:]
+    assert [r[0] for r in body] == ["INV-H2-1", "INV-H2-2", "INV-H4-1", "INV-H5-1", "INV-H5-2"]
 
 
 def test_hospital_1_is_never_scored(tmp_path):
     h1 = tmp_path / "h1.csv"
     write_hospital_submission([result("INV-H1-1")], h1, template=TEMPLATE)
-    h2, h4 = _pair(tmp_path)
+    files = _files(tmp_path)
     assert "hospital_1" in UNSCORED_HOSPITALS and "hospital_1" not in SCORED_HOSPITALS
     with pytest.raises(ValueError, match="not scored"):
-        combine_submissions({"hospital_1": h1, "hospital_2": h2, "hospital_4": h4}, tmp_path / "out.csv")
+        combine_submissions({"hospital_1": h1, **files}, tmp_path / "out.csv")
 
 
 def test_missing_scored_hospital_and_bad_header_are_refused(tmp_path):
-    h2, _ = _pair(tmp_path)
+    files = _files(tmp_path)
     with pytest.raises(ValueError, match="missing"):
-        combine_submissions({"hospital_2": h2}, tmp_path / "out.csv")
+        combine_submissions({"hospital_2": files["hospital_2"], "hospital_4": files["hospital_4"]},
+                            tmp_path / "out.csv")
     bad = tmp_path / "bad.csv"
     bad.write_text("invoice_id,flagged\nX,0\n", encoding="utf-8")
     with pytest.raises(ValueError, match="header"):
-        combine_submissions({"hospital_2": h2, "hospital_4": bad}, tmp_path / "out.csv")
+        combine_submissions({**files, "hospital_4": bad}, tmp_path / "out.csv")
 
 
 def test_duplicate_invoice_ids_are_refused(tmp_path):
-    _, h4 = _pair(tmp_path)
+    files = _files(tmp_path)
     dup = tmp_path / "dup.csv"
     dup.write_text(",".join(SUBMISSION_COLUMNS) + "\nA,0,,,10,0.50\nA,0,,,10,0.50\n",
                    encoding="utf-8")
     with pytest.raises(ValueError, match="more than once"):
-        combine_submissions({"hospital_2": dup, "hospital_4": h4}, tmp_path / "out.csv")
+        combine_submissions({**files, "hospital_2": dup}, tmp_path / "out.csv")
 
 
 # -------------------------------------------------- committed output checks
 
 committed = pytest.mark.skipif(
-    not (COMBINED.exists() and H2_FILE.exists() and H4_FILE.exists()),
+    not (COMBINED.exists() and H2_FILE.exists() and H4_FILE.exists() and H5_FILE.exists()),
     reason="run `python -m src.main submission` first")
 
 
 @committed
 def test_committed_hospital_subsets_equal_their_files_exactly():
-    h2, h4, combined = rows(H2_FILE), rows(H4_FILE), rows(COMBINED)
-    assert combined[0] == h2[0] == h4[0] == list(SUBMISSION_COLUMNS)
+    h2, h4, h5, combined = rows(H2_FILE), rows(H4_FILE), rows(H5_FILE), rows(COMBINED)
+    assert combined[0] == h2[0] == h4[0] == h5[0] == list(SUBMISSION_COLUMNS)
     assert [r for r in combined[1:] if r[0].startswith("INV-H2-")] == h2[1:]
     assert [r for r in combined[1:] if r[0].startswith("INV-H4-")] == h4[1:]
-    # Nothing but hospitals 2 and 4 is in the combined file.
-    assert len(combined) - 1 == (len(h2) - 1) + (len(h4) - 1)
+    assert [r for r in combined[1:] if r[0].startswith("INV-H5-")] == h5[1:]
+    # Nothing but hospitals 2, 4 and 5 is in the combined file.
+    assert len(combined) - 1 == (len(h2) - 1) + (len(h4) - 1) + (len(h5) - 1)
 
 
 @committed
@@ -117,7 +123,7 @@ def test_committed_submission_is_well_formed():
     for r in body:
         assert len(r) == len(SUBMISSION_COLUMNS)
         invoice_id, flagged, category, expected, billed, confidence = r
-        assert invoice_id[:7] in {"INV-H2-", "INV-H4-"}, "only hospitals 2 and 4 are scored and implemented"
+        assert invoice_id[:7] in {"INV-H2-", "INV-H4-", "INV-H5-"}, "only hospitals 2, 4 and 5 are scored"
         assert flagged in {"0", "1"}
         assert (category != "") == (flagged == "1")
         assert expected == "" or (expected.isdigit() and str(int(expected)) == expected)

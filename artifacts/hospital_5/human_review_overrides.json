@@ -1,0 +1,27 @@
+{
+  "note": "Human-authored input, not generated. Each entry replaces the gated decision for one normalisation proposal of src/hospital_5/normalization.py, with its reason. Read by src/hospital_5/semantic.py::load_review_overrides, which refuses an entry that names no proposal, grants global status, or lacks a reason. An override may reject a reading or allow it in context only; it never makes a token global. Jev's own answer for each proposal stays in jev_normalization_reviews.jsonl and is shown beside the override in the vocabulary artifacts.",
+  "overrides": [
+    {
+      "candidate_id": "bd->bedside",
+      "token": "bd",
+      "canonical": "bedside",
+      "decision": "unsafe_normalization",
+      "scope": "hospital_5",
+      "status": "human_reviewed",
+      "global": false,
+      "reviewed": "2026-09-24",
+      "reason": "Jev judged this safe (P=0.96) because the review state listed 'bedside' as the only colliding word; the state shows contract words only. In clinical shorthand BD is 'bed' (or 'twice daily'), and its only use in the corpus, 'ELECT INFECT WARD BD OCC', is a ward bed occupancy -- a service this contract does not carry. BD does not stand for 'bedside'."
+    },
+    {
+      "candidate_id": "ent->otolaryngologic",
+      "token": "ent",
+      "canonical": "otolaryngologic",
+      "decision": "context_required",
+      "scope": "hospital_5_contextual",
+      "status": "human_reviewed",
+      "global": false,
+      "reviewed": "2026-09-24",
+      "reason": "ENT (ear, nose and throat) is the standard clinical abbreviation for otolaryngology. It appears in the specialty slot of SUPV ENT SPCM ANLY (and its spellings) and of CONT ENT TRANSP SVC, and resolves to the H5 contract specialty Otolaryngologic. Jev chose 'safe' for this proposal (P=0.61) but below the gate. Allowed in context only: the reading is used only where the surrounding words fit a contracted Otolaryngologic service; elsewhere ENT stays unread. Unlike descriptions that omit their specialty, these carry it, abbreviated."
+    }
+  ]
+}

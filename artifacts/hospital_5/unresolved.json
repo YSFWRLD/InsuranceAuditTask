@@ -1,0 +1,287 @@
+{
+  "contract_fingerprint": "76a430f17bb4abde854cc3bf0427e71ca9b2b0a804827843ed211ee41193493c",
+  "normalization_version": "h5-normalization-1",
+  "matcher_version": "h5-matcher-2",
+  "lexicon": "reviewed_global_and_contextual",
+  "lexicon_sha256": "7bfa623edef745a425390425bda477cbce1dd4a07f407c65670c3e7937d24e10",
+  "jev_model": "jev-1.13.0",
+  "normalization_template": "001_jev_normalization_review@76841b2950a2",
+  "missing_word_template": "002_jev_missing_word_resolution@b30cd06320e2",
+  "ranking": "line occurrences still unresolved after every stage, then affected invoices",
+  "count": 15,
+  "unresolved": [
+    {
+      "identity_key": "analysis specimen supervised",
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape is not ruled out by text",
+      "raw_examples": [
+        "SUPERVISED SPCM ANLY /PH-7244"
+      ],
+      "line_occurrences": 58,
+      "line_occurrences_still_unresolved": 58,
+      "invoice_count": 56,
+      "line_identity": {
+        "AMBIGUOUS:missing_discriminator": 58
+      },
+      "candidates": [
+        "Supervised Otolaryngologic Specimen Analysis"
+      ],
+      "candidate_rule_families": [
+        "cumulative_discount"
+      ]
+    },
+    {
+      "identity_key": "home urologic visit",
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape is not ruled out by text",
+      "raw_examples": [
+        "UROL HM VST /PH-1437"
+      ],
+      "line_occurrences": 26,
+      "line_occurrences_still_unresolved": 26,
+      "invoice_count": 26,
+      "line_identity": {
+        "AMBIGUOUS:missing_discriminator": 26
+      },
+      "candidates": [
+        "Emergency Urologic Home Visit"
+      ],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "physiotherapy routine session",
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape is not ruled out by text",
+      "raw_examples": [
+        "RTN  PHYSIOTHERAPY SESS"
+      ],
+      "line_occurrences": 12,
+      "line_occurrences_still_unresolved": 12,
+      "invoice_count": 12,
+      "line_identity": {
+        "AMBIGUOUS:missing_discriminator": 12
+      },
+      "candidates": [
+        "Routine Psychiatric Physiotherapy Session"
+      ],
+      "candidate_rule_families": [
+        "threshold_premium"
+      ]
+    },
+    {
+      "identity_key": "ambulatory endoscopic hepatic ?proc",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "AMBULATORY  HEP ENDOSC PROC /PH-2434"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "assisted dispensing pharmaceutical psychiatric",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "ASST  PSYCH PHARM DISP /PH-6086"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "assisted geriatric laboratory panel",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "ASSISTED GERIATRIC LAB PNL /PH-5880"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "dispensing pharmaceutical ?inpt ?ren",
+      "structural_status": "AMBIGUOUS",
+      "method": "unrecognised_token",
+      "reason": "a word in the description could not be read by any accepted normalisation",
+      "raw_examples": [
+        "DISP INPT REN PHARM"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "AMBIGUOUS:unrecognised_token": 1
+      },
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing",
+        "Elective Metabolic Pharmaceutical Dispensing",
+        "Specialist Gastrointestinal Pharmaceutical Dispensing"
+      ],
+      "candidate_rule_families": [
+        "bundle",
+        "cumulative_discount",
+        "daily_cap"
+      ]
+    },
+    {
+      "identity_key": "elective infectious ?bd ?occ ?ward",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "ELECT  - INFECT WARD BD OCC"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "emergency palliative sterilisation ?svc",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "EMER - PALL STERIL SVC"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "gastrointestinal isolation ?cont ?occ ?rm",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "CONT GASTROINTESTINAL ISOL RM OCC"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "geriatric room ?occ ?recov",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "GER  - RECOV ROOM OCC"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "intermittent nursing observation ?endo",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "INTERM ENDO NURS OBS"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "intermittent sterilisation ?ren ?svc",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "INTERM  REN STERIL SVC"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "otolaryngologic postoperative ?diag ?img",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "POSTOPERATIVE  OTOLARYNGOLOGIC DIAG IMG /PH-6206"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "pulmonary specimen standard",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "SPCM  STD PULMONARY /PH-7123"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    }
+  ]
+}

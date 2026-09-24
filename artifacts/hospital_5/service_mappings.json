@@ -1,0 +1,2492 @@
+{
+  "contract_fingerprint": "76a430f17bb4abde854cc3bf0427e71ca9b2b0a804827843ed211ee41193493c",
+  "normalization_version": "h5-normalization-1",
+  "matcher_version": "h5-matcher-2",
+  "lexicon": "reviewed_global_and_contextual",
+  "lexicon_sha256": "7bfa623edef745a425390425bda477cbce1dd4a07f407c65670c3e7937d24e10",
+  "jev_model": "jev-1.13.0",
+  "normalization_template": "001_jev_normalization_review@76841b2950a2",
+  "missing_word_template": "002_jev_missing_word_resolution@b30cd06320e2",
+  "note": "structural_status is what text says. line_identity counts how each line was finally identified: text, contextual resolution, the unit-basis tie-break, or a gated Jev missing-word decision (per billed unit basis).",
+  "mappings": {
+    "advanced cardiac support": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Advanced Cardiac Ventilation Support",
+      "candidates": [
+        "Advanced Cardiac Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 14
+      },
+      "resolved_services": {
+        "Advanced Cardiac Ventilation Support": 14
+      }
+    },
+    "advanced cardiac support ventilation": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Advanced Cardiac Ventilation Support",
+      "candidates": [
+        "Advanced Cardiac Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:text": 51,
+        "MATCHED:text_contextual": 59
+      },
+      "resolved_services": {
+        "Advanced Cardiac Ventilation Support": 110
+      }
+    },
+    "advanced dermatologic dispensing": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Pharmaceutical Dispensing",
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:text": 27
+      },
+      "resolved_services": {
+        "Advanced Dermatologic Pharmaceutical Dispensing": 27
+      }
+    },
+    "advanced dermatologic dispensing pharmaceutical": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Pharmaceutical Dispensing",
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:text": 53
+      },
+      "resolved_services": {
+        "Advanced Dermatologic Pharmaceutical Dispensing": 53
+      }
+    },
+    "advanced dermatologic pharmaceutical": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Pharmaceutical Dispensing",
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:text": 32
+      },
+      "resolved_services": {
+        "Advanced Dermatologic Pharmaceutical Dispensing": 32
+      }
+    },
+    "advanced dispensing pharmaceutical": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 21
+      },
+      "resolved_services": {
+        "Advanced Dermatologic Pharmaceutical Dispensing": 21
+      }
+    },
+    "ambulatory case conference": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Ambulatory Hepatic Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 64
+      },
+      "resolved_services": {
+        "Ambulatory Hepatic Case Conference": 64
+      }
+    },
+    "ambulatory case conference hepatic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Ambulatory Hepatic Case Conference",
+      "candidates": [
+        "Ambulatory Hepatic Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 210
+      },
+      "resolved_services": {
+        "Ambulatory Hepatic Case Conference": 210
+      }
+    },
+    "ambulatory case hepatic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Ambulatory Hepatic Case Conference",
+      "candidates": [
+        "Ambulatory Hepatic Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 67
+      },
+      "resolved_services": {
+        "Ambulatory Hepatic Case Conference": 67
+      }
+    },
+    "ambulatory endoscopic hepatic ?proc": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "ambulatory imaging interpretation metabolic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Ambulatory Metabolic Imaging Interpretation",
+      "candidates": [
+        "Ambulatory Metabolic Imaging Interpretation"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 103
+      },
+      "resolved_services": {
+        "Ambulatory Metabolic Imaging Interpretation": 103
+      }
+    },
+    "ambulatory imaging interpretation oncology": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Ambulatory Oncology Imaging Interpretation",
+      "candidates": [
+        "Ambulatory Oncology Imaging Interpretation"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 100
+      },
+      "resolved_services": {
+        "Ambulatory Oncology Imaging Interpretation": 100
+      }
+    },
+    "ambulatory imaging metabolic": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Ambulatory Metabolic Imaging Interpretation",
+      "candidates": [
+        "Ambulatory Metabolic Imaging Interpretation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 21
+      },
+      "resolved_services": {
+        "Ambulatory Metabolic Imaging Interpretation": 21
+      }
+    },
+    "ambulatory isolation occupancy paediatric room": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Ambulatory Paediatric Isolation Room Occupancy",
+      "candidates": [
+        "Ambulatory Paediatric Isolation Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 101
+      },
+      "resolved_services": {
+        "Ambulatory Paediatric Isolation Room Occupancy": 101
+      }
+    },
+    "ambulatory occupancy paediatric room": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Ambulatory Paediatric Isolation Room Occupancy",
+      "candidates": [
+        "Ambulatory Paediatric Isolation Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 28
+      },
+      "resolved_services": {
+        "Ambulatory Paediatric Isolation Room Occupancy": 28
+      }
+    },
+    "analysis otolaryngologic specimen supervised": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Supervised Otolaryngologic Specimen Analysis",
+      "candidates": [
+        "Supervised Otolaryngologic Specimen Analysis"
+      ],
+      "line_identity": {
+        "MATCHED:text": 68,
+        "MATCHED:text_contextual": 252
+      },
+      "resolved_services": {
+        "Supervised Otolaryngologic Specimen Analysis": 320
+      }
+    },
+    "analysis specimen supervised": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Supervised Otolaryngologic Specimen Analysis"
+      ],
+      "line_identity": {
+        "AMBIGUOUS:missing_discriminator": 58
+      },
+      "resolved_services": {}
+    },
+    "assisted cardiac support ventilation": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Assisted Cardiac Ventilation Support",
+      "candidates": [
+        "Assisted Cardiac Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:text": 15,
+        "MATCHED:text_contextual": 85
+      },
+      "resolved_services": {
+        "Assisted Cardiac Ventilation Support": 100
+      }
+    },
+    "assisted dispensing pharmaceutical psychiatric": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "assisted endoscopic metabolic procedure": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Assisted Metabolic Endoscopic Procedure",
+      "candidates": [
+        "Assisted Metabolic Endoscopic Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 46,
+        "MATCHED:text_contextual": 68
+      },
+      "resolved_services": {
+        "Assisted Metabolic Endoscopic Procedure": 114
+      }
+    },
+    "assisted geriatric laboratory panel": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "assisted hepatic physiotherapy session": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Assisted Hepatic Physiotherapy Session",
+      "candidates": [
+        "Assisted Hepatic Physiotherapy Session"
+      ],
+      "line_identity": {
+        "MATCHED:text": 142
+      },
+      "resolved_services": {
+        "Assisted Hepatic Physiotherapy Session": 142
+      }
+    },
+    "assisted imaging interpretation renal": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Assisted Renal Imaging Interpretation",
+      "candidates": [
+        "Assisted Renal Imaging Interpretation"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 146
+      },
+      "resolved_services": {
+        "Assisted Renal Imaging Interpretation": 146
+      }
+    },
+    "assisted immunologic service sterilisation": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Assisted Immunologic Sterilisation Service",
+      "candidates": [
+        "Assisted Immunologic Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 80
+      },
+      "resolved_services": {
+        "Assisted Immunologic Sterilisation Service": 80
+      }
+    },
+    "assisted immunologic sterilisation": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Assisted Immunologic Sterilisation Service",
+      "candidates": [
+        "Assisted Immunologic Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 21
+      },
+      "resolved_services": {
+        "Assisted Immunologic Sterilisation Service": 21
+      }
+    },
+    "assisted metabolic procedure": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Assisted Metabolic Endoscopic Procedure",
+      "candidates": [
+        "Assisted Metabolic Endoscopic Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 18
+      },
+      "resolved_services": {
+        "Assisted Metabolic Endoscopic Procedure": 18
+      }
+    },
+    "assisted service sterilisation": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Assisted Immunologic Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 46
+      },
+      "resolved_services": {
+        "Assisted Immunologic Sterilisation Service": 46
+      }
+    },
+    "assisted support ventilation": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Assisted Cardiac Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 17
+      },
+      "resolved_services": {
+        "Assisted Cardiac Ventilation Support": 17
+      }
+    },
+    "bedside consultation paediatric": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Bedside Paediatric Consultation",
+      "candidates": [
+        "Bedside Paediatric Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 59
+      },
+      "resolved_services": {
+        "Bedside Paediatric Consultation": 59
+      }
+    },
+    "bedside oncology service": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Bedside Oncology Transfusion Service",
+      "candidates": [
+        "Bedside Oncology Transfusion Service"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 20
+      },
+      "resolved_services": {
+        "Bedside Oncology Transfusion Service": 20
+      }
+    },
+    "bedside oncology service transfusion": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Bedside Oncology Transfusion Service",
+      "candidates": [
+        "Bedside Oncology Transfusion Service"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 30
+      },
+      "resolved_services": {
+        "Bedside Oncology Transfusion Service": 30
+      }
+    },
+    "biopsy emergency neurological procedure": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Emergency Neurological Biopsy Procedure",
+      "candidates": [
+        "Emergency Neurological Biopsy Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 35,
+        "MATCHED:text_contextual": 76
+      },
+      "resolved_services": {
+        "Emergency Neurological Biopsy Procedure": 111
+      }
+    },
+    "biopsy emergency procedure": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Emergency Neurological Biopsy Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 22
+      },
+      "resolved_services": {
+        "Emergency Neurological Biopsy Procedure": 22
+      }
+    },
+    "biopsy neurological procedure routine": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Neurological Biopsy Procedure",
+      "candidates": [
+        "Routine Neurological Biopsy Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 33,
+        "MATCHED:text_contextual": 113
+      },
+      "resolved_services": {
+        "Routine Neurological Biopsy Procedure": 146
+      }
+    },
+    "biopsy paediatric preoperative": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Preoperative Paediatric Biopsy Procedure",
+      "candidates": [
+        "Preoperative Paediatric Biopsy Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 28
+      },
+      "resolved_services": {
+        "Preoperative Paediatric Biopsy Procedure": 28
+      }
+    },
+    "biopsy paediatric preoperative procedure": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Preoperative Paediatric Biopsy Procedure",
+      "candidates": [
+        "Preoperative Paediatric Biopsy Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 61,
+        "MATCHED:text_contextual": 27
+      },
+      "resolved_services": {
+        "Preoperative Paediatric Biopsy Procedure": 88
+      }
+    },
+    "care comprehensive geriatric wound": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Comprehensive Geriatric Wound Care",
+      "candidates": [
+        "Comprehensive Geriatric Wound Care"
+      ],
+      "line_identity": {
+        "MATCHED:text": 50
+      },
+      "resolved_services": {
+        "Comprehensive Geriatric Wound Care": 50
+      }
+    },
+    "care comprehensive wound": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Comprehensive Geriatric Wound Care"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 35
+      },
+      "resolved_services": {
+        "Comprehensive Geriatric Wound Care": 35
+      }
+    },
+    "case conference hepatic": {
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "service": null,
+      "candidates": [
+        "Ambulatory Hepatic Case Conference",
+        "Intensive Hepatic Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:unit_basis_tiebreak": 56
+      },
+      "resolved_services": {
+        "Ambulatory Hepatic Case Conference": 56
+      }
+    },
+    "case conference hepatic intensive": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Intensive Hepatic Case Conference",
+      "candidates": [
+        "Intensive Hepatic Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 106
+      },
+      "resolved_services": {
+        "Intensive Hepatic Case Conference": 106
+      }
+    },
+    "case conference inpatient psychiatric": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Psychiatric Case Conference",
+      "candidates": [
+        "Inpatient Psychiatric Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 92
+      },
+      "resolved_services": {
+        "Inpatient Psychiatric Case Conference": 92
+      }
+    },
+    "case conference psychiatric": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Inpatient Psychiatric Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 16
+      },
+      "resolved_services": {
+        "Inpatient Psychiatric Case Conference": 16
+      }
+    },
+    "comprehensive consultation": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Comprehensive Palliative Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 21
+      },
+      "resolved_services": {
+        "Comprehensive Palliative Consultation": 21
+      }
+    },
+    "comprehensive consultation palliative": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Comprehensive Palliative Consultation",
+      "candidates": [
+        "Comprehensive Palliative Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 97
+      },
+      "resolved_services": {
+        "Comprehensive Palliative Consultation": 97
+      }
+    },
+    "comprehensive endoscopic gastrointestinal procedure": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Comprehensive Gastrointestinal Endoscopic Procedure",
+      "candidates": [
+        "Comprehensive Gastrointestinal Endoscopic Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 105
+      },
+      "resolved_services": {
+        "Comprehensive Gastrointestinal Endoscopic Procedure": 105
+      }
+    },
+    "comprehensive endoscopic procedure": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Comprehensive Gastrointestinal Endoscopic Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 18
+      },
+      "resolved_services": {
+        "Comprehensive Gastrointestinal Endoscopic Procedure": 18
+      }
+    },
+    "comprehensive isolation occupancy ophthalmic room": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Comprehensive Ophthalmic Isolation Room Occupancy",
+      "candidates": [
+        "Comprehensive Ophthalmic Isolation Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text": 24,
+        "MATCHED:text_contextual": 64
+      },
+      "resolved_services": {
+        "Comprehensive Ophthalmic Isolation Room Occupancy": 88
+      }
+    },
+    "comprehensive metabolic support ventilation": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Comprehensive Metabolic Ventilation Support",
+      "candidates": [
+        "Comprehensive Metabolic Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:text": 66,
+        "MATCHED:text_contextual": 34
+      },
+      "resolved_services": {
+        "Comprehensive Metabolic Ventilation Support": 100
+      }
+    },
+    "comprehensive oncology service transfusion": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Comprehensive Oncology Transfusion Service",
+      "candidates": [
+        "Comprehensive Oncology Transfusion Service"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 131
+      },
+      "resolved_services": {
+        "Comprehensive Oncology Transfusion Service": 131
+      }
+    },
+    "comprehensive support ventilation": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Comprehensive Metabolic Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 27
+      },
+      "resolved_services": {
+        "Comprehensive Metabolic Ventilation Support": 27
+      }
+    },
+    "conference inpatient psychiatric": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Psychiatric Case Conference",
+      "candidates": [
+        "Inpatient Psychiatric Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 17
+      },
+      "resolved_services": {
+        "Inpatient Psychiatric Case Conference": 17
+      }
+    },
+    "consultation extended neurological": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Extended Neurological Consultation",
+      "candidates": [
+        "Extended Neurological Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 134
+      },
+      "resolved_services": {
+        "Extended Neurological Consultation": 134
+      }
+    },
+    "consultation paediatric ?beds": {
+      "structural_status": "AMBIGUOUS",
+      "method": "unrecognised_token",
+      "service": null,
+      "candidates": [
+        "Bedside Paediatric Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 57
+      },
+      "resolved_services": {
+        "Bedside Paediatric Consultation": 57
+      }
+    },
+    "consultation palliative": {
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "service": null,
+      "candidates": [
+        "Comprehensive Palliative Consultation",
+        "Supervised Palliative Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:unit_basis_tiebreak": 60
+      },
+      "resolved_services": {
+        "Comprehensive Palliative Consultation": 15,
+        "Supervised Palliative Consultation": 45
+      }
+    },
+    "consultation palliative supervised": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Supervised Palliative Consultation",
+      "candidates": [
+        "Supervised Palliative Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 148
+      },
+      "resolved_services": {
+        "Supervised Palliative Consultation": 148
+      }
+    },
+    "consultation supervised vascular": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Supervised Vascular Consultation",
+      "candidates": [
+        "Supervised Vascular Consultation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 133
+      },
+      "resolved_services": {
+        "Supervised Vascular Consultation": 133
+      }
+    },
+    "continuous endoscopic metabolic procedure": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Metabolic Endoscopic Procedure",
+      "candidates": [
+        "Continuous Metabolic Endoscopic Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 60,
+        "MATCHED:text_contextual": 294
+      },
+      "resolved_services": {
+        "Continuous Metabolic Endoscopic Procedure": 354
+      }
+    },
+    "continuous immunologic laboratory": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Immunologic Laboratory Panel",
+      "candidates": [
+        "Continuous Immunologic Laboratory Panel"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 20
+      },
+      "resolved_services": {
+        "Continuous Immunologic Laboratory Panel": 20
+      }
+    },
+    "continuous immunologic laboratory panel": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Immunologic Laboratory Panel",
+      "candidates": [
+        "Continuous Immunologic Laboratory Panel"
+      ],
+      "line_identity": {
+        "MATCHED:text": 73,
+        "MATCHED:text_contextual": 44
+      },
+      "resolved_services": {
+        "Continuous Immunologic Laboratory Panel": 117
+      }
+    },
+    "continuous otolaryngologic service transport": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Otolaryngologic Transport Service",
+      "candidates": [
+        "Continuous Otolaryngologic Transport Service"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 102
+      },
+      "resolved_services": {
+        "Continuous Otolaryngologic Transport Service": 102
+      }
+    },
+    "continuous otolaryngologic transport": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Otolaryngologic Transport Service",
+      "candidates": [
+        "Continuous Otolaryngologic Transport Service"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 24
+      },
+      "resolved_services": {
+        "Continuous Otolaryngologic Transport Service": 24
+      }
+    },
+    "dermatologic extended service transport": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Extended Dermatologic Transport Service",
+      "candidates": [
+        "Extended Dermatologic Transport Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 93,
+        "MATCHED:text_contextual": 46
+      },
+      "resolved_services": {
+        "Extended Dermatologic Transport Service": 139
+      }
+    },
+    "dermatologic home outpatient": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Outpatient Dermatologic Home Visit",
+      "candidates": [
+        "Outpatient Dermatologic Home Visit"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 28
+      },
+      "resolved_services": {
+        "Outpatient Dermatologic Home Visit": 28
+      }
+    },
+    "dermatologic home outpatient visit": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Outpatient Dermatologic Home Visit",
+      "candidates": [
+        "Outpatient Dermatologic Home Visit"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 45
+      },
+      "resolved_services": {
+        "Outpatient Dermatologic Home Visit": 45
+      }
+    },
+    "dermatologic home routine visit": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Dermatologic Home Visit",
+      "candidates": [
+        "Routine Dermatologic Home Visit"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 101
+      },
+      "resolved_services": {
+        "Routine Dermatologic Home Visit": 101
+      }
+    },
+    "dermatologic inpatient nursing observation": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Inpatient Dermatologic Nursing Observation",
+      "candidates": [
+        "Inpatient Dermatologic Nursing Observation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 46,
+        "MATCHED:text_contextual": 179
+      },
+      "resolved_services": {
+        "Inpatient Dermatologic Nursing Observation": 225
+      }
+    },
+    "dermatologic nursing observation": {
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "service": null,
+      "candidates": [
+        "Inpatient Dermatologic Nursing Observation",
+        "Specialist Dermatologic Nursing Observation"
+      ],
+      "line_identity": {
+        "MATCHED:unit_basis_tiebreak": 99
+      },
+      "resolved_services": {
+        "Inpatient Dermatologic Nursing Observation": 99
+      }
+    },
+    "dermatologic nursing observation specialist": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Specialist Dermatologic Nursing Observation",
+      "candidates": [
+        "Specialist Dermatologic Nursing Observation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 117
+      },
+      "resolved_services": {
+        "Specialist Dermatologic Nursing Observation": 117
+      }
+    },
+    "dermatologic outpatient visit": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Outpatient Dermatologic Home Visit",
+      "candidates": [
+        "Outpatient Dermatologic Home Visit"
+      ],
+      "line_identity": {
+        "MATCHED:text": 33,
+        "MATCHED:text_contextual": 39
+      },
+      "resolved_services": {
+        "Outpatient Dermatologic Home Visit": 72
+      }
+    },
+    "dermatologic routine visit": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Dermatologic Home Visit",
+      "candidates": [
+        "Routine Dermatologic Home Visit"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 20
+      },
+      "resolved_services": {
+        "Routine Dermatologic Home Visit": 20
+      }
+    },
+    "diagnostic elective imaging vascular": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Vascular Diagnostic Imaging",
+      "candidates": [
+        "Elective Vascular Diagnostic Imaging"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 113
+      },
+      "resolved_services": {
+        "Elective Vascular Diagnostic Imaging": 113
+      }
+    },
+    "diagnostic elective vascular": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Elective Vascular Diagnostic Imaging",
+      "candidates": [
+        "Elective Vascular Diagnostic Imaging"
+      ],
+      "line_identity": {
+        "MATCHED:text": 14
+      },
+      "resolved_services": {
+        "Elective Vascular Diagnostic Imaging": 14
+      }
+    },
+    "diagnostic imaging supervised": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Supervised Vascular Diagnostic Imaging"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 54
+      },
+      "resolved_services": {
+        "Supervised Vascular Diagnostic Imaging": 54
+      }
+    },
+    "diagnostic imaging supervised vascular": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Supervised Vascular Diagnostic Imaging",
+      "candidates": [
+        "Supervised Vascular Diagnostic Imaging"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 41
+      },
+      "resolved_services": {
+        "Supervised Vascular Diagnostic Imaging": 41
+      }
+    },
+    "diagnostic imaging vascular": {
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "service": null,
+      "candidates": [
+        "Elective Vascular Diagnostic Imaging",
+        "Supervised Vascular Diagnostic Imaging"
+      ],
+      "line_identity": {
+        "MATCHED:unit_basis_tiebreak": 32
+      },
+      "resolved_services": {
+        "Supervised Vascular Diagnostic Imaging": 32
+      }
+    },
+    "discharge emergency metabolic": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Emergency Metabolic Discharge Planning",
+      "candidates": [
+        "Emergency Metabolic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 39
+      },
+      "resolved_services": {
+        "Emergency Metabolic Discharge Planning": 39
+      }
+    },
+    "discharge emergency metabolic planning": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Emergency Metabolic Discharge Planning",
+      "candidates": [
+        "Emergency Metabolic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 123
+      },
+      "resolved_services": {
+        "Emergency Metabolic Discharge Planning": 123
+      }
+    },
+    "discharge intermittent orthopaedic planning": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Intermittent Orthopaedic Discharge Planning",
+      "candidates": [
+        "Intermittent Orthopaedic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 98
+      },
+      "resolved_services": {
+        "Intermittent Orthopaedic Discharge Planning": 98
+      }
+    },
+    "discharge intermittent planning urologic": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Intermittent Urologic Discharge Planning",
+      "candidates": [
+        "Intermittent Urologic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 109
+      },
+      "resolved_services": {
+        "Intermittent Urologic Discharge Planning": 109
+      }
+    },
+    "discharge metabolic planning": {
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "service": null,
+      "candidates": [
+        "Emergency Metabolic Discharge Planning",
+        "Supervised Metabolic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:unit_basis_tiebreak": 26
+      },
+      "resolved_services": {
+        "Supervised Metabolic Discharge Planning": 26
+      }
+    },
+    "discharge metabolic planning supervised": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Supervised Metabolic Discharge Planning",
+      "candidates": [
+        "Supervised Metabolic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 100
+      },
+      "resolved_services": {
+        "Supervised Metabolic Discharge Planning": 100
+      }
+    },
+    "discharge outpatient planning": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Outpatient Psychiatric Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 25
+      },
+      "resolved_services": {
+        "Outpatient Psychiatric Discharge Planning": 25
+      }
+    },
+    "discharge outpatient planning psychiatric": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Outpatient Psychiatric Discharge Planning",
+      "candidates": [
+        "Outpatient Psychiatric Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 108
+      },
+      "resolved_services": {
+        "Outpatient Psychiatric Discharge Planning": 108
+      }
+    },
+    "discharge planning psychiatric standard": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Standard Psychiatric Discharge Planning",
+      "candidates": [
+        "Standard Psychiatric Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 130
+      },
+      "resolved_services": {
+        "Standard Psychiatric Discharge Planning": 130
+      }
+    },
+    "dispensing elective metabolic": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Elective Metabolic Pharmaceutical Dispensing",
+      "candidates": [
+        "Elective Metabolic Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:text": 136
+      },
+      "resolved_services": {
+        "Elective Metabolic Pharmaceutical Dispensing": 136
+      }
+    },
+    "dispensing elective metabolic pharmaceutical": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Elective Metabolic Pharmaceutical Dispensing",
+      "candidates": [
+        "Elective Metabolic Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:text": 155
+      },
+      "resolved_services": {
+        "Elective Metabolic Pharmaceutical Dispensing": 155
+      }
+    },
+    "dispensing elective pharmaceutical": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Elective Metabolic Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 59
+      },
+      "resolved_services": {
+        "Elective Metabolic Pharmaceutical Dispensing": 59
+      }
+    },
+    "dispensing gastrointestinal pharmaceutical specialist": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Specialist Gastrointestinal Pharmaceutical Dispensing",
+      "candidates": [
+        "Specialist Gastrointestinal Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "MATCHED:text": 42,
+        "MATCHED:text_contextual": 143
+      },
+      "resolved_services": {
+        "Specialist Gastrointestinal Pharmaceutical Dispensing": 185
+      }
+    },
+    "dispensing pharmaceutical ?inpt ?ren": {
+      "structural_status": "AMBIGUOUS",
+      "method": "unrecognised_token",
+      "service": null,
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing",
+        "Elective Metabolic Pharmaceutical Dispensing",
+        "Specialist Gastrointestinal Pharmaceutical Dispensing"
+      ],
+      "line_identity": {
+        "AMBIGUOUS:unrecognised_token": 1
+      },
+      "resolved_services": {}
+    },
+    "elective fraction pulmonary radiotherapy": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Radiotherapy Fraction",
+      "candidates": [
+        "Elective Pulmonary Radiotherapy Fraction"
+      ],
+      "line_identity": {
+        "MATCHED:text": 24,
+        "MATCHED:text_contextual": 70
+      },
+      "resolved_services": {
+        "Elective Pulmonary Radiotherapy Fraction": 94
+      }
+    },
+    "elective infectious ?bd ?occ ?ward": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "elective nutritional ophthalmic support": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Ophthalmic Nutritional Support",
+      "candidates": [
+        "Elective Ophthalmic Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 60
+      },
+      "resolved_services": {
+        "Elective Ophthalmic Nutritional Support": 60
+      }
+    },
+    "elective occupancy ophthalmic recovery": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Ophthalmic Recovery Room Occupancy",
+      "candidates": [
+        "Elective Ophthalmic Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 81
+      },
+      "resolved_services": {
+        "Elective Ophthalmic Recovery Room Occupancy": 81
+      }
+    },
+    "elective occupancy ophthalmic recovery room": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Ophthalmic Recovery Room Occupancy",
+      "candidates": [
+        "Elective Ophthalmic Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 100
+      },
+      "resolved_services": {
+        "Elective Ophthalmic Recovery Room Occupancy": 100
+      }
+    },
+    "emergency endoscopic gastrointestinal procedure": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Emergency Gastrointestinal Endoscopic Procedure",
+      "candidates": [
+        "Emergency Gastrointestinal Endoscopic Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 136
+      },
+      "resolved_services": {
+        "Emergency Gastrointestinal Endoscopic Procedure": 136
+      }
+    },
+    "emergency fraction pulmonary": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Emergency Pulmonary Radiotherapy Fraction",
+      "candidates": [
+        "Emergency Pulmonary Radiotherapy Fraction"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 19
+      },
+      "resolved_services": {
+        "Emergency Pulmonary Radiotherapy Fraction": 19
+      }
+    },
+    "emergency fraction pulmonary radiotherapy": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Emergency Pulmonary Radiotherapy Fraction",
+      "candidates": [
+        "Emergency Pulmonary Radiotherapy Fraction"
+      ],
+      "line_identity": {
+        "MATCHED:text": 13,
+        "MATCHED:text_contextual": 100
+      },
+      "resolved_services": {
+        "Emergency Pulmonary Radiotherapy Fraction": 113
+      }
+    },
+    "emergency home urologic visit": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Emergency Urologic Home Visit",
+      "candidates": [
+        "Emergency Urologic Home Visit"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 93
+      },
+      "resolved_services": {
+        "Emergency Urologic Home Visit": 93
+      }
+    },
+    "emergency imaging interpretation oncology": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Emergency Oncology Imaging Interpretation",
+      "candidates": [
+        "Emergency Oncology Imaging Interpretation"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 126
+      },
+      "resolved_services": {
+        "Emergency Oncology Imaging Interpretation": 126
+      }
+    },
+    "emergency metabolic planning": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Emergency Metabolic Discharge Planning",
+      "candidates": [
+        "Emergency Metabolic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 25
+      },
+      "resolved_services": {
+        "Emergency Metabolic Discharge Planning": 25
+      }
+    },
+    "emergency palliative sterilisation ?svc": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "emergency urologic visit": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Emergency Urologic Home Visit",
+      "candidates": [
+        "Emergency Urologic Home Visit"
+      ],
+      "line_identity": {
+        "MATCHED:text": 14
+      },
+      "resolved_services": {
+        "Emergency Urologic Home Visit": 14
+      }
+    },
+    "endocrine extended theatre time": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Extended Endocrine Theatre Time",
+      "candidates": [
+        "Extended Endocrine Theatre Time"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 379
+      },
+      "resolved_services": {
+        "Extended Endocrine Theatre Time": 379
+      }
+    },
+    "endocrine focused theatre": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Focused Endocrine Theatre Time",
+      "candidates": [
+        "Focused Endocrine Theatre Time"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 19
+      },
+      "resolved_services": {
+        "Focused Endocrine Theatre Time": 19
+      }
+    },
+    "endocrine focused theatre time": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Focused Endocrine Theatre Time",
+      "candidates": [
+        "Focused Endocrine Theatre Time"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 124
+      },
+      "resolved_services": {
+        "Focused Endocrine Theatre Time": 124
+      }
+    },
+    "endocrine preoperative programme rehabilitation": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Preoperative Endocrine Rehabilitation Programme",
+      "candidates": [
+        "Preoperative Endocrine Rehabilitation Programme"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 129
+      },
+      "resolved_services": {
+        "Preoperative Endocrine Rehabilitation Programme": 129
+      }
+    },
+    "endoscopic extended procedure psychiatric": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Extended Psychiatric Endoscopic Procedure",
+      "candidates": [
+        "Extended Psychiatric Endoscopic Procedure"
+      ],
+      "line_identity": {
+        "MATCHED:text": 54,
+        "MATCHED:text_contextual": 84
+      },
+      "resolved_services": {
+        "Extended Psychiatric Endoscopic Procedure": 138
+      }
+    },
+    "extended infusion therapy urologic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Extended Urologic Infusion Therapy",
+      "candidates": [
+        "Extended Urologic Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 49
+      },
+      "resolved_services": {
+        "Extended Urologic Infusion Therapy": 49
+      }
+    },
+    "extended ophthalmic service transport": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Extended Ophthalmic Transport Service",
+      "candidates": [
+        "Extended Ophthalmic Transport Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 44,
+        "MATCHED:text_contextual": 88
+      },
+      "resolved_services": {
+        "Extended Ophthalmic Transport Service": 132
+      }
+    },
+    "focused fraction neurological radiotherapy": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Focused Neurological Radiotherapy Fraction",
+      "candidates": [
+        "Focused Neurological Radiotherapy Fraction"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 122
+      },
+      "resolved_services": {
+        "Focused Neurological Radiotherapy Fraction": 122
+      }
+    },
+    "focused nutritional support": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Focused Urologic Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 23
+      },
+      "resolved_services": {
+        "Focused Urologic Nutritional Support": 23
+      }
+    },
+    "focused nutritional support urologic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Focused Urologic Nutritional Support",
+      "candidates": [
+        "Focused Urologic Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 56
+      },
+      "resolved_services": {
+        "Focused Urologic Nutritional Support": 56
+      }
+    },
+    "focused nutritional urologic": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Focused Urologic Nutritional Support",
+      "candidates": [
+        "Focused Urologic Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:text": 36
+      },
+      "resolved_services": {
+        "Focused Urologic Nutritional Support": 36
+      }
+    },
+    "fraction paediatric radiotherapy standard": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Standard Paediatric Radiotherapy Fraction",
+      "candidates": [
+        "Standard Paediatric Radiotherapy Fraction"
+      ],
+      "line_identity": {
+        "MATCHED:text": 27,
+        "MATCHED:text_contextual": 181
+      },
+      "resolved_services": {
+        "Standard Paediatric Radiotherapy Fraction": 208
+      }
+    },
+    "fraction radiotherapy routine urologic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Urologic Radiotherapy Fraction",
+      "candidates": [
+        "Routine Urologic Radiotherapy Fraction"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 107
+      },
+      "resolved_services": {
+        "Routine Urologic Radiotherapy Fraction": 107
+      }
+    },
+    "fraction radiotherapy urologic": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Routine Urologic Radiotherapy Fraction"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 27
+      },
+      "resolved_services": {
+        "Routine Urologic Radiotherapy Fraction": 27
+      }
+    },
+    "gastrointestinal isolation ?cont ?occ ?rm": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "gastrointestinal nutritional preoperative support": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Preoperative Gastrointestinal Nutritional Support",
+      "candidates": [
+        "Preoperative Gastrointestinal Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 369
+      },
+      "resolved_services": {
+        "Preoperative Gastrointestinal Nutritional Support": 369
+      }
+    },
+    "geriatric monitoring routine telemetry": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Routine Geriatric Telemetry Monitoring",
+      "candidates": [
+        "Routine Geriatric Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:text": 31,
+        "MATCHED:text_contextual": 57
+      },
+      "resolved_services": {
+        "Routine Geriatric Telemetry Monitoring": 88
+      }
+    },
+    "geriatric room ?occ ?recov": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "geriatric routine telemetry": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Geriatric Telemetry Monitoring",
+      "candidates": [
+        "Routine Geriatric Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 46
+      },
+      "resolved_services": {
+        "Routine Geriatric Telemetry Monitoring": 46
+      }
+    },
+    "haematology laboratory outpatient panel": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Outpatient Haematology Laboratory Panel",
+      "candidates": [
+        "Outpatient Haematology Laboratory Panel"
+      ],
+      "line_identity": {
+        "MATCHED:text": 100
+      },
+      "resolved_services": {
+        "Outpatient Haematology Laboratory Panel": 100
+      }
+    },
+    "haematology laboratory panel": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Outpatient Haematology Laboratory Panel"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 26
+      },
+      "resolved_services": {
+        "Outpatient Haematology Laboratory Panel": 26
+      }
+    },
+    "home urologic visit": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Emergency Urologic Home Visit"
+      ],
+      "line_identity": {
+        "AMBIGUOUS:missing_discriminator": 26
+      },
+      "resolved_services": {}
+    },
+    "imaging interpretation musculoskeletal postoperative": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Postoperative Musculoskeletal Imaging Interpretation",
+      "candidates": [
+        "Postoperative Musculoskeletal Imaging Interpretation"
+      ],
+      "line_identity": {
+        "MATCHED:text": 19,
+        "MATCHED:text_contextual": 112
+      },
+      "resolved_services": {
+        "Postoperative Musculoskeletal Imaging Interpretation": 131
+      }
+    },
+    "immunologic inpatient occupancy recovery room": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Immunologic Recovery Room Occupancy",
+      "candidates": [
+        "Inpatient Immunologic Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 99
+      },
+      "resolved_services": {
+        "Inpatient Immunologic Recovery Room Occupancy": 99
+      }
+    },
+    "immunologic inpatient recovery room": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Immunologic Recovery Room Occupancy",
+      "candidates": [
+        "Inpatient Immunologic Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 30
+      },
+      "resolved_services": {
+        "Inpatient Immunologic Recovery Room Occupancy": 30
+      }
+    },
+    "immunologic occupancy preoperative recovery room": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Preoperative Immunologic Recovery Room Occupancy",
+      "candidates": [
+        "Preoperative Immunologic Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 101
+      },
+      "resolved_services": {
+        "Preoperative Immunologic Recovery Room Occupancy": 101
+      }
+    },
+    "immunologic occupancy recovery room": {
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "service": null,
+      "candidates": [
+        "Inpatient Immunologic Recovery Room Occupancy",
+        "Preoperative Immunologic Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:unit_basis_tiebreak": 28
+      },
+      "resolved_services": {
+        "Preoperative Immunologic Recovery Room Occupancy": 28
+      }
+    },
+    "immunologic service sterilisation supervised": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Supervised Immunologic Sterilisation Service",
+      "candidates": [
+        "Supervised Immunologic Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 47,
+        "MATCHED:text_contextual": 184
+      },
+      "resolved_services": {
+        "Supervised Immunologic Sterilisation Service": 231
+      }
+    },
+    "immunologic sterilisation supervised": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Supervised Immunologic Sterilisation Service",
+      "candidates": [
+        "Supervised Immunologic Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 51
+      },
+      "resolved_services": {
+        "Supervised Immunologic Sterilisation Service": 51
+      }
+    },
+    "infectious standard support ventilation": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Standard Infectious Ventilation Support",
+      "candidates": [
+        "Standard Infectious Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:text": 24,
+        "MATCHED:text_contextual": 66
+      },
+      "resolved_services": {
+        "Standard Infectious Ventilation Support": 90
+      }
+    },
+    "infectious support ventilation": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Standard Infectious Ventilation Support"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 26
+      },
+      "resolved_services": {
+        "Standard Infectious Ventilation Support": 26
+      }
+    },
+    "intensive oncology service sterilisation": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Intensive Oncology Sterilisation Service",
+      "candidates": [
+        "Intensive Oncology Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 62,
+        "MATCHED:text_contextual": 329
+      },
+      "resolved_services": {
+        "Intensive Oncology Sterilisation Service": 391
+      }
+    },
+    "intermittent monitoring telemetry vascular": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Intermittent Vascular Telemetry Monitoring",
+      "candidates": [
+        "Intermittent Vascular Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:text": 79
+      },
+      "resolved_services": {
+        "Intermittent Vascular Telemetry Monitoring": 79
+      }
+    },
+    "intermittent monitoring vascular": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Intermittent Vascular Telemetry Monitoring",
+      "candidates": [
+        "Intermittent Vascular Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:text": 28
+      },
+      "resolved_services": {
+        "Intermittent Vascular Telemetry Monitoring": 28
+      }
+    },
+    "intermittent nursing observation ?endo": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "intermittent orthopaedic planning": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Intermittent Orthopaedic Discharge Planning",
+      "candidates": [
+        "Intermittent Orthopaedic Discharge Planning"
+      ],
+      "line_identity": {
+        "MATCHED:text": 31
+      },
+      "resolved_services": {
+        "Intermittent Orthopaedic Discharge Planning": 31
+      }
+    },
+    "intermittent sterilisation ?ren ?svc": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "intermittent telemetry vascular": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Intermittent Vascular Telemetry Monitoring",
+      "candidates": [
+        "Intermittent Vascular Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:text": 24
+      },
+      "resolved_services": {
+        "Intermittent Vascular Telemetry Monitoring": 24
+      }
+    },
+    "isolation occupancy ophthalmic room": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Comprehensive Ophthalmic Isolation Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 22
+      },
+      "resolved_services": {
+        "Comprehensive Ophthalmic Isolation Room Occupancy": 22
+      }
+    },
+    "metabolic outpatient physiotherapy session": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Outpatient Metabolic Physiotherapy Session",
+      "candidates": [
+        "Outpatient Metabolic Physiotherapy Session"
+      ],
+      "line_identity": {
+        "MATCHED:text": 97
+      },
+      "resolved_services": {
+        "Outpatient Metabolic Physiotherapy Session": 97
+      }
+    },
+    "metabolic service specialist sterilisation": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Specialist Metabolic Sterilisation Service",
+      "candidates": [
+        "Specialist Metabolic Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 26,
+        "MATCHED:text_contextual": 97
+      },
+      "resolved_services": {
+        "Specialist Metabolic Sterilisation Service": 123
+      }
+    },
+    "monitoring psychiatric routine": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Routine Psychiatric Telemetry Monitoring",
+      "candidates": [
+        "Routine Psychiatric Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:text": 18
+      },
+      "resolved_services": {
+        "Routine Psychiatric Telemetry Monitoring": 18
+      }
+    },
+    "monitoring psychiatric routine telemetry": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Routine Psychiatric Telemetry Monitoring",
+      "candidates": [
+        "Routine Psychiatric Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:text": 41,
+        "MATCHED:text_contextual": 31
+      },
+      "resolved_services": {
+        "Routine Psychiatric Telemetry Monitoring": 72
+      }
+    },
+    "monitoring psychiatric telemetry": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Routine Psychiatric Telemetry Monitoring"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 25
+      },
+      "resolved_services": {
+        "Routine Psychiatric Telemetry Monitoring": 25
+      }
+    },
+    "musculoskeletal nutritional preoperative support": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Preoperative Musculoskeletal Nutritional Support",
+      "candidates": [
+        "Preoperative Musculoskeletal Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 113
+      },
+      "resolved_services": {
+        "Preoperative Musculoskeletal Nutritional Support": 113
+      }
+    },
+    "musculoskeletal nutritional support": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Preoperative Musculoskeletal Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 30
+      },
+      "resolved_services": {
+        "Preoperative Musculoskeletal Nutritional Support": 30
+      }
+    },
+    "neurological occupancy outpatient recovery room": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Outpatient Neurological Recovery Room Occupancy",
+      "candidates": [
+        "Outpatient Neurological Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 117
+      },
+      "resolved_services": {
+        "Outpatient Neurological Recovery Room Occupancy": 117
+      }
+    },
+    "nutritional ophthalmic support": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Elective Ophthalmic Nutritional Support"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 45
+      },
+      "resolved_services": {
+        "Elective Ophthalmic Nutritional Support": 45
+      }
+    },
+    "occupancy outpatient recovery room": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Outpatient Neurological Recovery Room Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 22
+      },
+      "resolved_services": {
+        "Outpatient Neurological Recovery Room Occupancy": 22
+      }
+    },
+    "oncology service transfusion ?beds": {
+      "structural_status": "AMBIGUOUS",
+      "method": "unrecognised_token",
+      "service": null,
+      "candidates": [
+        "Bedside Oncology Transfusion Service",
+        "Comprehensive Oncology Transfusion Service"
+      ],
+      "line_identity": {
+        "MATCHED:unit_basis_tiebreak_after_review": 68
+      },
+      "resolved_services": {
+        "Bedside Oncology Transfusion Service": 68
+      }
+    },
+    "ophthalmic preoperative service transport": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Preoperative Ophthalmic Transport Service",
+      "candidates": [
+        "Preoperative Ophthalmic Transport Service"
+      ],
+      "line_identity": {
+        "MATCHED:text": 31,
+        "MATCHED:text_contextual": 97
+      },
+      "resolved_services": {
+        "Preoperative Ophthalmic Transport Service": 128
+      }
+    },
+    "otolaryngologic postoperative ?diag ?img": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "outpatient physiotherapy session": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Outpatient Metabolic Physiotherapy Session"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 26
+      },
+      "resolved_services": {
+        "Outpatient Metabolic Physiotherapy Session": 26
+      }
+    },
+    "physiotherapy psychiatric routine session": {
+      "structural_status": "MATCHED",
+      "method": "text",
+      "service": "Routine Psychiatric Physiotherapy Session",
+      "candidates": [
+        "Routine Psychiatric Physiotherapy Session"
+      ],
+      "line_identity": {
+        "MATCHED:text": 33,
+        "MATCHED:text_contextual": 56
+      },
+      "resolved_services": {
+        "Routine Psychiatric Physiotherapy Session": 89
+      }
+    },
+    "physiotherapy routine session": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Routine Psychiatric Physiotherapy Session"
+      ],
+      "line_identity": {
+        "AMBIGUOUS:missing_discriminator": 12
+      },
+      "resolved_services": {}
+    },
+    "pulmonary specimen standard": {
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "service": null,
+      "candidates": [],
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "resolved_services": {}
+    },
+    "readings:compr cr ger wound": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Comprehensive Geriatric Wound Care",
+      "candidates": [
+        "Comprehensive Geriatric Wound Care"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 50
+      },
+      "resolved_services": {
+        "Comprehensive Geriatric Wound Care": 50
+      }
+    },
+    "readings:conf cont cs": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Continuous Pulmonary Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 29
+      },
+      "resolved_services": {
+        "Continuous Pulmonary Case Conference": 29
+      }
+    },
+    "readings:conference cont cs pulm": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Pulmonary Case Conference",
+      "candidates": [
+        "Continuous Pulmonary Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 21
+      },
+      "resolved_services": {
+        "Continuous Pulmonary Case Conference": 21
+      }
+    },
+    "readings:conference cont cs pulmonary": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Pulmonary Case Conference",
+      "candidates": [
+        "Continuous Pulmonary Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 49
+      },
+      "resolved_services": {
+        "Continuous Pulmonary Case Conference": 49
+      }
+    },
+    "readings:conference continuous cs pulmonary": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Continuous Pulmonary Case Conference",
+      "candidates": [
+        "Continuous Pulmonary Case Conference"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 18
+      },
+      "resolved_services": {
+        "Continuous Pulmonary Case Conference": 18
+      }
+    },
+    "readings:cr crit inpatient pulm": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Pulmonary Critical Care Occupancy",
+      "candidates": [
+        "Inpatient Pulmonary Critical Care Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 25
+      },
+      "resolved_services": {
+        "Inpatient Pulmonary Critical Care Occupancy": 25
+      }
+    },
+    "readings:cr crit inpt occupancy pulmonary": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Pulmonary Critical Care Occupancy",
+      "candidates": [
+        "Inpatient Pulmonary Critical Care Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 28
+      },
+      "resolved_services": {
+        "Inpatient Pulmonary Critical Care Occupancy": 28
+      }
+    },
+    "readings:cr critical inpatient occ pulm": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Pulmonary Critical Care Occupancy",
+      "candidates": [
+        "Inpatient Pulmonary Critical Care Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 27
+      },
+      "resolved_services": {
+        "Inpatient Pulmonary Critical Care Occupancy": 27
+      }
+    },
+    "readings:cr critical inpt occ pulm": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Inpatient Pulmonary Critical Care Occupancy",
+      "candidates": [
+        "Inpatient Pulmonary Critical Care Occupancy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 52
+      },
+      "resolved_services": {
+        "Inpatient Pulmonary Critical Care Occupancy": 52
+      }
+    },
+    "readings:ext inf ther": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Extended Urologic Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 41
+      },
+      "resolved_services": {
+        "Extended Urologic Infusion Therapy": 41
+      }
+    },
+    "readings:ext inf ther urologic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Extended Urologic Infusion Therapy",
+      "candidates": [
+        "Extended Urologic Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 44
+      },
+      "resolved_services": {
+        "Extended Urologic Infusion Therapy": 44
+      }
+    },
+    "readings:extended inf ther urol": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Extended Urologic Infusion Therapy",
+      "candidates": [
+        "Extended Urologic Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 41
+      },
+      "resolved_services": {
+        "Extended Urologic Infusion Therapy": 41
+      }
+    },
+    "readings:extended inf ther urologic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Extended Urologic Infusion Therapy",
+      "candidates": [
+        "Extended Urologic Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 39
+      },
+      "resolved_services": {
+        "Extended Urologic Infusion Therapy": 39
+      }
+    },
+    "readings:inf infect routine ther": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Infectious Infusion Therapy",
+      "candidates": [
+        "Routine Infectious Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 23
+      },
+      "resolved_services": {
+        "Routine Infectious Infusion Therapy": 23
+      }
+    },
+    "readings:inf infect rtn ther": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Infectious Infusion Therapy",
+      "candidates": [
+        "Routine Infectious Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 47
+      },
+      "resolved_services": {
+        "Routine Infectious Infusion Therapy": 47
+      }
+    },
+    "readings:inf infect rtn therapy": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Infectious Infusion Therapy",
+      "candidates": [
+        "Routine Infectious Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 27
+      },
+      "resolved_services": {
+        "Routine Infectious Infusion Therapy": 27
+      }
+    },
+    "readings:inf infectious routine therapy": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Infectious Infusion Therapy",
+      "candidates": [
+        "Routine Infectious Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 18
+      },
+      "resolved_services": {
+        "Routine Infectious Infusion Therapy": 18
+      }
+    },
+    "readings:inf infectious rtn ther": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Infectious Infusion Therapy",
+      "candidates": [
+        "Routine Infectious Infusion Therapy"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 24
+      },
+      "resolved_services": {
+        "Routine Infectious Infusion Therapy": 24
+      }
+    },
+    "routine service transport urologic": {
+      "structural_status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Routine Urologic Transport Service",
+      "candidates": [
+        "Routine Urologic Transport Service"
+      ],
+      "line_identity": {
+        "MATCHED:text_contextual": 123
+      },
+      "resolved_services": {
+        "Routine Urologic Transport Service": 123
+      }
+    },
+    "service sterilisation supervised": {
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "service": null,
+      "candidates": [
+        "Supervised Immunologic Sterilisation Service"
+      ],
+      "line_identity": {
+        "MATCHED:jev_missing_word": 53
+      },
+      "resolved_services": {
+        "Supervised Immunologic Sterilisation Service": 53
+      }
+    }
+  }
+}

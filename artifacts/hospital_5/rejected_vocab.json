@@ -1,0 +1,2566 @@
+{
+  "contract_fingerprint": "76a430f17bb4abde854cc3bf0427e71ca9b2b0a804827843ed211ee41193493c",
+  "normalization_version": "h5-normalization-1",
+  "matcher_version": "h5-matcher-2",
+  "model": "jev-1.13.0",
+  "normalization_template": "001_jev_normalization_review@76841b2950a2",
+  "missing_word_template": "002_jev_missing_word_resolution@b30cd06320e2",
+  "gates": {
+    "global_min_probability": 0.9,
+    "global_min_confidence": 0.85,
+    "context_min_probability": 0.8,
+    "service_min_probability": 0.9,
+    "service_min_confidence": 0.8,
+    "closure_min_probability": 0.9,
+    "unknown_min_probability": 0.9,
+    "max_candidates": 8
+  },
+  "note": "Never used for matching.",
+  "count": 159,
+  "entries": [
+    {
+      "candidate_id": "anly->specimen analysis",
+      "token": "anly",
+      "proposed": "specimen analysis",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.09,
+        "safe_global_normalization": 0.05,
+        "unsafe_normalization": 0.86
+      },
+      "confidence": 0.78,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.860"
+    },
+    {
+      "candidate_id": "bd->bedside",
+      "token": "bd",
+      "proposed": "bedside",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.96,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.95,
+      "gate_reason": "human review override (2026-09-24, hospital_5): Jev judged this safe (P=0.96) because the review state listed 'bedside' as the only colliding word; the state shows contract words only. In clinical shorthand BD is 'bed' (or 'twice daily'), and its only use in the corpus, 'ELECT INFECT WARD BD OCC', is a ward bed occupancy -- a service this contract does not carry. BD does not stand for 'bedside'."
+    },
+    {
+      "candidate_id": "beds->bedside",
+      "token": "beds",
+      "proposed": "bedside",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.29,
+        "unsafe_normalization": 0.67
+      },
+      "confidence": 0.52,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.670"
+    },
+    {
+      "candidate_id": "biop->biopsy procedure",
+      "token": "biop",
+      "proposed": "biopsy procedure",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.27,
+        "safe_global_normalization": 0.15,
+        "unsafe_normalization": 0.58
+      },
+      "confidence": 0.37,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.580"
+    },
+    {
+      "candidate_id": "biop->neurological biopsy",
+      "token": "biop",
+      "proposed": "neurological biopsy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "biop->paediatric biopsy",
+      "token": "biop",
+      "proposed": "paediatric biopsy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "conf->case conference",
+      "token": "conf",
+      "proposed": "case conference",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.47,
+        "safe_global_normalization": 0.06,
+        "unsafe_normalization": 0.47
+      },
+      "confidence": 0.2,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.470"
+    },
+    {
+      "candidate_id": "consult->neurological consultation",
+      "token": "consult",
+      "proposed": "neurological consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "consult->paediatric consultation",
+      "token": "consult",
+      "proposed": "paediatric consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "consult->palliative consultation",
+      "token": "consult",
+      "proposed": "palliative consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "consult->vascular consultation",
+      "token": "consult",
+      "proposed": "vascular consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cont->neurological consultation",
+      "token": "cont",
+      "proposed": "neurological consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.09,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.91
+      },
+      "confidence": 0.87,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cont->paediatric consultation",
+      "token": "cont",
+      "proposed": "paediatric consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.96
+      },
+      "confidence": 0.94,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cont->palliative consultation",
+      "token": "cont",
+      "proposed": "palliative consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.13,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.87
+      },
+      "confidence": 0.8,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cont->vascular consultation",
+      "token": "cont",
+      "proposed": "vascular consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.08,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.92
+      },
+      "confidence": 0.87,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cr->case conference",
+      "token": "cr",
+      "proposed": "case conference",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.58,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.41
+      },
+      "confidence": 0.38,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.410"
+    },
+    {
+      "candidate_id": "cr->critical care occupancy",
+      "token": "cr",
+      "proposed": "critical care occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.47,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.52
+      },
+      "confidence": 0.28,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.520"
+    },
+    {
+      "candidate_id": "cr->pulmonary critical",
+      "token": "cr",
+      "proposed": "pulmonary critical",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.17,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.82
+      },
+      "confidence": 0.73,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cr->wound care",
+      "token": "cr",
+      "proposed": "wound care",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.24,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.75
+      },
+      "confidence": 0.63,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.750"
+    },
+    {
+      "candidate_id": "crit->critical care occupancy",
+      "token": "crit",
+      "proposed": "critical care occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.19,
+        "safe_global_normalization": 0.04,
+        "unsafe_normalization": 0.77
+      },
+      "confidence": 0.66,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.770"
+    },
+    {
+      "candidate_id": "crit->pulmonary critical",
+      "token": "crit",
+      "proposed": "pulmonary critical",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.97,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cs->case conference",
+      "token": "cs",
+      "proposed": "case conference",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.74,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.25
+      },
+      "confidence": 0.61,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.250"
+    },
+    {
+      "candidate_id": "cs->hepatic case",
+      "token": "cs",
+      "proposed": "hepatic case",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.05,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.95
+      },
+      "confidence": 0.92,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cs->neurological consultation",
+      "token": "cs",
+      "proposed": "neurological consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.13,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.87
+      },
+      "confidence": 0.81,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cs->paediatric consultation",
+      "token": "cs",
+      "proposed": "paediatric consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.09,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.91
+      },
+      "confidence": 0.86,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cs->palliative consultation",
+      "token": "cs",
+      "proposed": "palliative consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.13,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.87
+      },
+      "confidence": 0.8,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cs->psychiatric case",
+      "token": "cs",
+      "proposed": "psychiatric case",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.31,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.68
+      },
+      "confidence": 0.52,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cs->pulmonary case",
+      "token": "cs",
+      "proposed": "pulmonary case",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.06,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.94
+      },
+      "confidence": 0.9,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "cs->vascular consultation",
+      "token": "cs",
+      "proposed": "vascular consultation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.14,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.86
+      },
+      "confidence": 0.78,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "diag->diagnostic imaging",
+      "token": "diag",
+      "proposed": "diagnostic imaging",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.33,
+        "safe_global_normalization": 0.08,
+        "unsafe_normalization": 0.59
+      },
+      "confidence": 0.39,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.590"
+    },
+    {
+      "candidate_id": "diag->discharge",
+      "token": "diag",
+      "proposed": "discharge",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.32,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.67
+      },
+      "confidence": 0.51,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.670"
+    },
+    {
+      "candidate_id": "diag->discharge planning",
+      "token": "diag",
+      "proposed": "discharge planning",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.1,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.9
+      },
+      "confidence": 0.84,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.900"
+    },
+    {
+      "candidate_id": "diag->metabolic discharge",
+      "token": "diag",
+      "proposed": "metabolic discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "diag->orthopaedic discharge",
+      "token": "diag",
+      "proposed": "orthopaedic discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "diag->psychiatric discharge",
+      "token": "diag",
+      "proposed": "psychiatric discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "diag->urologic discharge",
+      "token": "diag",
+      "proposed": "urologic discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "diag->vascular diagnostic",
+      "token": "diag",
+      "proposed": "vascular diagnostic",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "disch->discharge planning",
+      "token": "disch",
+      "proposed": "discharge planning",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.17,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.81
+      },
+      "confidence": 0.72,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.810"
+    },
+    {
+      "candidate_id": "disch->metabolic discharge",
+      "token": "disch",
+      "proposed": "metabolic discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "disch->orthopaedic discharge",
+      "token": "disch",
+      "proposed": "orthopaedic discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "disch->psychiatric discharge",
+      "token": "disch",
+      "proposed": "psychiatric discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "disch->urologic discharge",
+      "token": "disch",
+      "proposed": "urologic discharge",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "disp->pharmaceutical dispensing",
+      "token": "disp",
+      "proposed": "pharmaceutical dispensing",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.18,
+        "safe_global_normalization": 0.21,
+        "unsafe_normalization": 0.61
+      },
+      "confidence": 0.42,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.610"
+    },
+    {
+      "candidate_id": "endo->endoscopic procedure",
+      "token": "endo",
+      "proposed": "endoscopic procedure",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.73,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.27
+      },
+      "confidence": 0.6,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.270"
+    },
+    {
+      "candidate_id": "endo->gastrointestinal endoscopic",
+      "token": "endo",
+      "proposed": "gastrointestinal endoscopic",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.22,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.78
+      },
+      "confidence": 0.67,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "endo->metabolic endoscopic",
+      "token": "endo",
+      "proposed": "metabolic endoscopic",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.07,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.93
+      },
+      "confidence": 0.9,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "endo->psychiatric endoscopic",
+      "token": "endo",
+      "proposed": "psychiatric endoscopic",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "endosc->endoscopic procedure",
+      "token": "endosc",
+      "proposed": "endoscopic procedure",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.08,
+        "safe_global_normalization": 0.35,
+        "unsafe_normalization": 0.57
+      },
+      "confidence": 0.36,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.570"
+    },
+    {
+      "candidate_id": "endosc->gastrointestinal endoscopic",
+      "token": "endosc",
+      "proposed": "gastrointestinal endoscopic",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.07,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.92
+      },
+      "confidence": 0.88,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "endosc->metabolic endoscopic",
+      "token": "endosc",
+      "proposed": "metabolic endoscopic",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "endosc->psychiatric endoscopic",
+      "token": "endosc",
+      "proposed": "psychiatric endoscopic",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "fract->radiotherapy fraction",
+      "token": "fract",
+      "proposed": "radiotherapy fraction",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.04,
+        "unsafe_normalization": 0.92
+      },
+      "confidence": 0.88,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.920"
+    },
+    {
+      "candidate_id": "hm->dermatologic home",
+      "token": "hm",
+      "proposed": "dermatologic home",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.22,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.78
+      },
+      "confidence": 0.67,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "hm->home visit",
+      "token": "hm",
+      "proposed": "home visit",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.61,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.38
+      },
+      "confidence": 0.41,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.380"
+    },
+    {
+      "candidate_id": "hm->urologic home",
+      "token": "hm",
+      "proposed": "urologic home",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.16,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.84
+      },
+      "confidence": 0.75,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "img->diagnostic imaging",
+      "token": "img",
+      "proposed": "diagnostic imaging",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.29,
+        "safe_global_normalization": 0.11,
+        "unsafe_normalization": 0.6
+      },
+      "confidence": 0.39,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.600"
+    },
+    {
+      "candidate_id": "img->imaging interpretation",
+      "token": "img",
+      "proposed": "imaging interpretation",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.24,
+        "safe_global_normalization": 0.09,
+        "unsafe_normalization": 0.67
+      },
+      "confidence": 0.49,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.670"
+    },
+    {
+      "candidate_id": "img->immunologic",
+      "token": "img",
+      "proposed": "immunologic",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.72,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.28
+      },
+      "confidence": 0.57,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.280"
+    },
+    {
+      "candidate_id": "img->metabolic imaging",
+      "token": "img",
+      "proposed": "metabolic imaging",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "img->musculoskeletal imaging",
+      "token": "img",
+      "proposed": "musculoskeletal imaging",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.97,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "img->oncology imaging",
+      "token": "img",
+      "proposed": "oncology imaging",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "img->renal imaging",
+      "token": "img",
+      "proposed": "renal imaging",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "inf->infectious infusion",
+      "token": "inf",
+      "proposed": "infectious infusion",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.45,
+        "safe_global_normalization": 0.03,
+        "unsafe_normalization": 0.52
+      },
+      "confidence": 0.27,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "inf->urologic infusion",
+      "token": "inf",
+      "proposed": "urologic infusion",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.96
+      },
+      "confidence": 0.93,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "inpt->imaging interpretation",
+      "token": "inpt",
+      "proposed": "imaging interpretation",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.12,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.88
+      },
+      "confidence": 0.82,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.880"
+    },
+    {
+      "candidate_id": "inpt->interpretation",
+      "token": "inpt",
+      "proposed": "interpretation",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.65,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.34
+      },
+      "confidence": 0.48,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.340"
+    },
+    {
+      "candidate_id": "interp->imaging interpretation",
+      "token": "interp",
+      "proposed": "imaging interpretation",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.2,
+        "safe_global_normalization": 0.08,
+        "unsafe_normalization": 0.72
+      },
+      "confidence": 0.57,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.720"
+    },
+    {
+      "candidate_id": "isol->isolation room occupancy",
+      "token": "isol",
+      "proposed": "isolation room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.29,
+        "safe_global_normalization": 0.07,
+        "unsafe_normalization": 0.64
+      },
+      "confidence": 0.45,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.640"
+    },
+    {
+      "candidate_id": "isol->ophthalmic isolation",
+      "token": "isol",
+      "proposed": "ophthalmic isolation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "isol->paediatric isolation",
+      "token": "isol",
+      "proposed": "paediatric isolation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "lab->haematology laboratory",
+      "token": "lab",
+      "proposed": "haematology laboratory",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.07,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.93
+      },
+      "confidence": 0.9,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "lab->immunologic laboratory",
+      "token": "lab",
+      "proposed": "immunologic laboratory",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.03,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.97
+      },
+      "confidence": 0.96,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "lab->laboratory panel",
+      "token": "lab",
+      "proposed": "laboratory panel",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.25,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.73
+      },
+      "confidence": 0.6,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.730"
+    },
+    {
+      "candidate_id": "monit->telemetry monitoring",
+      "token": "monit",
+      "proposed": "telemetry monitoring",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.17,
+        "safe_global_normalization": 0.03,
+        "unsafe_normalization": 0.8
+      },
+      "confidence": 0.7,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.800"
+    },
+    {
+      "candidate_id": "nurs->dermatologic nursing",
+      "token": "nurs",
+      "proposed": "dermatologic nursing",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "nurs->nursing observation",
+      "token": "nurs",
+      "proposed": "nursing observation",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.24,
+        "safe_global_normalization": 0.04,
+        "unsafe_normalization": 0.72
+      },
+      "confidence": 0.59,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.720"
+    },
+    {
+      "candidate_id": "nutr->gastrointestinal nutritional",
+      "token": "nutr",
+      "proposed": "gastrointestinal nutritional",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "nutr->musculoskeletal nutritional",
+      "token": "nutr",
+      "proposed": "musculoskeletal nutritional",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "nutr->nutritional support",
+      "token": "nutr",
+      "proposed": "nutritional support",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.12,
+        "safe_global_normalization": 0.31,
+        "unsafe_normalization": 0.57
+      },
+      "confidence": 0.35,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.570"
+    },
+    {
+      "candidate_id": "nutr->ophthalmic nutritional",
+      "token": "nutr",
+      "proposed": "ophthalmic nutritional",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "nutr->urologic nutritional",
+      "token": "nutr",
+      "proposed": "urologic nutritional",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "obs->nursing observation",
+      "token": "obs",
+      "proposed": "nursing observation",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.23,
+        "safe_global_normalization": 0.17,
+        "unsafe_normalization": 0.6
+      },
+      "confidence": 0.4,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.600"
+    },
+    {
+      "candidate_id": "occ->critical care occupancy",
+      "token": "occ",
+      "proposed": "critical care occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.47,
+        "safe_global_normalization": 0.03,
+        "unsafe_normalization": 0.5
+      },
+      "confidence": 0.25,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.500"
+    },
+    {
+      "candidate_id": "occ->isolation room occupancy",
+      "token": "occ",
+      "proposed": "isolation room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.42,
+        "safe_global_normalization": 0.05,
+        "unsafe_normalization": 0.53
+      },
+      "confidence": 0.3,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.530"
+    },
+    {
+      "candidate_id": "occ->recovery room occupancy",
+      "token": "occ",
+      "proposed": "recovery room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.5599999999999999,
+        "safe_global_normalization": 0.05,
+        "unsafe_normalization": 0.39
+      },
+      "confidence": 0.35,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.390"
+    },
+    {
+      "candidate_id": "onc->critical care occupancy",
+      "token": "onc",
+      "proposed": "critical care occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.03,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.97
+      },
+      "confidence": 0.95,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.970"
+    },
+    {
+      "candidate_id": "onc->isolation room occupancy",
+      "token": "onc",
+      "proposed": "isolation room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.990"
+    },
+    {
+      "candidate_id": "onc->occupancy",
+      "token": "onc",
+      "proposed": "occupancy",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.45,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.55
+      },
+      "confidence": 0.33,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.550"
+    },
+    {
+      "candidate_id": "onc->otolaryngologic",
+      "token": "onc",
+      "proposed": "otolaryngologic",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.68,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.31
+      },
+      "confidence": 0.52,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.310"
+    },
+    {
+      "candidate_id": "onc->recovery room occupancy",
+      "token": "onc",
+      "proposed": "recovery room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.97,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.980"
+    },
+    {
+      "candidate_id": "pharm->dermatologic pharmaceutical",
+      "token": "pharm",
+      "proposed": "dermatologic pharmaceutical",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "pharm->gastrointestinal pharmaceutical",
+      "token": "pharm",
+      "proposed": "gastrointestinal pharmaceutical",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "pharm->metabolic pharmaceutical",
+      "token": "pharm",
+      "proposed": "metabolic pharmaceutical",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "pharm->pharmaceutical dispensing",
+      "token": "pharm",
+      "proposed": "pharmaceutical dispensing",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.11,
+        "safe_global_normalization": 0.34,
+        "unsafe_normalization": 0.55
+      },
+      "confidence": 0.32,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.550"
+    },
+    {
+      "candidate_id": "physio->hepatic physiotherapy",
+      "token": "physio",
+      "proposed": "hepatic physiotherapy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "physio->metabolic physiotherapy",
+      "token": "physio",
+      "proposed": "metabolic physiotherapy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "physio->physiotherapy session",
+      "token": "physio",
+      "proposed": "physiotherapy session",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.4,
+        "unsafe_normalization": 0.55
+      },
+      "confidence": 0.33,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.550"
+    },
+    {
+      "candidate_id": "physio->psychiatric physiotherapy",
+      "token": "physio",
+      "proposed": "psychiatric physiotherapy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "plng->discharge planning",
+      "token": "plng",
+      "proposed": "discharge planning",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.22,
+        "safe_global_normalization": 0.05,
+        "unsafe_normalization": 0.73
+      },
+      "confidence": 0.59,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.730"
+    },
+    {
+      "candidate_id": "pnl->laboratory panel",
+      "token": "pnl",
+      "proposed": "laboratory panel",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.23,
+        "safe_global_normalization": 0.34,
+        "unsafe_normalization": 0.43
+      },
+      "confidence": 0.15,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.430"
+    },
+    {
+      "candidate_id": "proc->biopsy procedure",
+      "token": "proc",
+      "proposed": "biopsy procedure",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.08,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.92
+      },
+      "confidence": 0.88,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.920"
+    },
+    {
+      "candidate_id": "proc->endoscopic procedure",
+      "token": "proc",
+      "proposed": "endoscopic procedure",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.06,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.94
+      },
+      "confidence": 0.91,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.940"
+    },
+    {
+      "candidate_id": "prog->rehabilitation programme",
+      "token": "prog",
+      "proposed": "rehabilitation programme",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.11,
+        "safe_global_normalization": 0.03,
+        "unsafe_normalization": 0.86
+      },
+      "confidence": 0.79,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.860"
+    },
+    {
+      "candidate_id": "radiother->neurological radiotherapy",
+      "token": "radiother",
+      "proposed": "neurological radiotherapy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "radiother->paediatric radiotherapy",
+      "token": "radiother",
+      "proposed": "paediatric radiotherapy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "radiother->pulmonary radiotherapy",
+      "token": "radiother",
+      "proposed": "pulmonary radiotherapy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "radiother->radiotherapy fraction",
+      "token": "radiother",
+      "proposed": "radiotherapy fraction",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.07,
+        "safe_global_normalization": 0.03,
+        "unsafe_normalization": 0.9
+      },
+      "confidence": 0.85,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.900"
+    },
+    {
+      "candidate_id": "radiother->urologic radiotherapy",
+      "token": "radiother",
+      "proposed": "urologic radiotherapy",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "recov->immunologic recovery",
+      "token": "recov",
+      "proposed": "immunologic recovery",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "recov->neurological recovery",
+      "token": "recov",
+      "proposed": "neurological recovery",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "recov->ophthalmic recovery",
+      "token": "recov",
+      "proposed": "ophthalmic recovery",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "recov->recovery room occupancy",
+      "token": "recov",
+      "proposed": "recovery room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.3,
+        "safe_global_normalization": 0.07,
+        "unsafe_normalization": 0.63
+      },
+      "confidence": 0.45,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.630"
+    },
+    {
+      "candidate_id": "rehab->endocrine rehabilitation",
+      "token": "rehab",
+      "proposed": "endocrine rehabilitation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "rehab->rehabilitation programme",
+      "token": "rehab",
+      "proposed": "rehabilitation programme",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.09,
+        "safe_global_normalization": 0.34,
+        "unsafe_normalization": 0.57
+      },
+      "confidence": 0.35,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.570"
+    },
+    {
+      "candidate_id": "ren->endocrine rehabilitation",
+      "token": "ren",
+      "proposed": "endocrine rehabilitation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.96
+      },
+      "confidence": 0.94,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "ren->rehabilitation programme",
+      "token": "ren",
+      "proposed": "rehabilitation programme",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.68,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.32
+      },
+      "confidence": 0.51,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.320"
+    },
+    {
+      "candidate_id": "rm->isolation room occupancy",
+      "token": "rm",
+      "proposed": "isolation room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.19,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.8
+      },
+      "confidence": 0.7,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.800"
+    },
+    {
+      "candidate_id": "rm->recovery room occupancy",
+      "token": "rm",
+      "proposed": "recovery room occupancy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.28,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.7
+      },
+      "confidence": 0.55,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.700"
+    },
+    {
+      "candidate_id": "rtn->endocrine rehabilitation",
+      "token": "rtn",
+      "proposed": "endocrine rehabilitation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.96
+      },
+      "confidence": 0.94,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "rtn->rehabilitation programme",
+      "token": "rtn",
+      "proposed": "rehabilitation programme",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.7,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.29
+      },
+      "confidence": 0.55,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.290"
+    },
+    {
+      "candidate_id": "sess->physiotherapy session",
+      "token": "sess",
+      "proposed": "physiotherapy session",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.1,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.88
+      },
+      "confidence": 0.83,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.880"
+    },
+    {
+      "candidate_id": "spcm->otolaryngologic specimen",
+      "token": "spcm",
+      "proposed": "otolaryngologic specimen",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.96,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "spcm->specimen analysis",
+      "token": "spcm",
+      "proposed": "specimen analysis",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.26,
+        "safe_global_normalization": 0.15,
+        "unsafe_normalization": 0.59
+      },
+      "confidence": 0.38,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.590"
+    },
+    {
+      "candidate_id": "steril->immunologic sterilisation",
+      "token": "steril",
+      "proposed": "immunologic sterilisation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "steril->metabolic sterilisation",
+      "token": "steril",
+      "proposed": "metabolic sterilisation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "steril->oncology sterilisation",
+      "token": "steril",
+      "proposed": "oncology sterilisation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "steril->sterilisation service",
+      "token": "steril",
+      "proposed": "sterilisation service",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.03,
+        "safe_global_normalization": 0.2,
+        "unsafe_normalization": 0.77
+      },
+      "confidence": 0.65,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.770"
+    },
+    {
+      "candidate_id": "supp->nutritional support",
+      "token": "supp",
+      "proposed": "nutritional support",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.11,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.88
+      },
+      "confidence": 0.82,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.880"
+    },
+    {
+      "candidate_id": "supp->ventilation support",
+      "token": "supp",
+      "proposed": "ventilation support",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.21,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.78
+      },
+      "confidence": 0.67,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.780"
+    },
+    {
+      "candidate_id": "svc->sterilisation service",
+      "token": "svc",
+      "proposed": "sterilisation service",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.26,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.72
+      },
+      "confidence": 0.58,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.720"
+    },
+    {
+      "candidate_id": "svc->transfusion service",
+      "token": "svc",
+      "proposed": "transfusion service",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.17,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.82
+      },
+      "confidence": 0.74,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.820"
+    },
+    {
+      "candidate_id": "svc->transport service",
+      "token": "svc",
+      "proposed": "transport service",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.2,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.79
+      },
+      "confidence": 0.68,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.790"
+    },
+    {
+      "candidate_id": "telem->geriatric telemetry",
+      "token": "telem",
+      "proposed": "geriatric telemetry",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "telem->psychiatric telemetry",
+      "token": "telem",
+      "proposed": "psychiatric telemetry",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.96,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "telem->telemetry monitoring",
+      "token": "telem",
+      "proposed": "telemetry monitoring",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.16,
+        "safe_global_normalization": 0.37,
+        "unsafe_normalization": 0.47
+      },
+      "confidence": 0.2,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.470"
+    },
+    {
+      "candidate_id": "telem->vascular telemetry",
+      "token": "telem",
+      "proposed": "vascular telemetry",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "ther->endocrine theatre",
+      "token": "ther",
+      "proposed": "endocrine theatre",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.03,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.97
+      },
+      "confidence": 0.95,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "ther->infusion therapy",
+      "token": "ther",
+      "proposed": "infusion therapy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.22,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.77
+      },
+      "confidence": 0.66,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.770"
+    },
+    {
+      "candidate_id": "ther->theatre time",
+      "token": "ther",
+      "proposed": "theatre time",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.53,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.47
+      },
+      "confidence": 0.29,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.470"
+    },
+    {
+      "candidate_id": "thtr->endocrine theatre",
+      "token": "thtr",
+      "proposed": "endocrine theatre",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "thtr->theatre time",
+      "token": "thtr",
+      "proposed": "theatre time",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.31,
+        "safe_global_normalization": 0.18,
+        "unsafe_normalization": 0.51
+      },
+      "confidence": 0.27,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.510"
+    },
+    {
+      "candidate_id": "tm->geriatric telemetry",
+      "token": "tm",
+      "proposed": "geriatric telemetry",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.05,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.95
+      },
+      "confidence": 0.93,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "tm->psychiatric telemetry",
+      "token": "tm",
+      "proposed": "psychiatric telemetry",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.07,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.93
+      },
+      "confidence": 0.88,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "tm->theatre time",
+      "token": "tm",
+      "proposed": "theatre time",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.76,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.22
+      },
+      "confidence": 0.65,
+      "gate_reason": "rejected: choice context_required, P(unsafe)=0.220"
+    },
+    {
+      "candidate_id": "tm->vascular telemetry",
+      "token": "tm",
+      "proposed": "vascular telemetry",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.1,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.9
+      },
+      "confidence": 0.85,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "transf->oncology transfusion",
+      "token": "transf",
+      "proposed": "oncology transfusion",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "transf->transfusion service",
+      "token": "transf",
+      "proposed": "transfusion service",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.13,
+        "safe_global_normalization": 0.47,
+        "unsafe_normalization": 0.4
+      },
+      "confidence": 0.2,
+      "gate_reason": "rejected: choice safe_global_normalization, P(unsafe)=0.400"
+    },
+    {
+      "candidate_id": "transp->dermatologic transport",
+      "token": "transp",
+      "proposed": "dermatologic transport",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "transp->ophthalmic transport",
+      "token": "transp",
+      "proposed": "ophthalmic transport",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "transp->otolaryngologic transport",
+      "token": "transp",
+      "proposed": "otolaryngologic transport",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "transp->transport service",
+      "token": "transp",
+      "proposed": "transport service",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.09,
+        "safe_global_normalization": 0.43,
+        "unsafe_normalization": 0.48
+      },
+      "confidence": 0.23,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.480"
+    },
+    {
+      "candidate_id": "transp->urologic transport",
+      "token": "transp",
+      "proposed": "urologic transport",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.97,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "vent->cardiac ventilation",
+      "token": "vent",
+      "proposed": "cardiac ventilation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.02,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.98
+      },
+      "confidence": 0.97,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "vent->infectious ventilation",
+      "token": "vent",
+      "proposed": "infectious ventilation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.98,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "vent->metabolic ventilation",
+      "token": "vent",
+      "proposed": "metabolic ventilation",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.01,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.99
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "vent->ventilation support",
+      "token": "vent",
+      "proposed": "ventilation support",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.28,
+        "safe_global_normalization": 0.31,
+        "unsafe_normalization": 0.41
+      },
+      "confidence": 0.12,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.410"
+    },
+    {
+      "candidate_id": "vst->home visit",
+      "token": "vst",
+      "proposed": "home visit",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.18,
+        "safe_global_normalization": 0.04,
+        "unsafe_normalization": 0.78
+      },
+      "confidence": 0.67,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.780"
+    },
+    {
+      "candidate_id": "wnd->geriatric wound",
+      "token": "wnd",
+      "proposed": "geriatric wound",
+      "heuristics": [
+        "specialty_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 1.0
+      },
+      "confidence": 0.99,
+      "gate_reason": "invariant: the phrase adds a qualifier or specialty word the token does not abbreviate"
+    },
+    {
+      "candidate_id": "wnd->wound care",
+      "token": "wnd",
+      "proposed": "wound care",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "unsafe_normalization",
+      "probabilities": {
+        "context_required": 0.15,
+        "safe_global_normalization": 0.22,
+        "unsafe_normalization": 0.63
+      },
+      "confidence": 0.45,
+      "gate_reason": "rejected: choice unsafe_normalization, P(unsafe)=0.630"
+    }
+  ]
+}

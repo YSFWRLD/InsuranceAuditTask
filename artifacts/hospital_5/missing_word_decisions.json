@@ -1,0 +1,828 @@
+{
+  "contract_fingerprint": "76a430f17bb4abde854cc3bf0427e71ca9b2b0a804827843ed211ee41193493c",
+  "normalization_version": "h5-normalization-1",
+  "matcher_version": "h5-matcher-2",
+  "model": "jev-1.13.0",
+  "normalization_template": "001_jev_normalization_review@76841b2950a2",
+  "missing_word_template": "002_jev_missing_word_resolution@b30cd06320e2",
+  "gates": {
+    "global_min_probability": 0.9,
+    "global_min_confidence": 0.85,
+    "context_min_probability": 0.8,
+    "service_min_probability": 0.9,
+    "service_min_confidence": 0.8,
+    "closure_min_probability": 0.9,
+    "unknown_min_probability": 0.9,
+    "max_candidates": 8
+  },
+  "counts": {
+    "service": 28,
+    "unresolved": 4,
+    "ambiguous_contracted": 1
+  },
+  "decisions": [
+    {
+      "review_id": "advanced dispensing pharmaceutical | per_item",
+      "identity_key": "advanced dispensing pharmaceutical",
+      "billed_unit_basis": "per_item",
+      "occurrence_count": 21,
+      "normalized_examples": [
+        "adv pharm disp"
+      ],
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing"
+      ],
+      "jev_answer": {
+        "choice": "advanced_dermatologic_pharmaceutical_dispensing",
+        "confidence": 0.94,
+        "probabilities": {
+          "advanced_dermatologic_pharmaceutical_dispensing": 0.96,
+          "ambiguous_contracted_service": 0.04,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Advanced Dermatologic Pharmaceutical Dispensing",
+      "gate_reason": "P=0.960 >= 0.9, confidence 0.940"
+    },
+    {
+      "review_id": "ambulatory case conference | per_hour",
+      "identity_key": "ambulatory case conference",
+      "billed_unit_basis": "per_hour",
+      "occurrence_count": 64,
+      "normalized_examples": [
+        "conf amb cs"
+      ],
+      "candidates": [
+        "Ambulatory Hepatic Case Conference"
+      ],
+      "jev_answer": {
+        "choice": "ambulatory_hepatic_case_conference",
+        "confidence": 0.9,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.07,
+          "ambulatory_hepatic_case_conference": 0.93,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Ambulatory Hepatic Case Conference",
+      "gate_reason": "P=0.930 >= 0.9, confidence 0.900"
+    },
+    {
+      "review_id": "analysis specimen supervised | per_item",
+      "identity_key": "analysis specimen supervised",
+      "billed_unit_basis": "per_item",
+      "occurrence_count": 58,
+      "normalized_examples": [
+        "supervised spcm anly"
+      ],
+      "candidates": [
+        "Supervised Otolaryngologic Specimen Analysis"
+      ],
+      "jev_answer": {
+        "choice": "supervised_otolaryngologic_specimen_analysis",
+        "confidence": 0.83,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.11,
+          "none_of_the_above_or_unknown": 0.0,
+          "supervised_otolaryngologic_specimen_analysis": 0.89
+        }
+      },
+      "outcome": "unresolved",
+      "service": null,
+      "gate_reason": "no gate passed (choice supervised_otolaryngologic_specimen_analysis, P=0.890)"
+    },
+    {
+      "review_id": "assisted service sterilisation | per_item",
+      "identity_key": "assisted service sterilisation",
+      "billed_unit_basis": "per_item",
+      "occurrence_count": 46,
+      "normalized_examples": [
+        "asst steril service",
+        "assisted steril svc"
+      ],
+      "candidates": [
+        "Assisted Immunologic Sterilisation Service"
+      ],
+      "jev_answer": {
+        "choice": "assisted_immunologic_sterilisation_service",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "assisted_immunologic_sterilisation_service": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Assisted Immunologic Sterilisation Service",
+      "gate_reason": "P=0.980 >= 0.9, confidence 0.970"
+    },
+    {
+      "review_id": "assisted support ventilation | per_day",
+      "identity_key": "assisted support ventilation",
+      "billed_unit_basis": "per_day",
+      "occurrence_count": 17,
+      "normalized_examples": [
+        "asst vent supp"
+      ],
+      "candidates": [
+        "Assisted Cardiac Ventilation Support"
+      ],
+      "jev_answer": {
+        "choice": "assisted_cardiac_ventilation_support",
+        "confidence": 0.9,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.07,
+          "assisted_cardiac_ventilation_support": 0.93,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Assisted Cardiac Ventilation Support",
+      "gate_reason": "P=0.930 >= 0.9, confidence 0.900"
+    },
+    {
+      "review_id": "biopsy emergency procedure | per_procedure",
+      "identity_key": "biopsy emergency procedure",
+      "billed_unit_basis": "per_procedure",
+      "occurrence_count": 22,
+      "normalized_examples": [
+        "emer biop proc"
+      ],
+      "candidates": [
+        "Emergency Neurological Biopsy Procedure"
+      ],
+      "jev_answer": {
+        "choice": "emergency_neurological_biopsy_procedure",
+        "confidence": 0.93,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "emergency_neurological_biopsy_procedure": 0.96,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Emergency Neurological Biopsy Procedure",
+      "gate_reason": "P=0.960 >= 0.9, confidence 0.930"
+    },
+    {
+      "review_id": "care comprehensive wound | per_visit",
+      "identity_key": "care comprehensive wound",
+      "billed_unit_basis": "per_visit",
+      "occurrence_count": 35,
+      "normalized_examples": [
+        "compr wnd care"
+      ],
+      "candidates": [
+        "Comprehensive Geriatric Wound Care"
+      ],
+      "jev_answer": {
+        "choice": "comprehensive_geriatric_wound_care",
+        "confidence": 0.96,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "comprehensive_geriatric_wound_care": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Comprehensive Geriatric Wound Care",
+      "gate_reason": "P=0.980 >= 0.9, confidence 0.960"
+    },
+    {
+      "review_id": "case conference psychiatric | per_hour",
+      "identity_key": "case conference psychiatric",
+      "billed_unit_basis": "per_hour",
+      "occurrence_count": 15,
+      "normalized_examples": [
+        "psychiatric cs conference"
+      ],
+      "candidates": [
+        "Inpatient Psychiatric Case Conference"
+      ],
+      "jev_answer": {
+        "choice": "inpatient_psychiatric_case_conference",
+        "confidence": 0.91,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "inpatient_psychiatric_case_conference": 0.94,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Inpatient Psychiatric Case Conference",
+      "gate_reason": "P=0.940 >= 0.9, confidence 0.910"
+    },
+    {
+      "review_id": "case conference psychiatric | per_visit",
+      "identity_key": "case conference psychiatric",
+      "billed_unit_basis": "per_visit",
+      "occurrence_count": 1,
+      "normalized_examples": [
+        "psychiatric cs conference"
+      ],
+      "candidates": [
+        "Inpatient Psychiatric Case Conference"
+      ],
+      "jev_answer": {
+        "choice": "inpatient_psychiatric_case_conference",
+        "confidence": 0.9,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "inpatient_psychiatric_case_conference": 0.94,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Inpatient Psychiatric Case Conference",
+      "gate_reason": "P=0.940 >= 0.9, confidence 0.900"
+    },
+    {
+      "review_id": "comprehensive consultation | per_visit",
+      "identity_key": "comprehensive consultation",
+      "billed_unit_basis": "per_visit",
+      "occurrence_count": 21,
+      "normalized_examples": [
+        "compr consult"
+      ],
+      "candidates": [
+        "Comprehensive Palliative Consultation"
+      ],
+      "jev_answer": {
+        "choice": "comprehensive_palliative_consultation",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "comprehensive_palliative_consultation": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Comprehensive Palliative Consultation",
+      "gate_reason": "P=0.980 >= 0.9, confidence 0.970"
+    },
+    {
+      "review_id": "comprehensive endoscopic procedure | per_procedure",
+      "identity_key": "comprehensive endoscopic procedure",
+      "billed_unit_basis": "per_procedure",
+      "occurrence_count": 18,
+      "normalized_examples": [
+        "compr endosc proc"
+      ],
+      "candidates": [
+        "Comprehensive Gastrointestinal Endoscopic Procedure"
+      ],
+      "jev_answer": {
+        "choice": "comprehensive_gastrointestinal_endoscopic_procedure",
+        "confidence": 0.96,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "comprehensive_gastrointestinal_endoscopic_procedure": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Comprehensive Gastrointestinal Endoscopic Procedure",
+      "gate_reason": "P=0.970 >= 0.9, confidence 0.960"
+    },
+    {
+      "review_id": "comprehensive support ventilation | per_day",
+      "identity_key": "comprehensive support ventilation",
+      "billed_unit_basis": "per_day",
+      "occurrence_count": 27,
+      "normalized_examples": [
+        "compr vent supp"
+      ],
+      "candidates": [
+        "Comprehensive Metabolic Ventilation Support"
+      ],
+      "jev_answer": {
+        "choice": "comprehensive_metabolic_ventilation_support",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "comprehensive_metabolic_ventilation_support": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Comprehensive Metabolic Ventilation Support",
+      "gate_reason": "P=0.980 >= 0.9, confidence 0.970"
+    },
+    {
+      "review_id": "consultation paediatric ?beds | per_procedure",
+      "identity_key": "consultation paediatric ?beds",
+      "billed_unit_basis": "per_procedure",
+      "occurrence_count": 57,
+      "normalized_examples": [
+        "beds paediatric consult",
+        "beds paed consult"
+      ],
+      "candidates": [
+        "Bedside Paediatric Consultation"
+      ],
+      "jev_answer": {
+        "choice": "bedside_paediatric_consultation",
+        "confidence": 0.98,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.01,
+          "bedside_paediatric_consultation": 0.99,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Bedside Paediatric Consultation",
+      "gate_reason": "P=0.990 >= 0.9, confidence 0.980"
+    },
+    {
+      "review_id": "diagnostic imaging supervised | per_test",
+      "identity_key": "diagnostic imaging supervised",
+      "billed_unit_basis": "per_test",
+      "occurrence_count": 54,
+      "normalized_examples": [
+        "supv diag img"
+      ],
+      "candidates": [
+        "Supervised Vascular Diagnostic Imaging"
+      ],
+      "jev_answer": {
+        "choice": "supervised_vascular_diagnostic_imaging",
+        "confidence": 0.91,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "none_of_the_above_or_unknown": 0.0,
+          "supervised_vascular_diagnostic_imaging": 0.94
+        }
+      },
+      "outcome": "service",
+      "service": "Supervised Vascular Diagnostic Imaging",
+      "gate_reason": "P=0.940 >= 0.9, confidence 0.910"
+    },
+    {
+      "review_id": "discharge outpatient planning | per_visit",
+      "identity_key": "discharge outpatient planning",
+      "billed_unit_basis": "per_visit",
+      "occurrence_count": 25,
+      "normalized_examples": [
+        "plng outpatient disch"
+      ],
+      "candidates": [
+        "Outpatient Psychiatric Discharge Planning"
+      ],
+      "jev_answer": {
+        "choice": "outpatient_psychiatric_discharge_planning",
+        "confidence": 0.9,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.07,
+          "none_of_the_above_or_unknown": 0.0,
+          "outpatient_psychiatric_discharge_planning": 0.93
+        }
+      },
+      "outcome": "service",
+      "service": "Outpatient Psychiatric Discharge Planning",
+      "gate_reason": "P=0.930 >= 0.9, confidence 0.900"
+    },
+    {
+      "review_id": "dispensing elective pharmaceutical | per_item",
+      "identity_key": "dispensing elective pharmaceutical",
+      "billed_unit_basis": "per_item",
+      "occurrence_count": 59,
+      "normalized_examples": [
+        "elective pharm disp"
+      ],
+      "candidates": [
+        "Elective Metabolic Pharmaceutical Dispensing"
+      ],
+      "jev_answer": {
+        "choice": "elective_metabolic_pharmaceutical_dispensing",
+        "confidence": 0.9,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "elective_metabolic_pharmaceutical_dispensing": 0.94,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Elective Metabolic Pharmaceutical Dispensing",
+      "gate_reason": "P=0.940 >= 0.9, confidence 0.900"
+    },
+    {
+      "review_id": "dispensing pharmaceutical ?inpt ?ren | per_visit",
+      "identity_key": "dispensing pharmaceutical ?inpt ?ren",
+      "billed_unit_basis": "per_visit",
+      "occurrence_count": 1,
+      "normalized_examples": [
+        "disp inpt ren pharm"
+      ],
+      "candidates": [
+        "Advanced Dermatologic Pharmaceutical Dispensing",
+        "Elective Metabolic Pharmaceutical Dispensing",
+        "Specialist Gastrointestinal Pharmaceutical Dispensing"
+      ],
+      "jev_answer": {
+        "choice": "ambiguous_contracted_service",
+        "confidence": 0.94,
+        "probabilities": {
+          "advanced_dermatologic_pharmaceutical_dispensing": 0.0,
+          "ambiguous_contracted_service": 0.96,
+          "elective_metabolic_pharmaceutical_dispensing": 0.0,
+          "none_of_the_above_or_unknown": 0.0,
+          "specialist_gastrointestinal_pharmaceutical_dispensing": 0.04
+        }
+      },
+      "outcome": "unresolved",
+      "service": null,
+      "gate_reason": "no gate passed (choice ambiguous_contracted_service, P=0.960)"
+    },
+    {
+      "review_id": "focused nutritional support | per_unit_dispensed",
+      "identity_key": "focused nutritional support",
+      "billed_unit_basis": "per_unit_dispensed",
+      "occurrence_count": 23,
+      "normalized_examples": [
+        "foc nutr supp"
+      ],
+      "candidates": [
+        "Focused Urologic Nutritional Support"
+      ],
+      "jev_answer": {
+        "choice": "focused_urologic_nutritional_support",
+        "confidence": 0.92,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.05,
+          "focused_urologic_nutritional_support": 0.95,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Focused Urologic Nutritional Support",
+      "gate_reason": "P=0.950 >= 0.9, confidence 0.920"
+    },
+    {
+      "review_id": "fraction radiotherapy urologic | per_item",
+      "identity_key": "fraction radiotherapy urologic",
+      "billed_unit_basis": "per_item",
+      "occurrence_count": 27,
+      "normalized_examples": [
+        "fract urol radiother"
+      ],
+      "candidates": [
+        "Routine Urologic Radiotherapy Fraction"
+      ],
+      "jev_answer": {
+        "choice": "routine_urologic_radiotherapy_fraction",
+        "confidence": 0.96,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "none_of_the_above_or_unknown": 0.0,
+          "routine_urologic_radiotherapy_fraction": 0.97
+        }
+      },
+      "outcome": "service",
+      "service": "Routine Urologic Radiotherapy Fraction",
+      "gate_reason": "P=0.970 >= 0.9, confidence 0.960"
+    },
+    {
+      "review_id": "haematology laboratory panel | per_item",
+      "identity_key": "haematology laboratory panel",
+      "billed_unit_basis": "per_item",
+      "occurrence_count": 26,
+      "normalized_examples": [
+        "haem laboratory pnl"
+      ],
+      "candidates": [
+        "Outpatient Haematology Laboratory Panel"
+      ],
+      "jev_answer": {
+        "choice": "outpatient_haematology_laboratory_panel",
+        "confidence": 0.95,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "none_of_the_above_or_unknown": 0.0,
+          "outpatient_haematology_laboratory_panel": 0.97
+        }
+      },
+      "outcome": "service",
+      "service": "Outpatient Haematology Laboratory Panel",
+      "gate_reason": "P=0.970 >= 0.9, confidence 0.950"
+    },
+    {
+      "review_id": "home urologic visit | per_visit",
+      "identity_key": "home urologic visit",
+      "billed_unit_basis": "per_visit",
+      "occurrence_count": 26,
+      "normalized_examples": [
+        "urol hm vst"
+      ],
+      "candidates": [
+        "Emergency Urologic Home Visit"
+      ],
+      "jev_answer": {
+        "choice": "emergency_urologic_home_visit",
+        "confidence": 0.83,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.11,
+          "emergency_urologic_home_visit": 0.89,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "unresolved",
+      "service": null,
+      "gate_reason": "no gate passed (choice emergency_urologic_home_visit, P=0.890)"
+    },
+    {
+      "review_id": "infectious support ventilation | per_hour",
+      "identity_key": "infectious support ventilation",
+      "billed_unit_basis": "per_hour",
+      "occurrence_count": 26,
+      "normalized_examples": [
+        "infect vent supp"
+      ],
+      "candidates": [
+        "Standard Infectious Ventilation Support"
+      ],
+      "jev_answer": {
+        "choice": "standard_infectious_ventilation_support",
+        "confidence": 0.99,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.01,
+          "none_of_the_above_or_unknown": 0.0,
+          "standard_infectious_ventilation_support": 0.99
+        }
+      },
+      "outcome": "service",
+      "service": "Standard Infectious Ventilation Support",
+      "gate_reason": "P=0.990 >= 0.9, confidence 0.990"
+    },
+    {
+      "review_id": "isolation occupancy ophthalmic room | per_night",
+      "identity_key": "isolation occupancy ophthalmic room",
+      "billed_unit_basis": "per_night",
+      "occurrence_count": 22,
+      "normalized_examples": [
+        "occ ophthalmic isol room"
+      ],
+      "candidates": [
+        "Comprehensive Ophthalmic Isolation Room Occupancy"
+      ],
+      "jev_answer": {
+        "choice": "comprehensive_ophthalmic_isolation_room_occupancy",
+        "confidence": 0.99,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.01,
+          "comprehensive_ophthalmic_isolation_room_occupancy": 0.99,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Comprehensive Ophthalmic Isolation Room Occupancy",
+      "gate_reason": "P=0.990 >= 0.9, confidence 0.990"
+    },
+    {
+      "review_id": "monitoring psychiatric telemetry | per_hour_per_item",
+      "identity_key": "monitoring psychiatric telemetry",
+      "billed_unit_basis": "per_hour_per_item",
+      "occurrence_count": 25,
+      "normalized_examples": [
+        "psych telem monitoring"
+      ],
+      "candidates": [
+        "Routine Psychiatric Telemetry Monitoring"
+      ],
+      "jev_answer": {
+        "choice": "routine_psychiatric_telemetry_monitoring",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "none_of_the_above_or_unknown": 0.0,
+          "routine_psychiatric_telemetry_monitoring": 0.98
+        }
+      },
+      "outcome": "service",
+      "service": "Routine Psychiatric Telemetry Monitoring",
+      "gate_reason": "P=0.980 >= 0.9, confidence 0.970"
+    },
+    {
+      "review_id": "musculoskeletal nutritional support | per_unit_dispensed",
+      "identity_key": "musculoskeletal nutritional support",
+      "billed_unit_basis": "per_unit_dispensed",
+      "occurrence_count": 30,
+      "normalized_examples": [
+        "msk nutr supp"
+      ],
+      "candidates": [
+        "Preoperative Musculoskeletal Nutritional Support"
+      ],
+      "jev_answer": {
+        "choice": "preoperative_musculoskeletal_nutritional_support",
+        "confidence": 0.9,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "none_of_the_above_or_unknown": 0.0,
+          "preoperative_musculoskeletal_nutritional_support": 0.9400000000000001
+        }
+      },
+      "outcome": "service",
+      "service": "Preoperative Musculoskeletal Nutritional Support",
+      "gate_reason": "P=0.940 >= 0.9, confidence 0.900"
+    },
+    {
+      "review_id": "nutritional ophthalmic support | per_day",
+      "identity_key": "nutritional ophthalmic support",
+      "billed_unit_basis": "per_day",
+      "occurrence_count": 45,
+      "normalized_examples": [
+        "ophth nutritional supp",
+        "ophth nutr supp"
+      ],
+      "candidates": [
+        "Elective Ophthalmic Nutritional Support"
+      ],
+      "jev_answer": {
+        "choice": "elective_ophthalmic_nutritional_support",
+        "confidence": 0.98,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.01,
+          "elective_ophthalmic_nutritional_support": 0.99,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Elective Ophthalmic Nutritional Support",
+      "gate_reason": "P=0.990 >= 0.9, confidence 0.980"
+    },
+    {
+      "review_id": "occupancy outpatient recovery room | per_night",
+      "identity_key": "occupancy outpatient recovery room",
+      "billed_unit_basis": "per_night",
+      "occurrence_count": 22,
+      "normalized_examples": [
+        "occ outpt recov rm"
+      ],
+      "candidates": [
+        "Outpatient Neurological Recovery Room Occupancy"
+      ],
+      "jev_answer": {
+        "choice": "outpatient_neurological_recovery_room_occupancy",
+        "confidence": 0.87,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.08,
+          "none_of_the_above_or_unknown": 0.0,
+          "outpatient_neurological_recovery_room_occupancy": 0.92
+        }
+      },
+      "outcome": "service",
+      "service": "Outpatient Neurological Recovery Room Occupancy",
+      "gate_reason": "P=0.920 >= 0.9, confidence 0.870"
+    },
+    {
+      "review_id": "oncology service transfusion ?beds | per_unit_dispensed",
+      "identity_key": "oncology service transfusion ?beds",
+      "billed_unit_basis": "per_unit_dispensed",
+      "occurrence_count": 68,
+      "normalized_examples": [
+        "beds onc transf svc",
+        "onc transf svc beds",
+        "beds onc transf service"
+      ],
+      "candidates": [
+        "Bedside Oncology Transfusion Service",
+        "Comprehensive Oncology Transfusion Service"
+      ],
+      "jev_answer": {
+        "choice": "ambiguous_contracted_service",
+        "confidence": 0.65,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.74,
+          "bedside_oncology_transfusion_service": 0.26,
+          "comprehensive_oncology_transfusion_service": 0.0,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "ambiguous_contracted",
+      "service": null,
+      "gate_reason": "P(some contracted candidate)=1.000 >= 0.9; no single candidate reached the bar (choice ambiguous_contracted_service, P=0.740)"
+    },
+    {
+      "review_id": "outpatient physiotherapy session | per_hour",
+      "identity_key": "outpatient physiotherapy session",
+      "billed_unit_basis": "per_hour",
+      "occurrence_count": 26,
+      "normalized_examples": [
+        "outpt physio session"
+      ],
+      "candidates": [
+        "Outpatient Metabolic Physiotherapy Session"
+      ],
+      "jev_answer": {
+        "choice": "outpatient_metabolic_physiotherapy_session",
+        "confidence": 0.89,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.07,
+          "none_of_the_above_or_unknown": 0.0,
+          "outpatient_metabolic_physiotherapy_session": 0.93
+        }
+      },
+      "outcome": "service",
+      "service": "Outpatient Metabolic Physiotherapy Session",
+      "gate_reason": "P=0.930 >= 0.9, confidence 0.890"
+    },
+    {
+      "review_id": "physiotherapy routine session | per_visit",
+      "identity_key": "physiotherapy routine session",
+      "billed_unit_basis": "per_visit",
+      "occurrence_count": 12,
+      "normalized_examples": [
+        "rtn physiotherapy sess"
+      ],
+      "candidates": [
+        "Routine Psychiatric Physiotherapy Session"
+      ],
+      "jev_answer": {
+        "choice": "routine_psychiatric_physiotherapy_session",
+        "confidence": 0.82,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.12,
+          "none_of_the_above_or_unknown": 0.0,
+          "routine_psychiatric_physiotherapy_session": 0.88
+        }
+      },
+      "outcome": "unresolved",
+      "service": null,
+      "gate_reason": "no gate passed (choice routine_psychiatric_physiotherapy_session, P=0.880)"
+    },
+    {
+      "review_id": "readings:conf cont cs | per_hour",
+      "identity_key": "readings:conf cont cs",
+      "billed_unit_basis": "per_hour",
+      "occurrence_count": 29,
+      "normalized_examples": [
+        "cont cs conf"
+      ],
+      "candidates": [
+        "Continuous Pulmonary Case Conference"
+      ],
+      "jev_answer": {
+        "choice": "continuous_pulmonary_case_conference",
+        "confidence": 0.95,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "continuous_pulmonary_case_conference": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Continuous Pulmonary Case Conference",
+      "gate_reason": "P=0.970 >= 0.9, confidence 0.950"
+    },
+    {
+      "review_id": "readings:ext inf ther | per_hour",
+      "identity_key": "readings:ext inf ther",
+      "billed_unit_basis": "per_hour",
+      "occurrence_count": 41,
+      "normalized_examples": [
+        "ext inf ther"
+      ],
+      "candidates": [
+        "Extended Urologic Infusion Therapy"
+      ],
+      "jev_answer": {
+        "choice": "extended_urologic_infusion_therapy",
+        "confidence": 0.93,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.05,
+          "extended_urologic_infusion_therapy": 0.95,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Extended Urologic Infusion Therapy",
+      "gate_reason": "P=0.950 >= 0.9, confidence 0.930"
+    },
+    {
+      "review_id": "service sterilisation supervised | per_procedure",
+      "identity_key": "service sterilisation supervised",
+      "billed_unit_basis": "per_procedure",
+      "occurrence_count": 53,
+      "normalized_examples": [
+        "supv steril svc"
+      ],
+      "candidates": [
+        "Supervised Immunologic Sterilisation Service"
+      ],
+      "jev_answer": {
+        "choice": "supervised_immunologic_sterilisation_service",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "none_of_the_above_or_unknown": 0.0,
+          "supervised_immunologic_sterilisation_service": 0.98
+        }
+      },
+      "outcome": "service",
+      "service": "Supervised Immunologic Sterilisation Service",
+      "gate_reason": "P=0.980 >= 0.9, confidence 0.970"
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "note": "An invoice can carry several reasons; 'primary' counts each blank once, under its most specific reason (the order of audit.BLANK_REASONS).",
+  "blank_rows": 111,
+  "by_reason": {
+    "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service": 92,
+    "a line names a service this agreement does not contract (no contract price)": 11,
+    "cumulative utilisation before a line straddles a discount tier": 8,
+    "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 7
+  },
+  "by_primary_reason": {
+    "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service": 90,
+    "a line names a service this agreement does not contract (no contract price)": 11,
+    "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 6,
+    "cumulative utilisation before a line straddles a discount tier": 4
+  },
+  "rows": {
+    "INV-H5-000014": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000019": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000027": [
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000031": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service",
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000034": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000035": [
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000045": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000046": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000068": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000073": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000074": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000085": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service",
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000086": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service",
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000089": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service",
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000090": [
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000096": [
+      "cumulative utilisation before a line straddles a discount tier"
+    ],
+    "INV-H5-000116": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000117": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000142": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000143": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000147": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000150": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000164": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H5-000171": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000190": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H5-000195": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000209": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000215": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000228": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000239": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000242": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000247": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000257": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000258": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000261": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000275": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000276": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000294": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000299": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000301": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000309": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000311": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000312": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000321": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000324": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000329": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000332": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000347": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000352": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000356": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000358": [
+      "a line names a service this agreement does not contract (no contract price)",
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000366": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000369": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000388": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000390": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000403": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000408": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000431": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000448": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000451": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000457": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000472": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000473": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000481": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000483": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000488": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000492": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000493": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000532": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000534": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000539": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000541": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000547": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000574": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000587": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000624": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000642": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000675": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000676": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000687": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000694": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000708": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000717": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000724": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000726": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H5-000749": [
+      "a line names a service this agreement does not contract (no contract price)",
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H5-000751": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H5-000756": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000762": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000766": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000787": [
+      "a line names a service this agreement does not contract (no contract price)",
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000798": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000815": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000833": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000842": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000850": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H5-000865": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000892": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000904": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000916": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000940": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000942": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000954": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000964": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000968": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000969": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H5-000975": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-000987": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-001024": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H5-001035": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ],
+    "INV-H5-001057": [
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service"
+    ]
+  }
+}

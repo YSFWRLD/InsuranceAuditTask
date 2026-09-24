@@ -1,0 +1,287 @@
+{
+  "stages": {
+    "deterministic_baseline": {
+      "description": "exact contract words only (suffixes stripped, punctuation collapsed); structural matching and the unit-basis tie-break; no review; Hospital 4's reconstruction rule",
+      "raw_descriptions": 474,
+      "identity_clusters": 378,
+      "matched_clusters": 0,
+      "ambiguous_clusters": 274,
+      "unknown_clusters": 104,
+      "identified_lines": 0,
+      "ambiguous_lines": 8609,
+      "unknown_lines": 4612,
+      "lines_by_method": {
+        "contradiction": 2,
+        "no_recognised_words": 4610,
+        "unrecognised_token": 8609
+      },
+      "invoices_reconstructable": 0,
+      "expected_total_blanks": 1050,
+      "flagged": 1027,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 6207,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "safe_global_normalization": {
+      "description": "+ tokens Jev judged safe everywhere (after gating)",
+      "raw_descriptions": 474,
+      "identity_clusters": 251,
+      "matched_clusters": 65,
+      "ambiguous_clusters": 174,
+      "unknown_clusters": 12,
+      "identified_lines": 4002,
+      "ambiguous_lines": 9179,
+      "unknown_lines": 40,
+      "lines_by_method": {
+        "contradiction": 11,
+        "missing_discriminator": 321,
+        "no_recognised_words": 29,
+        "text": 3817,
+        "unit_basis_tiebreak": 185,
+        "unrecognised_token": 8858
+      },
+      "invoices_reconstructable": 0,
+      "expected_total_blanks": 1050,
+      "flagged": 93,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 1830,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "contextual_normalization": {
+      "description": "+ context-required tokens, resolved by the surrounding words",
+      "raw_descriptions": 474,
+      "identity_clusters": 178,
+      "matched_clusters": 129,
+      "ambiguous_clusters": 38,
+      "unknown_clusters": 11,
+      "identified_lines": 12168,
+      "ambiguous_lines": 1042,
+      "unknown_lines": 11,
+      "lines_by_method": {
+        "contradiction": 11,
+        "missing_discriminator": 916,
+        "text": 3817,
+        "text_contextual": 8050,
+        "unit_basis_tiebreak": 301,
+        "unrecognised_token": 126
+      },
+      "invoices_reconstructable": 385,
+      "expected_total_blanks": 665,
+      "flagged": 76,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 68,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "jev_missing_word_resolution": {
+      "description": "+ gated Jev missing-word decisions per cluster and billed basis",
+      "raw_descriptions": 474,
+      "identity_clusters": 178,
+      "matched_clusters": 129,
+      "ambiguous_clusters": 38,
+      "unknown_clusters": 11,
+      "identified_lines": 13113,
+      "ambiguous_lines": 97,
+      "unknown_lines": 11,
+      "lines_by_method": {
+        "contradiction": 11,
+        "jev_missing_word": 877,
+        "missing_discriminator": 96,
+        "text": 3817,
+        "text_contextual": 8050,
+        "unit_basis_tiebreak": 301,
+        "unit_basis_tiebreak_after_review": 68,
+        "unrecognised_token": 1
+      },
+      "invoices_reconstructable": 936,
+      "expected_total_blanks": 114,
+      "flagged": 76,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 1,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "financial_equivalence": {
+      "description": "+ financial equivalence and dependency-aware uncertainty (FINAL)",
+      "raw_descriptions": 474,
+      "identity_clusters": 178,
+      "matched_clusters": 129,
+      "ambiguous_clusters": 38,
+      "unknown_clusters": 11,
+      "identified_lines": 13113,
+      "ambiguous_lines": 97,
+      "unknown_lines": 11,
+      "lines_by_method": {
+        "contradiction": 11,
+        "jev_missing_word": 877,
+        "missing_discriminator": 96,
+        "text": 3817,
+        "text_contextual": 8050,
+        "unit_basis_tiebreak": 301,
+        "unit_basis_tiebreak_after_review": 68,
+        "unrecognised_token": 1
+      },
+      "invoices_reconstructable": 939,
+      "expected_total_blanks": 111,
+      "flagged": 76,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 1,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "ablation_no_jev_missing_word": {
+      "description": "FINAL without the Jev missing-word decisions",
+      "raw_descriptions": 474,
+      "identity_clusters": 178,
+      "matched_clusters": 129,
+      "ambiguous_clusters": 38,
+      "unknown_clusters": 11,
+      "identified_lines": 12168,
+      "ambiguous_lines": 1042,
+      "unknown_lines": 11,
+      "lines_by_method": {
+        "contradiction": 11,
+        "missing_discriminator": 916,
+        "text": 3817,
+        "text_contextual": 8050,
+        "unit_basis_tiebreak": 301,
+        "unrecognised_token": 126
+      },
+      "invoices_reconstructable": 386,
+      "expected_total_blanks": 664,
+      "flagged": 76,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 68,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "ablation_no_tiebreak_after_review": {
+      "description": "FINAL without the unit-basis tie-break after a review closed a cluster to its contracted candidates",
+      "raw_descriptions": 474,
+      "identity_clusters": 178,
+      "matched_clusters": 129,
+      "ambiguous_clusters": 38,
+      "unknown_clusters": 11,
+      "identified_lines": 13045,
+      "ambiguous_lines": 165,
+      "unknown_lines": 11,
+      "lines_by_method": {
+        "contradiction": 11,
+        "jev_missing_word": 877,
+        "missing_discriminator": 96,
+        "text": 3817,
+        "text_contextual": 8050,
+        "unit_basis_tiebreak": 301,
+        "unrecognised_token": 69
+      },
+      "invoices_reconstructable": 884,
+      "expected_total_blanks": 166,
+      "flagged": 76,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 68,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "ablation_without_human_review_overrides": {
+      "description": "FINAL without artifacts/hospital_5/human_review_overrides.json (ENT read in context; BD rejected)",
+      "raw_descriptions": 474,
+      "identity_clusters": 180,
+      "matched_clusters": 128,
+      "ambiguous_clusters": 41,
+      "unknown_clusters": 11,
+      "identified_lines": 12861,
+      "ambiguous_lines": 349,
+      "unknown_lines": 11,
+      "lines_by_method": {
+        "contradiction": 11,
+        "jev_missing_word": 967,
+        "missing_discriminator": 96,
+        "text": 3817,
+        "text_contextual": 7708,
+        "unit_basis_tiebreak": 301,
+        "unit_basis_tiebreak_after_review": 68,
+        "unrecognised_token": 253
+      },
+      "invoices_reconstructable": 706,
+      "expected_total_blanks": 344,
+      "flagged": 75,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 1,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "ablation_no_financial_equivalence_no_jev": {
+      "description": "reviewed lexicon only; Hospital 4's reconstruction rule",
+      "raw_descriptions": 474,
+      "identity_clusters": 178,
+      "matched_clusters": 129,
+      "ambiguous_clusters": 38,
+      "unknown_clusters": 11,
+      "identified_lines": 12168,
+      "ambiguous_lines": 1042,
+      "unknown_lines": 11,
+      "lines_by_method": {
+        "contradiction": 11,
+        "missing_discriminator": 916,
+        "text": 3817,
+        "text_contextual": 8050,
+        "unit_basis_tiebreak": 301,
+        "unrecognised_token": 126
+      },
+      "invoices_reconstructable": 385,
+      "expected_total_blanks": 665,
+      "flagged": 76,
+      "semantic_ambiguous_but_financially_resolved_lines": 0,
+      "ambiguous_lines_whose_candidates_price_identically": 0,
+      "ambiguous_lines_with_two_or_more_candidates": 68,
+      "invoices_exact_with_an_ambiguous_line": 0
+    }
+  },
+  "normalization_review": {
+    "proposals_reviewed": 266,
+    "raw_choices": {
+      "context_required": 46,
+      "safe_global_normalization": 75,
+      "unsafe_normalization": 145
+    },
+    "gated_decisions": {
+      "context_required": 45,
+      "safe_global_normalization": 62,
+      "unsafe_normalization": 159
+    },
+    "tokens_global": 62,
+    "tokens_contextual": 27
+  },
+  "missing_word_review": {
+    "clusters_reviewed": 33,
+    "lines_in_reviewed_clusters": 1042,
+    "gated_outcomes": {
+      "ambiguous_contracted": 1,
+      "service": 28,
+      "unresolved": 4
+    },
+    "raw_choices": {
+      "specific_service": 31,
+      "ambiguous_contracted_service": 2,
+      "none_of_the_above_or_unknown": 0
+    }
+  },
+  "final_blank_reasons": {
+    "note": "An invoice can carry several reasons; 'primary' counts each blank once, under its most specific reason (the order of audit.BLANK_REASONS).",
+    "blank_rows": 111,
+    "by_reason": {
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service": 92,
+      "a line names a service this agreement does not contract (no contract price)": 11,
+      "cumulative utilisation before a line straddles a discount tier": 8,
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 7
+    },
+    "by_primary_reason": {
+      "a line's description fits a contracted service only by omitting a word, and the review did not rule out an uncontracted service": 90,
+      "a line names a service this agreement does not contract (no contract price)": 11,
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 6,
+      "cumulative utilisation before a line straddles a discount tier": 4
+    }
+  }
+}

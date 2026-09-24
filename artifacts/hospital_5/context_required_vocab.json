@@ -1,0 +1,843 @@
+{
+  "contract_fingerprint": "76a430f17bb4abde854cc3bf0427e71ca9b2b0a804827843ed211ee41193493c",
+  "normalization_version": "h5-normalization-1",
+  "matcher_version": "h5-matcher-2",
+  "model": "jev-1.13.0",
+  "normalization_template": "001_jev_normalization_review@76841b2950a2",
+  "missing_word_template": "002_jev_missing_word_resolution@b30cd06320e2",
+  "gates": {
+    "global_min_probability": 0.9,
+    "global_min_confidence": 0.85,
+    "context_min_probability": 0.8,
+    "service_min_probability": 0.9,
+    "service_min_confidence": 0.8,
+    "closure_min_probability": 0.9,
+    "unknown_min_probability": 0.9,
+    "max_candidates": 8
+  },
+  "note": "Accepted only as one of several readings; the surrounding words of each description must eliminate the others (structural resolution in the matcher).",
+  "count": 45,
+  "lexicon_contextual": {
+    "card": [
+      "cardiac"
+    ],
+    "conf": [
+      "conference"
+    ],
+    "cont": [
+      "consultation",
+      "continuous"
+    ],
+    "cr": [
+      "cardiac",
+      "care",
+      "comprehensive",
+      "conference",
+      "critical"
+    ],
+    "cs": [
+      "case",
+      "comprehensive",
+      "consultation",
+      "continuous"
+    ],
+    "diag": [
+      "diagnostic"
+    ],
+    "endo": [
+      "endocrine",
+      "endoscopic"
+    ],
+    "ent": [
+      "otolaryngologic"
+    ],
+    "fract": [
+      "fraction"
+    ],
+    "gi": [
+      "gastrointestinal",
+      "geriatric"
+    ],
+    "hm": [
+      "haematology",
+      "home"
+    ],
+    "img": [
+      "imaging"
+    ],
+    "inf": [
+      "infectious",
+      "infusion",
+      "infusion therapy"
+    ],
+    "inpt": [
+      "inpatient"
+    ],
+    "occ": [
+      "occupancy"
+    ],
+    "onc": [
+      "oncology"
+    ],
+    "proc": [
+      "procedure"
+    ],
+    "prog": [
+      "programme"
+    ],
+    "recov": [
+      "recovery"
+    ],
+    "ren": [
+      "rehabilitation",
+      "renal"
+    ],
+    "rm": [
+      "room"
+    ],
+    "rtn": [
+      "rehabilitation",
+      "routine"
+    ],
+    "supp": [
+      "support"
+    ],
+    "svc": [
+      "service"
+    ],
+    "ther": [
+      "theatre",
+      "therapy"
+    ],
+    "tm": [
+      "telemetry",
+      "telemetry monitoring",
+      "time"
+    ],
+    "vst": [
+      "visit"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "card->cardiac",
+      "token": "card",
+      "proposed": "cardiac",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.04,
+        "safe_global_normalization": 0.8,
+        "unsafe_normalization": 0.16
+      },
+      "confidence": 0.7,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.840 >= 0.8"
+    },
+    {
+      "candidate_id": "conf->conference",
+      "token": "conf",
+      "proposed": "conference",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.48,
+        "safe_global_normalization": 0.46,
+        "unsafe_normalization": 0.06
+      },
+      "confidence": 0.22,
+      "gate_reason": "context required: P(safe)+P(context)=0.940 >= 0.8"
+    },
+    {
+      "candidate_id": "cont->consultation",
+      "token": "cont",
+      "proposed": "consultation",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 1.0,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.0
+      },
+      "confidence": 1.0,
+      "gate_reason": "context required: P(safe)+P(context)=1.000 >= 0.8"
+    },
+    {
+      "candidate_id": "cont->continuous",
+      "token": "cont",
+      "proposed": "continuous",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.99,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.0
+      },
+      "confidence": 0.98,
+      "gate_reason": "context required: P(safe)+P(context)=1.000 >= 0.8"
+    },
+    {
+      "candidate_id": "cr->cardiac",
+      "token": "cr",
+      "proposed": "cardiac",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.98,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.96,
+      "gate_reason": "context required: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "cr->care",
+      "token": "cr",
+      "proposed": "care",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.9,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.09
+      },
+      "confidence": 0.86,
+      "gate_reason": "context required: P(safe)+P(context)=0.910 >= 0.8"
+    },
+    {
+      "candidate_id": "cr->comprehensive",
+      "token": "cr",
+      "proposed": "comprehensive",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.96,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.04
+      },
+      "confidence": 0.94,
+      "gate_reason": "context required: P(safe)+P(context)=0.960 >= 0.8"
+    },
+    {
+      "candidate_id": "cr->conference",
+      "token": "cr",
+      "proposed": "conference",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.97,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.95,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "cr->critical",
+      "token": "cr",
+      "proposed": "critical",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.99,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.98,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "cs->case",
+      "token": "cs",
+      "proposed": "case",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.94,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.05
+      },
+      "confidence": 0.92,
+      "gate_reason": "context required: P(safe)+P(context)=0.950 >= 0.8"
+    },
+    {
+      "candidate_id": "cs->comprehensive",
+      "token": "cs",
+      "proposed": "comprehensive",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.95,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.05
+      },
+      "confidence": 0.92,
+      "gate_reason": "context required: P(safe)+P(context)=0.950 >= 0.8"
+    },
+    {
+      "candidate_id": "cs->consultation",
+      "token": "cs",
+      "proposed": "consultation",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.98,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.98,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "cs->continuous",
+      "token": "cs",
+      "proposed": "continuous",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.97,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.95,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "diag->diagnostic",
+      "token": "diag",
+      "proposed": "diagnostic",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.57,
+        "safe_global_normalization": 0.4,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.36,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "endo->endocrine",
+      "token": "endo",
+      "proposed": "endocrine",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.98,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.97,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "endo->endoscopic",
+      "token": "endo",
+      "proposed": "endoscopic",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.97,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.95,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "ent->otolaryngologic",
+      "token": "ent",
+      "proposed": "otolaryngologic",
+      "heuristics": [
+        "clinical_acronym"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.1,
+        "safe_global_normalization": 0.61,
+        "unsafe_normalization": 0.29
+      },
+      "confidence": 0.41,
+      "gate_reason": "human review override (2026-09-24, hospital_5_contextual): ENT (ear, nose and throat) is the standard clinical abbreviation for otolaryngology. It appears in the specialty slot of SUPV ENT SPCM ANLY (and its spellings) and of CONT ENT TRANSP SVC, and resolves to the H5 contract specialty Otolaryngologic. Jev chose 'safe' for this proposal (P=0.61) but below the gate. Allowed in context only: the reading is used only where the surrounding words fit a contracted Otolaryngologic service; elsewhere ENT stays unread. Unlike descriptions that omit their specialty, these carry it, abbreviated."
+    },
+    {
+      "candidate_id": "fract->fraction",
+      "token": "fract",
+      "proposed": "fraction",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.21,
+        "safe_global_normalization": 0.65,
+        "unsafe_normalization": 0.14
+      },
+      "confidence": 0.47,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.860 >= 0.8"
+    },
+    {
+      "candidate_id": "gi->gastrointestinal",
+      "token": "gi",
+      "proposed": "gastrointestinal",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.67,
+        "safe_global_normalization": 0.31,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.51,
+      "gate_reason": "context required: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "gi->geriatric",
+      "token": "gi",
+      "proposed": "geriatric",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.98,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.97,
+      "gate_reason": "context required: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "hm->haematology",
+      "token": "hm",
+      "proposed": "haematology",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.89,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.09
+      },
+      "confidence": 0.83,
+      "gate_reason": "context required: P(safe)+P(context)=0.910 >= 0.8"
+    },
+    {
+      "candidate_id": "hm->home",
+      "token": "hm",
+      "proposed": "home",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.95,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.94,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "img->imaging",
+      "token": "img",
+      "proposed": "imaging",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.51,
+        "safe_global_normalization": 0.46,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.26,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "inf->infectious",
+      "token": "inf",
+      "proposed": "infectious",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.97,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.95,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "inf->infusion",
+      "token": "inf",
+      "proposed": "infusion",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.91,
+        "safe_global_normalization": 0.08,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.87,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "inf->infusion therapy",
+      "token": "inf",
+      "proposed": "infusion therapy",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.81,
+        "safe_global_normalization": 0.04,
+        "unsafe_normalization": 0.15
+      },
+      "confidence": 0.72,
+      "gate_reason": "context required: P(safe)+P(context)=0.850 >= 0.8"
+    },
+    {
+      "candidate_id": "inpt->inpatient",
+      "token": "inpt",
+      "proposed": "inpatient",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.72,
+        "safe_global_normalization": 0.26,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.57,
+      "gate_reason": "context required: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "occ->occupancy",
+      "token": "occ",
+      "proposed": "occupancy",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.23,
+        "safe_global_normalization": 0.75,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.63,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "onc->oncology",
+      "token": "onc",
+      "proposed": "oncology",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.58,
+        "safe_global_normalization": 0.39,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.38,
+      "gate_reason": "context required: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "proc->procedure",
+      "token": "proc",
+      "proposed": "procedure",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.14,
+        "safe_global_normalization": 0.84,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.76,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "prog->programme",
+      "token": "prog",
+      "proposed": "programme",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.17,
+        "safe_global_normalization": 0.79,
+        "unsafe_normalization": 0.04
+      },
+      "confidence": 0.68,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.960 >= 0.8"
+    },
+    {
+      "candidate_id": "recov->recovery",
+      "token": "recov",
+      "proposed": "recovery",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.11,
+        "safe_global_normalization": 0.87,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.8,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "ren->rehabilitation",
+      "token": "ren",
+      "proposed": "rehabilitation",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.94,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.06
+      },
+      "confidence": 0.91,
+      "gate_reason": "context required: P(safe)+P(context)=0.940 >= 0.8"
+    },
+    {
+      "candidate_id": "ren->renal",
+      "token": "ren",
+      "proposed": "renal",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.87,
+        "safe_global_normalization": 0.12,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.8,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "rm->room",
+      "token": "rm",
+      "proposed": "room",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.08,
+        "safe_global_normalization": 0.91,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.87,
+      "gate_reason": "judged safe, but a 2-letter token is only ever read in context (invariant)"
+    },
+    {
+      "candidate_id": "rtn->rehabilitation",
+      "token": "rtn",
+      "proposed": "rehabilitation",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.97,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.02
+      },
+      "confidence": 0.96,
+      "gate_reason": "context required: P(safe)+P(context)=0.980 >= 0.8"
+    },
+    {
+      "candidate_id": "rtn->routine",
+      "token": "rtn",
+      "proposed": "routine",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.86,
+        "safe_global_normalization": 0.13,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.78,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "supp->support",
+      "token": "supp",
+      "proposed": "support",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.19,
+        "safe_global_normalization": 0.74,
+        "unsafe_normalization": 0.07
+      },
+      "confidence": 0.62,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.930 >= 0.8"
+    },
+    {
+      "candidate_id": "svc->service",
+      "token": "svc",
+      "proposed": "service",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.13,
+        "safe_global_normalization": 0.84,
+        "unsafe_normalization": 0.03
+      },
+      "confidence": 0.76,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.970 >= 0.8"
+    },
+    {
+      "candidate_id": "ther->theatre",
+      "token": "ther",
+      "proposed": "theatre",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.99,
+        "safe_global_normalization": 0.0,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.98,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "ther->therapy",
+      "token": "ther",
+      "proposed": "therapy",
+      "heuristics": [
+        "prefix"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.97,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.96,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "tm->telemetry",
+      "token": "tm",
+      "proposed": "telemetry",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.97,
+        "safe_global_normalization": 0.02,
+        "unsafe_normalization": 0.01
+      },
+      "confidence": 0.96,
+      "gate_reason": "context required: P(safe)+P(context)=0.990 >= 0.8"
+    },
+    {
+      "candidate_id": "tm->telemetry monitoring",
+      "token": "tm",
+      "proposed": "telemetry monitoring",
+      "heuristics": [
+        "concept_phrase"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.79,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.2
+      },
+      "confidence": 0.68,
+      "gate_reason": "context required: P(safe)+P(context)=0.800 >= 0.8"
+    },
+    {
+      "candidate_id": "tm->time",
+      "token": "tm",
+      "proposed": "time",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "context_required",
+      "probabilities": {
+        "context_required": 0.89,
+        "safe_global_normalization": 0.01,
+        "unsafe_normalization": 0.1
+      },
+      "confidence": 0.84,
+      "gate_reason": "context required: P(safe)+P(context)=0.900 >= 0.8"
+    },
+    {
+      "candidate_id": "vst->visit",
+      "token": "vst",
+      "proposed": "visit",
+      "heuristics": [
+        "subsequence"
+      ],
+      "jev_choice": "safe_global_normalization",
+      "probabilities": {
+        "context_required": 0.1,
+        "safe_global_normalization": 0.8,
+        "unsafe_normalization": 0.1
+      },
+      "confidence": 0.69,
+      "gate_reason": "below the global bar: P(safe)+P(context)=0.900 >= 0.8"
+    }
+  ]
+}

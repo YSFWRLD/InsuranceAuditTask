@@ -3,12 +3,14 @@
     python -m src.main audit h1          audit every invoice; write predictions
     python -m src.main audit h2          (offline: reads persisted service mappings)
     python -m src.main audit h4          (offline, deterministic; writes artifacts too)
+    python -m src.main audit h5          (offline: reads committed, reviewed Jev decisions
+                                         and refuses stale ones; writes artifacts too)
     python -m src.main evaluate h1       score against the development split
                                          (and the locked holdout, while frozen)
-    python -m src.main submission        outputs/hospital_{2,4}/submission.csv and
+    python -m src.main submission        outputs/hospital_{2,4,5}/submission.csv and
                                          the combined outputs/submission.csv (scored
-                                         hospitals only: hospital_2, hospital_4;
-                                         offline)
+                                         hospitals only: hospital_2, hospital_4,
+                                         hospital_5; offline)
 
 Hospital 2 semantic service identity (run deliberately, never by an audit):
 
@@ -21,6 +23,19 @@ Hospital 2 semantic service identity (run deliberately, never by an audit):
     python -m src.main semantic h2 jev-import   apply jev_results.json (Playground)
     python -m src.main semantic h2 rebuild      recompute final decisions
 
+Hospital 5 semantic review (Jev only; run deliberately, never by an audit):
+
+    python -m src.main semantic h5 status               readiness, review coverage, staleness
+    python -m src.main semantic h5 candidates           normalisation proposals -> artifact
+    python -m src.main semantic h5 normalize-run        Jev by API, one question per proposal
+    python -m src.main semantic h5 normalize-export     Playground request bodies
+    python -m src.main semantic h5 normalize-import     apply jev_normalization_results.json
+    python -m src.main semantic h5 missing-word-run     Jev by API, one question per cluster
+    python -m src.main semantic h5 missing-word-export  Playground request bodies
+    python -m src.main semantic h5 missing-word-import  apply jev_missing_word_results.json
+    python -m src.main semantic h5 probe                the constructed stress-test case(s)
+    python -m src.main semantic h5 report               the semantic contribution report
+
 Development evidence (reads labels; not needed to produce predictions):
 
     python -m src.main split h1          the locked dev/holdout split (refuses
@@ -28,8 +43,8 @@ Development evidence (reads labels; not needed to produce predictions):
     python -m src.main freeze h1 [--reason TEXT]
     python -m src.main research h1 temporal|ablation
 
-Hospitals 1, 2 and 4 are implemented; ``h1``, ``h2`` and ``h4`` are the accepted
-hospitals.  Hospital 4 has no semantic stage and no labels.
+Hospitals 1, 2, 4 and 5 are implemented; ``h1``, ``h2``, ``h4`` and ``h5`` are the
+accepted hospitals.  Hospital 4 has no semantic stage; Hospitals 4 and 5 have no labels.
 """
 
 from __future__ import annotations
@@ -46,6 +61,10 @@ from .hospital_1 import evaluation as h1_evaluation
 from .hospital_1.matcher import write_match_audit
 from .hospital_2 import audit as h2_audit
 from .hospital_4 import audit as h4_audit
+from .hospital_5 import audit as h5_audit
+from .hospital_5 import report as h5_report
+from .hospital_5 import semantic as h5_semantic
+from .hospital_5 import workflow as h5_workflow
 from .hospital_2 import contract as h2_contract
 from .hospital_2 import semantic as h2_semantic
 from .hospital_2.matcher import H2Matcher, cluster_descriptions
@@ -58,6 +77,7 @@ OUTPUTS = REPO_ROOT / "outputs"
 H1_OUTPUTS = OUTPUTS / "hospital_1"
 H2_OUTPUTS = OUTPUTS / "hospital_2"
 H4_OUTPUTS = OUTPUTS / "hospital_4"
+H5_OUTPUTS = OUTPUTS / "hospital_5"
 TEMPLATE = REPO_ROOT / "submission_template.csv"
 
 
@@ -86,6 +106,9 @@ def cmd_audit(args) -> None:
         return
     if args.hospital == "h4":
         _audit_h4()
+        return
+    if args.hospital == "h5":
+        _audit_h5()
         return
     pipeline, results = _run_h1()
     write_predictions(results, H1_OUTPUTS / "predictions.csv")
@@ -150,19 +173,22 @@ def cmd_research(args) -> None:
 def cmd_submission(_args) -> None:
     # Only scored hospitals go into the submission.  Hospital 1 is the
     # labelled development hospital and is not scored, so it is left out.
-    # Hospitals 2 and 4 are the scored hospitals implemented; 3 and 5 are not.
+    # Hospitals 2, 4 and 5 are the scored hospitals implemented; 3 is not.
     _, results = _run_h2()
     h2_file = H2_OUTPUTS / "submission.csv"
     write_hospital_submission([r.result for r in results], h2_file, template=TEMPLATE)
     h4_pipeline = h4_audit.H4Pipeline()
     h4_file = H4_OUTPUTS / "submission.csv"
     write_hospital_submission([r.result for r in h4_pipeline.run()], h4_file, template=TEMPLATE)
+    h5_file = H5_OUTPUTS / "submission.csv"
+    write_hospital_submission([r.result for r in _run_h5()[1]], h5_file, template=TEMPLATE)
     path = OUTPUTS / "submission.csv"
-    counts = combine_submissions({"hospital_2": h2_file, "hospital_4": h4_file}, path)
-    for name, file in (("hospital_2", h2_file), ("hospital_4", h4_file)):
+    files = {"hospital_2": h2_file, "hospital_4": h4_file, "hospital_5": h5_file}
+    counts = combine_submissions(files, path)
+    for name, file in files.items():
         print(f"{file}: {counts[name]} rows")
     print(f"{path}: {sum(counts.values())} rows {counts} (hospital_1 is not scored; "
-          "hospitals 3 and 5 are not implemented)")
+          "hospital 3 is not implemented)")
 
 
 # --------------------------------------------------------------------------
@@ -224,6 +250,118 @@ def _audit_h4() -> None:
     print(f"written to {H4_OUTPUTS} and {h4_audit.ARTIFACTS}")
 
 
+def _run_h5():
+    try:
+        pipeline = h5_audit.H5Pipeline()
+    except h5_semantic.StaleSemanticArtifacts as exc:
+        raise SystemExit(f"hospital_5: {exc}") from None
+    return pipeline, pipeline.run()
+
+
+def _audit_h5() -> None:
+    pipeline, results = _run_h5()
+    info = h5_report.write_outputs(pipeline, results, template=TEMPLATE)
+    res = [r.result for r in results]
+    print(f"invoice occurrences: {len(pipeline.occurrences)}  invoice numbers (rows): {info['rows']}  "
+          f"flagged rows: {sum(r.flagged for r in res)}")
+    print(f"pricing_complete: {sum(r.pricing_complete for r in res)}  "
+          f"correction_reconstructable: {sum(r.correction_reconstructable for r in res)}  "
+          f"expected_total_cents blank: {sum(r.expected_total_cents is None for r in res)}")
+    print("identity:")
+    _print_counts(info["counts"])
+    print(f"pricing traces (every line): {info['traces']}")
+    # The stage-by-stage contribution report reruns the audit with each
+    # semantic step switched on in turn, on the same data.
+    h5_report.write_contribution_report(semantics=pipeline.semantics)
+    print(f"written to {H5_OUTPUTS} (including semantic_contribution.md) and {h5_audit.ARTIFACTS}")
+
+
+def cmd_semantic_h5(args) -> None:
+    """Hospital 5's Jev stages.  Each run/import stores reviews; the derived
+    vocabulary and decision artifacts are then rewritten from them."""
+    step = args.step
+    sem = h5_workflow.load_semantics(strict=False)
+    config = sem.config
+
+    def log(line: str) -> None:
+        print("  " + line, flush=True)
+
+    def transport():
+        try:
+            return h5_semantic.http_transport(config)
+        except h5_semantic.SemanticError as exc:
+            raise SystemExit(f"{exc}. No Jev call was made and nothing was changed.") from None
+
+    def load_results(default: Path) -> object:
+        path = args.file or default
+        if not path.exists():
+            raise SystemExit(f"{path} not found; nothing imported")
+        return json.loads(path.read_text(encoding="utf-8"))
+
+    def run_import(requests, default: Path, store: Path) -> dict:
+        try:
+            return h5_semantic.import_results(load_results(default), requests, store)
+        except (h5_semantic.SemanticError, json.JSONDecodeError) as exc:
+            raise SystemExit(str(exc)) from None
+
+    if step == "status":
+        for key, value in config.readiness().items():
+            print(f"  {key:<16} {value}")
+        for name, reqs, path in (("normalisation", sem.normalization_requests, h5_semantic.NORMALIZATION_REVIEWS),
+                                 ("missing-word", sem.missing_word_requests, h5_semantic.MISSING_WORD_REVIEWS)):
+            current, pending, stale = h5_semantic.partition(reqs, h5_semantic.load_reviews(path))
+            print(f"  {name}: {len(reqs)} requests, {len(current)} current reviews, {len(pending)} pending "
+                  f"({len(stale)} stale)")
+        return
+    if step == "report":
+        h5_report.write_contribution_report()
+        print(f"written to {H5_OUTPUTS / 'semantic_contribution.md'} and "
+              f"{h5_audit.ARTIFACTS / 'semantic_contribution.json'}")
+        return
+    if step == "candidates":
+        pass
+    elif step == "normalize-run":
+        print("normalisation reviews:", h5_semantic.run_requests(
+            sem.normalization_requests, transport(), h5_semantic.NORMALIZATION_REVIEWS,
+            workers=config.workers, log=log))
+    elif step == "normalize-export":
+        n = h5_semantic.export_requests(sem.normalization_requests,
+                                        h5_semantic.load_reviews(h5_semantic.NORMALIZATION_REVIEWS),
+                                        h5_semantic.NORMALIZATION_EXPORT)
+        print(f"{n} pending request(s) -> {h5_semantic.NORMALIZATION_EXPORT}")
+    elif step == "normalize-import":
+        print("normalisation results:", run_import(sem.normalization_requests, h5_semantic.NORMALIZATION_RESULTS,
+                                                   h5_semantic.NORMALIZATION_REVIEWS))
+    else:
+        # Missing-word questions are built from the reviewed lexicon, so they
+        # cannot be asked before every normalisation review is current.
+        if not sem.normalization_complete:
+            raise SystemExit("normalisation reviews are incomplete or stale; run normalize-run (or "
+                             "normalize-export / normalize-import) first")
+        if step == "missing-word-run":
+            print("missing-word reviews:", h5_semantic.run_requests(
+                sem.missing_word_requests, transport(), h5_semantic.MISSING_WORD_REVIEWS,
+                workers=config.workers, log=log))
+        elif step == "missing-word-export":
+            n = h5_semantic.export_requests(sem.missing_word_requests,
+                                            h5_semantic.load_reviews(h5_semantic.MISSING_WORD_REVIEWS),
+                                            h5_semantic.MISSING_WORD_EXPORT)
+            print(f"{n} pending request(s) -> {h5_semantic.MISSING_WORD_EXPORT}")
+        elif step == "missing-word-import":
+            print("missing-word results:", run_import(sem.missing_word_requests, h5_semantic.MISSING_WORD_RESULTS,
+                                                      h5_semantic.MISSING_WORD_REVIEWS))
+        elif step == "probe":
+            print("probe reviews:", h5_semantic.run_requests(
+                h5_workflow.probe_requests(sem), transport(), h5_semantic.PROBE_REVIEWS, workers=1, log=log))
+
+    sem = h5_workflow.load_semantics(strict=False)
+    h5_workflow.write_candidates(sem)
+    print(f"{len(sem.candidates)} normalisation proposals -> {h5_semantic.CANDIDATES_FILE}")
+    print(f"gated vocabulary: {h5_workflow.write_vocab_artifacts(sem)}")
+    if sem.normalization_complete:
+        print(f"missing-word decisions: {h5_workflow.write_missing_word_decisions(sem)}")
+
+
 def _h2_clusters(contract):
     occurrences = load_occurrences(h2_audit.JSONL)
     return cluster_descriptions(h2_semantic.descriptions_of(occurrences), H2Matcher(contract))
@@ -240,6 +378,13 @@ def _write_jev_batch(state: dict, questions: dict) -> None:
 
 
 def cmd_semantic(args) -> None:
+    if args.hospital == "h5":
+        if args.step not in H5_SEMANTIC_STEPS:
+            raise SystemExit(f"semantic h5: unknown step {args.step!r}; choose from {', '.join(H5_SEMANTIC_STEPS)}")
+        cmd_semantic_h5(args)
+        return
+    if args.step not in H2_SEMANTIC_STEPS:
+        raise SystemExit(f"semantic h2: unknown step {args.step!r}; choose from {', '.join(H2_SEMANTIC_STEPS)}")
     config = h2_semantic.SemanticConfig.from_env()
     contract = h2_contract.parse_contract()
 
@@ -324,6 +469,10 @@ def cmd_semantic(args) -> None:
 # CLI
 # --------------------------------------------------------------------------
 
+H2_SEMANTIC_STEPS = ("prepare", "status", "classify", "jev", "jev-export", "jev-import", "rebuild")
+H5_SEMANTIC_STEPS = ("status", "candidates", "normalize-run", "normalize-export", "normalize-import",
+                     "missing-word-run", "missing-word-export", "missing-word-import", "probe", "report")
+
 def load_environment(path: Path = REPO_ROOT / ".env") -> bool:
     """Load the project-root ``.env`` once, at startup.
 
@@ -347,7 +496,7 @@ def main() -> None:
         p.set_defaults(func=func)
         return p
 
-    hospital_command("audit", cmd_audit, ("h1", "h2", "h4"))
+    hospital_command("audit", cmd_audit, ("h1", "h2", "h4", "h5"))
     hospital_command("evaluate", cmd_evaluate)
     sub.add_parser("submission").set_defaults(func=cmd_submission)
     hospital_command("split", cmd_split).add_argument("--force", action="store_true")
@@ -355,9 +504,8 @@ def main() -> None:
     hospital_command("research", cmd_research).add_argument(
         "study", choices=["temporal", "ablation"]
     )
-    semantic = hospital_command("semantic", cmd_semantic, ("h2",))
-    semantic.add_argument(
-        "step", choices=["prepare", "status", "classify", "jev", "jev-export", "jev-import", "rebuild"])
+    semantic = hospital_command("semantic", cmd_semantic, ("h2", "h5"))
+    semantic.add_argument("step", choices=list(dict.fromkeys(H2_SEMANTIC_STEPS + H5_SEMANTIC_STEPS)))
     semantic.add_argument("--limit", type=int, default=None)
     semantic.add_argument("--retry-failed", action="store_true")
     semantic.add_argument("--file", type=Path, default=None)

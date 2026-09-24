@@ -1,0 +1,3114 @@
+{
+  "contract_fingerprint": "76a430f17bb4abde854cc3bf0427e71ca9b2b0a804827843ed211ee41193493c",
+  "normalization_version": "h5-normalization-1",
+  "matcher_version": "h5-matcher-2",
+  "model": "jev-1.13.0",
+  "normalization_template": "001_jev_normalization_review@76841b2950a2",
+  "missing_word_template": "002_jev_missing_word_resolution@b30cd06320e2",
+  "gates": {
+    "global_min_probability": 0.9,
+    "global_min_confidence": 0.85,
+    "context_min_probability": 0.8,
+    "service_min_probability": 0.9,
+    "service_min_confidence": 0.8,
+    "closure_min_probability": 0.9,
+    "unknown_min_probability": 0.9,
+    "max_candidates": 8
+  },
+  "note": "Deterministic proposals only; nothing here is accepted until reviewed and gated. Generated from the contract vocabulary and the description corpus; no price, quantity or total is read.",
+  "count": 266,
+  "candidates": [
+    {
+      "candidate_id": "adv->advanced",
+      "token": "adv",
+      "proposed": "advanced",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "amb->ambulatory",
+      "token": "amb",
+      "proposed": "ambulatory",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "anly->analysis",
+      "token": "anly",
+      "proposed": "analysis",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "anly->specimen analysis",
+      "token": "anly",
+      "proposed": "specimen analysis",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "asst->assisted",
+      "token": "asst",
+      "proposed": "assisted",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "bd->bedside",
+      "token": "bd",
+      "proposed": "bedside",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "beds->bedside",
+      "token": "beds",
+      "proposed": "bedside",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "biop->biopsy",
+      "token": "biop",
+      "proposed": "biopsy",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "biop->biopsy procedure",
+      "token": "biop",
+      "proposed": "biopsy procedure",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "biop->neurological biopsy",
+      "token": "biop",
+      "proposed": "neurological biopsy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "biop->paediatric biopsy",
+      "token": "biop",
+      "proposed": "paediatric biopsy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "card->cardiac",
+      "token": "card",
+      "proposed": "cardiac",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "compr->comprehensive",
+      "token": "compr",
+      "proposed": "comprehensive",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "conf->case conference",
+      "token": "conf",
+      "proposed": "case conference",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "conf->conference",
+      "token": "conf",
+      "proposed": "conference",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "consult->consultation",
+      "token": "consult",
+      "proposed": "consultation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "consult->neurological consultation",
+      "token": "consult",
+      "proposed": "neurological consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "consult->paediatric consultation",
+      "token": "consult",
+      "proposed": "paediatric consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "consult->palliative consultation",
+      "token": "consult",
+      "proposed": "palliative consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "consult->vascular consultation",
+      "token": "consult",
+      "proposed": "vascular consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cont->consultation",
+      "token": "cont",
+      "proposed": "consultation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cont->continuous",
+      "token": "cont",
+      "proposed": "continuous",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "cont->neurological consultation",
+      "token": "cont",
+      "proposed": "neurological consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cont->paediatric consultation",
+      "token": "cont",
+      "proposed": "paediatric consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cont->palliative consultation",
+      "token": "cont",
+      "proposed": "palliative consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cont->vascular consultation",
+      "token": "cont",
+      "proposed": "vascular consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cr->cardiac",
+      "token": "cr",
+      "proposed": "cardiac",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cr->care",
+      "token": "cr",
+      "proposed": "care",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cr->case conference",
+      "token": "cr",
+      "proposed": "case conference",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cr->comprehensive",
+      "token": "cr",
+      "proposed": "comprehensive",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cr->conference",
+      "token": "cr",
+      "proposed": "conference",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cr->critical",
+      "token": "cr",
+      "proposed": "critical",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "cr->critical care occupancy",
+      "token": "cr",
+      "proposed": "critical care occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cr->pulmonary critical",
+      "token": "cr",
+      "proposed": "pulmonary critical",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cr->wound care",
+      "token": "cr",
+      "proposed": "wound care",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "crit->critical",
+      "token": "crit",
+      "proposed": "critical",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "crit->critical care occupancy",
+      "token": "crit",
+      "proposed": "critical care occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "crit->pulmonary critical",
+      "token": "crit",
+      "proposed": "pulmonary critical",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->case",
+      "token": "cs",
+      "proposed": "case",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cs->case conference",
+      "token": "cs",
+      "proposed": "case conference",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->comprehensive",
+      "token": "cs",
+      "proposed": "comprehensive",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cs->consultation",
+      "token": "cs",
+      "proposed": "consultation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cs->continuous",
+      "token": "cs",
+      "proposed": "continuous",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "cs->hepatic case",
+      "token": "cs",
+      "proposed": "hepatic case",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->neurological consultation",
+      "token": "cs",
+      "proposed": "neurological consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->paediatric consultation",
+      "token": "cs",
+      "proposed": "paediatric consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->palliative consultation",
+      "token": "cs",
+      "proposed": "palliative consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->psychiatric case",
+      "token": "cs",
+      "proposed": "psychiatric case",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->pulmonary case",
+      "token": "cs",
+      "proposed": "pulmonary case",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "cs->vascular consultation",
+      "token": "cs",
+      "proposed": "vascular consultation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "derm->dermatologic",
+      "token": "derm",
+      "proposed": "dermatologic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "diag->diagnostic",
+      "token": "diag",
+      "proposed": "diagnostic",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "diag->diagnostic imaging",
+      "token": "diag",
+      "proposed": "diagnostic imaging",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "diag->discharge",
+      "token": "diag",
+      "proposed": "discharge",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "diag->discharge planning",
+      "token": "diag",
+      "proposed": "discharge planning",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "diag->metabolic discharge",
+      "token": "diag",
+      "proposed": "metabolic discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "diag->orthopaedic discharge",
+      "token": "diag",
+      "proposed": "orthopaedic discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "diag->psychiatric discharge",
+      "token": "diag",
+      "proposed": "psychiatric discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "diag->urologic discharge",
+      "token": "diag",
+      "proposed": "urologic discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "diag->vascular diagnostic",
+      "token": "diag",
+      "proposed": "vascular diagnostic",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "disch->discharge",
+      "token": "disch",
+      "proposed": "discharge",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "disch->discharge planning",
+      "token": "disch",
+      "proposed": "discharge planning",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "disch->metabolic discharge",
+      "token": "disch",
+      "proposed": "metabolic discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "disch->orthopaedic discharge",
+      "token": "disch",
+      "proposed": "orthopaedic discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "disch->psychiatric discharge",
+      "token": "disch",
+      "proposed": "psychiatric discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "disch->urologic discharge",
+      "token": "disch",
+      "proposed": "urologic discharge",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "disp->dispensing",
+      "token": "disp",
+      "proposed": "dispensing",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "disp->pharmaceutical dispensing",
+      "token": "disp",
+      "proposed": "pharmaceutical dispensing",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "elect->elective",
+      "token": "elect",
+      "proposed": "elective",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "emer->emergency",
+      "token": "emer",
+      "proposed": "emergency",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "endo->endocrine",
+      "token": "endo",
+      "proposed": "endocrine",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "endo->endoscopic",
+      "token": "endo",
+      "proposed": "endoscopic",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "endo->endoscopic procedure",
+      "token": "endo",
+      "proposed": "endoscopic procedure",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "endo->gastrointestinal endoscopic",
+      "token": "endo",
+      "proposed": "gastrointestinal endoscopic",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "endo->metabolic endoscopic",
+      "token": "endo",
+      "proposed": "metabolic endoscopic",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "endo->psychiatric endoscopic",
+      "token": "endo",
+      "proposed": "psychiatric endoscopic",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "endosc->endoscopic",
+      "token": "endosc",
+      "proposed": "endoscopic",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "endosc->endoscopic procedure",
+      "token": "endosc",
+      "proposed": "endoscopic procedure",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "endosc->gastrointestinal endoscopic",
+      "token": "endosc",
+      "proposed": "gastrointestinal endoscopic",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "endosc->metabolic endoscopic",
+      "token": "endosc",
+      "proposed": "metabolic endoscopic",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "endosc->psychiatric endoscopic",
+      "token": "endosc",
+      "proposed": "psychiatric endoscopic",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ent->otolaryngologic",
+      "token": "ent",
+      "proposed": "otolaryngologic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "clinical_acronym"
+      ]
+    },
+    {
+      "candidate_id": "ext->extended",
+      "token": "ext",
+      "proposed": "extended",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "foc->focused",
+      "token": "foc",
+      "proposed": "focused",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "fract->fraction",
+      "token": "fract",
+      "proposed": "fraction",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "fract->radiotherapy fraction",
+      "token": "fract",
+      "proposed": "radiotherapy fraction",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ger->geriatric",
+      "token": "ger",
+      "proposed": "geriatric",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "gi->gastrointestinal",
+      "token": "gi",
+      "proposed": "gastrointestinal",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "gi->geriatric",
+      "token": "gi",
+      "proposed": "geriatric",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "haem->haematology",
+      "token": "haem",
+      "proposed": "haematology",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "hep->hepatic",
+      "token": "hep",
+      "proposed": "hepatic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "hm->dermatologic home",
+      "token": "hm",
+      "proposed": "dermatologic home",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "hm->haematology",
+      "token": "hm",
+      "proposed": "haematology",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "hm->home",
+      "token": "hm",
+      "proposed": "home",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "hm->home visit",
+      "token": "hm",
+      "proposed": "home visit",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "hm->urologic home",
+      "token": "hm",
+      "proposed": "urologic home",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "img->diagnostic imaging",
+      "token": "img",
+      "proposed": "diagnostic imaging",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "img->imaging",
+      "token": "img",
+      "proposed": "imaging",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "img->imaging interpretation",
+      "token": "img",
+      "proposed": "imaging interpretation",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "img->immunologic",
+      "token": "img",
+      "proposed": "immunologic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "img->metabolic imaging",
+      "token": "img",
+      "proposed": "metabolic imaging",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "img->musculoskeletal imaging",
+      "token": "img",
+      "proposed": "musculoskeletal imaging",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "img->oncology imaging",
+      "token": "img",
+      "proposed": "oncology imaging",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "img->renal imaging",
+      "token": "img",
+      "proposed": "renal imaging",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "immun->immunologic",
+      "token": "immun",
+      "proposed": "immunologic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "inf->infectious",
+      "token": "inf",
+      "proposed": "infectious",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "inf->infectious infusion",
+      "token": "inf",
+      "proposed": "infectious infusion",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "inf->infusion",
+      "token": "inf",
+      "proposed": "infusion",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "inf->infusion therapy",
+      "token": "inf",
+      "proposed": "infusion therapy",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "inf->urologic infusion",
+      "token": "inf",
+      "proposed": "urologic infusion",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "infect->infectious",
+      "token": "infect",
+      "proposed": "infectious",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "inpt->imaging interpretation",
+      "token": "inpt",
+      "proposed": "imaging interpretation",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "inpt->inpatient",
+      "token": "inpt",
+      "proposed": "inpatient",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "inpt->interpretation",
+      "token": "inpt",
+      "proposed": "interpretation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "intens->intensive",
+      "token": "intens",
+      "proposed": "intensive",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "interm->intermittent",
+      "token": "interm",
+      "proposed": "intermittent",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "interp->imaging interpretation",
+      "token": "interp",
+      "proposed": "imaging interpretation",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "interp->interpretation",
+      "token": "interp",
+      "proposed": "interpretation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "isol->isolation",
+      "token": "isol",
+      "proposed": "isolation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "isol->isolation room occupancy",
+      "token": "isol",
+      "proposed": "isolation room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "isol->ophthalmic isolation",
+      "token": "isol",
+      "proposed": "ophthalmic isolation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "isol->paediatric isolation",
+      "token": "isol",
+      "proposed": "paediatric isolation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "lab->haematology laboratory",
+      "token": "lab",
+      "proposed": "haematology laboratory",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "lab->immunologic laboratory",
+      "token": "lab",
+      "proposed": "immunologic laboratory",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "lab->laboratory",
+      "token": "lab",
+      "proposed": "laboratory",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "lab->laboratory panel",
+      "token": "lab",
+      "proposed": "laboratory panel",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "metab->metabolic",
+      "token": "metab",
+      "proposed": "metabolic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "monit->monitoring",
+      "token": "monit",
+      "proposed": "monitoring",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "monit->telemetry monitoring",
+      "token": "monit",
+      "proposed": "telemetry monitoring",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "msk->musculoskeletal",
+      "token": "msk",
+      "proposed": "musculoskeletal",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "neuro->neurological",
+      "token": "neuro",
+      "proposed": "neurological",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "nurs->dermatologic nursing",
+      "token": "nurs",
+      "proposed": "dermatologic nursing",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "nurs->nursing",
+      "token": "nurs",
+      "proposed": "nursing",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "nurs->nursing observation",
+      "token": "nurs",
+      "proposed": "nursing observation",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "nutr->gastrointestinal nutritional",
+      "token": "nutr",
+      "proposed": "gastrointestinal nutritional",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "nutr->musculoskeletal nutritional",
+      "token": "nutr",
+      "proposed": "musculoskeletal nutritional",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "nutr->nutritional",
+      "token": "nutr",
+      "proposed": "nutritional",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "nutr->nutritional support",
+      "token": "nutr",
+      "proposed": "nutritional support",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "nutr->ophthalmic nutritional",
+      "token": "nutr",
+      "proposed": "ophthalmic nutritional",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "nutr->urologic nutritional",
+      "token": "nutr",
+      "proposed": "urologic nutritional",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "obs->nursing observation",
+      "token": "obs",
+      "proposed": "nursing observation",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "obs->observation",
+      "token": "obs",
+      "proposed": "observation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "occ->critical care occupancy",
+      "token": "occ",
+      "proposed": "critical care occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "occ->isolation room occupancy",
+      "token": "occ",
+      "proposed": "isolation room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "occ->occupancy",
+      "token": "occ",
+      "proposed": "occupancy",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "occ->recovery room occupancy",
+      "token": "occ",
+      "proposed": "recovery room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "onc->critical care occupancy",
+      "token": "onc",
+      "proposed": "critical care occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "onc->isolation room occupancy",
+      "token": "onc",
+      "proposed": "isolation room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "onc->occupancy",
+      "token": "onc",
+      "proposed": "occupancy",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "onc->oncology",
+      "token": "onc",
+      "proposed": "oncology",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "onc->otolaryngologic",
+      "token": "onc",
+      "proposed": "otolaryngologic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "onc->recovery room occupancy",
+      "token": "onc",
+      "proposed": "recovery room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ophth->ophthalmic",
+      "token": "ophth",
+      "proposed": "ophthalmic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "ortho->orthopaedic",
+      "token": "ortho",
+      "proposed": "orthopaedic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "outpt->outpatient",
+      "token": "outpt",
+      "proposed": "outpatient",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "paed->paediatric",
+      "token": "paed",
+      "proposed": "paediatric",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "pall->palliative",
+      "token": "pall",
+      "proposed": "palliative",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "pharm->dermatologic pharmaceutical",
+      "token": "pharm",
+      "proposed": "dermatologic pharmaceutical",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "pharm->gastrointestinal pharmaceutical",
+      "token": "pharm",
+      "proposed": "gastrointestinal pharmaceutical",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "pharm->metabolic pharmaceutical",
+      "token": "pharm",
+      "proposed": "metabolic pharmaceutical",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "pharm->pharmaceutical",
+      "token": "pharm",
+      "proposed": "pharmaceutical",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "pharm->pharmaceutical dispensing",
+      "token": "pharm",
+      "proposed": "pharmaceutical dispensing",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "physio->hepatic physiotherapy",
+      "token": "physio",
+      "proposed": "hepatic physiotherapy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "physio->metabolic physiotherapy",
+      "token": "physio",
+      "proposed": "metabolic physiotherapy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "physio->physiotherapy",
+      "token": "physio",
+      "proposed": "physiotherapy",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "physio->physiotherapy session",
+      "token": "physio",
+      "proposed": "physiotherapy session",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "physio->psychiatric physiotherapy",
+      "token": "physio",
+      "proposed": "psychiatric physiotherapy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "plng->discharge planning",
+      "token": "plng",
+      "proposed": "discharge planning",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "plng->planning",
+      "token": "plng",
+      "proposed": "planning",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "pnl->laboratory panel",
+      "token": "pnl",
+      "proposed": "laboratory panel",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "pnl->panel",
+      "token": "pnl",
+      "proposed": "panel",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "postop->postoperative",
+      "token": "postop",
+      "proposed": "postoperative",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "preop->preoperative",
+      "token": "preop",
+      "proposed": "preoperative",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "proc->biopsy procedure",
+      "token": "proc",
+      "proposed": "biopsy procedure",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "proc->endoscopic procedure",
+      "token": "proc",
+      "proposed": "endoscopic procedure",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "proc->procedure",
+      "token": "proc",
+      "proposed": "procedure",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "prog->programme",
+      "token": "prog",
+      "proposed": "programme",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "prog->rehabilitation programme",
+      "token": "prog",
+      "proposed": "rehabilitation programme",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "psych->psychiatric",
+      "token": "psych",
+      "proposed": "psychiatric",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "pulm->pulmonary",
+      "token": "pulm",
+      "proposed": "pulmonary",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "radiother->neurological radiotherapy",
+      "token": "radiother",
+      "proposed": "neurological radiotherapy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "radiother->paediatric radiotherapy",
+      "token": "radiother",
+      "proposed": "paediatric radiotherapy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "radiother->pulmonary radiotherapy",
+      "token": "radiother",
+      "proposed": "pulmonary radiotherapy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "radiother->radiotherapy",
+      "token": "radiother",
+      "proposed": "radiotherapy",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "radiother->radiotherapy fraction",
+      "token": "radiother",
+      "proposed": "radiotherapy fraction",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "radiother->urologic radiotherapy",
+      "token": "radiother",
+      "proposed": "urologic radiotherapy",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "recov->immunologic recovery",
+      "token": "recov",
+      "proposed": "immunologic recovery",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "recov->neurological recovery",
+      "token": "recov",
+      "proposed": "neurological recovery",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "recov->ophthalmic recovery",
+      "token": "recov",
+      "proposed": "ophthalmic recovery",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "recov->recovery",
+      "token": "recov",
+      "proposed": "recovery",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "recov->recovery room occupancy",
+      "token": "recov",
+      "proposed": "recovery room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "rehab->endocrine rehabilitation",
+      "token": "rehab",
+      "proposed": "endocrine rehabilitation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "rehab->rehabilitation",
+      "token": "rehab",
+      "proposed": "rehabilitation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "rehab->rehabilitation programme",
+      "token": "rehab",
+      "proposed": "rehabilitation programme",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ren->endocrine rehabilitation",
+      "token": "ren",
+      "proposed": "endocrine rehabilitation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ren->rehabilitation",
+      "token": "ren",
+      "proposed": "rehabilitation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "ren->rehabilitation programme",
+      "token": "ren",
+      "proposed": "rehabilitation programme",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ren->renal",
+      "token": "ren",
+      "proposed": "renal",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "rm->isolation room occupancy",
+      "token": "rm",
+      "proposed": "isolation room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "rm->recovery room occupancy",
+      "token": "rm",
+      "proposed": "recovery room occupancy",
+      "slots": [
+        "concept",
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "rm->room",
+      "token": "rm",
+      "proposed": "room",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "rtn->endocrine rehabilitation",
+      "token": "rtn",
+      "proposed": "endocrine rehabilitation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "rtn->rehabilitation",
+      "token": "rtn",
+      "proposed": "rehabilitation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "rtn->rehabilitation programme",
+      "token": "rtn",
+      "proposed": "rehabilitation programme",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "rtn->routine",
+      "token": "rtn",
+      "proposed": "routine",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "sess->physiotherapy session",
+      "token": "sess",
+      "proposed": "physiotherapy session",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "sess->session",
+      "token": "sess",
+      "proposed": "session",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "spclst->specialist",
+      "token": "spclst",
+      "proposed": "specialist",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "spcm->otolaryngologic specimen",
+      "token": "spcm",
+      "proposed": "otolaryngologic specimen",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "spcm->specimen",
+      "token": "spcm",
+      "proposed": "specimen",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "spcm->specimen analysis",
+      "token": "spcm",
+      "proposed": "specimen analysis",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "std->standard",
+      "token": "std",
+      "proposed": "standard",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "steril->immunologic sterilisation",
+      "token": "steril",
+      "proposed": "immunologic sterilisation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "steril->metabolic sterilisation",
+      "token": "steril",
+      "proposed": "metabolic sterilisation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "steril->oncology sterilisation",
+      "token": "steril",
+      "proposed": "oncology sterilisation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "steril->sterilisation",
+      "token": "steril",
+      "proposed": "sterilisation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "steril->sterilisation service",
+      "token": "steril",
+      "proposed": "sterilisation service",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "supp->nutritional support",
+      "token": "supp",
+      "proposed": "nutritional support",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "supp->support",
+      "token": "supp",
+      "proposed": "support",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "supp->ventilation support",
+      "token": "supp",
+      "proposed": "ventilation support",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "supv->supervised",
+      "token": "supv",
+      "proposed": "supervised",
+      "slots": [
+        "qualifier"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "svc->service",
+      "token": "svc",
+      "proposed": "service",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "svc->sterilisation service",
+      "token": "svc",
+      "proposed": "sterilisation service",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "svc->transfusion service",
+      "token": "svc",
+      "proposed": "transfusion service",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "svc->transport service",
+      "token": "svc",
+      "proposed": "transport service",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "telem->geriatric telemetry",
+      "token": "telem",
+      "proposed": "geriatric telemetry",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "telem->psychiatric telemetry",
+      "token": "telem",
+      "proposed": "psychiatric telemetry",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "telem->telemetry",
+      "token": "telem",
+      "proposed": "telemetry",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "telem->telemetry monitoring",
+      "token": "telem",
+      "proposed": "telemetry monitoring",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "telem->vascular telemetry",
+      "token": "telem",
+      "proposed": "vascular telemetry",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ther->endocrine theatre",
+      "token": "ther",
+      "proposed": "endocrine theatre",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ther->infusion therapy",
+      "token": "ther",
+      "proposed": "infusion therapy",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ther->theatre",
+      "token": "ther",
+      "proposed": "theatre",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "ther->theatre time",
+      "token": "ther",
+      "proposed": "theatre time",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "ther->therapy",
+      "token": "ther",
+      "proposed": "therapy",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "thtr->endocrine theatre",
+      "token": "thtr",
+      "proposed": "endocrine theatre",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "thtr->theatre",
+      "token": "thtr",
+      "proposed": "theatre",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "thtr->theatre time",
+      "token": "thtr",
+      "proposed": "theatre time",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "tm->geriatric telemetry",
+      "token": "tm",
+      "proposed": "geriatric telemetry",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "tm->psychiatric telemetry",
+      "token": "tm",
+      "proposed": "psychiatric telemetry",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "tm->telemetry",
+      "token": "tm",
+      "proposed": "telemetry",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "tm->telemetry monitoring",
+      "token": "tm",
+      "proposed": "telemetry monitoring",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "tm->theatre time",
+      "token": "tm",
+      "proposed": "theatre time",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "tm->time",
+      "token": "tm",
+      "proposed": "time",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "tm->vascular telemetry",
+      "token": "tm",
+      "proposed": "vascular telemetry",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "transf->oncology transfusion",
+      "token": "transf",
+      "proposed": "oncology transfusion",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "transf->transfusion",
+      "token": "transf",
+      "proposed": "transfusion",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "transf->transfusion service",
+      "token": "transf",
+      "proposed": "transfusion service",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "transp->dermatologic transport",
+      "token": "transp",
+      "proposed": "dermatologic transport",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "transp->ophthalmic transport",
+      "token": "transp",
+      "proposed": "ophthalmic transport",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "transp->otolaryngologic transport",
+      "token": "transp",
+      "proposed": "otolaryngologic transport",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "transp->transport",
+      "token": "transp",
+      "proposed": "transport",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "transp->transport service",
+      "token": "transp",
+      "proposed": "transport service",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "transp->urologic transport",
+      "token": "transp",
+      "proposed": "urologic transport",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "urol->urologic",
+      "token": "urol",
+      "proposed": "urologic",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "vasc->vascular",
+      "token": "vasc",
+      "proposed": "vascular",
+      "slots": [
+        "specialty"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "vent->cardiac ventilation",
+      "token": "vent",
+      "proposed": "cardiac ventilation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "vent->infectious ventilation",
+      "token": "vent",
+      "proposed": "infectious ventilation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "vent->metabolic ventilation",
+      "token": "vent",
+      "proposed": "metabolic ventilation",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "vent->ventilation",
+      "token": "vent",
+      "proposed": "ventilation",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "prefix"
+      ]
+    },
+    {
+      "candidate_id": "vent->ventilation support",
+      "token": "vent",
+      "proposed": "ventilation support",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "vst->home visit",
+      "token": "vst",
+      "proposed": "home visit",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    },
+    {
+      "candidate_id": "vst->visit",
+      "token": "vst",
+      "proposed": "visit",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "wnd->geriatric wound",
+      "token": "wnd",
+      "proposed": "geriatric wound",
+      "slots": [
+        "specialty",
+        "concept"
+      ],
+      "heuristics": [
+        "specialty_phrase"
+      ]
+    },
+    {
+      "candidate_id": "wnd->wound",
+      "token": "wnd",
+      "proposed": "wound",
+      "slots": [
+        "concept"
+      ],
+      "heuristics": [
+        "subsequence"
+      ]
+    },
+    {
+      "candidate_id": "wnd->wound care",
+      "token": "wnd",
+      "proposed": "wound care",
+      "slots": [
+        "concept",
+        "concept"
+      ],
+      "heuristics": [
+        "concept_phrase"
+      ]
+    }
+  ]
+}

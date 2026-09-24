@@ -1,0 +1,14 @@
+{
+  "invoice_rows": 1050,
+  "flagged": 76,
+  "pricing_complete": 945,
+  "correction_reconstructable": 939,
+  "expected_total_submitted": 939,
+  "expected_total_blank": 111,
+  "rows_exact_via_financial_equivalence": 0,
+  "represented_lines_by_financial_status": {
+    "financially_ambiguous": 108,
+    "identity_resolved": 13011,
+    "unknown_service": 11
+  }
+}
