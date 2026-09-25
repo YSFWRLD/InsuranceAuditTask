@@ -1,0 +1,339 @@
+{
+  "contract_fingerprint": "4a8029188e3f1e2f69eacb4493659fdcecc584c46364ff870bb888f3d47d5ac0",
+  "normalization_version": "h3-normalization-1",
+  "matcher_version": "h3-matcher-1",
+  "lexicon": "h3_orthographic",
+  "missing_word_template": "001_jev_missing_word_resolution@faedc45476cb",
+  "jev_model": "jev-1.13.0",
+  "ranking": "line occurrences still unresolved after every stage, then affected invoices",
+  "count": 18,
+  "unresolved": [
+    {
+      "identity_key": "continuous isolation occupancy room",
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "occupancy continuous isol room /RM-3671"
+      ],
+      "line_occurrences": 21,
+      "line_occurrences_still_unresolved": 21,
+      "invoice_count": 21,
+      "line_identity": {
+        "AMBIGUOUS:jev_ambiguous_contracted": 21
+      },
+      "candidates": [
+        "Continuous Immunologic Isolation Room Occupancy",
+        "Continuous Renal Isolation Room Occupancy"
+      ],
+      "candidate_rule_families": [
+        "daily_cap",
+        "non_business_day_uplift"
+      ]
+    },
+    {
+      "identity_key": "dispensing inpatient pharmaceutical",
+      "structural_status": "AMBIGUOUS",
+      "method": "missing_discriminator",
+      "reason": "only one contracted service fits, but the text omits its qualifier, specialty or concept, so an uncontracted service of the same shape is not ruled out by text",
+      "raw_examples": [
+        "dispensing inpt pharm /RM-6838"
+      ],
+      "line_occurrences": 20,
+      "line_occurrences_still_unresolved": 20,
+      "invoice_count": 20,
+      "line_identity": {
+        "AMBIGUOUS:missing_discriminator": 20
+      },
+      "candidates": [
+        "Inpatient Gastrointestinal Pharmaceutical Dispensing"
+      ],
+      "candidate_rule_families": [
+        "daily_cap"
+      ]
+    },
+    {
+      "identity_key": "advanced monitoring telemetry",
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "adv - telemetry monit /RM-3459"
+      ],
+      "line_occurrences": 18,
+      "line_occurrences_still_unresolved": 18,
+      "invoice_count": 18,
+      "line_identity": {
+        "AMBIGUOUS:jev_ambiguous_contracted": 18
+      },
+      "candidates": [
+        "Advanced Gastrointestinal Telemetry Monitoring",
+        "Advanced Paediatric Telemetry Monitoring"
+      ],
+      "candidate_rule_families": [
+        "exclusion"
+      ]
+    },
+    {
+      "identity_key": "inpatient theatre time",
+      "structural_status": "AMBIGUOUS",
+      "method": "tied_candidates",
+      "reason": "several contracted services fit the text equally",
+      "raw_examples": [
+        "inpt thtr tm"
+      ],
+      "line_occurrences": 13,
+      "line_occurrences_still_unresolved": 13,
+      "invoice_count": 13,
+      "line_identity": {
+        "AMBIGUOUS:jev_ambiguous_contracted": 13
+      },
+      "candidates": [
+        "Inpatient Metabolic Theatre Time",
+        "Inpatient Musculoskeletal Theatre Time"
+      ],
+      "candidate_rule_families": [
+        "daily_cap",
+        "exclusion"
+      ]
+    },
+    {
+      "identity_key": "administration anaesthesia hepatic ?inpt",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "administration - inpt hepatic anaes /RM-1221"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "ambulatory discharge musculoskeletal planning",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "amb msk disch planning /RM-1463"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "comprehensive oncology wound ?cr",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "compr oncology wnd cr /RM-4911"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "conference infectious intermittent ?cs",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "intermittent infect cs conf /RM-4829"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "conference paediatric preoperative",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "conf  preop paed"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "consultation focused rheumatologic",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "foc - rheum consult /RM-2110"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "critical occupancy rheumatologic ?cont ?cr",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "cont - rheum critical cr occ"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "diagnostic metabolic ?img",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "metab diagnostic img /RM-3735"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "discharge elective gastrointestinal planning",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "elect - gastrointestinal disch plng /RM-9438"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "elective physiotherapy session vascular",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "elect vascular physio sess /RM-8458"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "emergency musculoskeletal therapy ?inf",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "emer  - msk inf therapy"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "home infectious intensive visit",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "vst - intens infectious home"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "intensive service sterilisation",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "intens - steril svc"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    },
+    {
+      "identity_key": "metabolic monitoring outpatient telemetry",
+      "structural_status": "UNKNOWN",
+      "method": "contradiction",
+      "reason": "a word that was read contradicts every contracted service",
+      "raw_examples": [
+        "monitoring - outpt metabolic telem"
+      ],
+      "line_occurrences": 1,
+      "line_occurrences_still_unresolved": 1,
+      "invoice_count": 1,
+      "line_identity": {
+        "UNKNOWN:contradiction": 1
+      },
+      "candidates": [],
+      "candidate_rule_families": []
+    }
+  ]
+}

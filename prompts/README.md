@@ -3,7 +3,8 @@
 This folder holds every prompt behind this repository, in two kinds:
 
 - **Development** prompts are what the human author sent to the coding
-  assistant (Claude Code: Claude Opus 5, and Claude Opus 5.5 for Hospital 4).
+  assistant (Claude Code: Claude Opus 5, and Claude Opus 5.5 for Hospitals 3,
+  4 and 5).
 - **Runtime** prompts are what the code itself sends to a model when it runs.
 
 All AI use is disclosed in the root [README](../README.md#ai-use-disclosure).
@@ -24,6 +25,18 @@ Edit these files only when the stage is meant to be rerun.
 | [hospital_2/001_service_classifier.md](hospital_2/001_service_classifier.md) | OpenRouter `z-ai/glm-5.3-flash` | **active** | Written once and never iterated. Every stored classifier result carries version `@2b8f543469fb`. It was run on 2026-09-22: 69 clusters, 75 HTTP attempts including retries, 67 valid results and 2 failures. |
 | [hospital_2/002_jev_verifier.md](hospital_2/002_jev_verifier.md) | Jev | **superseded by 003** | A prose prompt with an invented question shape. **Never sent to Jev**, and no verdict came from it. Kept unchanged as history. |
 | [hospital_2/003_jev_verifier.md](hospital_2/003_jev_verifier.md) | Jev `jev-1.13.0` (TypeSafe SystemOne) | **active** | Uses the Playground `type: choice` format. Its documentation section (not the question) was edited once, on 2026-09-22T00:38Z, after the live parser fix. All 67 stored verdicts carry that edited version, `@7a2a82a900a9`. The committed version was `@ec6778c60f4b`. |
+
+### Hospital 3 (loaded and sent by `src/hospital_3/semantic.py`)
+
+One file with one JSON block, handled exactly as for Hospital 5 below: one
+request with one choice question per unresolved description cluster, every
+answer stored with the SHA-256 of the exact request body, and `audit h3`
+refusing to run on a missing or stale review. Hospital 3 has no normalisation
+question: its vocabulary is derived deterministically.
+
+| file | model | status | notes |
+|---|---|---|---|
+| [hospital_3/001_jev_missing_word_resolution.md](hospital_3/001_jev_missing_word_resolution.md) | Jev `jev-1.13.0` (TypeSafe SystemOne) | **active** | Question `missing_word_resolution`. The JSON block is Hospital 5's prompt 002 copied unchanged, so the question was not re-tuned; only the header differs. Written once and never iterated; all 38 stored reviews carry `@faedc45476cb`. The gates were fixed in code before the run. Run on 2026-09-25. |
 
 ### Hospital 5 (loaded and sent by `src/hospital_5/semantic.py`)
 
@@ -74,6 +87,8 @@ OpenRouter HTTP attempts.
 | 14 | [hospital_5/000_implement_hospital_5.md](hospital_5/000_implement_hospital_5.md) | H5 | the Hospital 5 implementation: Jev-reviewed normalisation and missing-word identity, financial equivalence, and its addition to the combined submission (Claude Opus 5.5) | at the time |
 | 15 | [hospital_5/003_pre_commit_validation.md](hospital_5/003_pre_commit_validation.md) | H5 | the pre-commit review: single-candidate closure removed, the review-slot guard, the `bd` override and 2-letter invariant, and text-only justifications for exclusions, discounts, caps and facility (Claude Opus 5.5) | at the time |
 | 16 | [hospital_5/004_ent_contextual_normalization.md](hospital_5/004_ent_contextual_normalization.md) | H5 | the human-reviewed contextual reading `ent → otolaryngologic` (in `artifacts/hospital_5/human_review_overrides.json`), the `h5-matcher-2` single-reading contextual fix, and one new missing-word question (Claude Opus 5.5) | at the time |
+| 17 | [hospital_3/000_implement_hospital_3.md](hospital_3/000_implement_hospital_3.md) | H3 | the Hospital 3 implementation: the three-document contract with explicit precedence and the amendment by Service Date, the deterministic H3 vocabulary, the bounded Jev missing-word stage, sensitivity runs, and its addition to the combined submission (Claude Opus 5.5) | at the time |
+| 18 | [hospital_3/002_h3_finalization_review.md](hospital_3/002_h3_finalization_review.md) | H3 | the H3 finalization review: the ENT reading reviewed and accepted as a human-reviewed contextual interpretation, independent checks of the Jev requests, the amendment, every proven total and blank, a fix to the per-unit discount alternative, and the updated write-up and PDF (Claude Opus 5.5) | at the time |
 
 **"Recovered"** means the prompt was not written to the repository when it was
 sent. On 2026-09-22 it was copied verbatim from the Claude Code session
@@ -81,7 +96,7 @@ transcript, and each such file says so in its header. Nothing was paraphrased
 or reconstructed from memory. Message 8 groups five one-line requests that
 were sent separately.
 
-These sixteen files hold the author's task prompts from this project's Claude
+These eighteen files hold the author's task prompts from this project's Claude
 Code session, which begins with message 1. Some short operational chat messages
 were not saved as prompt files, and have not been added retroactively:
 - after P005: pushing to the author's own repository, and deleting a local

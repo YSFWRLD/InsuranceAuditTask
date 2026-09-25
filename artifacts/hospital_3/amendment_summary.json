@@ -1,0 +1,748 @@
+{
+  "effective_date": "2025-01-01",
+  "basis": "Service Date (A1.1.2); the invoice date is never used for pricing",
+  "lines_by_rate_source": {
+    "amendment_no_1 A1.2": 280,
+    "amendment_no_1 A1.3": 81,
+    "appendix_b B.1": 11208,
+    "no contract price (identity not settled)": 86
+  },
+  "lines_of_amended_services_by_rate_source": {
+    "amendment_no_1 A1.2": 280,
+    "appendix_b B.1": 282
+  },
+  "amended_service_lines_dated_before_the_amendment_on_invoices_issued_after": 28,
+  "lines_of_added_services": 81,
+  "lines_of_added_services_before_effective_date": 0,
+  "added_service_lines": [
+    {
+      "line_id": "H3-L00446-04",
+      "invoice_id": "INV-H3-000446",
+      "service_date": "2025-01-01",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00472-08",
+      "invoice_id": "INV-H3-000472",
+      "service_date": "2025-01-03",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00475-06",
+      "invoice_id": "INV-H3-000475",
+      "service_date": "2025-01-01",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00479-01",
+      "invoice_id": "INV-H3-000479",
+      "service_date": "2025-01-04",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00482-12",
+      "invoice_id": "INV-H3-000482",
+      "service_date": "2025-01-01",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00490-09",
+      "invoice_id": "INV-H3-000490",
+      "service_date": "2025-01-01",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00502-06",
+      "invoice_id": "INV-H3-000502",
+      "service_date": "2025-01-04",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00512-06",
+      "invoice_id": "INV-H3-000512",
+      "service_date": "2025-01-11",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00515-01",
+      "invoice_id": "INV-H3-000515",
+      "service_date": "2025-01-13",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00528-01",
+      "invoice_id": "INV-H3-000528",
+      "service_date": "2025-01-26",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00530-08",
+      "invoice_id": "INV-H3-000530",
+      "service_date": "2025-01-27",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00546-10",
+      "invoice_id": "INV-H3-000546",
+      "service_date": "2025-02-07",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00546-14",
+      "invoice_id": "INV-H3-000546",
+      "service_date": "2025-02-08",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00548-03",
+      "invoice_id": "INV-H3-000548",
+      "service_date": "2025-02-09",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00549-05",
+      "invoice_id": "INV-H3-000549",
+      "service_date": "2025-02-08",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00550-05",
+      "invoice_id": "INV-H3-000550",
+      "service_date": "2025-02-10",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00566-08",
+      "invoice_id": "INV-H3-000566",
+      "service_date": "2025-02-22",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00573-04",
+      "invoice_id": "INV-H3-000573",
+      "service_date": "2025-03-01",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00579-07",
+      "invoice_id": "INV-H3-000579",
+      "service_date": "2025-03-03",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00585-18",
+      "invoice_id": "INV-H3-000585",
+      "service_date": "2025-03-12",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00594-06",
+      "invoice_id": "INV-H3-000594",
+      "service_date": "2025-03-16",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00598-10",
+      "invoice_id": "INV-H3-000598",
+      "service_date": "2025-03-23",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00605-07",
+      "invoice_id": "INV-H3-000605",
+      "service_date": "2025-03-27",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00608-07",
+      "invoice_id": "INV-H3-000608",
+      "service_date": "2025-03-30",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00609-09",
+      "invoice_id": "INV-H3-000609",
+      "service_date": "2025-03-31",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00609-15",
+      "invoice_id": "INV-H3-000609",
+      "service_date": "2025-04-02",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00612-11",
+      "invoice_id": "INV-H3-000612",
+      "service_date": "2025-04-05",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00624-07",
+      "invoice_id": "INV-H3-000624",
+      "service_date": "2025-04-15",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00628-18",
+      "invoice_id": "INV-H3-000628",
+      "service_date": "2025-04-19",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00638-05",
+      "invoice_id": "INV-H3-000638",
+      "service_date": "2025-04-24",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00648-16",
+      "invoice_id": "INV-H3-000648",
+      "service_date": "2025-05-09",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00653-05",
+      "invoice_id": "INV-H3-000352",
+      "service_date": "2025-05-11",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00660-10",
+      "invoice_id": "INV-H3-000660",
+      "service_date": "2025-05-20",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00667-11",
+      "invoice_id": "INV-H3-000667",
+      "service_date": "2025-05-29",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00673-07",
+      "invoice_id": "INV-H3-000673",
+      "service_date": "2025-06-02",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00686-03",
+      "invoice_id": "INV-H3-000686",
+      "service_date": "2025-06-13",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00687-14",
+      "invoice_id": "INV-H3-000687",
+      "service_date": "2025-06-11",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00689-01",
+      "invoice_id": "INV-H3-000689",
+      "service_date": "2025-06-13",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00690-14",
+      "invoice_id": "INV-H3-000690",
+      "service_date": "2025-06-14",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00693-03",
+      "invoice_id": "INV-H3-000693",
+      "service_date": "2025-06-16",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00697-18",
+      "invoice_id": "INV-H3-000697",
+      "service_date": "2025-06-16",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00708-01",
+      "invoice_id": "INV-H3-000708",
+      "service_date": "2025-06-28",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00709-12",
+      "invoice_id": "INV-H3-000709",
+      "service_date": "2025-06-25",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00718-04",
+      "invoice_id": "INV-H3-000718",
+      "service_date": "2025-07-03",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00718-10",
+      "invoice_id": "INV-H3-000718",
+      "service_date": "2025-07-06",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00723-04",
+      "invoice_id": "INV-H3-000723",
+      "service_date": "2025-07-11",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00727-06",
+      "invoice_id": "INV-H3-000727",
+      "service_date": "2025-07-14",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00732-08",
+      "invoice_id": "INV-H3-000732",
+      "service_date": "2025-07-13",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00741-08",
+      "invoice_id": "INV-H3-000741",
+      "service_date": "2025-07-23",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00755-03",
+      "invoice_id": "INV-H3-000755",
+      "service_date": "2025-08-06",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00761-14",
+      "invoice_id": "INV-H3-000761",
+      "service_date": "2025-08-11",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00764-06",
+      "invoice_id": "INV-H3-000764",
+      "service_date": "2025-08-14",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00770-02",
+      "invoice_id": "INV-H3-000770",
+      "service_date": "2025-08-23",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00771-11",
+      "invoice_id": "INV-H3-000771",
+      "service_date": "2025-08-23",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00783-03",
+      "invoice_id": "INV-H3-000783",
+      "service_date": "2025-09-01",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00786-05",
+      "invoice_id": "INV-H3-000786",
+      "service_date": "2025-09-02",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00791-02",
+      "invoice_id": "INV-H3-000791",
+      "service_date": "2025-09-08",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00792-02",
+      "invoice_id": "INV-H3-000792",
+      "service_date": "2025-09-11",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00793-07",
+      "invoice_id": "INV-H3-000793",
+      "service_date": "2025-09-11",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00809-07",
+      "invoice_id": "INV-H3-000809",
+      "service_date": "2025-09-18",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00815-03",
+      "invoice_id": "INV-H3-000815",
+      "service_date": "2025-09-29",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00820-03",
+      "invoice_id": "INV-H3-000820",
+      "service_date": "2025-10-01",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00821-04",
+      "invoice_id": "INV-H3-000821",
+      "service_date": "2025-10-04",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00822-06",
+      "invoice_id": "INV-H3-000822",
+      "service_date": "2025-10-04",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00833-06",
+      "invoice_id": "INV-H3-000833",
+      "service_date": "2025-10-07",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00842-02",
+      "invoice_id": "INV-H3-000842",
+      "service_date": "2025-10-16",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00846-01",
+      "invoice_id": "INV-H3-000846",
+      "service_date": "2025-10-17",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00852-07",
+      "invoice_id": "INV-H3-000852",
+      "service_date": "2025-10-21",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00854-07",
+      "invoice_id": "INV-H3-000854",
+      "service_date": "2025-10-23",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00858-17",
+      "invoice_id": "INV-H3-000858",
+      "service_date": "2025-11-04",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00862-02",
+      "invoice_id": "INV-H3-000862",
+      "service_date": "2025-11-02",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00867-08",
+      "invoice_id": "INV-H3-000867",
+      "service_date": "2025-11-05",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00867-09",
+      "invoice_id": "INV-H3-000867",
+      "service_date": "2025-11-06",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00872-03",
+      "invoice_id": "INV-H3-000872",
+      "service_date": "2025-11-09",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00884-09",
+      "invoice_id": "INV-H3-000884",
+      "service_date": "2025-11-19",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00893-06",
+      "invoice_id": "INV-H3-000893",
+      "service_date": "2025-11-25",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00901-07",
+      "invoice_id": "INV-H3-000901",
+      "service_date": "2025-12-01",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00905-01",
+      "invoice_id": "INV-H3-000905",
+      "service_date": "2025-12-03",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00922-10",
+      "invoice_id": "INV-H3-000922",
+      "service_date": "2025-12-13",
+      "status": "MATCHED",
+      "method": "jev_missing_word",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00929-05",
+      "invoice_id": "INV-H3-000929",
+      "service_date": "2025-12-19",
+      "status": "MATCHED",
+      "method": "text",
+      "service": "Advanced Dermatologic Nutritional Support",
+      "findings": []
+    },
+    {
+      "line_id": "H3-L00938-09",
+      "invoice_id": "INV-H3-000938",
+      "service_date": "2025-12-24",
+      "status": "MATCHED",
+      "method": "text_contextual",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "findings": []
+    }
+  ]
+}

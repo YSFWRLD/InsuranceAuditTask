@@ -2,15 +2,17 @@
 
     python -m src.main audit h1          audit every invoice; write predictions
     python -m src.main audit h2          (offline: reads persisted service mappings)
+    python -m src.main audit h3          (offline: reads committed, gated Jev missing-word
+                                         reviews and refuses stale ones; writes artifacts too)
     python -m src.main audit h4          (offline, deterministic; writes artifacts too)
     python -m src.main audit h5          (offline: reads committed, reviewed Jev decisions
                                          and refuses stale ones; writes artifacts too)
     python -m src.main evaluate h1       score against the development split
                                          (and the locked holdout, while frozen)
-    python -m src.main submission        outputs/hospital_{2,4,5}/submission.csv and
+    python -m src.main submission        outputs/hospital_{2,3,4,5}/submission.csv and
                                          the combined outputs/submission.csv (scored
-                                         hospitals only: hospital_2, hospital_4,
-                                         hospital_5; offline)
+                                         hospitals only: hospital_2, hospital_3,
+                                         hospital_4, hospital_5; offline)
 
 Hospital 2 semantic service identity (run deliberately, never by an audit):
 
@@ -22,6 +24,14 @@ Hospital 2 semantic service identity (run deliberately, never by an audit):
     python -m src.main semantic h2 jev-export   Playground state + questions JSON
     python -m src.main semantic h2 jev-import   apply jev_results.json (Playground)
     python -m src.main semantic h2 rebuild      recompute final decisions
+
+Hospital 3 semantic review (Jev only, missing-word questions; run deliberately,
+never by an audit):
+
+    python -m src.main semantic h3 status               readiness, review coverage, staleness
+    python -m src.main semantic h3 missing-word-run     Jev by API, one question per cluster
+    python -m src.main semantic h3 missing-word-export  Playground request bodies
+    python -m src.main semantic h3 missing-word-import  apply jev_missing_word_results.json
 
 Hospital 5 semantic review (Jev only; run deliberately, never by an audit):
 
@@ -43,8 +53,8 @@ Development evidence (reads labels; not needed to produce predictions):
     python -m src.main freeze h1 [--reason TEXT]
     python -m src.main research h1 temporal|ablation
 
-Hospitals 1, 2, 4 and 5 are implemented; ``h1``, ``h2``, ``h4`` and ``h5`` are the
-accepted hospitals.  Hospital 4 has no semantic stage; Hospitals 4 and 5 have no labels.
+Hospitals 1 to 5 are all implemented; ``h1`` to ``h5`` are the accepted hospitals.
+Hospital 4 has no semantic stage; Hospitals 2 to 5 have no labels.
 """
 
 from __future__ import annotations
@@ -60,6 +70,9 @@ from .hospital_1 import audit as h1_audit
 from .hospital_1 import evaluation as h1_evaluation
 from .hospital_1.matcher import write_match_audit
 from .hospital_2 import audit as h2_audit
+from .hospital_3 import audit as h3_audit
+from .hospital_3 import report as h3_report
+from .hospital_3 import semantic as h3_semantic
 from .hospital_4 import audit as h4_audit
 from .hospital_5 import audit as h5_audit
 from .hospital_5 import report as h5_report
@@ -76,6 +89,7 @@ REPO_ROOT = h1_audit.REPO_ROOT
 OUTPUTS = REPO_ROOT / "outputs"
 H1_OUTPUTS = OUTPUTS / "hospital_1"
 H2_OUTPUTS = OUTPUTS / "hospital_2"
+H3_OUTPUTS = OUTPUTS / "hospital_3"
 H4_OUTPUTS = OUTPUTS / "hospital_4"
 H5_OUTPUTS = OUTPUTS / "hospital_5"
 TEMPLATE = REPO_ROOT / "submission_template.csv"
@@ -103,6 +117,9 @@ def _run_h1() -> tuple[h1_audit.Pipeline, list]:
 def cmd_audit(args) -> None:
     if args.hospital == "h2":
         _audit_h2()
+        return
+    if args.hospital == "h3":
+        _audit_h3()
         return
     if args.hospital == "h4":
         _audit_h4()
@@ -173,22 +190,23 @@ def cmd_research(args) -> None:
 def cmd_submission(_args) -> None:
     # Only scored hospitals go into the submission.  Hospital 1 is the
     # labelled development hospital and is not scored, so it is left out.
-    # Hospitals 2, 4 and 5 are the scored hospitals implemented; 3 is not.
+    # Hospitals 2, 3, 4 and 5 are the scored hospitals.
     _, results = _run_h2()
     h2_file = H2_OUTPUTS / "submission.csv"
     write_hospital_submission([r.result for r in results], h2_file, template=TEMPLATE)
+    h3_file = H3_OUTPUTS / "submission.csv"
+    write_hospital_submission([r.result for r in _run_h3()[1]], h3_file, template=TEMPLATE)
     h4_pipeline = h4_audit.H4Pipeline()
     h4_file = H4_OUTPUTS / "submission.csv"
     write_hospital_submission([r.result for r in h4_pipeline.run()], h4_file, template=TEMPLATE)
     h5_file = H5_OUTPUTS / "submission.csv"
     write_hospital_submission([r.result for r in _run_h5()[1]], h5_file, template=TEMPLATE)
     path = OUTPUTS / "submission.csv"
-    files = {"hospital_2": h2_file, "hospital_4": h4_file, "hospital_5": h5_file}
+    files = {"hospital_2": h2_file, "hospital_3": h3_file, "hospital_4": h4_file, "hospital_5": h5_file}
     counts = combine_submissions(files, path)
     for name, file in files.items():
         print(f"{file}: {counts[name]} rows")
-    print(f"{path}: {sum(counts.values())} rows {counts} (hospital_1 is not scored; "
-          "hospital 3 is not implemented)")
+    print(f"{path}: {sum(counts.values())} rows {counts} (hospital_1 is not scored)")
 
 
 # --------------------------------------------------------------------------
@@ -232,6 +250,74 @@ def _audit_h2() -> None:
     _print_counts(h2_audit.identity_counts(pipeline))
     print(f"pricing traces for flagged invoices: {n_traces}")
     print(f"written to {H2_OUTPUTS}")
+
+
+def _run_h3():
+    try:
+        pipeline = h3_audit.H3Pipeline()
+    except h3_semantic.StaleSemanticArtifacts as exc:
+        raise SystemExit(f"hospital_3: {exc}") from None
+    return pipeline, pipeline.run()
+
+
+def _audit_h3() -> None:
+    pipeline, results = _run_h3()
+    info = h3_report.write_outputs(pipeline, results, template=TEMPLATE)
+    res = [r.result for r in results]
+    print(f"invoice occurrences: {len(pipeline.occurrences)}  invoice numbers (rows): {info['rows']}  "
+          f"flagged rows: {sum(r.flagged for r in res)}")
+    print(f"pricing_complete: {sum(r.pricing_complete for r in res)}  "
+          f"correction_reconstructable: {sum(r.correction_reconstructable for r in res)}  "
+          f"expected_total_cents blank: {sum(r.expected_total_cents is None for r in res)}")
+    print("identity:")
+    _print_counts(info["counts"])
+    print(f"pricing traces (every line): {info['traces']}")
+    # The contribution report reruns the audit with each identity stage switched
+    # on in turn, and under each alternative contract reading, on the same data.
+    h3_report.write_contribution_report(pipeline)
+    print(f"written to {H3_OUTPUTS} (including semantic_contribution.md) and {h3_audit.ARTIFACTS}")
+
+
+def cmd_semantic_h3(args) -> None:
+    """Hospital 3's one Jev stage: missing-word questions.  Each run or import
+    stores reviews; the gated decisions artifact is then rewritten from them."""
+    step = args.step
+    config = h3_semantic.JevConfig.from_env()
+    pipeline = h3_audit.H3Pipeline(decisions={})
+    requests = h3_semantic.missing_word_requests(pipeline.contract, pipeline.occurrences, pipeline.matcher, config)
+    reviews = h3_semantic.load_reviews()
+
+    def log(line: str) -> None:
+        print("  " + line, flush=True)
+
+    if step == "status":
+        for key, value in config.readiness().items():
+            print(f"  {key:<16} {value}")
+        current, pending, stale = h3_semantic.partition(requests, reviews)
+        print(f"  missing-word: {len(requests)} requests, {len(current)} current reviews, {len(pending)} pending "
+              f"({len(stale)} stale)")
+        return
+    if step == "missing-word-run":
+        try:
+            transport = h3_semantic.http_transport(config)
+        except h3_semantic.SemanticError as exc:
+            raise SystemExit(f"{exc}. No Jev call was made and nothing was changed.") from None
+        print("missing-word reviews:", h3_semantic.run_requests(requests, transport, workers=config.workers,
+                                                                 log=log))
+    elif step == "missing-word-export":
+        n = h3_semantic.export_requests(requests, reviews)
+        print(f"{n} pending request(s) -> {h3_semantic.MISSING_WORD_EXPORT}")
+    elif step == "missing-word-import":
+        path = args.file or h3_semantic.MISSING_WORD_RESULTS
+        if not path.exists():
+            raise SystemExit(f"{path} not found; nothing imported")
+        try:
+            print("missing-word results:", h3_semantic.import_results(
+                json.loads(path.read_text(encoding="utf-8")), requests))
+        except (h3_semantic.SemanticError, json.JSONDecodeError) as exc:
+            raise SystemExit(str(exc)) from None
+    counts = h3_semantic.write_decisions(requests, h3_semantic.load_reviews(), config.gates)
+    print(f"missing-word decisions: {counts} -> {h3_semantic.MISSING_WORD_DECISIONS_FILE}")
 
 
 def _audit_h4() -> None:
@@ -378,6 +464,11 @@ def _write_jev_batch(state: dict, questions: dict) -> None:
 
 
 def cmd_semantic(args) -> None:
+    if args.hospital == "h3":
+        if args.step not in H3_SEMANTIC_STEPS:
+            raise SystemExit(f"semantic h3: unknown step {args.step!r}; choose from {', '.join(H3_SEMANTIC_STEPS)}")
+        cmd_semantic_h3(args)
+        return
     if args.hospital == "h5":
         if args.step not in H5_SEMANTIC_STEPS:
             raise SystemExit(f"semantic h5: unknown step {args.step!r}; choose from {', '.join(H5_SEMANTIC_STEPS)}")
@@ -470,6 +561,7 @@ def cmd_semantic(args) -> None:
 # --------------------------------------------------------------------------
 
 H2_SEMANTIC_STEPS = ("prepare", "status", "classify", "jev", "jev-export", "jev-import", "rebuild")
+H3_SEMANTIC_STEPS = ("status", "missing-word-run", "missing-word-export", "missing-word-import")
 H5_SEMANTIC_STEPS = ("status", "candidates", "normalize-run", "normalize-export", "normalize-import",
                      "missing-word-run", "missing-word-export", "missing-word-import", "probe", "report")
 
@@ -496,7 +588,7 @@ def main() -> None:
         p.set_defaults(func=func)
         return p
 
-    hospital_command("audit", cmd_audit, ("h1", "h2", "h4", "h5"))
+    hospital_command("audit", cmd_audit, ("h1", "h2", "h3", "h4", "h5"))
     hospital_command("evaluate", cmd_evaluate)
     sub.add_parser("submission").set_defaults(func=cmd_submission)
     hospital_command("split", cmd_split).add_argument("--force", action="store_true")
@@ -504,8 +596,9 @@ def main() -> None:
     hospital_command("research", cmd_research).add_argument(
         "study", choices=["temporal", "ablation"]
     )
-    semantic = hospital_command("semantic", cmd_semantic, ("h2", "h5"))
-    semantic.add_argument("step", choices=list(dict.fromkeys(H2_SEMANTIC_STEPS + H5_SEMANTIC_STEPS)))
+    semantic = hospital_command("semantic", cmd_semantic, ("h2", "h3", "h5"))
+    semantic.add_argument("step", choices=list(dict.fromkeys(H2_SEMANTIC_STEPS + H3_SEMANTIC_STEPS
+                                                             + H5_SEMANTIC_STEPS)))
     semantic.add_argument("--limit", type=int, default=None)
     semantic.add_argument("--retry-failed", action="store_true")
     semantic.add_argument("--file", type=Path, default=None)

@@ -1,0 +1,248 @@
+{
+  "stages": {
+    "exact_contract_words": {
+      "description": "exact contract words only (reference suffixes stripped, punctuation collapsed); structural matching and the unit-basis tie-break; no review; Hospital 4's reconstruction rule",
+      "identity_clusters": 463,
+      "identified_lines": 0,
+      "ambiguous_lines": 8366,
+      "unknown_lines": 3289,
+      "lines_by_method": {
+        "contradiction": 3,
+        "no_recognised_words": 3286,
+        "unrecognised_token": 8366
+      },
+      "pricing_complete": 0,
+      "invoices_reconstructable": 0,
+      "expected_total_blanks": 932,
+      "flagged": 892,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "h3_orthographic_lexicon": {
+      "description": "+ Hospital 3's own letter-rule lexicon (global and contextual tokens), without the ENT acronym",
+      "identity_clusters": 225,
+      "identified_lines": 10327,
+      "ambiguous_lines": 1314,
+      "unknown_lines": 14,
+      "lines_by_method": {
+        "contradiction": 14,
+        "missing_discriminator": 838,
+        "text": 6143,
+        "text_contextual": 4099,
+        "tied_candidates": 52,
+        "unit_basis_tiebreak": 85,
+        "unrecognised_token": 424
+      },
+      "pricing_complete": 229,
+      "invoices_reconstructable": 224,
+      "expected_total_blanks": 708,
+      "flagged": 69,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "ent_in_context": {
+      "description": "+ `ent -> otolaryngologic`, read only where a contracted service fits",
+      "identity_clusters": 219,
+      "identified_lines": 10751,
+      "ambiguous_lines": 890,
+      "unknown_lines": 14,
+      "lines_by_method": {
+        "contradiction": 14,
+        "missing_discriminator": 838,
+        "text": 6143,
+        "text_contextual": 4523,
+        "tied_candidates": 52,
+        "unit_basis_tiebreak": 85
+      },
+      "pricing_complete": 356,
+      "invoices_reconstructable": 350,
+      "expected_total_blanks": 582,
+      "flagged": 69,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "jev_missing_word_resolution": {
+      "description": "+ gated Jev missing-word decisions per cluster and billed basis",
+      "identity_clusters": 219,
+      "identified_lines": 11569,
+      "ambiguous_lines": 72,
+      "unknown_lines": 14,
+      "lines_by_method": {
+        "contradiction": 14,
+        "jev_ambiguous_contracted": 52,
+        "jev_missing_word": 818,
+        "missing_discriminator": 20,
+        "text": 6143,
+        "text_contextual": 4523,
+        "unit_basis_tiebreak": 85
+      },
+      "pricing_complete": 852,
+      "invoices_reconstructable": 842,
+      "expected_total_blanks": 90,
+      "flagged": 70,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "financial_equivalence": {
+      "description": "+ financial equivalence and dependency-aware uncertainty (FINAL)",
+      "identity_clusters": 219,
+      "identified_lines": 11569,
+      "ambiguous_lines": 72,
+      "unknown_lines": 14,
+      "lines_by_method": {
+        "contradiction": 14,
+        "jev_ambiguous_contracted": 52,
+        "jev_missing_word": 818,
+        "missing_discriminator": 20,
+        "text": 6143,
+        "text_contextual": 4523,
+        "unit_basis_tiebreak": 85
+      },
+      "pricing_complete": 852,
+      "invoices_reconstructable": 848,
+      "expected_total_blanks": 84,
+      "flagged": 70,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "ablation_no_jev": {
+      "description": "FINAL without the Jev missing-word decisions (the deterministic audit)",
+      "identity_clusters": 219,
+      "identified_lines": 10751,
+      "ambiguous_lines": 890,
+      "unknown_lines": 14,
+      "lines_by_method": {
+        "contradiction": 14,
+        "missing_discriminator": 838,
+        "text": 6143,
+        "text_contextual": 4523,
+        "tied_candidates": 52,
+        "unit_basis_tiebreak": 85
+      },
+      "pricing_complete": 356,
+      "invoices_reconstructable": 353,
+      "expected_total_blanks": 579,
+      "flagged": 69,
+      "invoices_exact_with_an_ambiguous_line": 0
+    },
+    "ablation_no_ent": {
+      "description": "FINAL without the ENT reading (questions it would change are answered only from stored reviews with identical requests; none is asked)",
+      "identity_clusters": 225,
+      "identified_lines": 11145,
+      "ambiguous_lines": 496,
+      "unknown_lines": 14,
+      "lines_by_method": {
+        "contradiction": 14,
+        "jev_ambiguous_contracted": 52,
+        "jev_missing_word": 818,
+        "missing_discriminator": 20,
+        "text": 6143,
+        "text_contextual": 4099,
+        "unit_basis_tiebreak": 85,
+        "unrecognised_token": 424
+      },
+      "pricing_complete": 532,
+      "invoices_reconstructable": 529,
+      "expected_total_blanks": 403,
+      "flagged": 70,
+      "invoices_exact_with_an_ambiguous_line": 0
+    }
+  },
+  "missing_word_review": {
+    "questions": 38,
+    "lines_in_reviewed_clusters": 890,
+    "gated_outcomes": {
+      "ambiguous_contracted": 3,
+      "service": 34,
+      "unresolved": 1
+    }
+  },
+  "sensitivity": [
+    {
+      "run": "exclusion_after_trigger_only",
+      "alternative_reading": "Section 9: only a Service Date on or after the trigger's counts",
+      "flagged": 69,
+      "reconstructable": 848,
+      "rows_changed": 3,
+      "changed_rows": [
+        "INV-H3-000052",
+        "INV-H3-000600",
+        "INV-H3-000789"
+      ]
+    },
+    {
+      "run": "exclusion_day_n_excluded",
+      "alternative_reading": "Section 9: day N itself is outside the window",
+      "flagged": 70,
+      "reconstructable": 848,
+      "rows_changed": 2,
+      "changed_rows": [
+        "INV-H3-000600",
+        "INV-H3-000789"
+      ]
+    },
+    {
+      "run": "discount_unit_split",
+      "alternative_reading": "clause 6.1: each unit takes the tier its own position exceeds",
+      "flagged": 82,
+      "reconstructable": 848,
+      "rows_changed": 14,
+      "changed_rows": [
+        "INV-H3-000017",
+        "INV-H3-000056",
+        "INV-H3-000062",
+        "INV-H3-000065",
+        "INV-H3-000080",
+        "INV-H3-000143",
+        "INV-H3-000159",
+        "INV-H3-000169",
+        "INV-H3-000237",
+        "INV-H3-000239",
+        "INV-H3-000252",
+        "INV-H3-000367",
+        "INV-H3-000398",
+        "INV-H3-000399"
+      ]
+    },
+    {
+      "run": "day_aggregate_counts_repeats",
+      "alternative_reading": "clause 4.1 / Section 7: repeats of a Service that day add to the aggregate",
+      "flagged": 70,
+      "reconstructable": 848,
+      "rows_changed": 0,
+      "changed_rows": []
+    },
+    {
+      "run": "cap_excess_priced_at_cap",
+      "alternative_reading": "Section 7: units above the cap are simply not payable",
+      "flagged": 70,
+      "reconstructable": 852,
+      "rows_changed": 4,
+      "changed_rows": [
+        "INV-H3-000067",
+        "INV-H3-000236",
+        "INV-H3-000347",
+        "INV-H3-000427"
+      ]
+    },
+    {
+      "run": "uncontracted_on_date_blank",
+      "alternative_reading": "A1.3: decline to price a pre-effective added service instead of 0",
+      "flagged": 70,
+      "reconstructable": 848,
+      "rows_changed": 0,
+      "changed_rows": []
+    }
+  ],
+  "final_blank_reasons": {
+    "note": "An invoice can carry several reasons; 'primary' counts each blank once, under its most specific reason (the order of audit.BLANK_REASONS).",
+    "blank_rows": 84,
+    "by_reason": {
+      "a line's candidate services lead to different corrected amounts": 50,
+      "a line's description omits a word, so an uncontracted service cannot be ruled out": 20,
+      "a line names a service this agreement does not contract (no contract price)": 13,
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 7
+    },
+    "by_primary_reason": {
+      "a line's candidate services lead to different corrected amounts": 47,
+      "a line's description omits a word, so an uncontracted service cannot be ruled out": 20,
+      "a line names a service this agreement does not contract (no contract price)": 13,
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 4
+    }
+  }
+}

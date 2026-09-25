@@ -1,0 +1,1070 @@
+{
+  "contract_fingerprint": "4a8029188e3f1e2f69eacb4493659fdcecc584c46364ff870bb888f3d47d5ac0",
+  "normalization_version": "h3-normalization-1",
+  "matcher_version": "h3-matcher-1",
+  "lexicon": "h3_orthographic",
+  "missing_word_template": "001_jev_missing_word_resolution@faedc45476cb",
+  "jev_model": "jev-1.13.0",
+  "note": "Every reading is derived by letter rules from Hospital 3's own contract vocabulary; the classification is decided by Hospital 3's own descriptions (normalization.py). No other hospital's abbreviation table or review is consulted.",
+  "counts": {
+    "global": 75,
+    "contextual": 21
+  },
+  "tokens": {
+    "admin": {
+      "classification": "global",
+      "distinct_descriptions": 10,
+      "readings": {
+        "administration": [
+          "prefix"
+        ]
+      }
+    },
+    "adv": {
+      "classification": "global",
+      "distinct_descriptions": 24,
+      "readings": {
+        "advanced": [
+          "prefix"
+        ]
+      }
+    },
+    "amb": {
+      "classification": "global",
+      "distinct_descriptions": 12,
+      "readings": {
+        "ambulatory": [
+          "prefix"
+        ]
+      }
+    },
+    "anaes": {
+      "classification": "global",
+      "distinct_descriptions": 11,
+      "readings": {
+        "anaesthesia": [
+          "prefix"
+        ]
+      }
+    },
+    "anly": {
+      "classification": "global",
+      "distinct_descriptions": 5,
+      "readings": {
+        "analysis": [
+          "subsequence"
+        ]
+      }
+    },
+    "asst": {
+      "classification": "global",
+      "distinct_descriptions": 6,
+      "readings": {
+        "assisted": [
+          "subsequence"
+        ]
+      }
+    },
+    "bd": {
+      "classification": "contextual",
+      "distinct_descriptions": 3,
+      "readings": {
+        "bed": [
+          "subsequence"
+        ],
+        "bedside": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "bed": 187
+      }
+    },
+    "beds": {
+      "classification": "global",
+      "distinct_descriptions": 31,
+      "readings": {
+        "bedside": [
+          "prefix"
+        ]
+      }
+    },
+    "biop": {
+      "classification": "global",
+      "distinct_descriptions": 20,
+      "readings": {
+        "biopsy": [
+          "prefix"
+        ]
+      }
+    },
+    "card": {
+      "classification": "global",
+      "distinct_descriptions": 8,
+      "readings": {
+        "cardiac": [
+          "prefix"
+        ]
+      }
+    },
+    "compr": {
+      "classification": "global",
+      "distinct_descriptions": 8,
+      "readings": {
+        "comprehensive": [
+          "prefix"
+        ]
+      }
+    },
+    "conf": {
+      "classification": "global",
+      "distinct_descriptions": 11,
+      "readings": {
+        "conference": [
+          "prefix"
+        ]
+      }
+    },
+    "consult": {
+      "classification": "global",
+      "distinct_descriptions": 8,
+      "readings": {
+        "consultation": [
+          "prefix"
+        ]
+      }
+    },
+    "cont": {
+      "classification": "contextual",
+      "distinct_descriptions": 20,
+      "readings": {
+        "consultation": [
+          "subsequence"
+        ],
+        "continuous": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "(unread: no reading fits)": 1,
+        "continuous": 399
+      }
+    },
+    "cr": {
+      "classification": "contextual",
+      "distinct_descriptions": 20,
+      "readings": {
+        "cardiac": [
+          "subsequence"
+        ],
+        "care": [
+          "subsequence"
+        ],
+        "comprehensive": [
+          "subsequence"
+        ],
+        "conference": [
+          "subsequence"
+        ],
+        "critical": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "(unread: no reading fits)": 2,
+        "care": 316,
+        "care | comprehensive": 63,
+        "care | critical": 106
+      }
+    },
+    "crit": {
+      "classification": "global",
+      "distinct_descriptions": 4,
+      "readings": {
+        "critical": [
+          "prefix"
+        ]
+      }
+    },
+    "cs": {
+      "classification": "contextual",
+      "distinct_descriptions": 10,
+      "readings": {
+        "case": [
+          "subsequence"
+        ],
+        "comprehensive": [
+          "subsequence"
+        ],
+        "consultation": [
+          "subsequence"
+        ],
+        "continuous": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "(unread: no reading fits)": 1,
+        "case": 196
+      }
+    },
+    "derm": {
+      "classification": "global",
+      "distinct_descriptions": 25,
+      "readings": {
+        "dermatologic": [
+          "prefix"
+        ]
+      }
+    },
+    "diag": {
+      "classification": "contextual",
+      "distinct_descriptions": 6,
+      "readings": {
+        "diagnostic": [
+          "prefix"
+        ],
+        "discharge": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "diagnostic": 137
+      }
+    },
+    "dial": {
+      "classification": "global",
+      "distinct_descriptions": 10,
+      "readings": {
+        "dialysis": [
+          "prefix"
+        ]
+      }
+    },
+    "disch": {
+      "classification": "global",
+      "distinct_descriptions": 10,
+      "readings": {
+        "discharge": [
+          "prefix"
+        ]
+      }
+    },
+    "disp": {
+      "classification": "global",
+      "distinct_descriptions": 11,
+      "readings": {
+        "dispensing": [
+          "prefix"
+        ]
+      }
+    },
+    "elect": {
+      "classification": "global",
+      "distinct_descriptions": 10,
+      "readings": {
+        "elective": [
+          "prefix"
+        ]
+      }
+    },
+    "emer": {
+      "classification": "global",
+      "distinct_descriptions": 15,
+      "readings": {
+        "emergency": [
+          "prefix"
+        ]
+      }
+    },
+    "endo": {
+      "classification": "contextual",
+      "distinct_descriptions": 5,
+      "readings": {
+        "endocrine": [
+          "prefix"
+        ],
+        "endoscopic": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "endocrine": 133
+      }
+    },
+    "endosc": {
+      "classification": "global",
+      "distinct_descriptions": 11,
+      "readings": {
+        "endoscopic": [
+          "prefix"
+        ]
+      }
+    },
+    "ent": {
+      "classification": "contextual",
+      "distinct_descriptions": 15,
+      "readings": {
+        "otolaryngologic": [
+          "clinical_acronym"
+        ]
+      },
+      "reason": "clinical acronym: read only where a contracted service fits",
+      "lines_by_surviving_reading": {
+        "otolaryngologic": 424
+      }
+    },
+    "ext": {
+      "classification": "global",
+      "distinct_descriptions": 18,
+      "readings": {
+        "extended": [
+          "prefix"
+        ]
+      }
+    },
+    "foc": {
+      "classification": "global",
+      "distinct_descriptions": 15,
+      "readings": {
+        "focused": [
+          "prefix"
+        ]
+      }
+    },
+    "fract": {
+      "classification": "global",
+      "distinct_descriptions": 14,
+      "readings": {
+        "fraction": [
+          "prefix"
+        ]
+      }
+    },
+    "ger": {
+      "classification": "global",
+      "distinct_descriptions": 7,
+      "readings": {
+        "geriatric": [
+          "prefix"
+        ]
+      }
+    },
+    "gi": {
+      "classification": "contextual",
+      "distinct_descriptions": 12,
+      "readings": {
+        "gastrointestinal": [
+          "subsequence"
+        ],
+        "geriatric": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "gastrointestinal": 372
+      }
+    },
+    "haem": {
+      "classification": "global",
+      "distinct_descriptions": 14,
+      "readings": {
+        "haematology": [
+          "prefix"
+        ]
+      }
+    },
+    "hep": {
+      "classification": "global",
+      "distinct_descriptions": 6,
+      "readings": {
+        "hepatic": [
+          "prefix"
+        ]
+      }
+    },
+    "hm": {
+      "classification": "contextual",
+      "distinct_descriptions": 2,
+      "readings": {
+        "haematology": [
+          "subsequence"
+        ],
+        "home": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "home": 58
+      }
+    },
+    "img": {
+      "classification": "contextual",
+      "distinct_descriptions": 29,
+      "readings": {
+        "imaging": [
+          "subsequence"
+        ],
+        "immunologic": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "(unread: no reading fits)": 1,
+        "imaging": 735
+      }
+    },
+    "immun": {
+      "classification": "global",
+      "distinct_descriptions": 5,
+      "readings": {
+        "immunologic": [
+          "prefix"
+        ]
+      }
+    },
+    "inf": {
+      "classification": "contextual",
+      "distinct_descriptions": 12,
+      "readings": {
+        "infectious": [
+          "prefix"
+        ],
+        "infusion": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "(unread: no reading fits)": 1,
+        "infusion": 286
+      }
+    },
+    "infect": {
+      "classification": "global",
+      "distinct_descriptions": 12,
+      "readings": {
+        "infectious": [
+          "prefix"
+        ]
+      }
+    },
+    "inpt": {
+      "classification": "contextual",
+      "distinct_descriptions": 27,
+      "readings": {
+        "inpatient": [
+          "subsequence"
+        ],
+        "interpretation": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "(unread: no reading fits)": 1,
+        "inpatient": 536,
+        "inpatient | interpretation": 90
+      }
+    },
+    "intens": {
+      "classification": "global",
+      "distinct_descriptions": 16,
+      "readings": {
+        "intensive": [
+          "prefix"
+        ]
+      }
+    },
+    "interm": {
+      "classification": "global",
+      "distinct_descriptions": 9,
+      "readings": {
+        "intermittent": [
+          "prefix"
+        ]
+      }
+    },
+    "interp": {
+      "classification": "global",
+      "distinct_descriptions": 16,
+      "readings": {
+        "interpretation": [
+          "prefix"
+        ]
+      }
+    },
+    "isol": {
+      "classification": "global",
+      "distinct_descriptions": 17,
+      "readings": {
+        "isolation": [
+          "prefix"
+        ]
+      }
+    },
+    "lab": {
+      "classification": "global",
+      "distinct_descriptions": 15,
+      "readings": {
+        "laboratory": [
+          "prefix"
+        ]
+      }
+    },
+    "metab": {
+      "classification": "global",
+      "distinct_descriptions": 26,
+      "readings": {
+        "metabolic": [
+          "prefix"
+        ]
+      }
+    },
+    "monit": {
+      "classification": "global",
+      "distinct_descriptions": 11,
+      "readings": {
+        "monitoring": [
+          "prefix"
+        ]
+      }
+    },
+    "msk": {
+      "classification": "global",
+      "distinct_descriptions": 7,
+      "readings": {
+        "musculoskeletal": [
+          "subsequence"
+        ]
+      }
+    },
+    "neuro": {
+      "classification": "global",
+      "distinct_descriptions": 20,
+      "readings": {
+        "neurological": [
+          "prefix"
+        ]
+      }
+    },
+    "nurs": {
+      "classification": "global",
+      "distinct_descriptions": 1,
+      "readings": {
+        "nursing": [
+          "prefix"
+        ]
+      }
+    },
+    "nutr": {
+      "classification": "global",
+      "distinct_descriptions": 20,
+      "readings": {
+        "nutritional": [
+          "prefix"
+        ]
+      }
+    },
+    "obs": {
+      "classification": "contextual",
+      "distinct_descriptions": 2,
+      "readings": {
+        "observation": [
+          "prefix"
+        ],
+        "obstetric": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "observation": 95
+      }
+    },
+    "obst": {
+      "classification": "contextual",
+      "distinct_descriptions": 10,
+      "readings": {
+        "observation": [
+          "subsequence"
+        ],
+        "obstetric": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "obstetric": 223
+      }
+    },
+    "occ": {
+      "classification": "global",
+      "distinct_descriptions": 30,
+      "readings": {
+        "occupancy": [
+          "prefix"
+        ]
+      }
+    },
+    "onc": {
+      "classification": "contextual",
+      "distinct_descriptions": 7,
+      "readings": {
+        "occupancy": [
+          "subsequence"
+        ],
+        "oncology": [
+          "prefix"
+        ],
+        "otolaryngologic": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "oncology": 167
+      }
+    },
+    "ophth": {
+      "classification": "global",
+      "distinct_descriptions": 14,
+      "readings": {
+        "ophthalmic": [
+          "prefix"
+        ]
+      }
+    },
+    "ortho": {
+      "classification": "global",
+      "distinct_descriptions": 4,
+      "readings": {
+        "orthopaedic": [
+          "prefix"
+        ]
+      }
+    },
+    "outpt": {
+      "classification": "global",
+      "distinct_descriptions": 20,
+      "readings": {
+        "outpatient": [
+          "subsequence"
+        ]
+      }
+    },
+    "paed": {
+      "classification": "global",
+      "distinct_descriptions": 16,
+      "readings": {
+        "paediatric": [
+          "prefix"
+        ]
+      }
+    },
+    "pall": {
+      "classification": "global",
+      "distinct_descriptions": 11,
+      "readings": {
+        "palliative": [
+          "prefix"
+        ]
+      }
+    },
+    "pharm": {
+      "classification": "global",
+      "distinct_descriptions": 12,
+      "readings": {
+        "pharmaceutical": [
+          "prefix"
+        ]
+      }
+    },
+    "physio": {
+      "classification": "global",
+      "distinct_descriptions": 15,
+      "readings": {
+        "physiotherapy": [
+          "prefix"
+        ]
+      }
+    },
+    "plng": {
+      "classification": "global",
+      "distinct_descriptions": 9,
+      "readings": {
+        "planning": [
+          "subsequence"
+        ]
+      }
+    },
+    "pnl": {
+      "classification": "global",
+      "distinct_descriptions": 16,
+      "readings": {
+        "panel": [
+          "subsequence"
+        ]
+      }
+    },
+    "postop": {
+      "classification": "global",
+      "distinct_descriptions": 23,
+      "readings": {
+        "postoperative": [
+          "prefix"
+        ]
+      }
+    },
+    "preop": {
+      "classification": "global",
+      "distinct_descriptions": 21,
+      "readings": {
+        "preoperative": [
+          "prefix"
+        ]
+      }
+    },
+    "proc": {
+      "classification": "global",
+      "distinct_descriptions": 27,
+      "readings": {
+        "procedure": [
+          "prefix"
+        ]
+      }
+    },
+    "prog": {
+      "classification": "global",
+      "distinct_descriptions": 7,
+      "readings": {
+        "programme": [
+          "prefix"
+        ]
+      }
+    },
+    "psych": {
+      "classification": "global",
+      "distinct_descriptions": 13,
+      "readings": {
+        "psychiatric": [
+          "prefix"
+        ]
+      }
+    },
+    "pulm": {
+      "classification": "global",
+      "distinct_descriptions": 28,
+      "readings": {
+        "pulmonary": [
+          "prefix"
+        ]
+      }
+    },
+    "radiother": {
+      "classification": "global",
+      "distinct_descriptions": 19,
+      "readings": {
+        "radiotherapy": [
+          "prefix"
+        ]
+      }
+    },
+    "recov": {
+      "classification": "global",
+      "distinct_descriptions": 5,
+      "readings": {
+        "recovery": [
+          "prefix"
+        ]
+      }
+    },
+    "rehab": {
+      "classification": "global",
+      "distinct_descriptions": 9,
+      "readings": {
+        "rehabilitation": [
+          "prefix"
+        ]
+      }
+    },
+    "ren": {
+      "classification": "contextual",
+      "distinct_descriptions": 15,
+      "readings": {
+        "rehabilitation": [
+          "subsequence"
+        ],
+        "renal": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "renal": 416
+      }
+    },
+    "rheum": {
+      "classification": "global",
+      "distinct_descriptions": 17,
+      "readings": {
+        "rheumatologic": [
+          "prefix"
+        ]
+      }
+    },
+    "rm": {
+      "classification": "contextual",
+      "distinct_descriptions": 18,
+      "readings": {
+        "rheumatologic": [
+          "subsequence"
+        ],
+        "room": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "room": 403
+      }
+    },
+    "rtn": {
+      "classification": "contextual",
+      "distinct_descriptions": 10,
+      "readings": {
+        "rehabilitation": [
+          "subsequence"
+        ],
+        "routine": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "rehabilitation | routine": 78,
+        "routine": 189
+      }
+    },
+    "sess": {
+      "classification": "global",
+      "distinct_descriptions": 29,
+      "readings": {
+        "session": [
+          "prefix"
+        ]
+      }
+    },
+    "spclst": {
+      "classification": "global",
+      "distinct_descriptions": 25,
+      "readings": {
+        "specialist": [
+          "subsequence"
+        ]
+      }
+    },
+    "spcm": {
+      "classification": "global",
+      "distinct_descriptions": 9,
+      "readings": {
+        "specimen": [
+          "subsequence"
+        ]
+      }
+    },
+    "std": {
+      "classification": "global",
+      "distinct_descriptions": 6,
+      "readings": {
+        "standard": [
+          "subsequence"
+        ]
+      }
+    },
+    "steril": {
+      "classification": "global",
+      "distinct_descriptions": 14,
+      "readings": {
+        "sterilisation": [
+          "prefix"
+        ]
+      }
+    },
+    "supp": {
+      "classification": "global",
+      "distinct_descriptions": 24,
+      "readings": {
+        "support": [
+          "prefix"
+        ]
+      }
+    },
+    "supv": {
+      "classification": "global",
+      "distinct_descriptions": 15,
+      "readings": {
+        "supervised": [
+          "subsequence"
+        ]
+      }
+    },
+    "svc": {
+      "classification": "global",
+      "distinct_descriptions": 17,
+      "readings": {
+        "service": [
+          "subsequence"
+        ]
+      }
+    },
+    "telem": {
+      "classification": "global",
+      "distinct_descriptions": 12,
+      "readings": {
+        "telemetry": [
+          "prefix"
+        ]
+      }
+    },
+    "ther": {
+      "classification": "contextual",
+      "distinct_descriptions": 11,
+      "readings": {
+        "theatre": [
+          "subsequence"
+        ],
+        "therapy": [
+          "prefix"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "therapy": 291
+      }
+    },
+    "thtr": {
+      "classification": "global",
+      "distinct_descriptions": 16,
+      "readings": {
+        "theatre": [
+          "subsequence"
+        ]
+      }
+    },
+    "tm": {
+      "classification": "contextual",
+      "distinct_descriptions": 19,
+      "readings": {
+        "telemetry": [
+          "subsequence"
+        ],
+        "time": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "time": 268
+      }
+    },
+    "transp": {
+      "classification": "global",
+      "distinct_descriptions": 6,
+      "readings": {
+        "transport": [
+          "prefix"
+        ]
+      }
+    },
+    "urol": {
+      "classification": "global",
+      "distinct_descriptions": 11,
+      "readings": {
+        "urologic": [
+          "prefix"
+        ]
+      }
+    },
+    "vasc": {
+      "classification": "global",
+      "distinct_descriptions": 6,
+      "readings": {
+        "vascular": [
+          "prefix"
+        ]
+      }
+    },
+    "vent": {
+      "classification": "global",
+      "distinct_descriptions": 3,
+      "readings": {
+        "ventilation": [
+          "prefix"
+        ]
+      }
+    },
+    "vst": {
+      "classification": "global",
+      "distinct_descriptions": 3,
+      "readings": {
+        "visit": [
+          "subsequence"
+        ]
+      }
+    },
+    "wd": {
+      "classification": "contextual",
+      "distinct_descriptions": 3,
+      "readings": {
+        "ward": [
+          "subsequence"
+        ],
+        "wound": [
+          "subsequence"
+        ]
+      },
+      "reason": "several contract words are reachable",
+      "lines_by_surviving_reading": {
+        "ward": 185
+      }
+    },
+    "wnd": {
+      "classification": "global",
+      "distinct_descriptions": 17,
+      "readings": {
+        "wound": [
+          "subsequence"
+        ]
+      }
+    }
+  },
+  "clinical_acronyms": {
+    "ent": {
+      "reading": "otolaryngologic",
+      "distinct_descriptions": 15,
+      "with_another_specialty_word": [],
+      "descriptions_fitting_a_contracted_service_of_the_specialty": 15,
+      "descriptions_also_seen_with_the_specialty_spelled_out": 7,
+      "scope": "contextual only: read where a contracted service contains every other word",
+      "review": {
+        "canonical": "otolaryngologic",
+        "scope": "hospital_3_contextual",
+        "global": false,
+        "status": "human_reviewed",
+        "reviewed": "2026-09-25",
+        "record": "prompts/hospital_3/002_h3_finalization_review.md; outputs/hospital_3/decision_log.md item 18",
+        "reason": "ENT (ear, nose and throat) stands for otolaryngology. In Hospital 3 it occupies the specialty slot of 19 description spellings (15 token sets, 424 lines), never beside another specialty word; every one fits a contracted Otolaryngologic service, 7 of the 15 token sets also occur with the specialty spelled out, and no Hospital 3 contract word or description suggests another meaning. No price, total or invoice was consulted."
+      }
+    }
+  }
+}

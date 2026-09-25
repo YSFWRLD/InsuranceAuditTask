@@ -12,18 +12,19 @@ two-page PDF: [Yousef_Filmban_Insurance_Audit_Writeup.pdf](Yousef_Filmban_Insura
 |---|---|---|
 | Hospital 1 | implemented; the labelled **development** hospital, evaluated, **not scored** | no — it is development data |
 | Hospital 2 | implemented; **submitted** (1,125 rows, 74 flagged) | yes |
+| Hospital 3 | implemented; **submitted** (932 rows, 70 flagged, 848 totals proven); three-document contract with an amendment priced by Service Date; deterministic vocabulary plus bounded Jev missing-word decisions | yes |
 | Hospital 4 | implemented; **submitted** (835 rows, 63 flagged); fully deterministic, no LLM | yes |
 | Hospital 5 | implemented; **submitted** (1,050 rows, 76 flagged, 939 totals proven); deterministic audit over Jev-reviewed vocabulary and identity decisions | yes |
-| Hospital 3 | **not implemented** — no code, no rows, no placeholder files; not used to produce any submitted prediction | no |
 
 Deliverables, as the brief lists them:
 
 1. **A runnable repository.** See [Install and test](#install-and-test) and
    [Reproduce](#reproduce). Dependencies are pinned in `requirements.txt`.
 2. **`submission.csv`.** [`outputs/submission.csv`](outputs/submission.csv),
-   in the template format. It holds scored hospitals only: 3,010 rows. The
+   in the template format. It holds scored hospitals only: 3,942 rows. The
    per-hospital files are
    [`outputs/hospital_2/submission.csv`](outputs/hospital_2/submission.csv),
+   [`outputs/hospital_3/submission.csv`](outputs/hospital_3/submission.csv),
    [`outputs/hospital_4/submission.csv`](outputs/hospital_4/submission.csv) and
    [`outputs/hospital_5/submission.csv`](outputs/hospital_5/submission.csv).
 3. **Evaluation report.**
@@ -35,10 +36,11 @@ Deliverables, as the brief lists them:
    detailed per-hospital logs are
    [`outputs/hospital_1/decision_log.md`](outputs/hospital_1/decision_log.md),
    [`outputs/hospital_2/decision_log.md`](outputs/hospital_2/decision_log.md),
+   [`outputs/hospital_3/decision_log.md`](outputs/hospital_3/decision_log.md),
    [`outputs/hospital_4/decision_log.md`](outputs/hospital_4/decision_log.md) and
    [`outputs/hospital_5/decision_log.md`](outputs/hospital_5/decision_log.md).
 
-## Sequencing: Hospital 1, then 2, then 4, then 5
+## Sequencing: Hospital 1, then 2, then 4, then 5, then 3
 
 - **Hospital 1 came first because it is the only labelled hospital.** Every
   design choice (conservative matching, a declined total rather than a guessed
@@ -54,13 +56,16 @@ Deliverables, as the brief lists them:
   most totals blank. With 939 of 1,050 totals proven, against 307 of 835 for
   H4, it covers far more, but 111 totals remain blank. Jev reviews candidate vocabulary and missing-word
   identity as bounded choices. Every number is still Python.
-- **Hospital 3 was not implemented** and was not used to produce any
-  submitted prediction. It was looked at only during planning.
+- **Hospital 3 was added after the other three were finished.** Its
+  contract is split across three documents, and an amendment changes seven
+  rates and adds two services from 1 January 2025 *by Service Date*. Its
+  vocabulary is derived deterministically from its own contract words; Jev
+  answers only bounded missing-word questions. 848 of 932 totals are proven.
 - **Hospital 2 was stopped at a defined point.** See the
   [Stopping decision](outputs/hospital_2/decision_log.md#stopping-decision).
-  Following the brief's emphasis on depth and stated uncertainty, focused
-  implementations of three scored hospitals, with explicit uncertainty, were
-  preferred over shallow coverage of all four.
+  Following the brief's emphasis on depth and stated uncertainty, each
+  hospital was finished, with explicit uncertainty, before the next was
+  started.
 
 ## How it works
 
@@ -68,6 +73,7 @@ Deliverables, as the brief lists them:
 contract text ──► contract.py ──► rules (every rate, cap, discount, bundle, exclusion, with its clause)
 invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGUOUS / UNKNOWN (never uses price)
                   semantic.py ──► H2: LLM classifier + Jev verifier for unclear descriptions
+                                  H3: Jev resolves missing-word identity (vocabulary is deterministic)
                                   H5: Jev reviews proposed vocabulary and missing-word identity
                   audit.py    ──► integer-cent pricing, findings, reconstructable total or blank, confidence
 ```
@@ -75,7 +81,7 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
 - **Python decides every number.** All money is integer cents through
   `Decimal` with `ROUND_HALF_UP` (`src/shared/money.py`). A model is used only
   for service *identity*: Hospital 2's classifier and Jev verifier, and
-  Hospital 5's Jev reviews. It never sees a price, a total, an invoice or
+  Hospital 3's and Hospital 5's Jev reviews. It never sees a price, a total, an invoice or
   patient id, and it never calculates anything.
 - **Identity comes from words, never from price.** The billed price is the
   thing under audit, so using it to identify a service would be circular.
@@ -83,7 +89,7 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
 - **Detection and reconstruction are separate questions.**
   `expected_total_cents` is filled only when the corrected total can be
   defended. Otherwise it is left blank, never the billed total, zero, or a
-  cap-adjusted guess. For example, in Hospitals 1, 2 and 5 a daily-cap breach
+  cap-adjusted guess. For example, in Hospitals 1, 2, 3 and 5 a daily-cap breach
   proves an invoice is wrong but does not reveal the delivered quantity, so
   its total is blank. Hospital 4's contract instead says the excess "is not
   payable", so there the limit is priced. That is the chosen H4 policy; the
@@ -98,12 +104,12 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
 - `confidence` is an **evidence-strength score, not a calibrated
   probability**:
   - Hospital 1 uses 0.92 / 0.70 / 0.40;
-  - Hospitals 2, 4 and 5 use 0.85 / 0.65 / 0.40.
+  - Hospitals 2 to 5 use 0.85 / 0.65 / 0.40.
 
   It measures how the services were identified and whether the total can be
   reconstructed. Hospital 1 shows it is under-confident as a detection
   probability (the low band was right 19 of 19 times); see §4 of the
-  evaluation report. Hospitals 2, 4 and 5 have no labels, so their calibration
+  evaluation report. Hospitals 2 to 5 have no labels, so their calibration
   is unknown. Jev's probabilities are evidence about one description, not this
   score.
 - `predictions.csv` (per hospital) adds the uncertainty columns:
@@ -113,9 +119,9 @@ invoice text  ──► matcher.py  ──► service identity: MATCHED / AMBIGU
   - occurrence ids;
   - a plain-language `uncertainty_reasons`.
 
-  Hospitals 2, 4 and 5 also have a diagnostic `provisional_expected_total_cents`
-  that is never submitted. Hospital 5 adds per-invoice line counts by financial
-  status and the reasons for any blank total.
+  Hospitals 2 to 5 also have a diagnostic `provisional_expected_total_cents`
+  that is never submitted. Hospitals 3 and 5 add per-invoice line counts by
+  financial status and the reasons for any blank total.
 
 ## Results
 
@@ -157,6 +163,63 @@ does not identify, and the audit declines to guess. That covers 866 of the
 888 blank totals. See
 [`outputs/hospital_2/audit_report.md`](outputs/hospital_2/audit_report.md) and
 the [decision log](outputs/hospital_2/decision_log.md).
+
+### Hospital 3 (submitted, no labels)
+
+No accuracy is claimed. The audit calls nothing; it reads committed Jev
+reviews, checked against the requests the current code would send.
+
+| | |
+|---|---|
+| invoice rows / flagged | 932 / 70 (939 physical records, 7 reused numbers) |
+| `pricing_complete` / reconstructable | 852 / 848 |
+| blank `expected_total_cents` | 84, by primary reason: 47 a tie between two contracted services that price differently, 20 a description that omits a word (Jev below the bar), 13 unknown services, 4 daily-cap breaches |
+| contract package | Base Agreement + Appendix B + Amendment No. 1; precedence Amendment > Appendix B > Base; 120 services (118 + 2 added), 7 amended rates, 14 premiums, 12 weekend uplifts, 12 daily caps, 5 bundles, 12 discount services (19 tiers), 10 exclusions |
+| descriptions | 544 raw, 507 normalised, 219 identity clusters |
+| lines | 11,655: 11,569 identified, 72 ambiguous, 14 unknown |
+| lines identified by | text 6,143; text with context-resolved tokens 4,523; unit-basis tie-break 85; Jev missing-word choice 818 |
+| Jev missing-word review | 38 clusters (890 lines) → 34 services, 3 closed to their two candidates, 1 left unresolved (P = 0.89) |
+
+How the pipeline gets there, stage by stage on the same data
+([`semantic_contribution.md`](outputs/hospital_3/semantic_contribution.md)):
+
+| stage | identified lines | totals proven |
+|---|---|---|
+| exact contract words only | 0 | 0 |
+| + Hospital 3's own letter-rule vocabulary | 10,327 | 224 |
+| + `ent` → otolaryngologic, in context only | 10,751 | 350 |
+| + Jev missing-word decisions | 11,569 | 842 |
+| + financial equivalence (final) | 11,569 | 848 |
+
+- **The amendment is priced by Service Date, never invoice date** (A1.1.2).
+  282 lines of the seven amended services take the Appendix B rate and 280
+  the amended rate; 28 of the former are 2024 services on 2025 invoices,
+  correctly billed at the 2024 rate. 4 lines bill the wrong period and are
+  flagged (`amended_rate_applied_before_effective_date`,
+  `amended_rate_not_applied`).
+- **The two added services** are contracted only from 1 January 2025. A line
+  identified as one of them with an earlier Service Date would be
+  `service_not_contracted_on_date` (not `unknown_service`) and paid 0. All 81
+  occurrences are dated on or after the effective date.
+- **Vocabulary is Hospital 3's own.** Every reading is a Hospital 3 contract
+  word reached by a letter rule. Tokens with one reading and no slot conflict
+  in the Hospital 3 corpus are global (75); the rest are read only where a
+  contracted service fits (21). No other hospital's table is used.
+- **Jev was used because it was measured to matter.** Before any review, 838
+  lines omitted exactly one name slot and alone blocked 501 of the 939 invoice
+  records; the deterministic audit proved 353 totals. The gates were fixed
+  before the run (Hospital 5's, unchanged). Jev decides 495 proven totals.
+- **The largest interpretive dependency is ENT.** `ent` → otolaryngologic is
+  a human-reviewed reading, used only in context and never as a global alias.
+  `ent` never appears beside another specialty word, and every description
+  using it fits a contracted Otolaryngologic service. It decides 319 proven
+  totals.
+- **Readings chosen where the H3 wording is open,** each with a switch and a
+  measured effect: exclusions count on either side of the trigger, day N
+  included (all 3 findings depend on it); a threshold-crossing line takes the
+  tier already exceeded before it (14 rows would change per unit); a bare cap
+  breach is blank (4 rows); repeats add nothing to a day's aggregate (0 rows).
+  See the [decision log](outputs/hospital_3/decision_log.md).
 
 ### Hospital 4 (submitted, no labels)
 
@@ -254,17 +317,18 @@ pip install -r requirements.txt
 python -m pytest -q
 ```
 
-There are 711 tests:
+There are 874 tests:
 
 | area | tests |
 |---|---|
 | Hospital 1 | 154 |
 | Hospital 2 | 209 |
+| Hospital 3 | 162 |
 | Hospital 4 | 106 |
 | Hospital 5 | 190 |
 | shared | 36 |
 | setup and secrets | 8 |
-| submission files | 8 |
+| submission files | 9 |
 
 After dependencies are installed, the tests and normal reproduction workflow
 require no API keys or network access.
@@ -278,6 +342,10 @@ Reproduce the submission from the artifacts in the repository:
 
 ```bash
 python -m src.main audit h2
+```
+
+```bash
+python -m src.main audit h3
 ```
 
 ```bash
@@ -296,6 +364,16 @@ python -m src.main submission
   `artifacts/hospital_2/service_mappings.json` and makes no API call.
 - It writes `outputs/hospital_2/{predictions,findings,submission}.csv`,
   `audit_report.md` and `artifacts/hospital_2/pricing_traces.jsonl`.
+- `audit h3` parses the three contract documents, derives the vocabulary
+  from the contract and the descriptions, and checks each stored Jev review in
+  `artifacts/hospital_3/jev_missing_word_reviews.jsonl` against the exact
+  request body and input fingerprint; it **refuses to run if any is missing
+  or stale**. It writes everything under `artifacts/hospital_3/` (contract
+  rules, vocabulary evidence, clusters, request bodies, decisions, amendment
+  summary, a pricing trace for every line, coverage and blank reasons) and
+  `outputs/hospital_3/` (`{predictions,findings,submission}.csv`,
+  `audit_report.md`, `semantic_contribution.md`, which also measures each
+  alternative contract reading).
 - `audit h4` parses the contract and matches every description
   deterministically. It writes everything under `artifacts/hospital_4/`
   (contract rules, description clusters, service mappings, unresolved
@@ -315,9 +393,9 @@ python -m src.main submission
   - coverage and blank reasons;
   - `{predictions,findings,submission}.csv`, `audit_report.md` and
     `semantic_contribution.md`.
-- `submission` rewrites the three hospital files and builds
-  `outputs/submission.csv` by copying their rows unchanged: Hospital 2, then 4,
-  then 5. A hospital file and its rows in the combined file cannot disagree,
+- `submission` rewrites the four hospital files and builds
+  `outputs/submission.csv` by copying their rows unchanged: Hospital 2, then 3,
+  then 4, then 5. A hospital file and its rows in the combined file cannot disagree,
   and a test checks this.
 
 Reproduce the Hospital 1 predictions and evaluation:
@@ -357,6 +435,7 @@ for it:
 |---|---|---|
 | `python -m src.main semantic h2 classify [--retry-failed]` | OpenRouter, `z-ai/glm-5.3-flash` | `OPENROUTER_API_KEY` |
 | `python -m src.main semantic h2 jev` | TypeSafe SystemOne (Jev `jev-1.13.0`) | `TYPESAFE_API_KEY` (or `JEV_API_KEY`) |
+| `python -m src.main semantic h3 missing-word-run` | Jev: one question per unresolved cluster (38) | `TYPESAFE_API_KEY` (or `JEV_API_KEY`) |
 | `python -m src.main semantic h5 normalize-run` | Jev: one question per normalisation proposal (266) | `TYPESAFE_API_KEY` (or `JEV_API_KEY`) |
 | `python -m src.main semantic h5 missing-word-run` | Jev: one question per unresolved cluster (35) | `TYPESAFE_API_KEY` (or `JEV_API_KEY`) |
 | `python -m src.main semantic h5 probe` | Jev: the constructed stress test (1) | `TYPESAFE_API_KEY` (or `JEV_API_KEY`) |
@@ -366,13 +445,14 @@ for it:
 - A decision is kept only while its contract fingerprint, matcher version,
   prompt version (a hash of the prompt file) and candidate set are unchanged.
 - The Jev Playground route needs no key. For Hospital 2 it is `jev-export`,
-  then a manual Playground run, then `jev-import`. For Hospital 5 it is
+  then a manual Playground run, then `jev-import`. For Hospital 3 it is
+  `missing-word-export` / `missing-word-import`. For Hospital 5 it is
   `normalize-export` / `normalize-import` and `missing-word-export` /
   `missing-word-import`.
-- Hospital 5 reviews are stored per request with the request, state and
+- Hospital 3 and 5 reviews are stored per request with the request, state and
   question hashes. A run asks only the requests without a current review, so
-  rerunning on unchanged inputs calls nothing. `semantic h5 status` shows
-  coverage and staleness offline.
+  rerunning on unchanged inputs calls nothing. `semantic h3 status` and
+  `semantic h5 status` show coverage and staleness offline.
 - Missing-word questions are built from the reviewed vocabulary, so they
   cannot be asked until every normalisation review is current.
 
@@ -406,6 +486,10 @@ Optional settings (an empty value means the default):
 | `JEV_API_URL` | `https://api.typesafe.ai/v1/systemone` |
 | `JEV_MODEL` | `jev-1.13.0` |
 | `JEV_THRESHOLD` | `0.90` (Hospital 2 only) |
+| `H3_JEV_SERVICE_MIN_PROBABILITY` / `_CONFIDENCE` | `0.90` / `0.80` |
+| `H3_JEV_CLOSURE_MIN_PROBABILITY` / `H3_JEV_UNKNOWN_MIN_PROBABILITY` | `0.90` / `0.90` |
+| `H3_JEV_MAX_CANDIDATES` | `8` |
+| `H3_JEV_WORKERS` / `H3_JEV_MAX_ATTEMPTS` / `H3_JEV_TIMEOUT` | `4` / `3` / `60` |
 | `H5_JEV_GLOBAL_MIN_PROBABILITY` / `_CONFIDENCE` | `0.90` / `0.85` |
 | `H5_JEV_CONTEXT_MIN_PROBABILITY` | `0.80` |
 | `H5_JEV_SERVICE_MIN_PROBABILITY` / `_CONFIDENCE` | `0.90` / `0.80` |
@@ -414,14 +498,14 @@ Optional settings (an empty value means the default):
 | `H5_JEV_MAX_CANDIDATES` | `8` |
 | `H5_JEV_WORKERS` / `H5_JEV_MAX_ATTEMPTS` / `H5_JEV_TIMEOUT` | `4` / `3` / `60` |
 
-Changing an H5 gate changes which stored reviews are accepted, not the
-reviews themselves. Changing `JEV_MODEL` or a Hospital 5 prompt template makes
-every stored review stale, and the audit then refuses to run.
+Changing an H3 or H5 gate changes which stored reviews are accepted, not the
+reviews themselves. Changing `JEV_MODEL` or a Hospital 3 or 5 prompt template
+makes every stored review stale, and the audit then refuses to run.
 
 ## AI use (disclosure)
 
 - **Code and documents.** They were written with Claude Code (Claude Opus 5;
-  Hospitals 4 and 5 with Claude Opus 5.5),
+  Hospitals 3, 4 and 5 with Claude Opus 5.5),
   driven by the prompts in [`prompts/`](prompts/). The human author set the
   scope, the constraints and the stopping points; the assistant wrote the code,
   the tests and the first drafts of the reports.
@@ -433,6 +517,9 @@ every stored review stale, and the audit then refuses to run.
   - Hospital 2: the OpenRouter classifier
     (`prompts/hospital_2/001_service_classifier.md`) and the Jev verifier
     (`prompts/hospital_2/003_jev_verifier.md`);
+  - Hospital 3: Jev only, for missing-word identity
+    (`prompts/hospital_3/001_jev_missing_word_resolution.md`, Hospital 5's
+    question unchanged). Its vocabulary is deterministic;
   - Hospital 5: Jev only. It reviews normalisation proposals
     (`prompts/hospital_5/001_jev_normalization_review.md`) and missing-word
     identity (`prompts/hospital_5/002_jev_missing_word_resolution.md`). No
@@ -450,21 +537,29 @@ src/submission.py           per-hospital submission files -> combined outputs/su
 src/shared/                 data loading, money, result types, CSV writers (frozen with H1)
 src/hospital_1/             contract, matcher, audit, evaluation (the only label reader)
 src/hospital_2/             contract, matcher, semantic (identity only), audit
+src/hospital_3/             contract (three documents, precedence, dated rates), normalization
+                            (deterministic lexicon + evidence), matcher, semantic (Jev
+                            missing-word requests, gates, review store), audit, report
 src/hospital_4/             contract, matcher, audit (deterministic; no semantic stage)
 src/hospital_5/             contract, normalization (proposals + lexicon), matcher, semantic
                             (Jev requests, gates, review store), workflow, audit, report
-tests/                      shared/, hospital_1/, hospital_2/, hospital_4/, hospital_5/,
+tests/                      shared/, hospital_1/ to hospital_5/,
                             test_setup.py, test_submission.py
-outputs/submission.csv      the combined, scored submission (hospital_2, hospital_4, hospital_5)
+outputs/submission.csv      the combined, scored submission (hospital_2 to hospital_5)
 outputs/hospital_1/         predictions, findings, evaluation.md, evaluation_report.md,
                             generalization_report.md, decision_log.md
 outputs/hospital_2/         submission, predictions, findings, audit_report.md, decision_log.md
+outputs/hospital_3/         submission, predictions, findings, audit_report.md,
+                            semantic_contribution.md (stages, ablations, sensitivity), decision_log.md
 outputs/hospital_4/         submission, predictions, findings, audit_report.md, decision_log.md
 outputs/hospital_5/         submission, predictions, findings, audit_report.md,
                             semantic_contribution.md, decision_log.md
 artifacts/hospital_1/       locked split + manifest, freeze record, match audit, research/
 artifacts/hospital_2/       contract rules, clusters, service_mappings.json (every identity
                             decision with provenance), unresolved.json, Jev batch, pricing traces
+artifacts/hospital_3/       contract rules; vocabulary evidence; stored Jev reviews, request bodies
+                            and gated decisions; clusters, mappings, unresolved; amendment summary;
+                            pricing traces; coverage, blank reasons, contribution and sensitivity
 artifacts/hospital_4/       contract rules, description clusters, service mappings,
                             unresolved.json (ranked by impact), pricing traces (every line)
 artifacts/hospital_5/       contract rules; normalisation proposals; stored Jev reviews
@@ -478,7 +573,7 @@ EXERCISE.md                 the challenge brief (unchanged)
 
 Hospital 1's prediction path (`src/shared/*`, `src/hospital_1/{contract,matcher,audit}.py`)
 is hashed in `artifacts/hospital_1/freeze.json`. Editing any of those files
-switches off the holdout score. Hospitals 2, 4 and 5 reuse `src/shared/`
+switches off the holdout score. Hospitals 2 to 5 reuse `src/shared/`
 without modifying it.
 
 ## Adding a hospital

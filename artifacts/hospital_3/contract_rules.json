@@ -1,0 +1,3425 @@
+{
+  "fingerprint": "4a8029188e3f1e2f69eacb4493659fdcecc584c46364ff870bb888f3d47d5ac0",
+  "sources": {
+    "base_agreement": "contracts/hospital_3/base_agreement.md",
+    "appendix_b": "contracts/hospital_3/appendix_b_rate_schedule.md",
+    "amendment_no_1": "contracts/hospital_3/amendment_no_1.md"
+  },
+  "source_sha256": {
+    "base_agreement": "47240db1f9867a166700db86fb444908ddb9c244d9f28e9868418ee989334264",
+    "appendix_b": "a584918c6222a75c45a7188132a7bb5aff87f374a4ac20ed6a7324a8c8a593d0",
+    "amendment_no_1": "29d072052cbb33e9eec4fef238d0462070d353bc7b183dfc80d33e8e148e2f1c"
+  },
+  "parser_version": "h3-contract-1",
+  "counts": {
+    "services": 120,
+    "appendix_b_services": 118,
+    "amended_rates": 7,
+    "added_services": 2,
+    "daily_caps": 12,
+    "threshold_premiums": 14,
+    "non_business_day_uplifts": 12,
+    "bundle_pairs": 5,
+    "cumulative_discount_services": 12,
+    "cumulative_discount_tiers": 19,
+    "exclusion_windows": 10,
+    "compound_unit_bases": 1
+  },
+  "text_rendering_disagreements": [],
+  "contract_number": "INS-H3-2024-0562",
+  "provider": "Rivermead General Hospital",
+  "payer": "Meridian Health Assurance Group",
+  "effective_from": "2024-01-01",
+  "effective_to": "2025-12-31",
+  "currency": "GBP",
+  "rounding_convention": "half_up_cent",
+  "precedence": [
+    "amendment_no_1",
+    "appendix_b",
+    "base_agreement"
+  ],
+  "amendment_effective": "2025-01-01",
+  "amendment_basis": "service_date",
+  "facility_code": "F-MAIN",
+  "facility_multiplier": "1",
+  "plan_tier_multiplier": "1",
+  "non_business_weekdays": [
+    5,
+    6
+  ],
+  "pricing_order": [
+    "bundle",
+    "facility",
+    "plan_tier",
+    "premium",
+    "cumulative_discount"
+  ],
+  "services": {
+    "Advanced Gastrointestinal Telemetry Monitoring": {
+      "name": "Advanced Gastrointestinal Telemetry Monitoring",
+      "qualifier": "advanced",
+      "specialty": "gastrointestinal",
+      "concept": "telemetry monitoring",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Advanced Gastrointestinal Telemetry Monitoring",
+          "rate_cents": 128100,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Advanced Gastrointestinal Telemetry Monitoring | per day of service | GBP 1,281.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Advanced Gastrointestinal Telemetry Monitoring | per day of service | GBP 1,281.00 | \u2014 |"
+    },
+    "Advanced Geriatric Nutritional Support": {
+      "name": "Advanced Geriatric Nutritional Support",
+      "qualifier": "advanced",
+      "specialty": "geriatric",
+      "concept": "nutritional support",
+      "unit_basis": "per_unit_dispensed",
+      "unit_basis_text": "per unit dispensed",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Advanced Geriatric Nutritional Support",
+          "rate_cents": 1250,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Advanced Geriatric Nutritional Support | per unit dispensed | GBP 12.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Advanced Geriatric Nutritional Support | per unit dispensed | GBP 12.50 | \u2014 |"
+    },
+    "Advanced Metabolic Discharge Planning": {
+      "name": "Advanced Metabolic Discharge Planning",
+      "qualifier": "advanced",
+      "specialty": "metabolic",
+      "concept": "discharge planning",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Advanced Metabolic Discharge Planning",
+          "rate_cents": 21075,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Advanced Metabolic Discharge Planning | per hour | GBP 210.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Advanced Metabolic Discharge Planning | per hour | GBP 210.75 | \u2014 |"
+    },
+    "Advanced Musculoskeletal Radiotherapy Fraction": {
+      "name": "Advanced Musculoskeletal Radiotherapy Fraction",
+      "qualifier": "advanced",
+      "specialty": "musculoskeletal",
+      "concept": "radiotherapy fraction",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Advanced Musculoskeletal Radiotherapy Fraction",
+          "rate_cents": 348975,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Advanced Musculoskeletal Radiotherapy Fraction | per procedure | GBP 3,489.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Advanced Musculoskeletal Radiotherapy Fraction | per procedure | GBP 3,489.75 | \u2014 |"
+    },
+    "Advanced Paediatric Telemetry Monitoring": {
+      "name": "Advanced Paediatric Telemetry Monitoring",
+      "qualifier": "advanced",
+      "specialty": "paediatric",
+      "concept": "telemetry monitoring",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Advanced Paediatric Telemetry Monitoring",
+          "rate_cents": 41000,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Advanced Paediatric Telemetry Monitoring | per day of service | GBP 410.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Advanced Paediatric Telemetry Monitoring | per day of service | GBP 410.00 | \u2014 |"
+    },
+    "Advanced Rheumatologic Pharmaceutical Dispensing": {
+      "name": "Advanced Rheumatologic Pharmaceutical Dispensing",
+      "qualifier": "advanced",
+      "specialty": "rheumatologic",
+      "concept": "pharmaceutical dispensing",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Advanced Rheumatologic Pharmaceutical Dispensing",
+          "rate_cents": 27875,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Advanced Rheumatologic Pharmaceutical Dispensing | per item supplied | GBP 278.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Advanced Rheumatologic Pharmaceutical Dispensing | per item supplied | GBP 278.75 | \u2014 |"
+    },
+    "Ambulatory Metabolic Isolation Room Occupancy": {
+      "name": "Ambulatory Metabolic Isolation Room Occupancy",
+      "qualifier": "ambulatory",
+      "specialty": "metabolic",
+      "concept": "isolation room occupancy",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Ambulatory Metabolic Isolation Room Occupancy",
+          "rate_cents": 159725,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Ambulatory Metabolic Isolation Room Occupancy | per day of service | GBP 1,597.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Ambulatory Metabolic Isolation Room Occupancy | per day of service | GBP 1,597.25 | \u2014 |"
+    },
+    "Ambulatory Ophthalmic Imaging Interpretation": {
+      "name": "Ambulatory Ophthalmic Imaging Interpretation",
+      "qualifier": "ambulatory",
+      "specialty": "ophthalmic",
+      "concept": "imaging interpretation",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Ambulatory Ophthalmic Imaging Interpretation",
+          "rate_cents": 414850,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Ambulatory Ophthalmic Imaging Interpretation | per procedure | GBP 4,148.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Ambulatory Ophthalmic Imaging Interpretation | per procedure | GBP 4,148.50 | \u2014 |"
+    },
+    "Ambulatory Otolaryngologic Imaging Interpretation": {
+      "name": "Ambulatory Otolaryngologic Imaging Interpretation",
+      "qualifier": "ambulatory",
+      "specialty": "otolaryngologic",
+      "concept": "imaging interpretation",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Ambulatory Otolaryngologic Imaging Interpretation",
+          "rate_cents": 182625,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Ambulatory Otolaryngologic Imaging Interpretation | per procedure | GBP 1,826.25 | 12 procedures |"
+        },
+        {
+          "service": "Ambulatory Otolaryngologic Imaging Interpretation",
+          "rate_cents": 208200,
+          "document": "amendment_no_1",
+          "clause_id": "A1.2",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Ambulatory Otolaryngologic Imaging Interpretation | per procedure | GBP 1,826.25 | GBP 2,082.00 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Ambulatory Otolaryngologic Imaging Interpretation | per procedure | GBP 1,826.25 | 12 procedures |"
+    },
+    "Ambulatory Renal Case Conference": {
+      "name": "Ambulatory Renal Case Conference",
+      "qualifier": "ambulatory",
+      "specialty": "renal",
+      "concept": "case conference",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Ambulatory Renal Case Conference",
+          "rate_cents": 8775,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Ambulatory Renal Case Conference | per hour | GBP 87.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Ambulatory Renal Case Conference | per hour | GBP 87.75 | \u2014 |"
+    },
+    "Assisted Ophthalmic Recovery Room Occupancy": {
+      "name": "Assisted Ophthalmic Recovery Room Occupancy",
+      "qualifier": "assisted",
+      "specialty": "ophthalmic",
+      "concept": "recovery room occupancy",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Assisted Ophthalmic Recovery Room Occupancy",
+          "rate_cents": 8775,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Assisted Ophthalmic Recovery Room Occupancy | per hour | GBP 87.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Assisted Ophthalmic Recovery Room Occupancy | per hour | GBP 87.75 | \u2014 |"
+    },
+    "Assisted Paediatric Dialysis Session": {
+      "name": "Assisted Paediatric Dialysis Session",
+      "qualifier": "assisted",
+      "specialty": "paediatric",
+      "concept": "dialysis session",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Assisted Paediatric Dialysis Session",
+          "rate_cents": 372800,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Assisted Paediatric Dialysis Session | per procedure | GBP 3,728.00 | 12 procedures |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Assisted Paediatric Dialysis Session | per procedure | GBP 3,728.00 | 12 procedures |"
+    },
+    "Assisted Urologic Endoscopic Procedure": {
+      "name": "Assisted Urologic Endoscopic Procedure",
+      "qualifier": "assisted",
+      "specialty": "urologic",
+      "concept": "endoscopic procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Assisted Urologic Endoscopic Procedure",
+          "rate_cents": 94250,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Assisted Urologic Endoscopic Procedure | per procedure | GBP 942.50 | \u2014 |"
+        },
+        {
+          "service": "Assisted Urologic Endoscopic Procedure",
+          "rate_cents": 111225,
+          "document": "amendment_no_1",
+          "clause_id": "A1.2",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Assisted Urologic Endoscopic Procedure | per procedure | GBP 942.50 | GBP 1,112.25 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Assisted Urologic Endoscopic Procedure | per procedure | GBP 942.50 | \u2014 |"
+    },
+    "Bedside Cardiac Recovery Room Occupancy": {
+      "name": "Bedside Cardiac Recovery Room Occupancy",
+      "qualifier": "bedside",
+      "specialty": "cardiac",
+      "concept": "recovery room occupancy",
+      "unit_basis": "per_night",
+      "unit_basis_text": "per night of occupancy",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Cardiac Recovery Room Occupancy",
+          "rate_cents": 167750,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Cardiac Recovery Room Occupancy | per night of occupancy | GBP 1,677.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Cardiac Recovery Room Occupancy | per night of occupancy | GBP 1,677.50 | \u2014 |"
+    },
+    "Bedside Geriatric Telemetry Monitoring": {
+      "name": "Bedside Geriatric Telemetry Monitoring",
+      "qualifier": "bedside",
+      "specialty": "geriatric",
+      "concept": "telemetry monitoring",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Geriatric Telemetry Monitoring",
+          "rate_cents": 131100,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Geriatric Telemetry Monitoring | per day of service | GBP 1,311.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Geriatric Telemetry Monitoring | per day of service | GBP 1,311.00 | \u2014 |"
+    },
+    "Bedside Metabolic Infusion Therapy": {
+      "name": "Bedside Metabolic Infusion Therapy",
+      "qualifier": "bedside",
+      "specialty": "metabolic",
+      "concept": "infusion therapy",
+      "unit_basis": "per_unit_dispensed",
+      "unit_basis_text": "per unit dispensed",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Metabolic Infusion Therapy",
+          "rate_cents": 1850,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Metabolic Infusion Therapy | per unit dispensed | GBP 18.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Metabolic Infusion Therapy | per unit dispensed | GBP 18.50 | \u2014 |"
+    },
+    "Bedside Neurological Pharmaceutical Dispensing": {
+      "name": "Bedside Neurological Pharmaceutical Dispensing",
+      "qualifier": "bedside",
+      "specialty": "neurological",
+      "concept": "pharmaceutical dispensing",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Neurological Pharmaceutical Dispensing",
+          "rate_cents": 9675,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Neurological Pharmaceutical Dispensing | per item supplied | GBP 96.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Neurological Pharmaceutical Dispensing | per item supplied | GBP 96.75 | \u2014 |"
+    },
+    "Bedside Neurological Radiotherapy Fraction": {
+      "name": "Bedside Neurological Radiotherapy Fraction",
+      "qualifier": "bedside",
+      "specialty": "neurological",
+      "concept": "radiotherapy fraction",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Neurological Radiotherapy Fraction",
+          "rate_cents": 2575,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Neurological Radiotherapy Fraction | per item supplied | GBP 25.75 | \u2014 |"
+        },
+        {
+          "service": "Bedside Neurological Radiotherapy Fraction",
+          "rate_cents": 3050,
+          "document": "amendment_no_1",
+          "clause_id": "A1.2",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Bedside Neurological Radiotherapy Fraction | per item supplied | GBP 25.75 | GBP 30.50 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Neurological Radiotherapy Fraction | per item supplied | GBP 25.75 | \u2014 |"
+    },
+    "Bedside Oncology Case Conference": {
+      "name": "Bedside Oncology Case Conference",
+      "qualifier": "bedside",
+      "specialty": "oncology",
+      "concept": "case conference",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Oncology Case Conference",
+          "rate_cents": 11400,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Oncology Case Conference | per hour | GBP 114.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Oncology Case Conference | per hour | GBP 114.00 | \u2014 |"
+    },
+    "Bedside Palliative Wound Care": {
+      "name": "Bedside Palliative Wound Care",
+      "qualifier": "bedside",
+      "specialty": "palliative",
+      "concept": "wound care",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Palliative Wound Care",
+          "rate_cents": 14150,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Palliative Wound Care | per visit | GBP 141.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Palliative Wound Care | per visit | GBP 141.50 | \u2014 |"
+    },
+    "Bedside Pulmonary Sterilisation Service": {
+      "name": "Bedside Pulmonary Sterilisation Service",
+      "qualifier": "bedside",
+      "specialty": "pulmonary",
+      "concept": "sterilisation service",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Pulmonary Sterilisation Service",
+          "rate_cents": 381825,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Pulmonary Sterilisation Service | per procedure | GBP 3,818.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Pulmonary Sterilisation Service | per procedure | GBP 3,818.25 | \u2014 |"
+    },
+    "Bedside Renal Imaging Interpretation": {
+      "name": "Bedside Renal Imaging Interpretation",
+      "qualifier": "bedside",
+      "specialty": "renal",
+      "concept": "imaging interpretation",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Renal Imaging Interpretation",
+          "rate_cents": 59250,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Renal Imaging Interpretation | per test | GBP 592.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Renal Imaging Interpretation | per test | GBP 592.50 | \u2014 |"
+    },
+    "Bedside Urologic Laboratory Panel": {
+      "name": "Bedside Urologic Laboratory Panel",
+      "qualifier": "bedside",
+      "specialty": "urologic",
+      "concept": "laboratory panel",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Urologic Laboratory Panel",
+          "rate_cents": 2000,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Urologic Laboratory Panel | per item supplied | GBP 20.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Urologic Laboratory Panel | per item supplied | GBP 20.00 | \u2014 |"
+    },
+    "Bedside Urologic Ventilation Support": {
+      "name": "Bedside Urologic Ventilation Support",
+      "qualifier": "bedside",
+      "specialty": "urologic",
+      "concept": "ventilation support",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Urologic Ventilation Support",
+          "rate_cents": 168975,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Urologic Ventilation Support | per day of service | GBP 1,689.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Urologic Ventilation Support | per day of service | GBP 1,689.75 | \u2014 |"
+    },
+    "Bedside Vascular Critical Care Occupancy": {
+      "name": "Bedside Vascular Critical Care Occupancy",
+      "qualifier": "bedside",
+      "specialty": "vascular",
+      "concept": "critical care occupancy",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Bedside Vascular Critical Care Occupancy",
+          "rate_cents": 144425,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Bedside Vascular Critical Care Occupancy | per day of service | GBP 1,444.25 | 8 days |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Bedside Vascular Critical Care Occupancy | per day of service | GBP 1,444.25 | 8 days |"
+    },
+    "Comprehensive Haematology Radiotherapy Fraction": {
+      "name": "Comprehensive Haematology Radiotherapy Fraction",
+      "qualifier": "comprehensive",
+      "specialty": "haematology",
+      "concept": "radiotherapy fraction",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Comprehensive Haematology Radiotherapy Fraction",
+          "rate_cents": 156925,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Comprehensive Haematology Radiotherapy Fraction | per procedure | GBP 1,569.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Comprehensive Haematology Radiotherapy Fraction | per procedure | GBP 1,569.25 | \u2014 |"
+    },
+    "Comprehensive Orthopaedic Wound Care": {
+      "name": "Comprehensive Orthopaedic Wound Care",
+      "qualifier": "comprehensive",
+      "specialty": "orthopaedic",
+      "concept": "wound care",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Comprehensive Orthopaedic Wound Care",
+          "rate_cents": 16600,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Comprehensive Orthopaedic Wound Care | per item supplied | GBP 166.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Comprehensive Orthopaedic Wound Care | per item supplied | GBP 166.00 | \u2014 |"
+    },
+    "Comprehensive Palliative Diagnostic Imaging": {
+      "name": "Comprehensive Palliative Diagnostic Imaging",
+      "qualifier": "comprehensive",
+      "specialty": "palliative",
+      "concept": "diagnostic imaging",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Comprehensive Palliative Diagnostic Imaging",
+          "rate_cents": 163525,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Comprehensive Palliative Diagnostic Imaging | per procedure | GBP 1,635.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Comprehensive Palliative Diagnostic Imaging | per procedure | GBP 1,635.25 | \u2014 |"
+    },
+    "Continuous Gastrointestinal Laboratory Panel": {
+      "name": "Continuous Gastrointestinal Laboratory Panel",
+      "qualifier": "continuous",
+      "specialty": "gastrointestinal",
+      "concept": "laboratory panel",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Continuous Gastrointestinal Laboratory Panel",
+          "rate_cents": 56000,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Continuous Gastrointestinal Laboratory Panel | per test | GBP 560.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Continuous Gastrointestinal Laboratory Panel | per test | GBP 560.00 | \u2014 |"
+    },
+    "Continuous Immunologic Critical Care Occupancy": {
+      "name": "Continuous Immunologic Critical Care Occupancy",
+      "qualifier": "continuous",
+      "specialty": "immunologic",
+      "concept": "critical care occupancy",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Continuous Immunologic Critical Care Occupancy",
+          "rate_cents": 20725,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Continuous Immunologic Critical Care Occupancy | per hour | GBP 207.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Continuous Immunologic Critical Care Occupancy | per hour | GBP 207.25 | \u2014 |"
+    },
+    "Continuous Immunologic Isolation Room Occupancy": {
+      "name": "Continuous Immunologic Isolation Room Occupancy",
+      "qualifier": "continuous",
+      "specialty": "immunologic",
+      "concept": "isolation room occupancy",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Continuous Immunologic Isolation Room Occupancy",
+          "rate_cents": 116275,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Continuous Immunologic Isolation Room Occupancy | per day of service | GBP 1,162.75 | 24 days |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Continuous Immunologic Isolation Room Occupancy | per day of service | GBP 1,162.75 | 24 days |"
+    },
+    "Continuous Pulmonary Wound Care": {
+      "name": "Continuous Pulmonary Wound Care",
+      "qualifier": "continuous",
+      "specialty": "pulmonary",
+      "concept": "wound care",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Continuous Pulmonary Wound Care",
+          "rate_cents": 27625,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Continuous Pulmonary Wound Care | per item supplied | GBP 276.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Continuous Pulmonary Wound Care | per item supplied | GBP 276.25 | \u2014 |"
+    },
+    "Continuous Renal Isolation Room Occupancy": {
+      "name": "Continuous Renal Isolation Room Occupancy",
+      "qualifier": "continuous",
+      "specialty": "renal",
+      "concept": "isolation room occupancy",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Continuous Renal Isolation Room Occupancy",
+          "rate_cents": 50125,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Continuous Renal Isolation Room Occupancy | per day of service | GBP 501.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Continuous Renal Isolation Room Occupancy | per day of service | GBP 501.25 | \u2014 |"
+    },
+    "Elective Palliative Physiotherapy Session": {
+      "name": "Elective Palliative Physiotherapy Session",
+      "qualifier": "elective",
+      "specialty": "palliative",
+      "concept": "physiotherapy session",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Elective Palliative Physiotherapy Session",
+          "rate_cents": 18800,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Elective Palliative Physiotherapy Session | per hour | GBP 188.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Elective Palliative Physiotherapy Session | per hour | GBP 188.00 | \u2014 |"
+    },
+    "Elective Pulmonary Consultation": {
+      "name": "Elective Pulmonary Consultation",
+      "qualifier": "elective",
+      "specialty": "pulmonary",
+      "concept": "consultation",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Elective Pulmonary Consultation",
+          "rate_cents": 399025,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Elective Pulmonary Consultation | per procedure | GBP 3,990.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Elective Pulmonary Consultation | per procedure | GBP 3,990.25 | \u2014 |"
+    },
+    "Emergency Dermatologic Sterilisation Service": {
+      "name": "Emergency Dermatologic Sterilisation Service",
+      "qualifier": "emergency",
+      "specialty": "dermatologic",
+      "concept": "sterilisation service",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Emergency Dermatologic Sterilisation Service",
+          "rate_cents": 23025,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Emergency Dermatologic Sterilisation Service | per item supplied | GBP 230.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Emergency Dermatologic Sterilisation Service | per item supplied | GBP 230.25 | \u2014 |"
+    },
+    "Emergency Oncology Biopsy Procedure": {
+      "name": "Emergency Oncology Biopsy Procedure",
+      "qualifier": "emergency",
+      "specialty": "oncology",
+      "concept": "biopsy procedure",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Emergency Oncology Biopsy Procedure",
+          "rate_cents": 20375,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Emergency Oncology Biopsy Procedure | per item supplied | GBP 203.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Emergency Oncology Biopsy Procedure | per item supplied | GBP 203.75 | \u2014 |"
+    },
+    "Emergency Pulmonary Biopsy Procedure": {
+      "name": "Emergency Pulmonary Biopsy Procedure",
+      "qualifier": "emergency",
+      "specialty": "pulmonary",
+      "concept": "biopsy procedure",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Emergency Pulmonary Biopsy Procedure",
+          "rate_cents": 26350,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Emergency Pulmonary Biopsy Procedure | per item supplied | GBP 263.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Emergency Pulmonary Biopsy Procedure | per item supplied | GBP 263.50 | \u2014 |"
+    },
+    "Emergency Renal Isolation Room Occupancy": {
+      "name": "Emergency Renal Isolation Room Occupancy",
+      "qualifier": "emergency",
+      "specialty": "renal",
+      "concept": "isolation room occupancy",
+      "unit_basis": "per_night",
+      "unit_basis_text": "per night of occupancy",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Emergency Renal Isolation Room Occupancy",
+          "rate_cents": 49050,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Emergency Renal Isolation Room Occupancy | per night of occupancy | GBP 490.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Emergency Renal Isolation Room Occupancy | per night of occupancy | GBP 490.50 | \u2014 |"
+    },
+    "Emergency Vascular Biopsy Procedure": {
+      "name": "Emergency Vascular Biopsy Procedure",
+      "qualifier": "emergency",
+      "specialty": "vascular",
+      "concept": "biopsy procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Emergency Vascular Biopsy Procedure",
+          "rate_cents": 215625,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Emergency Vascular Biopsy Procedure | per procedure | GBP 2,156.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Emergency Vascular Biopsy Procedure | per procedure | GBP 2,156.25 | \u2014 |"
+    },
+    "Extended Dermatologic Infusion Therapy": {
+      "name": "Extended Dermatologic Infusion Therapy",
+      "qualifier": "extended",
+      "specialty": "dermatologic",
+      "concept": "infusion therapy",
+      "unit_basis": "per_unit_dispensed",
+      "unit_basis_text": "per unit dispensed",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Extended Dermatologic Infusion Therapy",
+          "rate_cents": 3475,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Extended Dermatologic Infusion Therapy | per unit dispensed | GBP 34.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Extended Dermatologic Infusion Therapy | per unit dispensed | GBP 34.75 | \u2014 |"
+    },
+    "Extended Dermatologic Sterilisation Service": {
+      "name": "Extended Dermatologic Sterilisation Service",
+      "qualifier": "extended",
+      "specialty": "dermatologic",
+      "concept": "sterilisation service",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Extended Dermatologic Sterilisation Service",
+          "rate_cents": 161525,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Extended Dermatologic Sterilisation Service | per procedure | GBP 1,615.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Extended Dermatologic Sterilisation Service | per procedure | GBP 1,615.25 | \u2014 |"
+    },
+    "Extended Geriatric Infusion Therapy": {
+      "name": "Extended Geriatric Infusion Therapy",
+      "qualifier": "extended",
+      "specialty": "geriatric",
+      "concept": "infusion therapy",
+      "unit_basis": "per_unit_dispensed",
+      "unit_basis_text": "per unit dispensed",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Extended Geriatric Infusion Therapy",
+          "rate_cents": 6100,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Extended Geriatric Infusion Therapy | per unit dispensed | GBP 61.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Extended Geriatric Infusion Therapy | per unit dispensed | GBP 61.00 | \u2014 |"
+    },
+    "Extended Haematology Radiotherapy Fraction": {
+      "name": "Extended Haematology Radiotherapy Fraction",
+      "qualifier": "extended",
+      "specialty": "haematology",
+      "concept": "radiotherapy fraction",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Extended Haematology Radiotherapy Fraction",
+          "rate_cents": 27575,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Extended Haematology Radiotherapy Fraction | per item supplied | GBP 275.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Extended Haematology Radiotherapy Fraction | per item supplied | GBP 275.75 | \u2014 |"
+    },
+    "Extended Infectious Telemetry Monitoring": {
+      "name": "Extended Infectious Telemetry Monitoring",
+      "qualifier": "extended",
+      "specialty": "infectious",
+      "concept": "telemetry monitoring",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Extended Infectious Telemetry Monitoring",
+          "rate_cents": 82675,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Extended Infectious Telemetry Monitoring | per day of service | GBP 826.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Extended Infectious Telemetry Monitoring | per day of service | GBP 826.75 | \u2014 |"
+    },
+    "Extended Musculoskeletal Endoscopic Procedure": {
+      "name": "Extended Musculoskeletal Endoscopic Procedure",
+      "qualifier": "extended",
+      "specialty": "musculoskeletal",
+      "concept": "endoscopic procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Extended Musculoskeletal Endoscopic Procedure",
+          "rate_cents": 442975,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Extended Musculoskeletal Endoscopic Procedure | per procedure | GBP 4,429.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Extended Musculoskeletal Endoscopic Procedure | per procedure | GBP 4,429.75 | \u2014 |"
+    },
+    "Extended Neurological Theatre Time": {
+      "name": "Extended Neurological Theatre Time",
+      "qualifier": "extended",
+      "specialty": "neurological",
+      "concept": "theatre time",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Extended Neurological Theatre Time",
+          "rate_cents": 3700,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Extended Neurological Theatre Time | per hour | GBP 37.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Extended Neurological Theatre Time | per hour | GBP 37.00 | \u2014 |"
+    },
+    "Focused Metabolic Theatre Time": {
+      "name": "Focused Metabolic Theatre Time",
+      "qualifier": "focused",
+      "specialty": "metabolic",
+      "concept": "theatre time",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Focused Metabolic Theatre Time",
+          "rate_cents": 4200,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Focused Metabolic Theatre Time | per hour | GBP 42.00 | 12 hours |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Focused Metabolic Theatre Time | per hour | GBP 42.00 | 12 hours |"
+    },
+    "Focused Neurological Physiotherapy Session": {
+      "name": "Focused Neurological Physiotherapy Session",
+      "qualifier": "focused",
+      "specialty": "neurological",
+      "concept": "physiotherapy session",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Focused Neurological Physiotherapy Session",
+          "rate_cents": 11125,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Focused Neurological Physiotherapy Session | per visit | GBP 111.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Focused Neurological Physiotherapy Session | per visit | GBP 111.25 | \u2014 |"
+    },
+    "Focused Obstetric Nutritional Support": {
+      "name": "Focused Obstetric Nutritional Support",
+      "qualifier": "focused",
+      "specialty": "obstetric",
+      "concept": "nutritional support",
+      "unit_basis": "per_unit_dispensed",
+      "unit_basis_text": "per unit dispensed",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Focused Obstetric Nutritional Support",
+          "rate_cents": 6925,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Focused Obstetric Nutritional Support | per unit dispensed | GBP 69.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Focused Obstetric Nutritional Support | per unit dispensed | GBP 69.25 | \u2014 |"
+    },
+    "Focused Urologic Telemetry Monitoring": {
+      "name": "Focused Urologic Telemetry Monitoring",
+      "qualifier": "focused",
+      "specialty": "urologic",
+      "concept": "telemetry monitoring",
+      "unit_basis": "per_hour_per_item",
+      "unit_basis_text": "per hour, per item",
+      "compound_unit_basis": true,
+      "rates": [
+        {
+          "service": "Focused Urologic Telemetry Monitoring",
+          "rate_cents": 5225,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Focused Urologic Telemetry Monitoring | per hour, per item | GBP 52.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Focused Urologic Telemetry Monitoring | per hour, per item | GBP 52.25 | \u2014 |"
+    },
+    "Inpatient Gastrointestinal Pharmaceutical Dispensing": {
+      "name": "Inpatient Gastrointestinal Pharmaceutical Dispensing",
+      "qualifier": "inpatient",
+      "specialty": "gastrointestinal",
+      "concept": "pharmaceutical dispensing",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Gastrointestinal Pharmaceutical Dispensing",
+          "rate_cents": 23550,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Gastrointestinal Pharmaceutical Dispensing | per item supplied | GBP 235.50 | 12 items |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Gastrointestinal Pharmaceutical Dispensing | per item supplied | GBP 235.50 | 12 items |"
+    },
+    "Inpatient Haematology Imaging Interpretation": {
+      "name": "Inpatient Haematology Imaging Interpretation",
+      "qualifier": "inpatient",
+      "specialty": "haematology",
+      "concept": "imaging interpretation",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Haematology Imaging Interpretation",
+          "rate_cents": 123075,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Haematology Imaging Interpretation | per procedure | GBP 1,230.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Haematology Imaging Interpretation | per procedure | GBP 1,230.75 | \u2014 |"
+    },
+    "Inpatient Hepatic Biopsy Procedure": {
+      "name": "Inpatient Hepatic Biopsy Procedure",
+      "qualifier": "inpatient",
+      "specialty": "hepatic",
+      "concept": "biopsy procedure",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Hepatic Biopsy Procedure",
+          "rate_cents": 3650,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Hepatic Biopsy Procedure | per item supplied | GBP 36.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Hepatic Biopsy Procedure | per item supplied | GBP 36.50 | \u2014 |"
+    },
+    "Inpatient Infectious Specimen Analysis": {
+      "name": "Inpatient Infectious Specimen Analysis",
+      "qualifier": "inpatient",
+      "specialty": "infectious",
+      "concept": "specimen analysis",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Infectious Specimen Analysis",
+          "rate_cents": 34775,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Infectious Specimen Analysis | per test | GBP 347.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Infectious Specimen Analysis | per test | GBP 347.75 | \u2014 |"
+    },
+    "Inpatient Metabolic Infusion Therapy": {
+      "name": "Inpatient Metabolic Infusion Therapy",
+      "qualifier": "inpatient",
+      "specialty": "metabolic",
+      "concept": "infusion therapy",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Metabolic Infusion Therapy",
+          "rate_cents": 14850,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Metabolic Infusion Therapy | per hour | GBP 148.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Metabolic Infusion Therapy | per hour | GBP 148.50 | \u2014 |"
+    },
+    "Inpatient Metabolic Theatre Time": {
+      "name": "Inpatient Metabolic Theatre Time",
+      "qualifier": "inpatient",
+      "specialty": "metabolic",
+      "concept": "theatre time",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Metabolic Theatre Time",
+          "rate_cents": 21000,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Metabolic Theatre Time | per hour | GBP 210.00 | 12 hours |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Metabolic Theatre Time | per hour | GBP 210.00 | 12 hours |"
+    },
+    "Inpatient Musculoskeletal Theatre Time": {
+      "name": "Inpatient Musculoskeletal Theatre Time",
+      "qualifier": "inpatient",
+      "specialty": "musculoskeletal",
+      "concept": "theatre time",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Musculoskeletal Theatre Time",
+          "rate_cents": 9250,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Musculoskeletal Theatre Time | per hour | GBP 92.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Musculoskeletal Theatre Time | per hour | GBP 92.50 | \u2014 |"
+    },
+    "Inpatient Obstetric Diagnostic Imaging": {
+      "name": "Inpatient Obstetric Diagnostic Imaging",
+      "qualifier": "inpatient",
+      "specialty": "obstetric",
+      "concept": "diagnostic imaging",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Obstetric Diagnostic Imaging",
+          "rate_cents": 327325,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Obstetric Diagnostic Imaging | per procedure | GBP 3,273.25 | 8 procedures |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Obstetric Diagnostic Imaging | per procedure | GBP 3,273.25 | 8 procedures |"
+    },
+    "Inpatient Obstetric Wound Care": {
+      "name": "Inpatient Obstetric Wound Care",
+      "qualifier": "inpatient",
+      "specialty": "obstetric",
+      "concept": "wound care",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Inpatient Obstetric Wound Care",
+          "rate_cents": 34175,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Inpatient Obstetric Wound Care | per visit | GBP 341.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Inpatient Obstetric Wound Care | per visit | GBP 341.75 | \u2014 |"
+    },
+    "Intensive Immunologic Wound Care": {
+      "name": "Intensive Immunologic Wound Care",
+      "qualifier": "intensive",
+      "specialty": "immunologic",
+      "concept": "wound care",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intensive Immunologic Wound Care",
+          "rate_cents": 13275,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intensive Immunologic Wound Care | per item supplied | GBP 132.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intensive Immunologic Wound Care | per item supplied | GBP 132.75 | \u2014 |"
+    },
+    "Intensive Infectious Anaesthesia Administration": {
+      "name": "Intensive Infectious Anaesthesia Administration",
+      "qualifier": "intensive",
+      "specialty": "infectious",
+      "concept": "anaesthesia administration",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intensive Infectious Anaesthesia Administration",
+          "rate_cents": 294675,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intensive Infectious Anaesthesia Administration | per procedure | GBP 2,946.75 | 4 procedures |"
+        },
+        {
+          "service": "Intensive Infectious Anaesthesia Administration",
+          "rate_cents": 312350,
+          "document": "amendment_no_1",
+          "clause_id": "A1.2",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Intensive Infectious Anaesthesia Administration | per procedure | GBP 2,946.75 | GBP 3,123.50 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intensive Infectious Anaesthesia Administration | per procedure | GBP 2,946.75 | 4 procedures |"
+    },
+    "Intensive Oncology Nutritional Support": {
+      "name": "Intensive Oncology Nutritional Support",
+      "qualifier": "intensive",
+      "specialty": "oncology",
+      "concept": "nutritional support",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intensive Oncology Nutritional Support",
+          "rate_cents": 62675,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intensive Oncology Nutritional Support | per day of service | GBP 626.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intensive Oncology Nutritional Support | per day of service | GBP 626.75 | \u2014 |"
+    },
+    "Intensive Ophthalmic Laboratory Panel": {
+      "name": "Intensive Ophthalmic Laboratory Panel",
+      "qualifier": "intensive",
+      "specialty": "ophthalmic",
+      "concept": "laboratory panel",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intensive Ophthalmic Laboratory Panel",
+          "rate_cents": 41825,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intensive Ophthalmic Laboratory Panel | per test | GBP 418.25 | \u2014 |"
+        },
+        {
+          "service": "Intensive Ophthalmic Laboratory Panel",
+          "rate_cents": 39725,
+          "document": "amendment_no_1",
+          "clause_id": "A1.2",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Intensive Ophthalmic Laboratory Panel | per test | GBP 418.25 | GBP 397.25 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intensive Ophthalmic Laboratory Panel | per test | GBP 418.25 | \u2014 |"
+    },
+    "Intensive Otolaryngologic Anaesthesia Administration": {
+      "name": "Intensive Otolaryngologic Anaesthesia Administration",
+      "qualifier": "intensive",
+      "specialty": "otolaryngologic",
+      "concept": "anaesthesia administration",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intensive Otolaryngologic Anaesthesia Administration",
+          "rate_cents": 68025,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intensive Otolaryngologic Anaesthesia Administration | per procedure | GBP 680.25 | \u2014 |"
+        },
+        {
+          "service": "Intensive Otolaryngologic Anaesthesia Administration",
+          "rate_cents": 80275,
+          "document": "amendment_no_1",
+          "clause_id": "A1.2",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Intensive Otolaryngologic Anaesthesia Administration | per procedure | GBP 680.25 | GBP 802.75 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intensive Otolaryngologic Anaesthesia Administration | per procedure | GBP 680.25 | \u2014 |"
+    },
+    "Intensive Paediatric Biopsy Procedure": {
+      "name": "Intensive Paediatric Biopsy Procedure",
+      "qualifier": "intensive",
+      "specialty": "paediatric",
+      "concept": "biopsy procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intensive Paediatric Biopsy Procedure",
+          "rate_cents": 399700,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intensive Paediatric Biopsy Procedure | per procedure | GBP 3,997.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intensive Paediatric Biopsy Procedure | per procedure | GBP 3,997.00 | \u2014 |"
+    },
+    "Intermittent Dermatologic Physiotherapy Session": {
+      "name": "Intermittent Dermatologic Physiotherapy Session",
+      "qualifier": "intermittent",
+      "specialty": "dermatologic",
+      "concept": "physiotherapy session",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intermittent Dermatologic Physiotherapy Session",
+          "rate_cents": 35175,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intermittent Dermatologic Physiotherapy Session | per visit | GBP 351.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intermittent Dermatologic Physiotherapy Session | per visit | GBP 351.75 | \u2014 |"
+    },
+    "Intermittent Gastrointestinal Endoscopic Procedure": {
+      "name": "Intermittent Gastrointestinal Endoscopic Procedure",
+      "qualifier": "intermittent",
+      "specialty": "gastrointestinal",
+      "concept": "endoscopic procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intermittent Gastrointestinal Endoscopic Procedure",
+          "rate_cents": 276475,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intermittent Gastrointestinal Endoscopic Procedure | per procedure | GBP 2,764.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intermittent Gastrointestinal Endoscopic Procedure | per procedure | GBP 2,764.75 | \u2014 |"
+    },
+    "Intermittent Immunologic Isolation Room Occupancy": {
+      "name": "Intermittent Immunologic Isolation Room Occupancy",
+      "qualifier": "intermittent",
+      "specialty": "immunologic",
+      "concept": "isolation room occupancy",
+      "unit_basis": "per_night",
+      "unit_basis_text": "per night of occupancy",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intermittent Immunologic Isolation Room Occupancy",
+          "rate_cents": 110525,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intermittent Immunologic Isolation Room Occupancy | per night of occupancy | GBP 1,105.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intermittent Immunologic Isolation Room Occupancy | per night of occupancy | GBP 1,105.25 | \u2014 |"
+    },
+    "Intermittent Infectious Theatre Time": {
+      "name": "Intermittent Infectious Theatre Time",
+      "qualifier": "intermittent",
+      "specialty": "infectious",
+      "concept": "theatre time",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intermittent Infectious Theatre Time",
+          "rate_cents": 13900,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intermittent Infectious Theatre Time | per hour | GBP 139.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intermittent Infectious Theatre Time | per hour | GBP 139.00 | \u2014 |"
+    },
+    "Intermittent Otolaryngologic Wound Care": {
+      "name": "Intermittent Otolaryngologic Wound Care",
+      "qualifier": "intermittent",
+      "specialty": "otolaryngologic",
+      "concept": "wound care",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Intermittent Otolaryngologic Wound Care",
+          "rate_cents": 28500,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Intermittent Otolaryngologic Wound Care | per visit | GBP 285.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Intermittent Otolaryngologic Wound Care | per visit | GBP 285.00 | \u2014 |"
+    },
+    "Outpatient Gastrointestinal Isolation Room Occupancy": {
+      "name": "Outpatient Gastrointestinal Isolation Room Occupancy",
+      "qualifier": "outpatient",
+      "specialty": "gastrointestinal",
+      "concept": "isolation room occupancy",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Outpatient Gastrointestinal Isolation Room Occupancy",
+          "rate_cents": 57050,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Outpatient Gastrointestinal Isolation Room Occupancy | per day of service | GBP 570.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Outpatient Gastrointestinal Isolation Room Occupancy | per day of service | GBP 570.50 | \u2014 |"
+    },
+    "Outpatient Haematology Transport Service": {
+      "name": "Outpatient Haematology Transport Service",
+      "qualifier": "outpatient",
+      "specialty": "haematology",
+      "concept": "transport service",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Outpatient Haematology Transport Service",
+          "rate_cents": 13375,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Outpatient Haematology Transport Service | per item supplied | GBP 133.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Outpatient Haematology Transport Service | per item supplied | GBP 133.75 | \u2014 |"
+    },
+    "Outpatient Infectious Anaesthesia Administration": {
+      "name": "Outpatient Infectious Anaesthesia Administration",
+      "qualifier": "outpatient",
+      "specialty": "infectious",
+      "concept": "anaesthesia administration",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Outpatient Infectious Anaesthesia Administration",
+          "rate_cents": 11950,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Outpatient Infectious Anaesthesia Administration | per hour | GBP 119.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Outpatient Infectious Anaesthesia Administration | per hour | GBP 119.50 | \u2014 |"
+    },
+    "Outpatient Metabolic Rehabilitation Programme": {
+      "name": "Outpatient Metabolic Rehabilitation Programme",
+      "qualifier": "outpatient",
+      "specialty": "metabolic",
+      "concept": "rehabilitation programme",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Outpatient Metabolic Rehabilitation Programme",
+          "rate_cents": 18975,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Outpatient Metabolic Rehabilitation Programme | per visit | GBP 189.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Outpatient Metabolic Rehabilitation Programme | per visit | GBP 189.75 | \u2014 |"
+    },
+    "Outpatient Pulmonary Transport Service": {
+      "name": "Outpatient Pulmonary Transport Service",
+      "qualifier": "outpatient",
+      "specialty": "pulmonary",
+      "concept": "transport service",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Outpatient Pulmonary Transport Service",
+          "rate_cents": 18125,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Outpatient Pulmonary Transport Service | per visit | GBP 181.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Outpatient Pulmonary Transport Service | per visit | GBP 181.25 | \u2014 |"
+    },
+    "Outpatient Renal Specimen Analysis": {
+      "name": "Outpatient Renal Specimen Analysis",
+      "qualifier": "outpatient",
+      "specialty": "renal",
+      "concept": "specimen analysis",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Outpatient Renal Specimen Analysis",
+          "rate_cents": 20700,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Outpatient Renal Specimen Analysis | per item supplied | GBP 207.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Outpatient Renal Specimen Analysis | per item supplied | GBP 207.00 | \u2014 |"
+    },
+    "Outpatient Rheumatologic Pharmaceutical Dispensing": {
+      "name": "Outpatient Rheumatologic Pharmaceutical Dispensing",
+      "qualifier": "outpatient",
+      "specialty": "rheumatologic",
+      "concept": "pharmaceutical dispensing",
+      "unit_basis": "per_unit_dispensed",
+      "unit_basis_text": "per unit dispensed",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Outpatient Rheumatologic Pharmaceutical Dispensing",
+          "rate_cents": 8050,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Outpatient Rheumatologic Pharmaceutical Dispensing | per unit dispensed | GBP 80.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Outpatient Rheumatologic Pharmaceutical Dispensing | per unit dispensed | GBP 80.50 | \u2014 |"
+    },
+    "Postoperative Cardiac Ward Bed Occupancy": {
+      "name": "Postoperative Cardiac Ward Bed Occupancy",
+      "qualifier": "postoperative",
+      "specialty": "cardiac",
+      "concept": "ward bed occupancy",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Cardiac Ward Bed Occupancy",
+          "rate_cents": 134325,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Cardiac Ward Bed Occupancy | per day of service | GBP 1,343.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Cardiac Ward Bed Occupancy | per day of service | GBP 1,343.25 | \u2014 |"
+    },
+    "Postoperative Dermatologic Physiotherapy Session": {
+      "name": "Postoperative Dermatologic Physiotherapy Session",
+      "qualifier": "postoperative",
+      "specialty": "dermatologic",
+      "concept": "physiotherapy session",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Dermatologic Physiotherapy Session",
+          "rate_cents": 20200,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Dermatologic Physiotherapy Session | per hour | GBP 202.00 | 4 hours |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Dermatologic Physiotherapy Session | per hour | GBP 202.00 | 4 hours |"
+    },
+    "Postoperative Geriatric Nutritional Support": {
+      "name": "Postoperative Geriatric Nutritional Support",
+      "qualifier": "postoperative",
+      "specialty": "geriatric",
+      "concept": "nutritional support",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Geriatric Nutritional Support",
+          "rate_cents": 108675,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Geriatric Nutritional Support | per day of service | GBP 1,086.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Geriatric Nutritional Support | per day of service | GBP 1,086.75 | \u2014 |"
+    },
+    "Postoperative Haematology Nursing Observation": {
+      "name": "Postoperative Haematology Nursing Observation",
+      "qualifier": "postoperative",
+      "specialty": "haematology",
+      "concept": "nursing observation",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Haematology Nursing Observation",
+          "rate_cents": 140975,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Haematology Nursing Observation | per day of service | GBP 1,409.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Haematology Nursing Observation | per day of service | GBP 1,409.75 | \u2014 |"
+    },
+    "Postoperative Neurological Diagnostic Imaging": {
+      "name": "Postoperative Neurological Diagnostic Imaging",
+      "qualifier": "postoperative",
+      "specialty": "neurological",
+      "concept": "diagnostic imaging",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Neurological Diagnostic Imaging",
+          "rate_cents": 53550,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Neurological Diagnostic Imaging | per test | GBP 535.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Neurological Diagnostic Imaging | per test | GBP 535.50 | \u2014 |"
+    },
+    "Postoperative Otolaryngologic Laboratory Panel": {
+      "name": "Postoperative Otolaryngologic Laboratory Panel",
+      "qualifier": "postoperative",
+      "specialty": "otolaryngologic",
+      "concept": "laboratory panel",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Otolaryngologic Laboratory Panel",
+          "rate_cents": 24475,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Otolaryngologic Laboratory Panel | per item supplied | GBP 244.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Otolaryngologic Laboratory Panel | per item supplied | GBP 244.75 | \u2014 |"
+    },
+    "Postoperative Otolaryngologic Rehabilitation Programme": {
+      "name": "Postoperative Otolaryngologic Rehabilitation Programme",
+      "qualifier": "postoperative",
+      "specialty": "otolaryngologic",
+      "concept": "rehabilitation programme",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Otolaryngologic Rehabilitation Programme",
+          "rate_cents": 147875,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Otolaryngologic Rehabilitation Programme | per day of service | GBP 1,478.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Otolaryngologic Rehabilitation Programme | per day of service | GBP 1,478.75 | \u2014 |"
+    },
+    "Postoperative Psychiatric Endoscopic Procedure": {
+      "name": "Postoperative Psychiatric Endoscopic Procedure",
+      "qualifier": "postoperative",
+      "specialty": "psychiatric",
+      "concept": "endoscopic procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Psychiatric Endoscopic Procedure",
+          "rate_cents": 368575,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Psychiatric Endoscopic Procedure | per procedure | GBP 3,685.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Psychiatric Endoscopic Procedure | per procedure | GBP 3,685.75 | \u2014 |"
+    },
+    "Postoperative Pulmonary Consultation": {
+      "name": "Postoperative Pulmonary Consultation",
+      "qualifier": "postoperative",
+      "specialty": "pulmonary",
+      "concept": "consultation",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Pulmonary Consultation",
+          "rate_cents": 26750,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Pulmonary Consultation | per visit | GBP 267.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Pulmonary Consultation | per visit | GBP 267.50 | \u2014 |"
+    },
+    "Postoperative Rheumatologic Anaesthesia Administration": {
+      "name": "Postoperative Rheumatologic Anaesthesia Administration",
+      "qualifier": "postoperative",
+      "specialty": "rheumatologic",
+      "concept": "anaesthesia administration",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Postoperative Rheumatologic Anaesthesia Administration",
+          "rate_cents": 8725,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Postoperative Rheumatologic Anaesthesia Administration | per hour | GBP 87.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Postoperative Rheumatologic Anaesthesia Administration | per hour | GBP 87.25 | \u2014 |"
+    },
+    "Preoperative Cardiac Discharge Planning": {
+      "name": "Preoperative Cardiac Discharge Planning",
+      "qualifier": "preoperative",
+      "specialty": "cardiac",
+      "concept": "discharge planning",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Cardiac Discharge Planning",
+          "rate_cents": 5675,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Cardiac Discharge Planning | per hour | GBP 56.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Cardiac Discharge Planning | per hour | GBP 56.75 | \u2014 |"
+    },
+    "Preoperative Dermatologic Dialysis Session": {
+      "name": "Preoperative Dermatologic Dialysis Session",
+      "qualifier": "preoperative",
+      "specialty": "dermatologic",
+      "concept": "dialysis session",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Dermatologic Dialysis Session",
+          "rate_cents": 439850,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Dermatologic Dialysis Session | per procedure | GBP 4,398.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Dermatologic Dialysis Session | per procedure | GBP 4,398.50 | \u2014 |"
+    },
+    "Preoperative Endocrine Dialysis Session": {
+      "name": "Preoperative Endocrine Dialysis Session",
+      "qualifier": "preoperative",
+      "specialty": "endocrine",
+      "concept": "dialysis session",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Endocrine Dialysis Session",
+          "rate_cents": 400300,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Endocrine Dialysis Session | per procedure | GBP 4,003.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Endocrine Dialysis Session | per procedure | GBP 4,003.00 | \u2014 |"
+    },
+    "Preoperative Gastrointestinal Radiotherapy Fraction": {
+      "name": "Preoperative Gastrointestinal Radiotherapy Fraction",
+      "qualifier": "preoperative",
+      "specialty": "gastrointestinal",
+      "concept": "radiotherapy fraction",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Gastrointestinal Radiotherapy Fraction",
+          "rate_cents": 26025,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Gastrointestinal Radiotherapy Fraction | per item supplied | GBP 260.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Gastrointestinal Radiotherapy Fraction | per item supplied | GBP 260.25 | \u2014 |"
+    },
+    "Preoperative Ophthalmic Imaging Interpretation": {
+      "name": "Preoperative Ophthalmic Imaging Interpretation",
+      "qualifier": "preoperative",
+      "specialty": "ophthalmic",
+      "concept": "imaging interpretation",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Ophthalmic Imaging Interpretation",
+          "rate_cents": 23275,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Ophthalmic Imaging Interpretation | per test | GBP 232.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Ophthalmic Imaging Interpretation | per test | GBP 232.75 | \u2014 |"
+    },
+    "Preoperative Paediatric Laboratory Panel": {
+      "name": "Preoperative Paediatric Laboratory Panel",
+      "qualifier": "preoperative",
+      "specialty": "paediatric",
+      "concept": "laboratory panel",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Paediatric Laboratory Panel",
+          "rate_cents": 44500,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Paediatric Laboratory Panel | per test | GBP 445.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Paediatric Laboratory Panel | per test | GBP 445.00 | \u2014 |"
+    },
+    "Preoperative Psychiatric Home Visit": {
+      "name": "Preoperative Psychiatric Home Visit",
+      "qualifier": "preoperative",
+      "specialty": "psychiatric",
+      "concept": "home visit",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Psychiatric Home Visit",
+          "rate_cents": 32825,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Psychiatric Home Visit | per visit | GBP 328.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Psychiatric Home Visit | per visit | GBP 328.25 | \u2014 |"
+    },
+    "Preoperative Psychiatric Radiotherapy Fraction": {
+      "name": "Preoperative Psychiatric Radiotherapy Fraction",
+      "qualifier": "preoperative",
+      "specialty": "psychiatric",
+      "concept": "radiotherapy fraction",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Psychiatric Radiotherapy Fraction",
+          "rate_cents": 3450,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Psychiatric Radiotherapy Fraction | per item supplied | GBP 34.50 | 4 items |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Psychiatric Radiotherapy Fraction | per item supplied | GBP 34.50 | 4 items |"
+    },
+    "Preoperative Rheumatologic Transport Service": {
+      "name": "Preoperative Rheumatologic Transport Service",
+      "qualifier": "preoperative",
+      "specialty": "rheumatologic",
+      "concept": "transport service",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Preoperative Rheumatologic Transport Service",
+          "rate_cents": 15075,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Preoperative Rheumatologic Transport Service | per item supplied | GBP 150.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Preoperative Rheumatologic Transport Service | per item supplied | GBP 150.75 | \u2014 |"
+    },
+    "Routine Endocrine Specimen Analysis": {
+      "name": "Routine Endocrine Specimen Analysis",
+      "qualifier": "routine",
+      "specialty": "endocrine",
+      "concept": "specimen analysis",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Routine Endocrine Specimen Analysis",
+          "rate_cents": 8725,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Routine Endocrine Specimen Analysis | per item supplied | GBP 87.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Routine Endocrine Specimen Analysis | per item supplied | GBP 87.25 | \u2014 |"
+    },
+    "Routine Obstetric Diagnostic Imaging": {
+      "name": "Routine Obstetric Diagnostic Imaging",
+      "qualifier": "routine",
+      "specialty": "obstetric",
+      "concept": "diagnostic imaging",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Routine Obstetric Diagnostic Imaging",
+          "rate_cents": 26375,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Routine Obstetric Diagnostic Imaging | per item supplied | GBP 263.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Routine Obstetric Diagnostic Imaging | per item supplied | GBP 263.75 | \u2014 |"
+    },
+    "Routine Psychiatric Consultation": {
+      "name": "Routine Psychiatric Consultation",
+      "qualifier": "routine",
+      "specialty": "psychiatric",
+      "concept": "consultation",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Routine Psychiatric Consultation",
+          "rate_cents": 282975,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Routine Psychiatric Consultation | per procedure | GBP 2,829.75 | 8 procedures |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Routine Psychiatric Consultation | per procedure | GBP 2,829.75 | 8 procedures |"
+    },
+    "Routine Vascular Rehabilitation Programme": {
+      "name": "Routine Vascular Rehabilitation Programme",
+      "qualifier": "routine",
+      "specialty": "vascular",
+      "concept": "rehabilitation programme",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Routine Vascular Rehabilitation Programme",
+          "rate_cents": 37575,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Routine Vascular Rehabilitation Programme | per visit | GBP 375.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Routine Vascular Rehabilitation Programme | per visit | GBP 375.75 | \u2014 |"
+    },
+    "Specialist Dermatologic Infusion Therapy": {
+      "name": "Specialist Dermatologic Infusion Therapy",
+      "qualifier": "specialist",
+      "specialty": "dermatologic",
+      "concept": "infusion therapy",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Dermatologic Infusion Therapy",
+          "rate_cents": 17400,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Dermatologic Infusion Therapy | per hour | GBP 174.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Dermatologic Infusion Therapy | per hour | GBP 174.00 | \u2014 |"
+    },
+    "Specialist Gastrointestinal Specimen Analysis": {
+      "name": "Specialist Gastrointestinal Specimen Analysis",
+      "qualifier": "specialist",
+      "specialty": "gastrointestinal",
+      "concept": "specimen analysis",
+      "unit_basis": "per_test",
+      "unit_basis_text": "per test",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Gastrointestinal Specimen Analysis",
+          "rate_cents": 52850,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Gastrointestinal Specimen Analysis | per test | GBP 528.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Gastrointestinal Specimen Analysis | per test | GBP 528.50 | \u2014 |"
+    },
+    "Specialist Haematology Endoscopic Procedure": {
+      "name": "Specialist Haematology Endoscopic Procedure",
+      "qualifier": "specialist",
+      "specialty": "haematology",
+      "concept": "endoscopic procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Haematology Endoscopic Procedure",
+          "rate_cents": 101900,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Haematology Endoscopic Procedure | per procedure | GBP 1,019.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Haematology Endoscopic Procedure | per procedure | GBP 1,019.00 | \u2014 |"
+    },
+    "Specialist Hepatic Case Conference": {
+      "name": "Specialist Hepatic Case Conference",
+      "qualifier": "specialist",
+      "specialty": "hepatic",
+      "concept": "case conference",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Hepatic Case Conference",
+          "rate_cents": 35275,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Hepatic Case Conference | per visit | GBP 352.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Hepatic Case Conference | per visit | GBP 352.75 | \u2014 |"
+    },
+    "Specialist Obstetric Dialysis Session": {
+      "name": "Specialist Obstetric Dialysis Session",
+      "qualifier": "specialist",
+      "specialty": "obstetric",
+      "concept": "dialysis session",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Obstetric Dialysis Session",
+          "rate_cents": 62925,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Obstetric Dialysis Session | per procedure | GBP 629.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Obstetric Dialysis Session | per procedure | GBP 629.25 | \u2014 |"
+    },
+    "Specialist Ophthalmic Nutritional Support": {
+      "name": "Specialist Ophthalmic Nutritional Support",
+      "qualifier": "specialist",
+      "specialty": "ophthalmic",
+      "concept": "nutritional support",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Ophthalmic Nutritional Support",
+          "rate_cents": 32475,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Ophthalmic Nutritional Support | per day of service | GBP 324.75 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Ophthalmic Nutritional Support | per day of service | GBP 324.75 | \u2014 |"
+    },
+    "Specialist Paediatric Biopsy Procedure": {
+      "name": "Specialist Paediatric Biopsy Procedure",
+      "qualifier": "specialist",
+      "specialty": "paediatric",
+      "concept": "biopsy procedure",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Paediatric Biopsy Procedure",
+          "rate_cents": 14225,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Paediatric Biopsy Procedure | per item supplied | GBP 142.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Paediatric Biopsy Procedure | per item supplied | GBP 142.25 | \u2014 |"
+    },
+    "Specialist Psychiatric Discharge Planning": {
+      "name": "Specialist Psychiatric Discharge Planning",
+      "qualifier": "specialist",
+      "specialty": "psychiatric",
+      "concept": "discharge planning",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Psychiatric Discharge Planning",
+          "rate_cents": 38650,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Psychiatric Discharge Planning | per visit | GBP 386.50 | \u2014 |"
+        },
+        {
+          "service": "Specialist Psychiatric Discharge Planning",
+          "rate_cents": 44050,
+          "document": "amendment_no_1",
+          "clause_id": "A1.2",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Specialist Psychiatric Discharge Planning | per visit | GBP 386.50 | GBP 440.50 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Psychiatric Discharge Planning | per visit | GBP 386.50 | \u2014 |"
+    },
+    "Specialist Pulmonary Biopsy Procedure": {
+      "name": "Specialist Pulmonary Biopsy Procedure",
+      "qualifier": "specialist",
+      "specialty": "pulmonary",
+      "concept": "biopsy procedure",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Pulmonary Biopsy Procedure",
+          "rate_cents": 385550,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Pulmonary Biopsy Procedure | per procedure | GBP 3,855.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Pulmonary Biopsy Procedure | per procedure | GBP 3,855.50 | \u2014 |"
+    },
+    "Specialist Pulmonary Physiotherapy Session": {
+      "name": "Specialist Pulmonary Physiotherapy Session",
+      "qualifier": "specialist",
+      "specialty": "pulmonary",
+      "concept": "physiotherapy session",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Specialist Pulmonary Physiotherapy Session",
+          "rate_cents": 12500,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Specialist Pulmonary Physiotherapy Session | per hour | GBP 125.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Specialist Pulmonary Physiotherapy Session | per hour | GBP 125.00 | \u2014 |"
+    },
+    "Standard Orthopaedic Theatre Time": {
+      "name": "Standard Orthopaedic Theatre Time",
+      "qualifier": "standard",
+      "specialty": "orthopaedic",
+      "concept": "theatre time",
+      "unit_basis": "per_hour",
+      "unit_basis_text": "per hour",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Standard Orthopaedic Theatre Time",
+          "rate_cents": 6025,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Standard Orthopaedic Theatre Time | per hour | GBP 60.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Standard Orthopaedic Theatre Time | per hour | GBP 60.25 | \u2014 |"
+    },
+    "Standard Otolaryngologic Discharge Planning": {
+      "name": "Standard Otolaryngologic Discharge Planning",
+      "qualifier": "standard",
+      "specialty": "otolaryngologic",
+      "concept": "discharge planning",
+      "unit_basis": "per_visit",
+      "unit_basis_text": "per visit",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Standard Otolaryngologic Discharge Planning",
+          "rate_cents": 30600,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Standard Otolaryngologic Discharge Planning | per visit | GBP 306.00 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Standard Otolaryngologic Discharge Planning | per visit | GBP 306.00 | \u2014 |"
+    },
+    "Standard Rheumatologic Imaging Interpretation": {
+      "name": "Standard Rheumatologic Imaging Interpretation",
+      "qualifier": "standard",
+      "specialty": "rheumatologic",
+      "concept": "imaging interpretation",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Standard Rheumatologic Imaging Interpretation",
+          "rate_cents": 383550,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Standard Rheumatologic Imaging Interpretation | per procedure | GBP 3,835.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Standard Rheumatologic Imaging Interpretation | per procedure | GBP 3,835.50 | \u2014 |"
+    },
+    "Supervised Hepatic Sterilisation Service": {
+      "name": "Supervised Hepatic Sterilisation Service",
+      "qualifier": "supervised",
+      "specialty": "hepatic",
+      "concept": "sterilisation service",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Supervised Hepatic Sterilisation Service",
+          "rate_cents": 26625,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Supervised Hepatic Sterilisation Service | per item supplied | GBP 266.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Supervised Hepatic Sterilisation Service | per item supplied | GBP 266.25 | \u2014 |"
+    },
+    "Supervised Neurological Laboratory Panel": {
+      "name": "Supervised Neurological Laboratory Panel",
+      "qualifier": "supervised",
+      "specialty": "neurological",
+      "concept": "laboratory panel",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Supervised Neurological Laboratory Panel",
+          "rate_cents": 23125,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Supervised Neurological Laboratory Panel | per item supplied | GBP 231.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Supervised Neurological Laboratory Panel | per item supplied | GBP 231.25 | \u2014 |"
+    },
+    "Supervised Ophthalmic Nutritional Support": {
+      "name": "Supervised Ophthalmic Nutritional Support",
+      "qualifier": "supervised",
+      "specialty": "ophthalmic",
+      "concept": "nutritional support",
+      "unit_basis": "per_unit_dispensed",
+      "unit_basis_text": "per unit dispensed",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Supervised Ophthalmic Nutritional Support",
+          "rate_cents": 5950,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Supervised Ophthalmic Nutritional Support | per unit dispensed | GBP 59.50 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Supervised Ophthalmic Nutritional Support | per unit dispensed | GBP 59.50 | \u2014 |"
+    },
+    "Supervised Otolaryngologic Wound Care": {
+      "name": "Supervised Otolaryngologic Wound Care",
+      "qualifier": "supervised",
+      "specialty": "otolaryngologic",
+      "concept": "wound care",
+      "unit_basis": "per_item",
+      "unit_basis_text": "per item supplied",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Supervised Otolaryngologic Wound Care",
+          "rate_cents": 24025,
+          "document": "appendix_b",
+          "clause_id": "B.1",
+          "start": null,
+          "end": null,
+          "source_text": "| Supervised Otolaryngologic Wound Care | per item supplied | GBP 240.25 | \u2014 |"
+        }
+      ],
+      "contracted_from": null,
+      "listed_in": "appendix_b",
+      "source_text": "| Supervised Otolaryngologic Wound Care | per item supplied | GBP 240.25 | \u2014 |"
+    },
+    "Advanced Dermatologic Nutritional Support": {
+      "name": "Advanced Dermatologic Nutritional Support",
+      "qualifier": "advanced",
+      "specialty": "dermatologic",
+      "concept": "nutritional support",
+      "unit_basis": "per_day",
+      "unit_basis_text": "per day of service",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Advanced Dermatologic Nutritional Support",
+          "rate_cents": 86525,
+          "document": "amendment_no_1",
+          "clause_id": "A1.3",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Advanced Dermatologic Nutritional Support | per day of service | GBP 865.25 |"
+        }
+      ],
+      "contracted_from": "2025-01-01",
+      "listed_in": "amendment_no_1",
+      "source_text": "| Advanced Dermatologic Nutritional Support | per day of service | GBP 865.25 |"
+    },
+    "Elective Pulmonary Imaging Interpretation": {
+      "name": "Elective Pulmonary Imaging Interpretation",
+      "qualifier": "elective",
+      "specialty": "pulmonary",
+      "concept": "imaging interpretation",
+      "unit_basis": "per_procedure",
+      "unit_basis_text": "per procedure",
+      "compound_unit_basis": false,
+      "rates": [
+        {
+          "service": "Elective Pulmonary Imaging Interpretation",
+          "rate_cents": 456000,
+          "document": "amendment_no_1",
+          "clause_id": "A1.3",
+          "start": "2025-01-01",
+          "end": null,
+          "source_text": "| Elective Pulmonary Imaging Interpretation | per procedure | GBP 4,560.00 |"
+        }
+      ],
+      "contracted_from": "2025-01-01",
+      "listed_in": "amendment_no_1",
+      "source_text": "| Elective Pulmonary Imaging Interpretation | per procedure | GBP 4,560.00 |"
+    }
+  },
+  "daily_caps": {
+    "Ambulatory Otolaryngologic Imaging Interpretation": {
+      "service": "Ambulatory Otolaryngologic Imaging Interpretation",
+      "max_units": 12,
+      "clause_id": "7",
+      "source_text": "| Ambulatory Otolaryngologic Imaging Interpretation | 12 procedures |"
+    },
+    "Assisted Paediatric Dialysis Session": {
+      "service": "Assisted Paediatric Dialysis Session",
+      "max_units": 12,
+      "clause_id": "7",
+      "source_text": "| Assisted Paediatric Dialysis Session | 12 procedures |"
+    },
+    "Bedside Vascular Critical Care Occupancy": {
+      "service": "Bedside Vascular Critical Care Occupancy",
+      "max_units": 8,
+      "clause_id": "7",
+      "source_text": "| Bedside Vascular Critical Care Occupancy | 8 days |"
+    },
+    "Continuous Immunologic Isolation Room Occupancy": {
+      "service": "Continuous Immunologic Isolation Room Occupancy",
+      "max_units": 24,
+      "clause_id": "7",
+      "source_text": "| Continuous Immunologic Isolation Room Occupancy | 24 days |"
+    },
+    "Focused Metabolic Theatre Time": {
+      "service": "Focused Metabolic Theatre Time",
+      "max_units": 12,
+      "clause_id": "7",
+      "source_text": "| Focused Metabolic Theatre Time | 12 hours |"
+    },
+    "Inpatient Gastrointestinal Pharmaceutical Dispensing": {
+      "service": "Inpatient Gastrointestinal Pharmaceutical Dispensing",
+      "max_units": 12,
+      "clause_id": "7",
+      "source_text": "| Inpatient Gastrointestinal Pharmaceutical Dispensing | 12 items |"
+    },
+    "Inpatient Metabolic Theatre Time": {
+      "service": "Inpatient Metabolic Theatre Time",
+      "max_units": 12,
+      "clause_id": "7",
+      "source_text": "| Inpatient Metabolic Theatre Time | 12 hours |"
+    },
+    "Inpatient Obstetric Diagnostic Imaging": {
+      "service": "Inpatient Obstetric Diagnostic Imaging",
+      "max_units": 8,
+      "clause_id": "7",
+      "source_text": "| Inpatient Obstetric Diagnostic Imaging | 8 procedures |"
+    },
+    "Intensive Infectious Anaesthesia Administration": {
+      "service": "Intensive Infectious Anaesthesia Administration",
+      "max_units": 4,
+      "clause_id": "7",
+      "source_text": "| Intensive Infectious Anaesthesia Administration | 4 procedures |"
+    },
+    "Postoperative Dermatologic Physiotherapy Session": {
+      "service": "Postoperative Dermatologic Physiotherapy Session",
+      "max_units": 4,
+      "clause_id": "7",
+      "source_text": "| Postoperative Dermatologic Physiotherapy Session | 4 hours |"
+    },
+    "Preoperative Psychiatric Radiotherapy Fraction": {
+      "service": "Preoperative Psychiatric Radiotherapy Fraction",
+      "max_units": 4,
+      "clause_id": "7",
+      "source_text": "| Preoperative Psychiatric Radiotherapy Fraction | 4 items |"
+    },
+    "Routine Psychiatric Consultation": {
+      "service": "Routine Psychiatric Consultation",
+      "max_units": 8,
+      "clause_id": "7",
+      "source_text": "| Routine Psychiatric Consultation | 8 procedures |"
+    }
+  },
+  "threshold_premiums": {
+    "Advanced Rheumatologic Pharmaceutical Dispensing": {
+      "service": "Advanced Rheumatologic Pharmaceutical Dispensing",
+      "exceeds_units": 6,
+      "uplift_fraction": "0.3",
+      "clause_id": "4.1",
+      "source_text": "| Advanced Rheumatologic Pharmaceutical Dispensing | more than 6 items | +30% |"
+    },
+    "Ambulatory Renal Case Conference": {
+      "service": "Ambulatory Renal Case Conference",
+      "exceeds_units": 8,
+      "uplift_fraction": "0.25",
+      "clause_id": "4.1",
+      "source_text": "| Ambulatory Renal Case Conference | more than 8 hours | +25% |"
+    },
+    "Bedside Metabolic Infusion Therapy": {
+      "service": "Bedside Metabolic Infusion Therapy",
+      "exceeds_units": 12,
+      "uplift_fraction": "0.4",
+      "clause_id": "4.1",
+      "source_text": "| Bedside Metabolic Infusion Therapy | more than 12 units | +40% |"
+    },
+    "Emergency Dermatologic Sterilisation Service": {
+      "service": "Emergency Dermatologic Sterilisation Service",
+      "exceeds_units": 10,
+      "uplift_fraction": "0.4",
+      "clause_id": "4.1",
+      "source_text": "| Emergency Dermatologic Sterilisation Service | more than 10 items | +40% |"
+    },
+    "Emergency Oncology Biopsy Procedure": {
+      "service": "Emergency Oncology Biopsy Procedure",
+      "exceeds_units": 6,
+      "uplift_fraction": "0.3",
+      "clause_id": "4.1",
+      "source_text": "| Emergency Oncology Biopsy Procedure | more than 6 items | +30% |"
+    },
+    "Inpatient Metabolic Infusion Therapy": {
+      "service": "Inpatient Metabolic Infusion Therapy",
+      "exceeds_units": 16,
+      "uplift_fraction": "0.4",
+      "clause_id": "4.1",
+      "source_text": "| Inpatient Metabolic Infusion Therapy | more than 16 hours | +40% |"
+    },
+    "Outpatient Pulmonary Transport Service": {
+      "service": "Outpatient Pulmonary Transport Service",
+      "exceeds_units": 12,
+      "uplift_fraction": "0.4",
+      "clause_id": "4.1",
+      "source_text": "| Outpatient Pulmonary Transport Service | more than 12 visits | +40% |"
+    },
+    "Outpatient Rheumatologic Pharmaceutical Dispensing": {
+      "service": "Outpatient Rheumatologic Pharmaceutical Dispensing",
+      "exceeds_units": 10,
+      "uplift_fraction": "0.4",
+      "clause_id": "4.1",
+      "source_text": "| Outpatient Rheumatologic Pharmaceutical Dispensing | more than 10 units | +40% |"
+    },
+    "Postoperative Haematology Nursing Observation": {
+      "service": "Postoperative Haematology Nursing Observation",
+      "exceeds_units": 8,
+      "uplift_fraction": "0.2",
+      "clause_id": "4.1",
+      "source_text": "| Postoperative Haematology Nursing Observation | more than 8 days | +20% |"
+    },
+    "Preoperative Ophthalmic Imaging Interpretation": {
+      "service": "Preoperative Ophthalmic Imaging Interpretation",
+      "exceeds_units": 16,
+      "uplift_fraction": "0.4",
+      "clause_id": "4.1",
+      "source_text": "| Preoperative Ophthalmic Imaging Interpretation | more than 16 tests | +40% |"
+    },
+    "Specialist Haematology Endoscopic Procedure": {
+      "service": "Specialist Haematology Endoscopic Procedure",
+      "exceeds_units": 12,
+      "uplift_fraction": "0.15",
+      "clause_id": "4.1",
+      "source_text": "| Specialist Haematology Endoscopic Procedure | more than 12 procedures | +15% |"
+    },
+    "Specialist Paediatric Biopsy Procedure": {
+      "service": "Specialist Paediatric Biopsy Procedure",
+      "exceeds_units": 8,
+      "uplift_fraction": "0.15",
+      "clause_id": "4.1",
+      "source_text": "| Specialist Paediatric Biopsy Procedure | more than 8 items | +15% |"
+    },
+    "Standard Rheumatologic Imaging Interpretation": {
+      "service": "Standard Rheumatologic Imaging Interpretation",
+      "exceeds_units": 8,
+      "uplift_fraction": "0.25",
+      "clause_id": "4.1",
+      "source_text": "| Standard Rheumatologic Imaging Interpretation | more than 8 procedures | +25% |"
+    },
+    "Supervised Ophthalmic Nutritional Support": {
+      "service": "Supervised Ophthalmic Nutritional Support",
+      "exceeds_units": 16,
+      "uplift_fraction": "0.2",
+      "clause_id": "4.1",
+      "source_text": "| Supervised Ophthalmic Nutritional Support | more than 16 units | +20% |"
+    }
+  },
+  "non_business_day_uplifts": {
+    "Ambulatory Metabolic Isolation Room Occupancy": {
+      "service": "Ambulatory Metabolic Isolation Room Occupancy",
+      "uplift_fraction": "0.12",
+      "clause_id": "5",
+      "source_text": "| Ambulatory Metabolic Isolation Room Occupancy | +12% |"
+    },
+    "Continuous Renal Isolation Room Occupancy": {
+      "service": "Continuous Renal Isolation Room Occupancy",
+      "uplift_fraction": "0.1",
+      "clause_id": "5",
+      "source_text": "| Continuous Renal Isolation Room Occupancy | +10% |"
+    },
+    "Extended Haematology Radiotherapy Fraction": {
+      "service": "Extended Haematology Radiotherapy Fraction",
+      "uplift_fraction": "0.15",
+      "clause_id": "5",
+      "source_text": "| Extended Haematology Radiotherapy Fraction | +15% |"
+    },
+    "Intensive Oncology Nutritional Support": {
+      "service": "Intensive Oncology Nutritional Support",
+      "uplift_fraction": "0.25",
+      "clause_id": "5",
+      "source_text": "| Intensive Oncology Nutritional Support | +25% |"
+    },
+    "Postoperative Otolaryngologic Rehabilitation Programme": {
+      "service": "Postoperative Otolaryngologic Rehabilitation Programme",
+      "uplift_fraction": "0.1",
+      "clause_id": "5",
+      "source_text": "| Postoperative Otolaryngologic Rehabilitation Programme | +10% |"
+    },
+    "Postoperative Pulmonary Consultation": {
+      "service": "Postoperative Pulmonary Consultation",
+      "uplift_fraction": "0.25",
+      "clause_id": "5",
+      "source_text": "| Postoperative Pulmonary Consultation | +25% |"
+    },
+    "Postoperative Rheumatologic Anaesthesia Administration": {
+      "service": "Postoperative Rheumatologic Anaesthesia Administration",
+      "uplift_fraction": "0.2",
+      "clause_id": "5",
+      "source_text": "| Postoperative Rheumatologic Anaesthesia Administration | +20% |"
+    },
+    "Preoperative Gastrointestinal Radiotherapy Fraction": {
+      "service": "Preoperative Gastrointestinal Radiotherapy Fraction",
+      "uplift_fraction": "0.2",
+      "clause_id": "5",
+      "source_text": "| Preoperative Gastrointestinal Radiotherapy Fraction | +20% |"
+    },
+    "Preoperative Psychiatric Home Visit": {
+      "service": "Preoperative Psychiatric Home Visit",
+      "uplift_fraction": "0.15",
+      "clause_id": "5",
+      "source_text": "| Preoperative Psychiatric Home Visit | +15% |"
+    },
+    "Routine Obstetric Diagnostic Imaging": {
+      "service": "Routine Obstetric Diagnostic Imaging",
+      "uplift_fraction": "0.1",
+      "clause_id": "5",
+      "source_text": "| Routine Obstetric Diagnostic Imaging | +10% |"
+    },
+    "Routine Vascular Rehabilitation Programme": {
+      "service": "Routine Vascular Rehabilitation Programme",
+      "uplift_fraction": "0.1",
+      "clause_id": "5",
+      "source_text": "| Routine Vascular Rehabilitation Programme | +10% |"
+    },
+    "Specialist Psychiatric Discharge Planning": {
+      "service": "Specialist Psychiatric Discharge Planning",
+      "uplift_fraction": "0.1",
+      "clause_id": "5",
+      "source_text": "| Specialist Psychiatric Discharge Planning | +10% |"
+    }
+  },
+  "bundles": [
+    {
+      "service_a": "Bedside Palliative Wound Care",
+      "service_b": "Intermittent Gastrointestinal Endoscopic Procedure",
+      "rate_a_cents": 12025,
+      "rate_b_cents": 235000,
+      "clause_id": "8.1",
+      "source_text": "| Bedside Palliative Wound Care | Intermittent Gastrointestinal Endoscopic Procedure | GBP 120.25 | GBP 2,350.00 |"
+    },
+    {
+      "service_a": "Continuous Immunologic Critical Care Occupancy",
+      "service_b": "Specialist Ophthalmic Nutritional Support",
+      "rate_a_cents": 15550,
+      "rate_b_cents": 24350,
+      "clause_id": "8.1",
+      "source_text": "| Continuous Immunologic Critical Care Occupancy | Specialist Ophthalmic Nutritional Support | GBP 155.50 | GBP 243.50 |"
+    },
+    {
+      "service_a": "Elective Pulmonary Consultation",
+      "service_b": "Focused Neurological Physiotherapy Session",
+      "rate_a_cents": 351150,
+      "rate_b_cents": 9800,
+      "clause_id": "8.1",
+      "source_text": "| Elective Pulmonary Consultation | Focused Neurological Physiotherapy Session | GBP 3,511.50 | GBP 98.00 |"
+    },
+    {
+      "service_a": "Extended Musculoskeletal Endoscopic Procedure",
+      "service_b": "Focused Obstetric Nutritional Support",
+      "rate_a_cents": 363250,
+      "rate_b_cents": 5675,
+      "clause_id": "8.1",
+      "source_text": "| Extended Musculoskeletal Endoscopic Procedure | Focused Obstetric Nutritional Support | GBP 3,632.50 | GBP 56.75 |"
+    },
+    {
+      "service_a": "Inpatient Hepatic Biopsy Procedure",
+      "service_b": "Specialist Gastrointestinal Specimen Analysis",
+      "rate_a_cents": 2925,
+      "rate_b_cents": 42275,
+      "clause_id": "8.1",
+      "source_text": "| Inpatient Hepatic Biopsy Procedure | Specialist Gastrointestinal Specimen Analysis | GBP 29.25 | GBP 422.75 |"
+    }
+  ],
+  "volume_discounts": {
+    "Ambulatory Ophthalmic Imaging Interpretation": [
+      {
+        "service": "Ambulatory Ophthalmic Imaging Interpretation",
+        "exceeds_units": 100,
+        "discount_fraction": "0.1",
+        "clause_id": "6",
+        "source_text": "| Ambulatory Ophthalmic Imaging Interpretation | more than 100 procedures | 10% |"
+      }
+    ],
+    "Assisted Urologic Endoscopic Procedure": [
+      {
+        "service": "Assisted Urologic Endoscopic Procedure",
+        "exceeds_units": 100,
+        "discount_fraction": "0.1",
+        "clause_id": "6",
+        "source_text": "| Assisted Urologic Endoscopic Procedure | more than 100 procedures | 10% |"
+      },
+      {
+        "service": "Assisted Urologic Endoscopic Procedure",
+        "exceeds_units": 300,
+        "discount_fraction": "0.2",
+        "clause_id": "6",
+        "source_text": "| Assisted Urologic Endoscopic Procedure | more than 300 procedures | 20% |"
+      }
+    ],
+    "Bedside Urologic Laboratory Panel": [
+      {
+        "service": "Bedside Urologic Laboratory Panel",
+        "exceeds_units": 80,
+        "discount_fraction": "0.1",
+        "clause_id": "6",
+        "source_text": "| Bedside Urologic Laboratory Panel | more than 80 items | 10% |"
+      },
+      {
+        "service": "Bedside Urologic Laboratory Panel",
+        "exceeds_units": 240,
+        "discount_fraction": "0.2",
+        "clause_id": "6",
+        "source_text": "| Bedside Urologic Laboratory Panel | more than 240 items | 20% |"
+      }
+    ],
+    "Bedside Urologic Ventilation Support": [
+      {
+        "service": "Bedside Urologic Ventilation Support",
+        "exceeds_units": 80,
+        "discount_fraction": "0.12",
+        "clause_id": "6",
+        "source_text": "| Bedside Urologic Ventilation Support | more than 80 days | 12% |"
+      },
+      {
+        "service": "Bedside Urologic Ventilation Support",
+        "exceeds_units": 240,
+        "discount_fraction": "0.3",
+        "clause_id": "6",
+        "source_text": "| Bedside Urologic Ventilation Support | more than 240 days | 30% |"
+      }
+    ],
+    "Elective Palliative Physiotherapy Session": [
+      {
+        "service": "Elective Palliative Physiotherapy Session",
+        "exceeds_units": 60,
+        "discount_fraction": "0.1",
+        "clause_id": "6",
+        "source_text": "| Elective Palliative Physiotherapy Session | more than 60 hours | 10% |"
+      },
+      {
+        "service": "Elective Palliative Physiotherapy Session",
+        "exceeds_units": 180,
+        "discount_fraction": "0.2",
+        "clause_id": "6",
+        "source_text": "| Elective Palliative Physiotherapy Session | more than 180 hours | 20% |"
+      }
+    ],
+    "Extended Infectious Telemetry Monitoring": [
+      {
+        "service": "Extended Infectious Telemetry Monitoring",
+        "exceeds_units": 100,
+        "discount_fraction": "0.12",
+        "clause_id": "6",
+        "source_text": "| Extended Infectious Telemetry Monitoring | more than 100 days | 12% |"
+      },
+      {
+        "service": "Extended Infectious Telemetry Monitoring",
+        "exceeds_units": 300,
+        "discount_fraction": "0.25",
+        "clause_id": "6",
+        "source_text": "| Extended Infectious Telemetry Monitoring | more than 300 days | 25% |"
+      }
+    ],
+    "Inpatient Infectious Specimen Analysis": [
+      {
+        "service": "Inpatient Infectious Specimen Analysis",
+        "exceeds_units": 80,
+        "discount_fraction": "0.15",
+        "clause_id": "6",
+        "source_text": "| Inpatient Infectious Specimen Analysis | more than 80 tests | 15% |"
+      },
+      {
+        "service": "Inpatient Infectious Specimen Analysis",
+        "exceeds_units": 240,
+        "discount_fraction": "0.25",
+        "clause_id": "6",
+        "source_text": "| Inpatient Infectious Specimen Analysis | more than 240 tests | 25% |"
+      }
+    ],
+    "Intensive Otolaryngologic Anaesthesia Administration": [
+      {
+        "service": "Intensive Otolaryngologic Anaesthesia Administration",
+        "exceeds_units": 60,
+        "discount_fraction": "0.12",
+        "clause_id": "6",
+        "source_text": "| Intensive Otolaryngologic Anaesthesia Administration | more than 60 procedures | 12% |"
+      }
+    ],
+    "Intermittent Dermatologic Physiotherapy Session": [
+      {
+        "service": "Intermittent Dermatologic Physiotherapy Session",
+        "exceeds_units": 60,
+        "discount_fraction": "0.12",
+        "clause_id": "6",
+        "source_text": "| Intermittent Dermatologic Physiotherapy Session | more than 60 visits | 12% |"
+      },
+      {
+        "service": "Intermittent Dermatologic Physiotherapy Session",
+        "exceeds_units": 180,
+        "discount_fraction": "0.3",
+        "clause_id": "6",
+        "source_text": "| Intermittent Dermatologic Physiotherapy Session | more than 180 visits | 30% |"
+      }
+    ],
+    "Outpatient Renal Specimen Analysis": [
+      {
+        "service": "Outpatient Renal Specimen Analysis",
+        "exceeds_units": 60,
+        "discount_fraction": "0.15",
+        "clause_id": "6",
+        "source_text": "| Outpatient Renal Specimen Analysis | more than 60 items | 15% |"
+      }
+    ],
+    "Postoperative Cardiac Ward Bed Occupancy": [
+      {
+        "service": "Postoperative Cardiac Ward Bed Occupancy",
+        "exceeds_units": 100,
+        "discount_fraction": "0.15",
+        "clause_id": "6",
+        "source_text": "| Postoperative Cardiac Ward Bed Occupancy | more than 100 days | 15% |"
+      }
+    ],
+    "Supervised Hepatic Sterilisation Service": [
+      {
+        "service": "Supervised Hepatic Sterilisation Service",
+        "exceeds_units": 80,
+        "discount_fraction": "0.1",
+        "clause_id": "6",
+        "source_text": "| Supervised Hepatic Sterilisation Service | more than 80 items | 10% |"
+      }
+    ]
+  },
+  "exclusion_windows": [
+    {
+      "service": "Advanced Gastrointestinal Telemetry Monitoring",
+      "days": 7,
+      "other_service": "Advanced Geriatric Nutritional Support",
+      "clause_id": "9",
+      "source_text": "| Advanced Gastrointestinal Telemetry Monitoring | 7 days | Advanced Geriatric Nutritional Support |"
+    },
+    {
+      "service": "Bedside Cardiac Recovery Room Occupancy",
+      "days": 14,
+      "other_service": "Specialist Dermatologic Infusion Therapy",
+      "clause_id": "9",
+      "source_text": "| Bedside Cardiac Recovery Room Occupancy | 14 days | Specialist Dermatologic Infusion Therapy |"
+    },
+    {
+      "service": "Bedside Neurological Radiotherapy Fraction",
+      "days": 7,
+      "other_service": "Postoperative Geriatric Nutritional Support",
+      "clause_id": "9",
+      "source_text": "| Bedside Neurological Radiotherapy Fraction | 7 days | Postoperative Geriatric Nutritional Support |"
+    },
+    {
+      "service": "Emergency Vascular Biopsy Procedure",
+      "days": 30,
+      "other_service": "Preoperative Endocrine Dialysis Session",
+      "clause_id": "9",
+      "source_text": "| Emergency Vascular Biopsy Procedure | 30 days | Preoperative Endocrine Dialysis Session |"
+    },
+    {
+      "service": "Extended Geriatric Infusion Therapy",
+      "days": 14,
+      "other_service": "Inpatient Obstetric Wound Care",
+      "clause_id": "9",
+      "source_text": "| Extended Geriatric Infusion Therapy | 14 days | Inpatient Obstetric Wound Care |"
+    },
+    {
+      "service": "Inpatient Musculoskeletal Theatre Time",
+      "days": 21,
+      "other_service": "Intermittent Infectious Theatre Time",
+      "clause_id": "9",
+      "source_text": "| Inpatient Musculoskeletal Theatre Time | 21 days | Intermittent Infectious Theatre Time |"
+    },
+    {
+      "service": "Intensive Ophthalmic Laboratory Panel",
+      "days": 30,
+      "other_service": "Assisted Ophthalmic Recovery Room Occupancy",
+      "clause_id": "9",
+      "source_text": "| Intensive Ophthalmic Laboratory Panel | 30 days | Assisted Ophthalmic Recovery Room Occupancy |"
+    },
+    {
+      "service": "Outpatient Haematology Transport Service",
+      "days": 30,
+      "other_service": "Inpatient Obstetric Wound Care",
+      "clause_id": "9",
+      "source_text": "| Outpatient Haematology Transport Service | 30 days | Inpatient Obstetric Wound Care |"
+    },
+    {
+      "service": "Preoperative Cardiac Discharge Planning",
+      "days": 30,
+      "other_service": "Extended Dermatologic Infusion Therapy",
+      "clause_id": "9",
+      "source_text": "| Preoperative Cardiac Discharge Planning | 30 days | Extended Dermatologic Infusion Therapy |"
+    },
+    {
+      "service": "Preoperative Dermatologic Dialysis Session",
+      "days": 10,
+      "other_service": "Outpatient Gastrointestinal Isolation Room Occupancy",
+      "clause_id": "9",
+      "source_text": "| Preoperative Dermatologic Dialysis Session | 10 days | Outpatient Gastrointestinal Isolation Room Occupancy |"
+    }
+  ],
+  "invoice_clauses": {
+    "10.1": "Each invoice quotes the contract number on the face of this Base Agreement and carries an invoice number unique across the term.",
+    "10.2": "Every Service Date falls within the term and may not fall after the invoice date.",
+    "10.3": "The same Service may not be billed twice for the same Patient and Service Date, whether on one invoice or across several."
+  },
+  "conventions": {
+    "base 1.3": "This Base Agreement is to be read together with Appendix B (Rate Schedule) and with any amendment executed under clause 1.4. In the event of conflict, an amendment prevails over Appendix B, and Appendix B prevails over this Base Agreement.",
+    "base 1.4": "The Parties may amend the rates and the list of contracted Services by a numbered amendment executed by both Parties. An amendment states its own effective date and the basis on which that date operates.",
+    "base 1.5": "The Provider delivers the Services from Main Campus (F-MAIN). No facility differential applies, and all plan tiers are reimbursed identically.",
+    "base 2.1": "\"Service Day\" means the calendar day recorded as the Service Date of the line item.",
+    "base 2.2": "\"Business Day\" means any Service Day other than a Saturday or a Sunday.",
+    "base 3.1": "All monetary amounts are expressed in whole cents. Where the application of a multiplier, premium or discount produces a fraction of a cent, the result shall be rounded to the nearest whole cent, with exact halves rounded away from zero (\"half up\"). Rounding is applied after each individual step of the calculation, not once at the end.",
+    "base 3.2": "Where more than one adjustment applies to the same Service, the adjustments shall be applied to the base rate strictly in the following order: (a) substitution of a bundled rate; (b) the facility multiplier; (c) the plan-tier multiplier; (d) any premium or uplift; and (e) any cumulative volume discount. The line total is then the resulting unit rate multiplied by the billed quantity.",
+    "base 3.3": "The line total is the effective unit rate multiplied by the billed quantity; the invoice total is the sum of the line totals.",
+    "base 4.1": "A threshold premium is assessed against the aggregate quantity of the Service delivered to the Patient on the Service Day.",
+    "base 6.1": "Cumulative utilisation is counted cumulatively across the whole term of this Agreement and aggregated across all Patients, in Service Date order, up to but excluding the line item being priced; where two line items share a Service Date they are counted in ascending order of line identifier. Where two thresholds are met the deeper discount applies.",
+    "base 8.1": "Bundled rates replace the Appendix B rates for both Services whenever the pair is delivered to the same Patient on the same Service Day, and are substituted before any premium or discount.",
+    "amendment A1.1.2": "This Amendment applies **by Service Date**. A line item whose Service Date falls on or after the effective date is priced under this Amendment; a line item whose Service Date falls before the effective date is priced under Appendix B. The date on which an invoice is issued is irrelevant for this purpose.",
+    "amendment A1.4.1": "Save as expressly amended by this Amendment, the Base Agreement and Appendix B continue in full force. In particular, the premiums, caps, bundles, exclusion windows and calculation conventions in the Base Agreement are unchanged, and apply to the substituted rates in the same way as they applied to the rates they replace.",
+    "amendment A1.4.2": "Nothing in this Amendment affects an invoice already settled before the effective date."
+  },
+  "warnings": []
+}

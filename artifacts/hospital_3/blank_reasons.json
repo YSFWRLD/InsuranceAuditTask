@@ -1,0 +1,276 @@
+{
+  "note": "An invoice can carry several reasons; 'primary' counts each blank once, under its most specific reason (the order of audit.BLANK_REASONS).",
+  "blank_rows": 84,
+  "by_reason": {
+    "a line's candidate services lead to different corrected amounts": 50,
+    "a line's description omits a word, so an uncontracted service cannot be ruled out": 20,
+    "a line names a service this agreement does not contract (no contract price)": 13,
+    "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 7
+  },
+  "by_primary_reason": {
+    "a line's candidate services lead to different corrected amounts": 47,
+    "a line's description omits a word, so an uncontracted service cannot be ruled out": 20,
+    "a line names a service this agreement does not contract (no contract price)": 13,
+    "a daily cap is breached: the billed quantity is wrong but the right one is unknowable": 4
+  },
+  "rows": {
+    "INV-H3-000012": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000036": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000067": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H3-000078": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000084": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000093": [
+      "a line names a service this agreement does not contract (no contract price)",
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H3-000104": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000114": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000126": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000127": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000144": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out",
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000160": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000172": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000181": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000183": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000194": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000210": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000220": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000230": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000236": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H3-000284": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000304": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000305": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000308": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000347": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H3-000392": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000417": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000427": [
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H3-000428": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000433": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000449": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000455": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000465": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000498": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000499": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000501": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000516": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000519": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000526": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000530": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000540": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000555": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000565": [
+      "a line names a service this agreement does not contract (no contract price)",
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H3-000583": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000595": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000603": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000607": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000611": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000619": [
+      "a line names a service this agreement does not contract (no contract price)",
+      "a daily cap is breached: the billed quantity is wrong but the right one is unknowable"
+    ],
+    "INV-H3-000635": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000639": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000663": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000680": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000687": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000689": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000692": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000711": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000712": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000732": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000751": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000752": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000757": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000781": [
+      "a line names a service this agreement does not contract (no contract price)",
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000785": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000786": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000791": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000794": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000804": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000805": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out",
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000811": [
+      "a line's description omits a word, so an uncontracted service cannot be ruled out"
+    ],
+    "INV-H3-000816": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000833": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000840": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000847": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000857": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000864": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000870": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000914": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000917": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000918": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000926": [
+      "a line's candidate services lead to different corrected amounts"
+    ],
+    "INV-H3-000934": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000935": [
+      "a line names a service this agreement does not contract (no contract price)"
+    ],
+    "INV-H3-000936": [
+      "a line's candidate services lead to different corrected amounts"
+    ]
+  }
+}

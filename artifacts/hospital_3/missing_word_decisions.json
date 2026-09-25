@@ -1,0 +1,1105 @@
+{
+  "template_version": "001_jev_missing_word_resolution@faedc45476cb",
+  "model": "jev-1.13.0",
+  "gates": {
+    "service_min_probability": 0.9,
+    "service_min_confidence": 0.8,
+    "closure_min_probability": 0.9,
+    "unknown_min_probability": 0.9,
+    "max_candidates": 8
+  },
+  "max_slots_supplied_by_review": 1,
+  "counts": {
+    "ambiguous_contracted": 3,
+    "service": 34,
+    "unresolved": 1
+  },
+  "decisions": [
+    {
+      "review_id": "administration anaesthesia rheumatologic | per_hour",
+      "occurrence_count": 20,
+      "normalized_examples": [
+        "admin rheumatologic anaes"
+      ],
+      "candidates": [
+        {
+          "service": "Postoperative Rheumatologic Anaesthesia Administration",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "postoperative_rheumatologic_anaesthesia_administration",
+        "confidence": 0.88,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.08,
+          "none_of_the_above_or_unknown": 0.0,
+          "postoperative_rheumatologic_anaesthesia_administration": 0.92
+        }
+      },
+      "outcome": "service",
+      "service": "Postoperative Rheumatologic Anaesthesia Administration",
+      "reason": "P=0.920 >= 0.9, confidence 0.880",
+      "request_sha256": "b452aef3d7e0a08c4e30a4e0226965c47649be7a1d0f4e2cce195500e849132f"
+    },
+    {
+      "review_id": "advanced monitoring telemetry | per_day",
+      "occurrence_count": 18,
+      "normalized_examples": [
+        "adv telemetry monit"
+      ],
+      "candidates": [
+        {
+          "service": "Advanced Gastrointestinal Telemetry Monitoring",
+          "missing_fields": [
+            "specialty"
+          ]
+        },
+        {
+          "service": "Advanced Paediatric Telemetry Monitoring",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "ambiguous_contracted_service",
+        "confidence": 1.0,
+        "probabilities": {
+          "advanced_gastrointestinal_telemetry_monitoring": 0.0,
+          "advanced_paediatric_telemetry_monitoring": 0.0,
+          "ambiguous_contracted_service": 1.0,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "ambiguous_contracted",
+      "service": null,
+      "reason": "P(some contracted candidate)=1.000 >= 0.9; no single candidate reached the bar (choice ambiguous_contracted_service, P=1.000)",
+      "request_sha256": "1ea394279ad17b25c5a54049d89d6885e72cdc00b00a496692d6498fccd6f0db"
+    },
+    {
+      "review_id": "ambulatory case conference | per_hour",
+      "occurrence_count": 22,
+      "normalized_examples": [
+        "amb cs conf"
+      ],
+      "candidates": [
+        {
+          "service": "Ambulatory Renal Case Conference",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "ambulatory_renal_case_conference",
+        "confidence": 0.91,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "ambulatory_renal_case_conference": 0.94,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Ambulatory Renal Case Conference",
+      "reason": "P=0.940 >= 0.9, confidence 0.910",
+      "request_sha256": "a0c15448fff38b676410fe6084598410961c3497afa1554e383c4f0083e4a184"
+    },
+    {
+      "review_id": "ambulatory case conference | per_item",
+      "occurrence_count": 1,
+      "normalized_examples": [
+        "amb cs conf"
+      ],
+      "candidates": [
+        {
+          "service": "Ambulatory Renal Case Conference",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "ambulatory_renal_case_conference",
+        "confidence": 0.88,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.08,
+          "ambulatory_renal_case_conference": 0.92,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Ambulatory Renal Case Conference",
+      "reason": "P=0.920 >= 0.9, confidence 0.880",
+      "request_sha256": "a36321e11258002c708325f82ddcbdfcdedb1adbbdc8f665806c80da73e10683"
+    },
+    {
+      "review_id": "bedside imaging interpretation | per_test",
+      "occurrence_count": 28,
+      "normalized_examples": [
+        "beds imaging interpretation"
+      ],
+      "candidates": [
+        {
+          "service": "Bedside Renal Imaging Interpretation",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "bedside_renal_imaging_interpretation",
+        "confidence": 0.95,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "bedside_renal_imaging_interpretation": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Bedside Renal Imaging Interpretation",
+      "reason": "P=0.970 >= 0.9, confidence 0.950",
+      "request_sha256": "8c7201b70fc8e0ee2359685e346ce368d25b607fd0ed1939eb31caf048fcbde4"
+    },
+    {
+      "review_id": "bedside laboratory panel | per_item",
+      "occurrence_count": 67,
+      "normalized_examples": [
+        "beds laboratory pnl"
+      ],
+      "candidates": [
+        {
+          "service": "Bedside Urologic Laboratory Panel",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "bedside_urologic_laboratory_panel",
+        "confidence": 0.94,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "bedside_urologic_laboratory_panel": 0.96,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Bedside Urologic Laboratory Panel",
+      "reason": "P=0.960 >= 0.9, confidence 0.940",
+      "request_sha256": "15bc55e5ffce9a3462ef8ced5808483def0a00defb034e0146252e52f2fae00b"
+    },
+    {
+      "review_id": "biopsy oncology procedure | per_item",
+      "occurrence_count": 16,
+      "normalized_examples": [
+        "onc biop proc"
+      ],
+      "candidates": [
+        {
+          "service": "Emergency Oncology Biopsy Procedure",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "emergency_oncology_biopsy_procedure",
+        "confidence": 0.91,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "emergency_oncology_biopsy_procedure": 0.94,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Emergency Oncology Biopsy Procedure",
+      "reason": "P=0.940 >= 0.9, confidence 0.910",
+      "request_sha256": "145f22001ceddb0bf6e518867cbf17eb2b46cb7313fa8f5a626c303e1488ed1a"
+    },
+    {
+      "review_id": "cardiac discharge planning | per_hour",
+      "occurrence_count": 15,
+      "normalized_examples": [
+        "card disch plng"
+      ],
+      "candidates": [
+        {
+          "service": "Preoperative Cardiac Discharge Planning",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "preoperative_cardiac_discharge_planning",
+        "confidence": 0.94,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "none_of_the_above_or_unknown": 0.0,
+          "preoperative_cardiac_discharge_planning": 0.96
+        }
+      },
+      "outcome": "service",
+      "service": "Preoperative Cardiac Discharge Planning",
+      "reason": "P=0.960 >= 0.9, confidence 0.940",
+      "request_sha256": "13ccb9aa979e34f8468b455f0d86f6f8cbfcbf0d5c8c3271dc2ef91d236603cd"
+    },
+    {
+      "review_id": "cardiac discharge planning | per_procedure",
+      "occurrence_count": 1,
+      "normalized_examples": [
+        "card disch plng"
+      ],
+      "candidates": [
+        {
+          "service": "Preoperative Cardiac Discharge Planning",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "preoperative_cardiac_discharge_planning",
+        "confidence": 0.9,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "none_of_the_above_or_unknown": 0.0,
+          "preoperative_cardiac_discharge_planning": 0.9400000000000001
+        }
+      },
+      "outcome": "service",
+      "service": "Preoperative Cardiac Discharge Planning",
+      "reason": "P=0.940 >= 0.9, confidence 0.900",
+      "request_sha256": "ddf254f26544820685395ac3d58c83c2082a5706e6541da7f0408ec86c71ccc3"
+    },
+    {
+      "review_id": "care inpatient wound | per_visit",
+      "occurrence_count": 19,
+      "normalized_examples": [
+        "inpt wnd care"
+      ],
+      "candidates": [
+        {
+          "service": "Inpatient Obstetric Wound Care",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "inpatient_obstetric_wound_care",
+        "confidence": 0.94,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "inpatient_obstetric_wound_care": 0.96,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Inpatient Obstetric Wound Care",
+      "reason": "P=0.960 >= 0.9, confidence 0.940",
+      "request_sha256": "20ef3681bac49463a828869c97fbd999b9f409b8f2e1276efa1cda9734b330be"
+    },
+    {
+      "review_id": "case conference oncology | per_hour",
+      "occurrence_count": 19,
+      "normalized_examples": [
+        "conference onc cs"
+      ],
+      "candidates": [
+        {
+          "service": "Bedside Oncology Case Conference",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "bedside_oncology_case_conference",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "bedside_oncology_case_conference": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Bedside Oncology Case Conference",
+      "reason": "P=0.980 >= 0.9, confidence 0.970",
+      "request_sha256": "07480be0aec5069532c0df0c65142b8d270182338ec67fcedcf3d5cf811101e1"
+    },
+    {
+      "review_id": "continuous isolation occupancy room | per_day",
+      "occurrence_count": 21,
+      "normalized_examples": [
+        "occupancy continuous isol room"
+      ],
+      "candidates": [
+        {
+          "service": "Continuous Immunologic Isolation Room Occupancy",
+          "missing_fields": [
+            "specialty"
+          ]
+        },
+        {
+          "service": "Continuous Renal Isolation Room Occupancy",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "ambiguous_contracted_service",
+        "confidence": 1.0,
+        "probabilities": {
+          "ambiguous_contracted_service": 1.0,
+          "continuous_immunologic_isolation_room_occupancy": 0.0,
+          "continuous_renal_isolation_room_occupancy": 0.0,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "ambiguous_contracted",
+      "service": null,
+      "reason": "P(some contracted candidate)=1.000 >= 0.9; no single candidate reached the bar (choice ambiguous_contracted_service, P=1.000)",
+      "request_sha256": "e91412eed5fe7a015f1bee3846792e0637a1c6effe7f3dfc27ea2eeff87b16e4"
+    },
+    {
+      "review_id": "continuous laboratory panel | per_test",
+      "occurrence_count": 21,
+      "normalized_examples": [
+        "cont lab panel"
+      ],
+      "candidates": [
+        {
+          "service": "Continuous Gastrointestinal Laboratory Panel",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "continuous_gastrointestinal_laboratory_panel",
+        "confidence": 0.96,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "continuous_gastrointestinal_laboratory_panel": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Continuous Gastrointestinal Laboratory Panel",
+      "reason": "P=0.970 >= 0.9, confidence 0.960",
+      "request_sha256": "be09e3147d67dee76628a80dd19851f050cd898d7881d4bb2c793ab043e4618e"
+    },
+    {
+      "review_id": "dispensing inpatient pharmaceutical | per_item",
+      "occurrence_count": 20,
+      "normalized_examples": [
+        "dispensing inpt pharm"
+      ],
+      "candidates": [
+        {
+          "service": "Inpatient Gastrointestinal Pharmaceutical Dispensing",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "inpatient_gastrointestinal_pharmaceutical_dispensing",
+        "confidence": 0.84,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.11,
+          "inpatient_gastrointestinal_pharmaceutical_dispensing": 0.89,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "unresolved",
+      "service": null,
+      "reason": "no gate passed (choice inpatient_gastrointestinal_pharmaceutical_dispensing, P=0.890)",
+      "request_sha256": "620b93f45ffc074f80047ef953c4584dba4171e5f03f1d0d307d7f34161e04e8"
+    },
+    {
+      "review_id": "dispensing neurological pharmaceutical | per_item",
+      "occurrence_count": 18,
+      "normalized_examples": [
+        "neuro pharm dispensing"
+      ],
+      "candidates": [
+        {
+          "service": "Bedside Neurological Pharmaceutical Dispensing",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "bedside_neurological_pharmaceutical_dispensing",
+        "confidence": 0.95,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "bedside_neurological_pharmaceutical_dispensing": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Bedside Neurological Pharmaceutical Dispensing",
+      "reason": "P=0.970 >= 0.9, confidence 0.950",
+      "request_sha256": "7fe022c6e9c92b4e2fdc5eda5b2525d25769c3aa9877c25b27d0435f75a66359"
+    },
+    {
+      "review_id": "dispensing outpatient pharmaceutical | per_unit_dispensed",
+      "occurrence_count": 14,
+      "normalized_examples": [
+        "outpt pharm disp"
+      ],
+      "candidates": [
+        {
+          "service": "Outpatient Rheumatologic Pharmaceutical Dispensing",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "outpatient_rheumatologic_pharmaceutical_dispensing",
+        "confidence": 0.86,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.09,
+          "none_of_the_above_or_unknown": 0.0,
+          "outpatient_rheumatologic_pharmaceutical_dispensing": 0.91
+        }
+      },
+      "outcome": "service",
+      "service": "Outpatient Rheumatologic Pharmaceutical Dispensing",
+      "reason": "P=0.910 >= 0.9, confidence 0.860",
+      "request_sha256": "df397971f71636a30a2b2b8a8903cd135ee181f984a307457e4bcb2bfad07644"
+    },
+    {
+      "review_id": "elective imaging interpretation | per_procedure",
+      "occurrence_count": 14,
+      "normalized_examples": [
+        "interp elect img"
+      ],
+      "candidates": [
+        {
+          "service": "Elective Pulmonary Imaging Interpretation",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "elective_pulmonary_imaging_interpretation",
+        "confidence": 0.88,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.08,
+          "elective_pulmonary_imaging_interpretation": 0.92,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Elective Pulmonary Imaging Interpretation",
+      "reason": "P=0.920 >= 0.9, confidence 0.880",
+      "request_sha256": "e30ad55ca010ec2fa939089e3d148b0fc11bfe3f949c0a4c9245b0c19bcc164b"
+    },
+    {
+      "review_id": "emergency service sterilisation | per_item",
+      "occurrence_count": 27,
+      "normalized_examples": [
+        "emergency steril service"
+      ],
+      "candidates": [
+        {
+          "service": "Emergency Dermatologic Sterilisation Service",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "emergency_dermatologic_sterilisation_service",
+        "confidence": 0.96,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "emergency_dermatologic_sterilisation_service": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Emergency Dermatologic Sterilisation Service",
+      "reason": "P=0.980 >= 0.9, confidence 0.960",
+      "request_sha256": "8bbdcf726fbde53cca3bc9d67f0fc499139cdb072a29474521a08873477bd2bd"
+    },
+    {
+      "review_id": "endoscopic extended procedure | per_procedure",
+      "occurrence_count": 62,
+      "normalized_examples": [
+        "ext endoscopic proc"
+      ],
+      "candidates": [
+        {
+          "service": "Extended Musculoskeletal Endoscopic Procedure",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "extended_musculoskeletal_endoscopic_procedure",
+        "confidence": 0.96,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "extended_musculoskeletal_endoscopic_procedure": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Extended Musculoskeletal Endoscopic Procedure",
+      "reason": "P=0.970 >= 0.9, confidence 0.960",
+      "request_sha256": "e41e809a3e35d9effba2357750bb29982f367989f51aae3649810761b1002ea5"
+    },
+    {
+      "review_id": "endoscopic gastrointestinal procedure | per_procedure",
+      "occurrence_count": 29,
+      "normalized_examples": [
+        "gi endosc proc"
+      ],
+      "candidates": [
+        {
+          "service": "Intermittent Gastrointestinal Endoscopic Procedure",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "intermittent_gastrointestinal_endoscopic_procedure",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "intermittent_gastrointestinal_endoscopic_procedure": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Intermittent Gastrointestinal Endoscopic Procedure",
+      "reason": "P=0.980 >= 0.9, confidence 0.970",
+      "request_sha256": "1cd2ae6410c0876081e69385f4aa42ee6c2b491ec1b6d48dadc3155f3f165a95"
+    },
+    {
+      "review_id": "endoscopic intermittent procedure | per_procedure",
+      "occurrence_count": 24,
+      "normalized_examples": [
+        "interm endosc proc"
+      ],
+      "candidates": [
+        {
+          "service": "Intermittent Gastrointestinal Endoscopic Procedure",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "intermittent_gastrointestinal_endoscopic_procedure",
+        "confidence": 0.96,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "intermittent_gastrointestinal_endoscopic_procedure": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Intermittent Gastrointestinal Endoscopic Procedure",
+      "reason": "P=0.970 >= 0.9, confidence 0.960",
+      "request_sha256": "d4a512b9b5f1deda4afd00bfee5e2156604a164236b47fd18f51a8f12f69c8f8"
+    },
+    {
+      "review_id": "endoscopic postoperative procedure | per_procedure",
+      "occurrence_count": 16,
+      "normalized_examples": [
+        "postop endoscopic proc"
+      ],
+      "candidates": [
+        {
+          "service": "Postoperative Psychiatric Endoscopic Procedure",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "postoperative_psychiatric_endoscopic_procedure",
+        "confidence": 0.92,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.05,
+          "none_of_the_above_or_unknown": 0.0,
+          "postoperative_psychiatric_endoscopic_procedure": 0.95
+        }
+      },
+      "outcome": "service",
+      "service": "Postoperative Psychiatric Endoscopic Procedure",
+      "reason": "P=0.950 >= 0.9, confidence 0.920",
+      "request_sha256": "0b8033e66d04031744cfb95732e1c718c39e614836e03d3fef4613709fa07d21"
+    },
+    {
+      "review_id": "endoscopic procedure urologic | per_procedure",
+      "occurrence_count": 23,
+      "normalized_examples": [
+        "proc urologic endosc"
+      ],
+      "candidates": [
+        {
+          "service": "Assisted Urologic Endoscopic Procedure",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "assisted_urologic_endoscopic_procedure",
+        "confidence": 0.98,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.01,
+          "assisted_urologic_endoscopic_procedure": 0.99,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Assisted Urologic Endoscopic Procedure",
+      "reason": "P=0.990 >= 0.9, confidence 0.980",
+      "request_sha256": "50a87d40804c95d56955dce47f751641fcac4c22e1e7c4329285ffffcc9e67fc"
+    },
+    {
+      "review_id": "focused monitoring telemetry | per_hour_per_item",
+      "occurrence_count": 22,
+      "normalized_examples": [
+        "monit foc telemetry"
+      ],
+      "candidates": [
+        {
+          "service": "Focused Urologic Telemetry Monitoring",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "focused_urologic_telemetry_monitoring",
+        "confidence": 0.94,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "focused_urologic_telemetry_monitoring": 0.96,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Focused Urologic Telemetry Monitoring",
+      "reason": "P=0.960 >= 0.9, confidence 0.940",
+      "request_sha256": "d8d25c272e2ef43ed6d8f82031c21d2f772d09ad5b8ae1e6e05f9e5cbad3348a"
+    },
+    {
+      "review_id": "focused nutritional support | per_unit_dispensed",
+      "occurrence_count": 29,
+      "normalized_examples": [
+        "foc nutr supp"
+      ],
+      "candidates": [
+        {
+          "service": "Focused Obstetric Nutritional Support",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "focused_obstetric_nutritional_support",
+        "confidence": 0.93,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "focused_obstetric_nutritional_support": 0.96,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Focused Obstetric Nutritional Support",
+      "reason": "P=0.960 >= 0.9, confidence 0.930",
+      "request_sha256": "82e01643859a364ef3cbbf9919a5d57c5fc553b257b2008402ef0fe198375e29"
+    },
+    {
+      "review_id": "fraction gastrointestinal radiotherapy | per_item",
+      "occurrence_count": 23,
+      "normalized_examples": [
+        "fract gastrointestinal radiotherapy"
+      ],
+      "candidates": [
+        {
+          "service": "Preoperative Gastrointestinal Radiotherapy Fraction",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "preoperative_gastrointestinal_radiotherapy_fraction",
+        "confidence": 0.91,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.06,
+          "none_of_the_above_or_unknown": 0.0,
+          "preoperative_gastrointestinal_radiotherapy_fraction": 0.94
+        }
+      },
+      "outcome": "service",
+      "service": "Preoperative Gastrointestinal Radiotherapy Fraction",
+      "reason": "P=0.940 >= 0.9, confidence 0.910",
+      "request_sha256": "8a5a8f1a44794d09528de324dc5a2c8e3d5e7b8599e54077a07a4227933212a1"
+    },
+    {
+      "review_id": "fraction psychiatric radiotherapy | per_item",
+      "occurrence_count": 23,
+      "normalized_examples": [
+        "fract psych radiotherapy"
+      ],
+      "candidates": [
+        {
+          "service": "Preoperative Psychiatric Radiotherapy Fraction",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "preoperative_psychiatric_radiotherapy_fraction",
+        "confidence": 0.95,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "none_of_the_above_or_unknown": 0.0,
+          "preoperative_psychiatric_radiotherapy_fraction": 0.97
+        }
+      },
+      "outcome": "service",
+      "service": "Preoperative Psychiatric Radiotherapy Fraction",
+      "reason": "P=0.970 >= 0.9, confidence 0.950",
+      "request_sha256": "109687c2bd1eb777143a40525032c80121d1bc29f8f3ddae7ed2c060e81c3977"
+    },
+    {
+      "review_id": "imaging interpretation rheumatologic | per_procedure",
+      "occurrence_count": 21,
+      "normalized_examples": [
+        "rheum img interp"
+      ],
+      "candidates": [
+        {
+          "service": "Standard Rheumatologic Imaging Interpretation",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "standard_rheumatologic_imaging_interpretation",
+        "confidence": 0.99,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.01,
+          "none_of_the_above_or_unknown": 0.0,
+          "standard_rheumatologic_imaging_interpretation": 0.99
+        }
+      },
+      "outcome": "service",
+      "service": "Standard Rheumatologic Imaging Interpretation",
+      "reason": "P=0.990 >= 0.9, confidence 0.990",
+      "request_sha256": "485dd0e910bc64da4827b45ad527f0e6f3cf69420f2e70340e4622267ac10d47"
+    },
+    {
+      "review_id": "infectious monitoring telemetry | per_day",
+      "occurrence_count": 73,
+      "normalized_examples": [
+        "infect telemetry monit"
+      ],
+      "candidates": [
+        {
+          "service": "Extended Infectious Telemetry Monitoring",
+          "missing_fields": [
+            "qualifier"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "extended_infectious_telemetry_monitoring",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "extended_infectious_telemetry_monitoring": 0.98,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Extended Infectious Telemetry Monitoring",
+      "reason": "P=0.980 >= 0.9, confidence 0.970",
+      "request_sha256": "6fc4f63a22a1fe1b0f0f6f58e8be59c31e0beba2faea8103b5d90843412e01a4"
+    },
+    {
+      "review_id": "inpatient theatre time | per_hour",
+      "occurrence_count": 13,
+      "normalized_examples": [
+        "inpt thtr tm"
+      ],
+      "candidates": [
+        {
+          "service": "Inpatient Metabolic Theatre Time",
+          "missing_fields": [
+            "specialty"
+          ]
+        },
+        {
+          "service": "Inpatient Musculoskeletal Theatre Time",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "ambiguous_contracted_service",
+        "confidence": 1.0,
+        "probabilities": {
+          "ambiguous_contracted_service": 1.0,
+          "inpatient_metabolic_theatre_time": 0.0,
+          "inpatient_musculoskeletal_theatre_time": 0.0,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "ambiguous_contracted",
+      "service": null,
+      "reason": "P(some contracted candidate)=1.000 >= 0.9; no single candidate reached the bar (choice ambiguous_contracted_service, P=1.000)",
+      "request_sha256": "ac75f1035ef60a70c859a57424338dc603fa9a6ddb69fb64b552bba60d6ead9b"
+    },
+    {
+      "review_id": "intensive laboratory panel | per_test",
+      "occurrence_count": 19,
+      "normalized_examples": [
+        "intensive laboratory pnl"
+      ],
+      "candidates": [
+        {
+          "service": "Intensive Ophthalmic Laboratory Panel",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "intensive_ophthalmic_laboratory_panel",
+        "confidence": 0.94,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "intensive_ophthalmic_laboratory_panel": 0.96,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Intensive Ophthalmic Laboratory Panel",
+      "reason": "P=0.960 >= 0.9, confidence 0.940",
+      "request_sha256": "5f80e39ccd89bc44d9eff9e313aa5336b2fa83e9875c2bec96e5997cc7244879"
+    },
+    {
+      "review_id": "intensive nutritional support | per_day",
+      "occurrence_count": 18,
+      "normalized_examples": [
+        "intens nutr supp"
+      ],
+      "candidates": [
+        {
+          "service": "Intensive Oncology Nutritional Support",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "intensive_oncology_nutritional_support",
+        "confidence": 0.92,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.05,
+          "intensive_oncology_nutritional_support": 0.95,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Intensive Oncology Nutritional Support",
+      "reason": "P=0.950 >= 0.9, confidence 0.920",
+      "request_sha256": "8f655de779492a5577392d0d347112d7979779464741862e2d1a056facc45972"
+    },
+    {
+      "review_id": "intermittent isolation occupancy room | per_night",
+      "occurrence_count": 10,
+      "normalized_examples": [
+        "intermittent isolation rm occ"
+      ],
+      "candidates": [
+        {
+          "service": "Intermittent Immunologic Isolation Room Occupancy",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "intermittent_immunologic_isolation_room_occupancy",
+        "confidence": 0.92,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.05,
+          "intermittent_immunologic_isolation_room_occupancy": 0.95,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Intermittent Immunologic Isolation Room Occupancy",
+      "reason": "P=0.950 >= 0.9, confidence 0.920",
+      "request_sha256": "32d603adcb0c7c42a05bb2b32609b38a50830ec08b491dcc38b46b01214ad3b6"
+    },
+    {
+      "review_id": "laboratory panel supervised | per_item",
+      "occurrence_count": 20,
+      "normalized_examples": [
+        "pnl supv lab"
+      ],
+      "candidates": [
+        {
+          "service": "Supervised Neurological Laboratory Panel",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "supervised_neurological_laboratory_panel",
+        "confidence": 0.93,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.05,
+          "none_of_the_above_or_unknown": 0.0,
+          "supervised_neurological_laboratory_panel": 0.95
+        }
+      },
+      "outcome": "service",
+      "service": "Supervised Neurological Laboratory Panel",
+      "reason": "P=0.950 >= 0.9, confidence 0.930",
+      "request_sha256": "112580279deb52305d3ff281ab7dec7c4f1e5992ba47175559c82f9c0cba1308"
+    },
+    {
+      "review_id": "physiotherapy session specialist | per_hour",
+      "occurrence_count": 25,
+      "normalized_examples": [
+        "specialist physio sess"
+      ],
+      "candidates": [
+        {
+          "service": "Specialist Pulmonary Physiotherapy Session",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "specialist_pulmonary_physiotherapy_session",
+        "confidence": 0.87,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.08,
+          "none_of_the_above_or_unknown": 0.0,
+          "specialist_pulmonary_physiotherapy_session": 0.92
+        }
+      },
+      "outcome": "service",
+      "service": "Specialist Pulmonary Physiotherapy Session",
+      "reason": "P=0.920 >= 0.9, confidence 0.870",
+      "request_sha256": "d40cd1696a2b3bddcc68056ee5d30899aed2d9b1e8d8b13720f8db54fcb1091d"
+    },
+    {
+      "review_id": "postoperative pulmonary | per_visit",
+      "occurrence_count": 31,
+      "normalized_examples": [
+        "postop pulm",
+        "pulm postoperative"
+      ],
+      "candidates": [
+        {
+          "service": "Postoperative Pulmonary Consultation",
+          "missing_fields": [
+            "concept"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "postoperative_pulmonary_consultation",
+        "confidence": 0.94,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.04,
+          "none_of_the_above_or_unknown": 0.0,
+          "postoperative_pulmonary_consultation": 0.96
+        }
+      },
+      "outcome": "service",
+      "service": "Postoperative Pulmonary Consultation",
+      "reason": "P=0.960 >= 0.9, confidence 0.940",
+      "request_sha256": "a7ba60bb8285a997506b92c34251a6391414f704f571d253008e8e56e0aaf56c"
+    },
+    {
+      "review_id": "psychiatric routine | per_procedure",
+      "occurrence_count": 12,
+      "normalized_examples": [
+        "psych rtn"
+      ],
+      "candidates": [
+        {
+          "service": "Routine Psychiatric Consultation",
+          "missing_fields": [
+            "concept"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "routine_psychiatric_consultation",
+        "confidence": 0.97,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.02,
+          "none_of_the_above_or_unknown": 0.0,
+          "routine_psychiatric_consultation": 0.98
+        }
+      },
+      "outcome": "service",
+      "service": "Routine Psychiatric Consultation",
+      "reason": "P=0.980 >= 0.9, confidence 0.970",
+      "request_sha256": "cfa24cfe8bd837d760f3ae7c978c4721122b6191e9fef524c827108853c2ec8f"
+    },
+    {
+      "review_id": "readings:cont cr crit occ | per_hour",
+      "occurrence_count": 36,
+      "normalized_examples": [
+        "cont crit cr occ"
+      ],
+      "candidates": [
+        {
+          "service": "Continuous Immunologic Critical Care Occupancy",
+          "missing_fields": [
+            "specialty"
+          ]
+        }
+      ],
+      "jev": {
+        "choice": "continuous_immunologic_critical_care_occupancy",
+        "confidence": 0.95,
+        "probabilities": {
+          "ambiguous_contracted_service": 0.03,
+          "continuous_immunologic_critical_care_occupancy": 0.97,
+          "none_of_the_above_or_unknown": 0.0
+        }
+      },
+      "outcome": "service",
+      "service": "Continuous Immunologic Critical Care Occupancy",
+      "reason": "P=0.970 >= 0.9, confidence 0.950",
+      "request_sha256": "2229dae09914315f4a0156e0015e14ef71d259ca6cd6b3f8786cddda9848ba3c"
+    }
+  ]
+}
